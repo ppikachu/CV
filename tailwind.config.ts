@@ -1,4 +1,4 @@
-import type { Config } from 'tailwindcss'
+import type { Config } from "tailwindcss";
 
 export default {
 	content: [
@@ -9,11 +9,23 @@ export default {
 		"./nuxt.config.{js,ts}",
 	],
 	theme: {
-		fontFamily: {
-			sans: ['JetBrains Mono', 'sans-serif'],
+		fontFamily: { sans: ["JetBrains Mono", "sans-serif"] },
+		extend: {
+			typography: (theme) => ({
+				md: {
+					css: {
+						
+						color: theme("colors.red.500"),
+						
+					},
+				},
+			}),
 		},
-		extend: {},
 	},
-	plugins: [],
-} satisfies Config
-
+	plugins: [
+		// require("@tailwindcss/typography"),
+		// require("@tailwindcss/aspect-ratio"),
+		// require('@tailwindcss/forms'),
+		// require('tailwindcss-children'),
+	],
+} satisfies Config;

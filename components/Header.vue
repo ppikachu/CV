@@ -9,6 +9,6 @@
 	</div>
 </template>
 
-<script lang="ts" setup>
-
+<script setup lang="ts">
+const { data } = await useAsyncData('page-data', () => queryContent('/hello').findOne())
 </script>

@@ -6,10 +6,11 @@ export default defineNuxtConfig({
 		"@nuxt/content",
 		"@nuxt/devtools",
 		"@nuxtjs/google-fonts",
+		"@nuxt/image",
 	],
 	googleFonts: {
 		families: {
-			'JetBrains Mono': [400, 700]
-		}
+			"JetBrains Mono": [400, 700],
+		},
 	},
 });

@@ -1,3 +1,5 @@
+
+import { content } from '#tailwind-config';
 <template>
 	<UContainer>
 		<div class="my-10">
@@ -6,30 +8,10 @@
 				<Social />
 				<ContentDoc path="/about"/>
 				<ContentDoc path="/experience"/>
-				<h1>Proyectos</h1>
+				<ProseH1>Proyectos</ProseH1>
 			</section>
 
-			<ContentList path="/projects" v-slot="{ list }">
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
-					<UCard v-for="article in list" :key="article._path" :ui="{ body: { base: 'h-full' } }">
-						<div class="flex flex-col justify-between h-full">
-							<div class="prose prose-sm dark:prose-invert">
-								<h3 class="font-bold mb-4">{{ article.title }}</h3>
-								<!-- <p>{{ article.description }}</p> -->
-								<ContentRendererMarkdown :value="article" />
-							</div>
-							<div v-if="article.tags" class="flex flex-wrap gap-2 mt-4">
-								<UBadge
-									v-for="tag in article.tags"
-									:key="tag"
-									:label="tag"
-									color="white"
-								/>
-							</div>
-						</div>
-					</UCard>
-				</div>
-			</ContentList>
+			<Projects />
 
 			<Skills />
 

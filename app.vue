@@ -1,14 +1,13 @@
 <template>
 	<UContainer>
 		<div class="my-10">
-			<ClientOnly>
-				<section class="prose dark:prose-invert" >
-					<Header />
-					<Social />
-					<ContentDoc path="/about"/>
-					<h1>Work Experience</h1>
-				</section>
-			</ClientOnly>
+			<section class="prose dark:prose-invert" >
+				<Header />
+				<Social />
+				<ContentDoc path="/about"/>
+				<ContentDoc path="/experience"/>
+				<h1>Proyectos</h1>
+			</section>
 
 			<ContentList path="/projects" v-slot="{ list }">
 				<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">

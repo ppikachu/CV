@@ -1,5 +1,11 @@
 <template>
-	<NuxtImg :src="refinedSrc" :alt="alt" :class="class" :width="width" :height="height" />
+	<NuxtImg
+		:src="refinedSrc"
+		:alt="alt"
+		:class="class"
+		:width="width"
+		:height="height"
+	/>
 </template>
 
 <script setup lang="ts">

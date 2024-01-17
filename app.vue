@@ -2,7 +2,7 @@
 import { content } from '#tailwind-config';
 <template>
 	<UContainer>
-		<section class="prose dark:prose-invert max-w-3xl  mx-auto my-10">
+		<section class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
 			<NuxtPage />
 		</section>
 	</UContainer>

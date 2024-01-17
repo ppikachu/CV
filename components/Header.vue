@@ -1,31 +1,31 @@
 <template>
-	<div class="flex gap-4 justify-between items-center">
-		<div class="flex-grow">
-			<ContentDoc path="/head" />
-			<Social />
-		</div>
-		<div class="flex flex-col gap-4 items-center not-prose">
-			<NuxtImg
-				src="/images/avatar.png"
-				alt="Santiago's avatar"
-				class="w-24 h-24 rounded-lg"
+	<div class="flex w-full justify-end">
+		<ColorScheme>
+			<UToggle
+				v-model="isDark"
+				on-icon="i-heroicons-moon-solid"
+				off-icon="i-heroicons-sun-solid"
+				@click="isDark = !isDark"
+				:ui="{
+					active: 'bg-gray-500 dark:bg-gray-700',
+					icon: {
+						on: 'dark:text-gray-500',
+					}
+				}"
 			/>
-			<ColorScheme>
-				<UToggle
-					v-model="isDark"
-					on-icon="i-heroicons-moon-solid"
-					off-icon="i-heroicons-sun-solid"
-					@click="isDark = !isDark"
-					:ui="{
-						active: 'bg-gray-500 dark:bg-gray-700',
-						icon: {
-							on: 'dark:text-gray-500',
-						}
-					}"
-				/>
-			</ColorScheme>
-		</div>
+		</ColorScheme>
 	</div>
+	<div class="flex gap-4 justify-between items-center">
+		<div class="">
+			<ContentDoc path="/head" />
+		</div>
+		<UAvatar
+		src="/images/avatar.png"
+		alt="Santiago's avatar"
+		size="3xl"
+		/>
+	</div>
+	<Social />
 </template>
 
 <script setup lang="ts">

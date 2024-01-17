@@ -10,22 +10,23 @@ export default {
 	],
 	theme: {
 		fontFamily: { sans: ["JetBrains Mono", "sans-serif"] },
-		extend: {
-			typography: (theme) => ({
-				md: {
-					css: {
-						
-						color: theme("colors.red.500"),
-						
-					},
-				},
-			}),
-		},
+		// extend: {
+		// 	typography: (theme: any) => ({
+		// 		DEFAULT: {
+		// 			css: {
+		// 				color: theme("colors.pink.700"),
+		// 				p: {
+		// 					marginTop: 0,
+		// 					marginBottom: 0
+		// 				},
+		// 			},
+		// 		},
+		// 	}),
+		// },
 	},
 	plugins: [
 		// require("@tailwindcss/typography"),
 		// require("@tailwindcss/aspect-ratio"),
 		// require('@tailwindcss/forms'),
-		// require('tailwindcss-children'),
 	],
 } satisfies Config;

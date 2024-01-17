@@ -3,7 +3,7 @@ title: 'Luz Negra'
 description: 'Landing page interactivo y portfolio online'
 image: '/images/autocine.png'
 url: 'https://luz-negra.com'
-tags: ['Nuxt', 'JavaScript', 'Tailwind']
+tags: ['Nuxt', 'Three.js']
 ---
 
 Estudio multimedia especializado en animación, motion graphics y web interactivas.

@@ -3,7 +3,7 @@ title: 'Great Lengths'
 description: 'Extensiones de cabello'
 image: '/images/GL.png'
 url: 'https://greatlengthslatinoamerica.com'
-tags: ['Nuxt', 'GLSL', 'JavaScript', 'Tailwind', 'Git']
+tags: ['Nuxt']
 ---
 
 Planificación, desarrollo y mantenimiento del sitio web oficial.

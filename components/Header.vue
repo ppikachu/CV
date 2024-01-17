@@ -8,7 +8,7 @@
 				v-model="isDark"
 				on-icon="i-heroicons-moon-solid"
 				off-icon="i-heroicons-sun-solid"
-				class="mt-4 md:mt-6"
+				class="mt-8 md:mt-9"
 				@click="isDark = !isDark"
 				:ui="{
 					active: 'bg-gray-500 dark:bg-gray-700',

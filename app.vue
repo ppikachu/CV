@@ -2,16 +2,20 @@
 import { content } from '#tailwind-config';
 <template>
 	<UContainer>
-		<div class="my-10">
-			<section class="prose dark:prose-invert mx-auto" >
-				<Header />
-				<Social />
-				<ContentDoc path="/about"/>
-				<ContentDoc path="/experience"/>
-				<Projects />
-				<Skills />
-			</section>
-
-		</div>
+		<section class="prose dark:prose-invert max-w-3xl  mx-auto my-10">
+			<NuxtPage />
+		</section>
 	</UContainer>
 </template>
+
+<style>
+.page-enter-active,
+.page-leave-active {
+	transition: all 0.2s;
+}
+.page-enter-from,
+.page-leave-to {
+	opacity: 0;
+	filter: blur(1rem);
+}
+</style>

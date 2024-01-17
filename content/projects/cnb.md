@@ -1,7 +1,7 @@
 ---
 title: 'Archivo digital'
 description: 'Casa Nacional del Bicentenario (Museo Nacional)'
-tags: ['PHP', 'HTML', CSS']
+tags: ['PHP', 'HTML', 'CSS']
 ---
 
 Casa Nacional del Bicentenario (Museo Nacional)

@@ -3,7 +3,7 @@ title: 'Sanders'
 description: 'Salón de belleza'
 image: '/images/AS.png'
 url: 'https://sanders.com.ar'
-tags: ['Nuxt', 'GLSL', 'JavaScript', 'Tailwind', 'Git']
+tags: ['Nuxt', 'GLSL']
 ---
 
 Planificación, desarrollo y mantenimiento del sitio web oficial.

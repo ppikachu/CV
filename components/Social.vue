@@ -1,5 +1,5 @@
 <template>
-	<section class="not-prose mb-10">
+	<section class="not-prose">
 		<UButton
 			icon="i-heroicons-globe-americas-16-solid"
 			label="CABA, Buenos Aires, Argentina"

@@ -1,7 +1,6 @@
 <template>
 	<main>
 		<Header />
-		<Social />
 		<ContentDoc path="/about"/>
 		<ContentDoc path="/experience"/>
 		<Projects />

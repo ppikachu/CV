@@ -18,4 +18,15 @@ import { content } from '#tailwind-config';
 	opacity: 0;
 	filter: blur(1rem);
 }
+
+.carousel__pagination-button::after {
+		@apply dark:bg-gray-600;
+}
+.carousel__pagination-button--active::after {
+		@apply dark:bg-gray-400;
+}
+
+.carousel__icon {
+	@apply dark:text-gray-300 text-gray-300;
+}
 </style>

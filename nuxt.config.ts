@@ -13,6 +13,9 @@ export default defineNuxtConfig({
 			"JetBrains Mono": [400, 700],
 		},
 	},
+	ui: {
+    icons: ['ph']
+  },
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
 	},

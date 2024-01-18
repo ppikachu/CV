@@ -20,11 +20,22 @@ import type { baseURL } from 'nuxt/dist/core/runtime/nitro/paths';
 			>
 				<div>
 						<h3 class="font-bold mb-1 leading-tight">
+						<UTooltip
+							:close-delay="100"
+							:popper="{resize: true, placement: 'top-start', adaptive: true}"
+							:ui="{
+								base: 'h-auto p-0',
+							}"
+						>
 							<NuxtLink v-if="article.url" :to="article.url" target="_blank" class="flex items-center gap-1">
 								<span>{{ article.title }}</span>
 								<UIcon name="i-heroicons-arrow-top-right-on-square" />
 							</NuxtLink>
 							<span v-else>{{ article.title }}</span>
+							<template #text>
+								<NuxtImg :src="article.image" :alt="article.title" class="w-full" />
+							</template>
+						</UTooltip>
 						</h3>
 						<p class="text-gray-700 dark:text-gray-400 text-xs mb-4">
 							{{ article.description }}
@@ -35,7 +46,9 @@ import type { baseURL } from 'nuxt/dist/core/runtime/nitro/paths';
 						<UBadge v-for="tag in article.tags" :key="tag" :label="tag" color="white" />
 						<UButton
 							color="white"
+							size="xs"
 							icon="i-heroicons-eye-20-solid"
+							label="Ver proyecto"
 							:to="article._path"
 						/>
 					</div>

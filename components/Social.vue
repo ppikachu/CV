@@ -1,3 +1,23 @@
+<script setup lang="ts">
+const data = [
+	{
+		icon: 'i-ph-envelope-simple-bold',
+		to: 'mailto:ppikachu@gmail.com',
+	},
+	{
+		icon: 'i-ph-github-logo-bold',
+		to: 'https://github.com/ppikachu',
+	},
+	{
+		icon: 'i-ph-behance-logo-bold',
+		to: 'https://www.behance.net/stoyos',
+	},
+	{
+		icon: 'i-ph-linkedin-logo-bold',
+		to: 'https://www.linkedin.com/in/santiago-toyos',
+	},
+]
+</script>
 <template>
 	<section class="not-prose">
 		<UButton
@@ -7,39 +27,14 @@
 			size="xs"
 			:padded="false"
 		/>
-		<ul class="flex gap-4">
-			<li>
+		<ul class="flex gap-2">
+			<li v-for="item in data">
 				<UButton
-					to="#"
+					:to="item.to"
 					target="_blank"
-					icon="i-heroicons-envelope"
-					variant="link"
+					:icon="item.icon"
+					variant="ghost"
 					color="gray"
-					:padded="false"
-					:ui="{
-						icon: {
-							size: {
-								xl: 'w-8 h-8',
-							}
-						}
-					}"
-				/>
-			</li>
-			<li>
-				<UButton
-					to="#"
-					target="_blank"
-					icon="i-heroicons-user-circle"
-					variant="link"
-					color="gray"
-					:padded="false"
-					:ui="{
-						icon: {
-							size: {
-								xl: 'w-8 h-8',
-							}
-						}
-					}"
 				/>
 			</li>
 		</ul>

@@ -4,6 +4,11 @@ description: 'Extensiones de cabello'
 image: '/images/GL.png'
 url: 'https://greatlengthslatinoamerica.com'
 tags: ['Nuxt']
+gallery:
+  - url: '/images/greatlengthsl_strand.png'
+    alt: 'Great Lengths1'
+  - url: '/images/greatlengths_map.png'
+    alt: 'Great Lengths2'
 ---
 
 Planificación, desarrollo y mantenimiento del sitio web oficial.

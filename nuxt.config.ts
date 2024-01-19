@@ -14,10 +14,27 @@ export default defineNuxtConfig({
 		},
 	},
 	ui: {
-    icons: ['ph']
-  },
+		icons: ['ph']
+	},
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
 	},
-	devtools: { enabled: false },
+	devtools: { enabled: true },
+	runtimeConfig: {
+		public: {
+			DEFAULT_LANGUAGE: "es-AR",
+			NAME: "Santiago Toyos",
+			DESCRIPTION: "CV",
+			OG_IMAGE: "/OG.png",// TODO
+			TWITTER_IMAGE: "/twitter.png",// TODO
+			ICON: "/icon.png",// TODO
+			HOST:
+				process.env.NODE_ENV === "production"
+					? "https://cv-st.vercel.app"
+					: "http://localhost:3000",
+		},
+	},
+	content: {
+    contentHead: false,
+  },
 });

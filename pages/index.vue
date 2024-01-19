@@ -1,13 +1,9 @@
 <template>
-	<main>
+	<main class="flex flex-col gap-8">
 		<Header />
-		<ContentDoc path="/about"/>
-		<ContentDoc path="/experience"/>
+		<About />
+		<Experience />
 		<Projects />
 		<Skills />
 	</main>
 </template>
-
-<script lang="ts" setup>
-
-</script>

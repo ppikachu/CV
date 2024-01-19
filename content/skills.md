@@ -1,4 +1,4 @@
 ---
 title: 'Skills'
-tags: [ UI, Javascript, PHP, Laravel, WordPress, NuxtJS, Three.js, GLSL ]
+tags: [ UI, Javascript, WordPress, NuxtJS, Three.js, GLSL, 'Final Cut Pro', 'Apple Motion', 'Modo', 'Nuke', 'Moho Pro' ]
 ---

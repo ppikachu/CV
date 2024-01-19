@@ -1,7 +1,7 @@
 
 <template>
 	<section>
-		<ProseH1>Experiencia</ProseH1>
+		<ProseH1>Proyectos en curso</ProseH1>
 		<Card path="/work" />
 	</section>
 </template>

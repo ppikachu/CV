@@ -1,11 +1,9 @@
 ---
 title: 'Archivo digital'
 description: 'Casa Nacional del Bicentenario (Museo Nacional)'
+image: '/images/cnb4.jpg'
 tags: ['PHP', 'HTML', 'CSS']
 ---
-
-Casa Nacional del Bicentenario (Museo Nacional)
-
 Usando la base de datos existente rediseñé la interfaz (UI, UX) con la que los visitantes acceden al archivo digital del bicentenario (fotografías, videos, noticias).
 
 Desarrolló y entregó un tema personalizado que coincidía con el diseño aprobado por la interfaz de usuario para la plataforma Omeka (sistema de administración de colecciones digitales de código libre).

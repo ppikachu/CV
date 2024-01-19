@@ -21,7 +21,9 @@
 					<h3 class="font-bold mb-1 leading-tight">
 					<UTooltip
 						:close-delay="100"
-						:popper="{resize: true, placement: 'top-start', adaptive: true}"
+						:popper="{
+							placement: 'top-start',
+						}"
 						:ui="{
 							base: 'h-auto p-0',
 						}"

@@ -7,6 +7,7 @@ export default defineNuxtConfig({
 		"@nuxtjs/google-fonts",
 		"@nuxt/image",
 		"vue3-carousel-nuxt",
+		"nuxt-swiper",
 	],
 	googleFonts: {
 		families: {
@@ -14,7 +15,7 @@ export default defineNuxtConfig({
 		},
 	},
 	ui: {
-		icons: ['ph']
+		icons: ["ph"],
 	},
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
@@ -25,9 +26,9 @@ export default defineNuxtConfig({
 			DEFAULT_LANGUAGE: "es-AR",
 			NAME: "Santiago Toyos",
 			DESCRIPTION: "CV",
-			OG_IMAGE: "/OG.png",// TODO
-			TWITTER_IMAGE: "/twitter.png",// TODO
-			ICON: "/icon.png",// TODO
+			OG_IMAGE: "/OG.png", // TODO
+			TWITTER_IMAGE: "/twitter.png", // TODO
+			ICON: "/icon.png", // TODO
 			HOST:
 				process.env.NODE_ENV === "production"
 					? "https://cv-st.vercel.app"
@@ -35,6 +36,6 @@ export default defineNuxtConfig({
 		},
 	},
 	content: {
-    contentHead: false,
-  },
+		contentHead: false,
+	},
 });

@@ -20,22 +20,20 @@
 				<div class="flex-grow">
 					<h3 class="font-bold mb-1 leading-tight">
 					<UTooltip
-						:close-delay="100"
+						:prevent=!article.url
 						:popper="{
-							placement: 'top-start',
-						}"
-						:ui="{
-							base: 'h-auto p-0',
+							placement: 'auto',
+							// offsetDistance: 10,
 						}"
 					>
+						<template #text>
+							Online. Click para ver.
+						</template>
 						<NuxtLink v-if="article.url" :to="article.url" target="_blank" class="flex items-center gap-1">
 							<span>{{ article.title }}</span>
 							<UIcon name="i-heroicons-arrow-top-right-on-square" />
 						</NuxtLink>
 						<span v-else>{{ article.title }}</span>
-						<template #text>
-							<NuxtImg :src="article.image" :alt="article.title" class="w-full" />
-						</template>
 					</UTooltip>
 					</h3>
 					<p class="text-gray-700 dark:text-gray-400 text-xs mb-4">
@@ -44,30 +42,36 @@
 				</div>
 
 				<section class="flex gap-2 items-end">
-					<div v-if="article.tags" class="flex-grow gap-1">
-						<div class="gap-1 flex flex-wrap">
-							<UBadge
-								v-for="tag in article.tags"
-								:key="tag"
-								:label="tag"
-								color="gray"
-								variant="soft"
-								size="xs"
-								:ui="{
-									variant: {
-										soft: 'dark:bg-gray-700',
-									}
-								}"
-							/>
-						</div>
+
+					<div v-if="article.tags" class="flex flex-grow gap-1 flex-wrap">
+						<UBadge
+							v-for="tag in article.tags"
+							:key="tag"
+							:label="tag"
+							color="gray"
+							variant="soft"
+							size="xs"
+							:ui="{ variant: { soft: 'dark:bg-gray-700' } }"
+						/>
 					</div>
-					<UButton
-						v-if="article._dir === 'proyecto'"
-						color="white"
-						size="xs"
-						icon="i-heroicons-eye-20-solid"
-						:to="article._path"
-					/>
+
+					<div v-if="article._dir === 'proyecto'" class="flex p-1">
+						<UTooltip :popper="{ placement: 'auto' }" :ui="{ base: 'p-0 h-auto' }">
+							<UButton
+								color="white"
+								size="xs"
+								icon="i-heroicons-eye"
+								variant="soft"
+								:padded=false
+								:to="article._path"
+							/>
+							<template #text>
+								<NuxtImg v-if="article.image" :src="article.image" :alt="article.title" class="w-full" />
+								<p class="text-gray-700 dark:text-gray-400 text-xs p-2">Click para ver.</p>
+							</template>
+						</UTooltip>
+					</div>
+
 				</section>
 			</UCard>
 		</ContentList>

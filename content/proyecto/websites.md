@@ -5,7 +5,7 @@ tags: ['WordPress', 'Nuxt', 'JavaScript', 'Sage*']
 ---
 ## Luz Negra website
 
-Rediseño de nuestra presencia online. La base de datos de WordPress fue migrada a Contentful como nuestro CMS y Nuxt para el frontend.
+Rediseño de porfolio online. La base de datos de WordPress fue migrada a Contentful como CMS y Nuxt para el frontend.
 
 ## Websites empresariales
 
@@ -16,6 +16,5 @@ Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hook
 - Código optimizado logrando puntajes en Lighthouse por encima del 80%
 - Configuración de plugins (SEO, LiteSpeed Cache, Google Analytics).
 - Visibilidad en buscadores, apareciendo en la primer página de resultados de Google.
-- Wordpress como CMS permitió a los clientes encargarse del contenido del sitio evitando contratar personal específico para esa tarea.
 
-*Sage es un tema de inicio popular de WordPress de código abierto diseñado para ser una base para la creación de temas personalizados de WordPress. Viene con un flujo de trabajo de desarrollo moderno que incluye herramientas como Laravel, Webpack y Browsersync, construido con HTML5, CSS3 y JavaScript, utilizando las mejores prácticas actuales para el rendimiento y la seguridad.
+\* Sage es un tema de inicio popular de WordPress de código abierto diseñado para ser una base para la creación de temas personalizados de WordPress. Viene con un flujo de trabajo de desarrollo moderno que incluye herramientas como Laravel, Webpack y Browsersync, construido con HTML5, CSS3 y JavaScript, utilizando las mejores prácticas actuales para el rendimiento y la seguridad.

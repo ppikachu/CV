@@ -1,6 +1,6 @@
 ---
 title: 'Freelance work'
-description: 'Intro y créditos de la serie documental "Pampa Libre"'
+description: 'Proyectos de video que he realizado'
 tags: ['Nuke', 'Final Cut Pro', 'Logic Pro', 'Apple Motion']
 ---
 ## Revlon (Comercial TV)
@@ -12,7 +12,7 @@ Localización al castellano de publicidades para tv.
 
 ## Nacidas para sufrir (Película / dir. Miguel Albaladejo)
 
-Formó parte del equipo de compositores digitales a cargo del reemplazo de cielos en tomas con pantalla verde.
+Formé parte del equipo de compositores digitales a cargo del reemplazo de cielos en tomas con pantalla verde.
 
 - Chroma key y composición.
 - Herramientas utilizadas: Nuke.

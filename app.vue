@@ -45,14 +45,13 @@ useHead({
 	filter: blur(1rem);
 }
 
-.carousel__pagination-button::after {
-		@apply dark:bg-gray-600;
+.swiper-button-next, .swiper-button-prev {
+		@apply dark:text-primary;
 }
-.carousel__pagination-button--active::after {
-		@apply dark:bg-gray-400;
+.swiper-pagination-bullet {
+		/* @apply dark:text-gray-400; */
 }
-
-.carousel__icon {
-	@apply dark:text-gray-300 text-gray-300;
+.swiper-pagination-bullet-active {
+		@apply dark:bg-primary;
 }
 </style>

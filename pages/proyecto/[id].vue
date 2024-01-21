@@ -1,5 +1,16 @@
 <template>
-	<UCard>
+	<UCard
+		:ui="{
+			base: 'h-full',
+			background: 'bg-transparent dark:bg-transparent md:bg-white dark:md:bg-gray-900',
+			ring: 'ring-0 md:ring-1',
+			shadow: 'shadow-none',
+			body: {
+				base: 'h-full flex flex-col justify-between',
+				padding: 'px-0 py-4 sm:py-3 sm:px-3'
+			},
+		}"
+	>
 		<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 			<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
 			<ProseH2 class="mt-0">{{ data.description }}</ProseH2>

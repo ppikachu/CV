@@ -26,8 +26,8 @@ export default defineNuxtConfig({
 			DEFAULT_LANGUAGE: "es-AR",
 			NAME: "Santiago Toyos",
 			DESCRIPTION: "CV",
-			OG_IMAGE: "/OG.png", // TODO
-			TWITTER_IMAGE: "/twitter.png", // TODO
+			OG_IMAGE: "/OG.png",
+			TWITTER_IMAGE: "/twitter.png",
 			ICON: "/icon.png", // TODO
 			HOST:
 				process.env.NODE_ENV === "production"

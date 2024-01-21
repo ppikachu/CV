@@ -18,7 +18,7 @@
 				}"
 			>
 				<div class="flex-grow">
-					<h3 class="font-bold mb-1 leading-tight">
+					<h3 class="mb-1 leading-tight">
 					<UTooltip
 						:prevent=!article.url
 						:popper="{
@@ -36,7 +36,7 @@
 						<span v-else>{{ article.title }}</span>
 					</UTooltip>
 					</h3>
-					<p class="text-gray-700 dark:text-gray-400 text-xs mb-4">
+					<p class="text-gray-700 dark:text-gray-400 text-sm mb-6">
 						{{ article.description }}
 					</p>
 				</div>
@@ -79,6 +79,7 @@
 </template>
 
 <script lang="ts" setup>
+// FIXME? 'props' is declared but its value is never read.
 const props = defineProps({
 	list: Object,
 	path: String

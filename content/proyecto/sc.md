@@ -3,7 +3,7 @@ title: 'Solar Control'
 description: 'Sitio web institucional'
 image: '/images/SC.png'
 url: 'https://solarcontrol.com.ar'
-tags: ['WordPress', 'JavaScript', 'Tailwind', 'Git']
+tags: ['WordPress', 'JavaScript', 'Tailwind']
 gallery:
   - url: '/images/sc.jpg'
     alt: 'SC1'

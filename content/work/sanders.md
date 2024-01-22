@@ -3,7 +3,7 @@ title: 'Sanders'
 description: 'Salón de belleza'
 image: '/images/AS.png'
 url: 'https://sanders.com.ar'
-tags: ['Nuxt', 'GLSL', 'Final Cut Pro', 'Apple Motion']
+tags: ['Nuxt', 'GLSL', 'Vercel']
 gallery:
   - url: '/images/sanders.jpg'
     alt: 'Sanders1'

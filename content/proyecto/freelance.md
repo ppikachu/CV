@@ -1,5 +1,5 @@
 ---
-title: 'Freelance work'
+title: 'Freelance video'
 description: 'Proyectos de video que he realizado'
 tags: ['Nuke', 'Final Cut Pro', 'Logic Pro', 'Apple Motion']
 ---

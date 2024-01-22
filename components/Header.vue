@@ -10,7 +10,9 @@
 			size="3xl"
 			/>
 		</div>
+
 		<Social />
+
 		<ColorScheme>
 			<UToggle
 				v-model="isDark"
@@ -25,6 +27,7 @@
 				}"
 			/>
 		</ColorScheme>
+
 	</section>
 </template>
 

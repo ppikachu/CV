@@ -3,7 +3,7 @@ title: 'Great Lengths'
 description: 'Extensiones de cabello'
 image: '/images/GL.png'
 url: 'https://greatlengthslatinoamerica.com'
-tags: ['Nuxt']
+tags: ['Nuxt', 'Tailwind', 'Git', 'Vercel']
 gallery:
   - url: '/images/greatlengthsl_strand.png'
     alt: 'Great Lengths1'

@@ -1,7 +1,7 @@
 ---
 title: 'Websites empresariales'
 description: 'VFX Boat, Pequeño Editor, Hookup Animation, Solar Control, Una Casa.'
-tags: ['WordPress', 'Nuxt', 'JavaScript', 'Sage*']
+tags: ['WordPress', 'Nuxt', 'JavaScript', 'Tailwind', 'Git']
 ---
 ## Luz Negra website
 
@@ -17,4 +17,4 @@ Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hook
 - Configuración de plugins (SEO, LiteSpeed Cache, Google Analytics).
 - Visibilidad en buscadores, apareciendo en la primer página de resultados de Google.
 
-\* Sage es un tema de inicio popular de WordPress de código abierto diseñado para ser una base para la creación de temas personalizados de WordPress. Viene con un flujo de trabajo de desarrollo moderno que incluye herramientas como Laravel, Webpack y Browsersync, construido con HTML5, CSS3 y JavaScript, utilizando las mejores prácticas actuales para el rendimiento y la seguridad.
+\* Sage es un tema para crear sitios en WordPress de código abierto. Con un flujo de trabajo de desarrollo moderno que incluye herramientas como Laravel, Webpack y Browsersync.

@@ -2,7 +2,7 @@
 	<main class="flex flex-col gap-8">
 		<Header />
 		<About />
-		<Experience />
+		<Current />
 		<Projects />
 		<Skills />
 	</main>

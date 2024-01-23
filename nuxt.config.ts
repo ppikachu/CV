@@ -37,5 +37,8 @@ export default defineNuxtConfig({
 	},
 	content: {
 		contentHead: false,
+		// markdown: {
+		// 	remarkPlugins: ["remark-unwrap-images"],
+		// },
 	},
 });

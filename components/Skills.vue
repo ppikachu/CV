@@ -7,7 +7,7 @@
 			<div class="flex flex-wrap gap-2">
 				<UBadge
 					size="lg"
-					color="gray"
+					variant="soft"
 					v-for="skill in data.tags"
 					:key="skill"
 					:label="skill"

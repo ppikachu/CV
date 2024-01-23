@@ -19,14 +19,7 @@ const data = [
 ]
 </script>
 <template>
-	<section class="not-prose">
-		<UButton
-			icon="i-heroicons-globe-americas-16-solid"
-			label="CABA, Buenos Aires, Argentina"
-			variant="link" color="gray"
-			size="xs"
-			:padded="false"
-		/>
+	<section class="not-prose mb-2">
 		<ul class="flex gap-2">
 			<li v-for="item in data">
 				<UButton

@@ -12,21 +12,29 @@
 		</div>
 
 		<Social />
-
-		<ColorScheme>
-			<UToggle
-				v-model="isDark"
-				on-icon="i-heroicons-moon-solid"
-				off-icon="i-heroicons-sun-solid"
-				@click="isDark = !isDark"
-				:ui="{
-					active: 'bg-gray-500 dark:bg-gray-700',
-					icon: {
-						on: 'dark:text-gray-500',
-					}
-				}"
+		<div class="flex gap-8">
+			<UButton
+				icon="i-heroicons-globe-americas-16-solid"
+				label="CABA, Buenos Aires, Argentina"
+				variant="link" color="gray"
+				size="xs"
+				:padded="false"
 			/>
-		</ColorScheme>
+			<ColorScheme>
+				<UToggle
+					v-model="isDark"
+					on-icon="i-heroicons-moon-solid"
+					off-icon="i-heroicons-sun-solid"
+					@click="isDark = !isDark"
+					:ui="{
+						active: 'bg-gray-500 dark:bg-gray-700',
+						icon: {
+							on: 'dark:text-gray-500',
+						}
+					}"
+				/>
+			</ColorScheme>
+		</div>
 
 	</section>
 </template>

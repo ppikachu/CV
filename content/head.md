@@ -1,3 +1,3 @@
 # Santiago Toyos
 
-## Desarrollador Web especializado en diseño multimedia
+## Diseñador multidisciplinario con experiencia en contenido multimedia

@@ -4,6 +4,7 @@ description: 'Landing page interactivo y portfolio online'
 image: '/images/autocine.png'
 url: 'https://luz-negra.com'
 tags: ['Nuxt', 'Three.js']
+current: true
 gallery:
   - url: '/images/luznegra1.jpg'
     alt: 'Luz Negra1'

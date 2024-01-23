@@ -2,10 +2,11 @@
 	<NuxtImg
 		:src="refinedSrc"
 		:alt="alt"
-		:class="class"
+		class="mb-0"
 		:width="width"
 		:height="height"
 	/>
+	<p class="mt-2 mb-12 text-sm text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
 </template>
 
 <script setup lang="ts">

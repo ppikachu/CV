@@ -4,6 +4,7 @@ description: 'Extensiones de cabello'
 image: '/images/GL.png'
 url: 'https://greatlengthslatinoamerica.com'
 tags: ['Nuxt', 'Tailwind', 'Git', 'Vercel']
+current: true
 gallery:
   - url: '/images/greatlengthsl_strand.png'
     alt: 'Great Lengths1'

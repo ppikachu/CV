@@ -17,4 +17,7 @@ Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hook
 - Configuración de plugins (SEO, LiteSpeed Cache, Google Analytics).
 - Visibilidad en buscadores, apareciendo en la primer página de resultados de Google.
 
+::gallery{:images='["/images/sc.jpg","/images/sc-auto.jpg"]'}
+::
+
 \* Sage es un tema para crear sitios en WordPress de código abierto. Con un flujo de trabajo de desarrollo moderno que incluye herramientas como Laravel, Webpack y Browsersync.

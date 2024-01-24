@@ -17,6 +17,8 @@ Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hook
 - Configuración de plugins (SEO, LiteSpeed Cache, Google Analytics).
 - Visibilidad en buscadores, apareciendo en la primer página de resultados de Google.
 
+::project-skills{:skills='["WordPress", "Nuxt", "JavaScript", "Tailwind", "Git"]'}
+
 ::gallery{:images='["/images/sc.jpg","/images/sc-auto.jpg"]'}
 ::
 

@@ -1,21 +1,20 @@
 <template>
 	<div>
-		<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 		<UCard
-			:ui="{
-				base: 'h-full',
-				background: 'bg-transparent dark:bg-transparent md:bg-white dark:md:bg-gray-900',
-				ring: 'ring-0 md:ring-1',
-				shadow: 'shadow-none',
-				body: {
-					base: 'h-full flex flex-col justify-between',
-					padding: 'px-0 py-4 sm:py-3 sm:px-3'
-				},
-			}"
+		:ui="{
+			background: 'bg-transparent dark:bg-transparent md:bg-white dark:md:bg-gray-900',
+			ring: 'ring-0 md:ring-1',
+			shadow: 'shadow-none',
+			body: {
+				base: 'h-full flex flex-col justify-between',
+				padding: 'px-0 py-4 sm:py-3 sm:px-3'
+			},
+		}"
 		>
+			<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 				<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
 				<ProseH2 class="mt-0">{{ data.description }}</ProseH2>
-				<section class="not-prose">
+				<section v-if="data.gallery || data.image" class="not-prose">
 					<div v-if="data.gallery" class="my-8">
 						<Swiper
 							:modules="[SwiperPagination, SwiperNavigation]"
@@ -35,7 +34,7 @@
 						<NuxtImg :src="data.image" :alt="data.title" class="w-full mb-4" />
 					</div>
 				</section>
-				<ContentRenderer :value="data" class="prose dark:prose-invert mx-auto" />
+				<ContentRenderer :value="data" class="prose dark:prose-invert w-full mx-auto" />
 		
 				<!-- <DevOnly>
 					<div class="prose dark:prose-invert prose-sm mx-auto my-4">
@@ -52,8 +51,8 @@
 					block
 					/>
 				</div>
-			</UCard>
-		</ContentQuery>
+			</ContentQuery>
+		</UCard>
 	</div>
 </template>
 

@@ -40,7 +40,7 @@
 					</p>
 				</div>
 
-				<ProjectSkills :article="article" />
+				<ProjectSkills :skills="article.tags" />
 
 				<div class="mt-4">
 					<UTooltip

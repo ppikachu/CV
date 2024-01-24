@@ -1,5 +1,5 @@
 <template>
-	<section class="not-prose my-8">
+	<section class="not-prose my-8 mx-auto">
 		<Swiper
 			:modules="[SwiperPagination, SwiperNavigation]"
 			:auto-height=true

@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 const props = defineProps({
-	skills: Array,
+	skills: Array<string>
 })
 const route = useRoute()
 </script>

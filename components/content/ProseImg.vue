@@ -2,7 +2,7 @@
 	<NuxtImg
 		:src="refinedSrc"
 		:alt="alt"
-		class="mb-0"
+		class="mb-0 w-full rounded-md"
 		:width="width"
 		:height="height"
 	/>

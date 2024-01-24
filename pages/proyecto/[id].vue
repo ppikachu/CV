@@ -26,12 +26,12 @@
 							:loop=true
 						>
 							<SwiperSlide v-for="slide in data.gallery" :key="slide">
-								<NuxtImg :src="slide.url" :alt="slide.alt" class="w-full" />
+								<NuxtImg :src="slide.url" :alt="slide.alt" class="w-full rounded-md" />
 							</SwiperSlide>
 						</Swiper>
 					</div>
 					<div v-else-if="data.image">
-						<NuxtImg :src="data.image" :alt="data.title" class="w-full mb-4" />
+						<NuxtImg :src="data.image" :alt="data.title" class="w-full mb-4 rounded-md" />
 					</div>
 				</section>
 				<ContentRenderer :value="data" class="prose dark:prose-invert w-full mx-auto" />

@@ -9,18 +9,23 @@ export default defineNuxtConfig({
 		"vue3-carousel-nuxt",
 		"nuxt-swiper",
 	],
+
 	googleFonts: {
 		families: {
 			"JetBrains Mono": [400, 700],
 		},
 	},
+
 	ui: {
 		icons: ["ph"],
 	},
+
 	app: {
 		pageTransition: { name: "page", mode: "out-in" },
 	},
+
 	devtools: { enabled: true },
+
 	runtimeConfig: {
 		public: {
 			DEFAULT_LANGUAGE: "es-AR",
@@ -35,10 +40,13 @@ export default defineNuxtConfig({
 					: "http://localhost:3000",
 		},
 	},
+
 	content: {
 		contentHead: false,
 		// markdown: {
 		// 	remarkPlugins: ["remark-unwrap-images"],
 		// },
 	},
+
+	// extends: ["@nuxtjs/i18n"],
 });

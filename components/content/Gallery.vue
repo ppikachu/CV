@@ -10,7 +10,7 @@
 			:loop=true
 		>
 			<SwiperSlide v-for="slide, key in images" :key="key">
-				<NuxtImg :src="slide" :alt="slide" class="w-full" />
+				<NuxtImg :src="slide" :alt="slide" class="w-full rounded-md" />
 			</SwiperSlide>
 		</Swiper>
 	</section>

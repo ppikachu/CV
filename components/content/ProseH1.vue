@@ -1,5 +1,5 @@
 <template>
-	<h1 class="text-primary text-xl md:text-2xl leading-tight font-normal">
+	<h1 class="text-primary leading-tight">
 		<slot />
 	</h1>
 </template>

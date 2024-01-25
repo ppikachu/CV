@@ -2,6 +2,6 @@
 <template>
 	<section>
 		<ProseH1>Proyectos</ProseH1>
-		<Card />
+		<Card :current="false" />
 	</section>
 </template>

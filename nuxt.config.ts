@@ -43,9 +43,10 @@ export default defineNuxtConfig({
 
 	content: {
 		contentHead: false,
-		// markdown: {
+		markdown: {
+			anchorLinks: false,
 		// 	remarkPlugins: ["remark-unwrap-images"],
-		// },
+		},
 	},
 
 	// extends: ["@nuxtjs/i18n"],

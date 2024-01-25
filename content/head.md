@@ -1,3 +1,3 @@
 # Santiago Toyos
 
-## Diseñador multidisciplinario con experiencia en contenido multimedia
+## Diseñador con experiencia en contenido multimedia

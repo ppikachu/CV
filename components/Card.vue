@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2 md:mt-5">
-		<ContentList path="/proyecto" :where="{current:props.current}" v-slot="{ list }">
+		<ContentList path="/proyecto" :where="{current:props.current}" :only="['title','description','image','tags','_path']" v-slot="{ list }">
 			<UCard
 				class="not-prose"
 				v-for="article in list"
@@ -72,8 +72,7 @@
 <script lang="ts" setup>
 const props = defineProps({
 	current: {
-		type: Boolean,
-		default: null
+		type: Boolean
 	}
 })
 </script>

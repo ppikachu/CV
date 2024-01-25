@@ -1,9 +1,7 @@
 <template>
 	<section>
 		<div class="flex gap-4 justify-between mt-8">
-			<div class="">
-				<ContentDoc path="/head" />
-			</div>
+			<ContentDoc path="/head" />
 			<UAvatar
 			src="/images/avatar.png"
 			alt="Santiago's avatar"

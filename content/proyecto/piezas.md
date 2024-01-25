@@ -4,6 +4,7 @@ description: 'Perpetual machine illusion'
 image: '/images/piezas.png'
 url: 'https://piezas.vercel.app'
 tags: ['Vue', 'Three.js', 'GLSL']
+current: false
 ---
 
 This design consists in just two pieces floating in space to assure no friction. 😉

@@ -1,5 +1,5 @@
 <template>
-	<section class="flex gap-1 flex-wrap" :class="{ 'mb-8': route.path.includes('proyecto') }">
+	<section class="flex gap-1 flex-wrap" :class="{ 'my-8': route.path.includes('proyecto') }">
 		<UBadge
 			v-for="skill, i in skills"
 			:key="i"

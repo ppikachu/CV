@@ -1,13 +1,13 @@
 ---
 title: 'Luz Negra'
-description: 'Landing page interactivo y portfolio online'
+description: 'Landing page interactiva y portfolio online'
 image: '/images/web_luznegra.png'
 url: 'https://luz-negra.com'
 tags: ['Nuxt', 'Three.js']
 current: true
 ---
 
-Landing page interactivo y portfolio online para estudio multimedia especializado en animación, motion graphics y web interactivas.
+Landing page interactiva y portfolio online para estudio multimedia especializado en animación, motion graphics y web interactivas.
 
 - Three.js scene with night/day mode
 - Custom 3D models as gltf

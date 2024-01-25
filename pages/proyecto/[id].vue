@@ -9,7 +9,7 @@
 				<ProseH1 v-else class="mb-1">{{ data.title }}</ProseH1>
 				<ProseH2>{{ data.description }}</ProseH2>
 			</div>
-			<NuxtPicture v-if="data.image" :src="data.image" class="w-full rounded-md mt-4" />
+			<NuxtImg v-if="data.image" :src="data.image" class="w-full rounded-md mt-4" />
 			<ContentRenderer :value="data" />
 			<ProjectSkills v-if="data.tags && data.current" :skills="data.tags" />
 			<div class="flex justify-center not-prose mt-8">

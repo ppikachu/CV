@@ -10,7 +10,7 @@ current: true
 
 ## Susan Ibitz
 
-!(/images/WEB10.jpg)
+![WEB](/images/WEB10.jpg)
 ![WEB](/images/WEB15.jpg)
 ![WEB](/images/WEB17.jpg)
 ![WEB](/images/WEB20.jpg)

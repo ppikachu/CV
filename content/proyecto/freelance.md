@@ -11,6 +11,8 @@ Localización al castellano de publicidades para tv.
 - Composición de texto y gráfica
 - Edición y masterización voice-over
 
+*fotos*
+
 ::project-skills{:skills='["Final Cut Pro", "Logic Pro"]'}
 ::
 

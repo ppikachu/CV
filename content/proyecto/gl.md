@@ -9,4 +9,5 @@ current: true
 
 Planificación, desarrollo y mantenimiento del sitio web oficial.
 
+- Uso de la API de Google Maps para mostrar la ubicación de los salones autorizados.
 - Responsable del maquetado, UI, layout, código, deploy en Vercel.

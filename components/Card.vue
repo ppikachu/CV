@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-2 md:mt-5">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4 mt-2 md:mt-5">
 		<ContentList path="/proyecto" :where="{current:props.current}" :only="['title','description','image','tags','_path','url']" v-slot="{ list }">
 			<UCard
 				class="not-prose"
@@ -35,7 +35,7 @@
 						<span v-else>{{ article.title }}</span>
 					</UTooltip>
 					</h3>
-					<p class="text-gray-700 dark:text-gray-400 text-sm mb-4">
+					<p class="text-gray-700 dark:text-gray-400 text-sm mb-2 md:mb-4">
 						{{ article.description }}
 					</p>
 				</div>

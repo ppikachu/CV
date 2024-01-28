@@ -7,14 +7,22 @@ current: false
 
 Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hookup Animation, Solar Control, Una Casa usando Wordpress como CMS y el tema Sage*.
 
+### Tienda Fresca (Clarín)
+
 ![tiendafresca1](images/screencapture-tiendafresca1.png)
 ![tiendafresca2](images/screencapture-tiendafresca2.png)
 ![tiendafresca3](images/screencapture-tiendafresca3.png)
 
+### Habitados.tv
+
 ![Habitados.tv](/images/h2_1.jpg)
+
+### Hookup Animation
 
 ![Hookup2](/images/hookup2.jpg)
 ![Hookup3](/images/hookup3.jpg)
+
+### VFX.Boat
 
 ![VFX.Boat](/images/vfxboat.com.png)
 

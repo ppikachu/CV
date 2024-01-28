@@ -2,8 +2,8 @@
 	<main class="flex flex-col">
 		<Header />
 		<About />
+		<Skills />
 		<Current />
 		<Projects />
-		<Skills />
 	</main>
 </template>

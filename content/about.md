@@ -1,10 +1,18 @@
-Soy un profesional con 20 años de experiencia en producción de contenido multimedia, aplicaciones web, 3D y tecnologías de animación.
+Soy un diseñador autodidacta con más de 20 años de experiencia. Trabajando en producción de contenido multimedia, aplicaciones web, 3D y tecnologías de animación, he perfeccionado mis habilidades y desarrollado una pasión por crear direcciones de marca y sistemas de diseño elaborados. Con atención meticulosa a los detalles y un sólido entendimiento del desarrollo front-end, me esfuerzo por crear diseños empáticos que mezclen de forma fluida la estética con la funcionalidad.
 
-**Educación**:  
-Diseño Gráfico, Universidad de Palermo, CABA  
-Escuela de Bellas Artes, CABA  
-Autodidacta
+**Habilidades:**  
+
+- Dirección de arte
+- Identidad de marca
+- Sistemas de diseño
+- Desarrollo front-end
+- Diseño de productos
+- Prototipado
+- Diseño de experiencia de usuario (UX) + Diseño de interfaz de usuario (UI)
+
+**Collaboración:**  
+Con el tiempo, he construido una sólida red de talentosos socios que pueden ofrecer una variedad de servicios adicionales. Típicamente, esto podría incluir desarrolladores, redactores, ilustradores o cualquier persona necesaria para un proyecto en particular.
 
 **Idiomas:**  
 Español (nativo)  
-Inglés (conversacional).
+Inglés (conversacional)

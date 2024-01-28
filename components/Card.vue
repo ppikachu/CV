@@ -44,7 +44,7 @@
 
 				<div class="mt-4">
 					<UTooltip
-						:popper="{ placement: 'bottom' }"
+						:popper="{ placement: 'top-start' }"
 						:ui="{ base: 'p-0 h-auto' }"
 					>
 						<UButton
@@ -60,7 +60,6 @@
 						</UButton>
 						<template #text>
 							<NuxtImg v-if="article.image" :src="article.image" :alt="article.title" class="w-full" />
-							<p class="text-gray-700 dark:text-gray-400 text-xs p-2">Click para ver.</p>
 						</template>
 					</UTooltip>
 				</div>

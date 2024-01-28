@@ -42,7 +42,6 @@ useHead({
 .page-enter-from,
 .page-leave-to {
 	opacity: 0;
-	filter: blur(1rem);
 }
 
 .swiper-button-next, .swiper-button-prev {

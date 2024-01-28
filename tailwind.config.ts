@@ -28,7 +28,7 @@ export default {
 							fontSize: theme("fontSize.base")[0],
 						},
 						"h1, h2, h3, h4": {
-							marginTop: 0,
+							marginTop: '3rem',
 							marginBottom: '1rem',
 							fontWeight: 400,
 						},

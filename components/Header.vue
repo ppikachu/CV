@@ -1,11 +1,14 @@
 <template>
-	<section>
-		<div class="flex gap-4 justify-between mt-8">
-			<ContentDoc path="/head" />
+	<section class="flex flex-col gap-2 mb-8">
+		<div class="flex gap-8 justify-between mt-4 sm:mt-8 items-center not-prose">
+			<div>
+				<ProseH1>Santiago Toyos</ProseH1>
+				<ProseH2>Diseñador con experiencia en contenido multimedia</ProseH2>
+			</div>
 			<UAvatar
 			src="/images/avatar.png"
 			alt="Santiago's avatar"
-			size="3xl"
+			size="2xl"
 			/>
 		</div>
 
@@ -48,3 +51,12 @@ const isDark = computed({
 	}
 })
 </script>
+
+<style scoped>
+h1 {
+	@apply text-2xl;
+}
+h2 {
+	@apply text-xl;
+}
+</style>

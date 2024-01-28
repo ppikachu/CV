@@ -5,8 +5,12 @@
 			target="_blank"
 			variant="soft"
 			size="xs"
+			block
 		>
 			<ContentSlot />
+			<template #trailing>
+				<UIcon name="i-heroicons-arrow-right-20-solid" />
+			</template>
 		</UButton>
 	</div>
 </template>

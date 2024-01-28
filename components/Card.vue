@@ -21,7 +21,7 @@
 					<UTooltip
 						:prevent=!article.url
 						:popper="{
-							placement: 'auto',
+							placement: 'top',
 							// offsetDistance: 10,
 						}"
 					>
@@ -44,13 +44,14 @@
 
 				<div class="mt-4">
 					<UTooltip
-						:popper="{ placement: 'auto' }"
+						:popper="{ placement: 'bottom' }"
 						:ui="{ base: 'p-0 h-auto' }"
 					>
 						<UButton
 							size="xs"
 							label="Ver proyecto"
-							variant="soft"
+							variant="solid"
+							color="white"
 							:to="article._path"
 						>
 							<template #trailing>

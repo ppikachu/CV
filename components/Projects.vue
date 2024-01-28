@@ -1,7 +1,7 @@
 
 <template>
 	<section>
-		<ProseH1>Proyectos</ProseH1>
+		<ProseH1>Proyectos Destacados</ProseH1>
 		<Card :current="false" />
 	</section>
 </template>

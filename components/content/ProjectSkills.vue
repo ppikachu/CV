@@ -5,6 +5,7 @@
 			:key="i"
 			:label="skill"
 			variant="soft"
+			color="gray"
 			:ui="{ variant: { soft: 'dark:bg-gray-700' } }"
 		/>
 	</section>

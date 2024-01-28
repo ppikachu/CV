@@ -1,6 +1,6 @@
 ---
-title: 'Websites empresariales'
-description: 'VFX Boat, Pequeño Editor, Hookup Animation, Solar Control, Una Casa.'
+title: 'VFX Boat, Pequeño Editor, Hookup Animation, Solar Control, Una Casa'
+description: 'Websites empresariales'
 tags: ['WordPress', 'JavaScript', 'Tailwind', 'Git']
 current: false
 ---

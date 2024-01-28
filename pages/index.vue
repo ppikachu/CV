@@ -1,5 +1,5 @@
 <template>
-	<main class="flex flex-col gap-8">
+	<main class="flex flex-col">
 		<Header />
 		<About />
 		<Current />

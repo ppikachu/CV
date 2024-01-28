@@ -8,6 +8,7 @@
 				<UBadge
 					size="lg"
 					variant="soft"
+					color="gray"
 					v-for="skill in data.tags"
 					:key="skill"
 					:label="skill"

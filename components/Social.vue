@@ -19,7 +19,7 @@ const data = [
 ]
 </script>
 <template>
-	<section class="not-prose mb-2">
+	<section class="not-prose">
 		<ul class="flex gap-2">
 			<li v-for="item in data">
 				<UButton

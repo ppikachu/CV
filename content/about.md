@@ -1,4 +1,4 @@
-Soy un diseñador autodidacta con más de 20 años de experiencia. Trabajando en producción de contenido multimedia, aplicaciones web, 3D y tecnologías de animación, he perfeccionado mis habilidades y desarrollado una pasión por crear direcciones de marca y sistemas de diseño elaborados. Con atención meticulosa a los detalles y un sólido entendimiento del desarrollo front-end, me esfuerzo por crear diseños empáticos que mezclen de forma fluida la estética con la funcionalidad.
+Soy un diseñador autodidacta con más de 20 años de experiencia. Trabajando en producción de contenido multimedia, aplicaciones web, 3D y tecnologías de animación. Con atención a los detalles, me esfuerzo por crear diseños empáticos que combinen estética con funcionalidad.
 
 **Habilidades:**  
 

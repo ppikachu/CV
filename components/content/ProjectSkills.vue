@@ -4,10 +4,10 @@
 			v-for="skill, i in skills"
 			:key="i"
 			:label="skill"
-			variant="soft"
+			variant="outline"
 			color="gray"
-			:ui="{ variant: { soft: 'dark:bg-gray-700' } }"
-		/>
+			:ui="{ variant: { outline: 'ring-gray-200 dark:ring-gray-800' } }"
+			/>
 	</section>
 </template>
 

@@ -42,7 +42,7 @@
 
 				<ProjectSkills :skills="article.tags" />
 
-				<div class="mt-4">
+				<div class="mt-4 sm:mt-3">
 					<UTooltip
 						:popper="{ placement: 'top-start' }"
 						:ui="{ base: 'p-0 h-auto' }"

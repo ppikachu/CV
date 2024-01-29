@@ -5,5 +5,6 @@
 		<Skills />
 		<Current />
 		<Projects />
+		<SiteFooter />
 	</main>
 </template>

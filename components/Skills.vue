@@ -7,8 +7,9 @@
 			<div class="flex flex-wrap gap-2">
 				<UBadge
 					size="lg"
-					variant="soft"
-					color="gray"
+					variant="outline"
+					color="white"
+					:ui="{ variant: { outline: 'ring-gray-200 dark:ring-gray-800' } }"
 					v-for="skill in data.tags"
 					:key="skill"
 					:label="skill"

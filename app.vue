@@ -45,12 +45,12 @@ useHead({
 }
 
 .swiper-button-next, .swiper-button-prev {
-		@apply dark:text-primary;
+	@apply dark:text-primary;
 }
 .swiper-pagination-bullet {
-		/* @apply dark:text-gray-400; */
+	/* @apply dark:text-gray-400; */
 }
 .swiper-pagination-bullet-active {
-		@apply dark:bg-primary;
+	@apply dark:bg-primary;
 }
 </style>

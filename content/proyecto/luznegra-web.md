@@ -15,3 +15,5 @@ Landing page interactiva y portfolio online para estudio multimedia especializad
 - Responsive (tablet & mobile friendly)
 - Contentful CMS and media storage
 - Contact form using Formspark and Turnstile for CAPTCHA
+
+![Autocine 3D](/images/autocine.png)

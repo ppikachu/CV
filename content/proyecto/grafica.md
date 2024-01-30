@@ -5,8 +5,6 @@ tags: ['Illustrator', 'Modo', 'Photoshop']
 current: false
 ---
 
-Proyectos de gráfica impresa y digital
-
 ### Willem
 
 ![Willem](/images/willem.jpg)

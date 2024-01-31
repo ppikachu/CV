@@ -9,5 +9,6 @@ current: false
 
 ![Willem](/images/willem.jpg)
 ![semueve-tapa](/images/semueve-tapa.jpg)
-![semueve-cd](/images/semueve-cd.jpg)
-![willem-semueve](/images/willem-semueve.jpg)
+
+::carousel{:images='["semueve-cd.jpg", "willem-semueve.jpg"]'}
+::

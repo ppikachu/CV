@@ -6,8 +6,6 @@ export default defineNuxtConfig({
 		"@nuxt/devtools",
 		"@nuxtjs/google-fonts",
 		"@nuxt/image",
-		"vue3-carousel-nuxt",
-		"nuxt-swiper",
 	],
 
 	googleFonts: {
@@ -45,7 +43,7 @@ export default defineNuxtConfig({
 		contentHead: false,
 		markdown: {
 			anchorLinks: false,
-		// 	remarkPlugins: ["remark-unwrap-images"],
+			// remarkPlugins: ["remark-unwrap-images"],
 		},
 	},
 

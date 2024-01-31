@@ -14,11 +14,8 @@ Localización al castellano de publicidades para tv.
 ::project-skills{:skills='["Final Cut Pro", "Logic Pro"]'}
 ::
 
-![Revlon 0](/images/still_revlon-0.jpg)
-![Revlon 1](/images/still_revlon-1.jpg)
-![Revlon 2](/images/still_revlon-2.jpg)
-![Revlon 3](/images/still_revlon-3.jpg)
-![Revlon 4](/images/still_revlon-4.jpg)
+::carousel{:images='["still_revlon-0.jpg", "still_revlon-1.jpg", "still_revlon-2.jpg", "still_revlon-3.jpg", "still_revlon-4.jpg"]'}
+::
 
 ## Tango Restó (Comercial TV)
 

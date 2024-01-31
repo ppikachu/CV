@@ -10,8 +10,11 @@ current: true
 
 ## Susan Ibitz
 
-![WEB](/images/WEB10.jpg)
+<!-- ![WEB](/images/WEB10.jpg)
 ![WEB](/images/WEB15.jpg)
 ![WEB](/images/WEB17.jpg)
 ![WEB](/images/WEB20.jpg)
-![WEB](/images/WEB23.jpg)
+![WEB](/images/WEB23.jpg) -->
+
+::carousel{:images='["WEB10.jpg", "WEB15.jpg", "WEB17.jpg", "WEB20.jpg", "WEB23.jpg"]'}
+::

@@ -20,7 +20,7 @@ const data = [
 </script>
 <template>
 	<section class="not-prose">
-		<ul class="flex gap-2">
+		<ul class="flex gap-3">
 			<li v-for="item in data">
 				<UButton
 					:to="item.to"
@@ -28,6 +28,7 @@ const data = [
 					:icon="item.icon"
 					variant="ghost"
 					color="gray"
+					size="md"
 				/>
 			</li>
 		</ul>

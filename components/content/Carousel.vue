@@ -18,7 +18,8 @@
 			:ui="{
 				item: 'basis-full',
 				indicators: {
-					inactive: 'dark:bg-opacity-30 mix-blend-normal',
+					active: 'bg-gray-200 dark:bg-gray-200',
+					inactive: 'bg-opacity-30 dark:bg-opacity-30 mix-blend-normal',
 				}
 			}"
 			class="rounded-lg overflow-hidden"

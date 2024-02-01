@@ -1,7 +1,7 @@
 ---
 title: 'Luz Negra'
 description: 'Landing page interactiva y portfolio online'
-image: '/images/web_luznegra.png'
+image: '/images/web_luznegra-1620x769.png'
 url: 'https://luz-negra.com'
 tags: ['Nuxt', 'Three.js']
 current: true
@@ -16,4 +16,4 @@ Landing page interactiva y portfolio online para estudio multimedia especializad
 - Contentful CMS and media storage
 - Contact form using Formspark and Turnstile for CAPTCHA
 
-![Autocine 3D](/images/autocine.png)
+![Autocine 3D](/images/autocine-1096x740.png)

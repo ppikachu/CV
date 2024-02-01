@@ -10,7 +10,8 @@
 				<ProseH2>{{ data.description }}</ProseH2>
 				<ProjectSkills v-if="data.tags" :skills="data.tags" />
 			</div>
-			<NuxtImg v-if="data.image" :src="data.image" class="w-full rounded-md mt-4" />
+			<!-- <NuxtImg v-if="data.image" :src="data.image" class="w-full rounded-md mt-4" /> -->
+			<ProseImg v-if="data.image" :src="data.image" :alt="data.title" :show-alt="false" />
 			<ContentRenderer :value="data" />
 			<div class="flex justify-center not-prose mt-8">
 				<UButton

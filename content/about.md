@@ -10,7 +10,7 @@ Soy un diseñador autodidacta con más de 20 años de experiencia. Trabajando en
 - Prototipado
 - Diseño de experiencia de usuario (UX) + Diseño de interfaz de usuario (UI)
 
-**Collaboración:**  
+**Colaboración:**  
 Con el tiempo, he construido una sólida red de talentosos socios que pueden ofrecer una variedad de servicios adicionales. Típicamente, esto podría incluir desarrolladores, redactores, ilustradores o cualquier persona necesaria para un proyecto en particular.
 
 **Idiomas:**  

@@ -1,7 +1,7 @@
 ---
 title: 'Piezas'
 description: 'Perpetual machine illusion. Proyecto personal'
-image: '/images/piezas.png'
+image: '/images/piezas-980x480.png'
 url: 'https://piezas.vercel.app'
 tags: ['Vue', 'Three.js', 'GLSL']
 current: false

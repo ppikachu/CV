@@ -31,10 +31,10 @@ export default defineNuxtConfig({
 			DESCRIPTION: "CV",
 			OG_IMAGE: "/OG.png",
 			TWITTER_IMAGE: "/twitter.png",
-			ICON: "/icon.png", // TODO
+			ICON: "/icon.png",
 			HOST:
 				process.env.NODE_ENV === "production"
-					? "https://cv-st.vercel.app"
+					? "https://toyos.vercel.app"
 					: "http://localhost:3000",
 		},
 	},

@@ -7,8 +7,8 @@ current: false
 
 ### Willem
 
-![Willem](/images/willem.jpg)
-![semueve-tapa](/images/semueve-tapa.jpg)
+![Willem](/images/willem-2528x2528.jpg)
+![semueve-tapa](/images/semueve-tapa-600x600.jpg)
 
-::carousel{:images='["semueve-cd.jpg", "willem-semueve.jpg"]'}
+::carousel{:images='["semueve-cd-600x486.jpg", "willem-semueve-1024x683.jpg"]'}
 ::

@@ -14,7 +14,7 @@ Localización al castellano de publicidades para tv.
 ::project-skills{:skills='["Final Cut Pro", "Logic Pro"]'}
 ::
 
-::carousel{:images='["still_revlon-0.jpg", "still_revlon-1.jpg", "still_revlon-2.jpg", "still_revlon-3.jpg", "still_revlon-4.jpg"]'}
+::carousel{:images='["still_revlon-0-1846x1038.jpg", "still_revlon-1-1846x1038.jpg", "still_revlon-2-1846x1038.jpg", "still_revlon-3-1846x1038.jpg", "still_revlon-4-1846x1038.jpg"]'}
 ::
 
 ## Tango Restó (Comercial TV)
@@ -25,7 +25,7 @@ Localización al castellano de publicidades para tv.
 ::project-skills{:skills='["Nuke", "Final Cut Pro", "Logic Pro"]'}
 ::
 
-![Tango Restó - Iwao](/images/still_tango-resto.jpg)
+![Tango Restó - Iwao](/images/still_tango-resto-1846x1038.jpg)
 
 ## Nacidas para sufrir (Película / dir. Miguel Albaladejo)
 

@@ -1,7 +1,7 @@
 ---
 title: 'Sanders'
 description: 'Sitio web oficial'
-image: '/images/web_sanders.png'
+image: '/images/web_sanders-1620x769.png'
 url: 'https://sanders.com.ar'
 tags: ['Nuxt', 'GLSL', 'Vercel']
 current: true

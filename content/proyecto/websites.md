@@ -9,22 +9,22 @@ Desarrollé web empresariales para clientes como VFX Boat, Pequeño Editor, Hook
 
 ### Tienda Fresca (Clarín)
 
-![tiendafresca1](images/screencapture-tiendafresca1.png)
-![tiendafresca2](images/screencapture-tiendafresca2.png)
-![tiendafresca3](images/screencapture-tiendafresca3.png)
+![tiendafresca1](images/screencapture-tiendafresca1-637x554.png)
+![tiendafresca2](images/screencapture-tiendafresca2-637x752.png)
+![tiendafresca3](images/screencapture-tiendafresca3-637x660.png)
 
 ### Habitados.tv
 
-![Habitados.tv](/images/h2_1.jpg)
+![Habitados.tv](/images/h2_1-1090x1177.jpg)
 
 ### Hookup Animation
 
-![Hookup2](/images/hookup2.jpg)
-![Hookup3](/images/hookup3.jpg)
+![Hookup2](/images/hookup2-1008x601.jpg)
+![Hookup3](/images/hookup3-1008x601.jpg)
 
 ### VFX.Boat
 
-![VFX.Boat](/images/vfxboat.com.png)
+![VFX.Boat](/images/vfxboat.com-972x931.png)
 
 - Desarrollo y deploy de sitios web en Google Cloud y en empresas locales de hosting.
 - Responsable del diseño final, UI, HTML layout y código.

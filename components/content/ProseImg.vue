@@ -5,6 +5,7 @@
 		class="mb-0 w-full rounded-md"
 		:width="dimensionedSrc.width"
 		:height="dimensionedSrc.height"
+		placeholder
 	/>
 	<p v-if="alt!=='' && showAlt" class="mt-2 mb-4 text-sm text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
 </template>

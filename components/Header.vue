@@ -6,7 +6,7 @@
 				<ProseH2>Diseñador con experiencia en contenido multimedia</ProseH2>
 			</div>
 			<UAvatar
-			src="/images/avatar.png"
+			src="/images/avatar-128x128.png"
 			alt="Santiago's avatar"
 			size="2xl"
 			/>

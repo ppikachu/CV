@@ -7,6 +7,8 @@ current: false
 
 ### Willem
 
+Arte de los CD's de la banda Willem.
+
 ![Willem](/images/willem-2528x2528.jpg)
 ![semueve-tapa](/images/semueve-tapa-600x600.jpg)
 

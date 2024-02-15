@@ -1,0 +1,27 @@
+.caja-int {
+	@apply w-full md:w-7/12 px-4 py-8 mx-auto prose prose-invert lg:prose-lg;
+}
+.caja-int-no-image {
+	@apply w-full px-4 py-8 prose-lg;
+}
+.caja-img {
+	@apply object-cover w-full md:w-5/12 md:rounded-r;
+}
+.caja-out {
+	@apply md:rounded-lg flex flex-col-reverse md:flex-row;
+}
+address {
+	@apply not-italic;
+}
+.butoff {
+	@apply inline-flex p-0.5 mr-2 mt-2 no-underline rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-2 focus:outline-none focus:ring-pink-600;
+}
+
+.aspect-video {
+	@apply w-full;
+	aspect-ratio: 16 / 9;
+}
+.aspect-square {
+	@apply w-full;
+	aspect-ratio: 1 / 1;
+}

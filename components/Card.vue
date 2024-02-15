@@ -1,5 +1,5 @@
 <template>
-	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4 mt-2 md:mt-5">
+	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4">
 		<ContentList path="/proyecto" :where="{current:props.current}" :only="['title','description','image','tags','_path','url']" v-slot="{ list }">
 			<UCard
 				class="not-prose"
@@ -28,7 +28,7 @@
 						<template #text>
 							Online. Click para ver.
 						</template>
-						<NuxtLink v-if="article.url" :to="article.url" target="_blank" class="flex items-center gap-1">
+						<NuxtLink v-if="article.url" :to="article.url" target="_blank" class="flex items-center gap-1 text-primary">
 							<span>{{ article.title }}</span>
 							<UIcon name="i-heroicons-arrow-top-right-on-square" />
 						</NuxtLink>

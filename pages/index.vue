@@ -1,8 +1,8 @@
 <template>
 	<main class="flex flex-col">
-		<ClientOnly>
+		<!-- <ClientOnly>
 			<Hero />
-		</ClientOnly>
+		</ClientOnly> -->
 		<section class="z-10">
 			<Header />
 			<About />

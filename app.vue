@@ -28,6 +28,7 @@ useHead({
 </script>
 <template>
 	<UContainer>
+		<NuxtLoadingIndicator />
 		<section class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
 			<NuxtPage />
 		</section>
@@ -42,15 +43,5 @@ useHead({
 .page-enter-from,
 .page-leave-to {
 	opacity: 0;
-}
-
-.swiper-button-next, .swiper-button-prev {
-	@apply dark:text-primary;
-}
-.swiper-pagination-bullet {
-	/* @apply dark:text-gray-400; */
-}
-.swiper-pagination-bullet-active {
-	@apply dark:bg-primary;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4">
-		<ContentList path="/proyecto" :where="{current:props.current}" :only="['title','description','image','tags','_path','url']" v-slot="{ list }">
+		<ContentList path="/proyecto" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
 				class="not-prose"
 				v-for="article in list"
@@ -16,29 +16,30 @@
 					},
 				}"
 			>
-				<div class="flex-grow">
-					<h3 class="mb-1 leading-tight">
-					<UTooltip
-						:prevent=!article.url
-						:popper="{
-							placement: 'top',
-							// offsetDistance: 10,
-						}"
-					>
+				<h3 class="mb-1 leading-tight">
+					<NuxtLink v-if="article.url" :to="article.url" target="_blank">
+						<UTooltip
+							class="w-full"
+							:popper="{
+								placement: 'top',
+								text: 'Online. Click para ver.'
+								// offsetDistance: 10,
+							}"
+						>
 						<template #text>
 							Online. Click para ver.
 						</template>
-						<NuxtLink v-if="article.url" :to="article.url" target="_blank" class="flex items-center gap-1 text-primary">
-							<span>{{ article.title }}</span>
-							<UIcon name="i-heroicons-arrow-top-right-on-square" />
+							<div class="flex justify-between gap-1 w-full">
+								<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
+								<UBadge v-if="article.wip" size="xs" color="white" label="WIP" :ui="{ color: { white: { solid: 'text-gray-400 dark:text-gray-500'} } }" />
+							</div>
+						</UTooltip>
 						</NuxtLink>
 						<span v-else>{{ article.title }}</span>
-					</UTooltip>
-					</h3>
-					<p class="text-gray-700 dark:text-gray-400 text-sm mb-2 md:mb-4">
-						{{ article.description }}
-					</p>
-				</div>
+				</h3>
+				<p class="text-gray-700 dark:text-gray-400 text-sm mb-2 md:mb-4">
+					{{ article.description }}
+				</p>
 
 				<ProjectSkills :skills="article.tags" />
 

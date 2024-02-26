@@ -28,7 +28,6 @@
 	</div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 const nuxtApp = useNuxtApp()
-const route = useRoute()
 </script>

@@ -6,7 +6,6 @@
 					class="not-prose"
 					v-for="article in list"
 					:key="article._path"
-					:to="article._path"
 					:ui="{
 						background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-900',
 						ring: 'ring-0 sm:ring-1',

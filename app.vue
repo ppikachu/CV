@@ -29,9 +29,9 @@ useHead({
 <template>
 	<UContainer>
 		<NuxtLoadingIndicator />
-		<section class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
+		<main class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
 			<NuxtPage />
-		</section>
+		</main>
 	</UContainer>
 </template>
 

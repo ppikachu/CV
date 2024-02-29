@@ -29,7 +29,7 @@ export default defineNuxtConfig({
 		public: {
 			DEFAULT_LANGUAGE: "es-AR",
 			NAME: "Santiago Toyos",
-			DESCRIPTION: "CV",
+			DESCRIPTION: "Diseñador con experiencia en contenido multimedia",
 			OG_IMAGE: "/OG.png",
 			TWITTER_IMAGE: "/twitter.png",
 			ICON: "/icon.png",

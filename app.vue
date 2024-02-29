@@ -28,7 +28,7 @@ useHead({
 </script>
 <template>
 	<UContainer>
-		<NuxtLoadingIndicator />
+		<NuxtLoadingIndicator color="#a3e635" />
 		<main class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
 			<NuxtPage />
 		</main>

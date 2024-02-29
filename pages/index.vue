@@ -1,8 +1,6 @@
 <template>
 	<div class="flex flex-col">
-		<!-- <ClientOnly>
-			<Hero />
-		</ClientOnly> -->
+		<!-- <ClientOnly><Hero /></ClientOnly> -->
 		<Header />
 		<About />
 		<Skills />

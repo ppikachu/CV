@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4">
-		<ContentList path="/proyecto" :where="{current:props.current}">
+		<ContentList path="proyecto" :where="{current:props.current}">
 			<template #default="{ list }">
 				<UCard
 					class="not-prose"

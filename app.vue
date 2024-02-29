@@ -28,7 +28,7 @@ useHead({
 </script>
 <template>
 	<UContainer>
-		<NuxtLoadingIndicator />
+		<NuxtLoadingIndicator color="repeating-linear-gradient(to right, #121212 0%, #a3e635 100%)" />
 		<section class="prose dark:prose-invert max-w-3xl mx-auto mt-4 mb-10">
 			<NuxtPage />
 		</section>

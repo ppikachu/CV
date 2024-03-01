@@ -10,60 +10,53 @@
 					ring: 'ring-0 sm:ring-1',
 					shadow: 'shadow-none',
 					body: {
-						base: 'h-full flex flex-col justify-between',
+						base: 'h-full',
 						padding: 'px-0 py-3 sm:p-3 sm:px-3 md:py-3 md:px-3'
 					},
 				}"
 			>
-				<h3 class="mb-1 leading-tight">
-					<NuxtLink v-if="article.url" :to="article.url" target="_blank">
-						<UTooltip
-							class="w-full"
-							:popper="{
-								placement: 'top',
-								text: 'Online. Click para ver.'
-								// offsetDistance: 10,
-							}"
-						>
-						<template #text>
-							Online. Click para ver.
-						</template>
-							<div class="flex justify-between gap-1 w-full">
-								<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
-								<UBadge v-if="article.wip" size="xs" color="white" label="WIP" :ui="{ color: { white: { solid: 'text-gray-400 dark:text-gray-500'} } }" />
-							</div>
-						</UTooltip>
-						</NuxtLink>
-						<span v-else>{{ article.title }}</span>
-				</h3>
-				<p class="text-gray-700 dark:text-gray-400 text-sm mb-2 md:mb-4">
-					{{ article.description }}
-				</p>
-
-				<ProjectSkills :skills="article.tags" />
-
-				<div class="mt-4 sm:mt-3">
-					<UTooltip
-						:popper="{ placement: 'top-start' }"
-						:ui="{ base: 'p-0 h-auto' }"
+				<div class="h-full flex flex-col justify-between">
+					<div>
+						<h2 class="mb-2 leading-tight">
+							<NuxtLink v-if="article.url" :to="article.url" target="_blank">
+								<UTooltip
+									class="w-full"
+									:popper="{
+										placement: 'top',
+										text: 'Online. Click para ver.'
+										// offsetDistance: 10,
+									}"
+								>
+								<template #text>
+									Online. Click para ver.
+								</template>
+									<div class="flex justify-between gap-1 w-full">
+										<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
+										<UBadge v-if="article.wip" size="xs" color="white" label="WIP" :ui="{ color: { white: { solid: 'text-gray-400 dark:text-gray-500'} } }" />
+									</div>
+								</UTooltip>
+								</NuxtLink>
+								<span v-else>{{ article.title }}</span>
+						</h2>
+						<p class="text-gray-700 dark:text-gray-400 mb-4 leading-snug">
+							{{ article.description }}
+						</p>
+						<ProjectSkills :skills="article.tags" />
+					</div>
+					<UButton
+						size="xs"
+						label="Ver proyecto"
+						variant="solid"
+						color="white"
+						class="mt-5"
+						block
+						:to="article._path"
 					>
-						<UButton
-							size="xs"
-							label="Ver proyecto"
-							variant="solid"
-							color="white"
-							:to="article._path"
-						>
-							<template #trailing>
-								<UIcon name="i-heroicons-arrow-right-20-solid" />
-							</template>
-						</UButton>
-						<template #text>
-							<NuxtImg v-if="article.image" :src="article.image" :alt="article.title" class="w-full" />
+						<template #trailing>
+							<UIcon name="i-heroicons-arrow-right-20-solid" />
 						</template>
-					</UTooltip>
+					</UButton>
 				</div>
-
 			</UCard>
 		</ContentList>
 	</div>

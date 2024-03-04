@@ -2,18 +2,15 @@
 import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="not-prose mt-4">
-		<ul class="flex gap-3">
-			<li v-for="item in data">
-				<UButton
-					:to="item.to"
-					target="_blank"
-					:icon="item.icon"
-					variant="ghost"
-					color="gray"
-					size="md"
-				/>
-			</li>
-		</ul>
+	<section class="not-prose my-2 flex gap-5">
+		<UButton v-for="item in data"
+			:to="item.to"
+			target="_blank"
+			variant="ghost"
+			color="black"
+			:padded="false"
+		>
+			<UIcon :name="item.icon" dynamic class="w-6 h-6" />
+		</UButton>
 	</section>
 </template>

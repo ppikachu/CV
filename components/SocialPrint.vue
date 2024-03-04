@@ -9,10 +9,13 @@ import data from '~/assets/social_links.json'
 			:to="item.to"
 			:padded="false"
 			:label="item.label"
-			:icon="item.icon"
 			target="_blank"
 			variant="link"
 			color="white"
-		/>
+		>
+			<template #leading>
+				<UIcon :name="item.icon" dynamic class="w-5 h-5" />
+			</template>
+		</UButton>
 	</section>
 </template>

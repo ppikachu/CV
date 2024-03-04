@@ -1,25 +1,8 @@
 <script setup lang="ts">
-const data = [
-	{
-		icon: 'i-ph-envelope-simple-bold',
-		to: 'mailto:ppikachu@gmail.com',
-	},
-	{
-		icon: 'i-ph-github-logo-bold',
-		to: 'https://github.com/ppikachu',
-	},
-	{
-		icon: 'i-ph-behance-logo-bold',
-		to: 'https://www.behance.net/stoyos',
-	},
-	{
-		icon: 'i-ph-linkedin-logo-bold',
-		to: 'https://www.linkedin.com/in/santiago-toyos',
-	},
-]
+import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="not-prose">
+	<section class="not-prose mt-4">
 		<ul class="flex gap-3">
 			<li v-for="item in data">
 				<UButton

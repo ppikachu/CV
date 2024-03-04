@@ -1,5 +1,5 @@
 <template>
-	<div class="not-prose my-4">
+	<div class="not-prose my-4 no-print">
 		<UButton
 			:to="props.url"
 			target="_blank"

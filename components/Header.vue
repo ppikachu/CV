@@ -1,5 +1,5 @@
 <template>
-	<section class="flex flex-col gap-2 mb-8">
+	<section class="flex flex-col gap-2 mb-4">
 		<div class="flex gap-8 justify-between mt-4 sm:mt-8 items-center not-prose">
 			<div>
 				<ProseH1>Santiago Toyos</ProseH1>

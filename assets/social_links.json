@@ -1,0 +1,22 @@
+[
+		{
+			"to": "mailto:ppikachu@gmail.com",
+			"label": "ppikachu@gmail.com",
+			"icon": "i-ph-envelope-simple-bold"
+		},
+		{
+			"to": "https://github.com/ppikachu",
+			"label": "github.com/ppikachu",
+			"icon": "i-ph-github-logo-bold"
+		},
+		{
+			"to": "https://www.behance.net/stoyos",
+			"label": "www.behance.net/stoyos",
+			"icon": "i-ph-behance-logo-bold"
+		},
+		{
+			"to": "https://www.linkedin.com/in/santiago-toyos",
+			"label": "www.linkedin.com/in/santiago-toyos",
+			"icon": "i-ph-linkedin-logo-bold"
+		}
+	]

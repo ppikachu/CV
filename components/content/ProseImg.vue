@@ -1,13 +1,15 @@
 <template>
-	<NuxtImg
-		:src="refinedSrc"
-		:alt="alt"
-		class="mb-0 w-full h-auto rounded-md"
-		:width="dimensionedSrc.width"
-		:height="dimensionedSrc.height"
-		placeholder
-	/>
-	<p v-if="alt!=='' && showAlt" class="mt-2 mb-4 text-sm text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
+	<div class="no-print">
+		<NuxtImg
+			:src="refinedSrc"
+			:alt="alt"
+			class="mb-0 w-full h-auto rounded-md"
+			:width="dimensionedSrc.width"
+			:height="dimensionedSrc.height"
+			placeholder
+		/>
+		<p v-if="alt!=='' && showAlt" class="mt-2 mb-4 text-sm text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
+	</div>
 </template>
 
 <script setup lang="ts">

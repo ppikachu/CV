@@ -1,9 +1,13 @@
 <template>
 	<section>
 		<ContentQuery path="/skills" find="one" v-slot="{ data }">
+
+			<ContentRenderer :value="data" />
+
 			<div class="prose dark:prose-invert my-4">
 				<ProseH1>{{ data.title }}</ProseH1>
 			</div>
+
 			<div class="flex flex-wrap gap-2">
 				<UBadge
 					size="lg"

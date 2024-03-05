@@ -13,7 +13,7 @@ const props = defineProps({
 
 <template>
 	<!--videos component-->
-	<section v-if="props.src">
+	<section v-if="props.src" class="no-print">
 		<aside class="my-8">
 			<video controls playsinline :data-poster="props.poster" class="my-0 w-full" >
 				<source :src="props.src" type="video/mp4" />

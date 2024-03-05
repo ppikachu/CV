@@ -1,36 +1,16 @@
 <script setup lang="ts">
-const data = [
-	{
-		icon: 'i-ph-envelope-simple-bold',
-		to: 'mailto:ppikachu@gmail.com',
-	},
-	{
-		icon: 'i-ph-github-logo-bold',
-		to: 'https://github.com/ppikachu',
-	},
-	{
-		icon: 'i-ph-behance-logo-bold',
-		to: 'https://www.behance.net/stoyos',
-	},
-	{
-		icon: 'i-ph-linkedin-logo-bold',
-		to: 'https://www.linkedin.com/in/santiago-toyos',
-	},
-]
+import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="not-prose">
-		<ul class="flex gap-3">
-			<li v-for="item in data">
-				<UButton
-					:to="item.to"
-					target="_blank"
-					:icon="item.icon"
-					variant="ghost"
-					color="gray"
-					size="md"
-				/>
-			</li>
-		</ul>
+	<section class="not-prose my-2 flex gap-3">
+		<UButton v-for="item in data"
+			:to="item.to"
+			target="_blank"
+			variant="ghost"
+			color="black"
+			:padded="false"
+		>
+			<UIcon :name="item.icon" dynamic class="w-4 h-4 md:w-6 md:h-6" />
+		</UButton>
 	</section>
 </template>

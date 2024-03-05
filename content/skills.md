@@ -1,10 +1,13 @@
 ---
-title: 'Skills'
+title: 'Herramientas'
 tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 'Git', 'Ilustración Digital', 'Final Cut Pro', 'Apple Motion', 'Modo', 'Nuke', 'Moho Pro' ]
 ---
-**Habilidades:**  
+**Qué puedo hacer:**  
 
 - Dirección de arte
 - Identidad de marca + producto
 - Producción audiovisual
 - Prototipado + Desarrollo front-end
+
+**Idiomas:**  
+Español (nativo), Inglés (medio)

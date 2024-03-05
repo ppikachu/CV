@@ -2,7 +2,7 @@
 import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="not-prose my-2 flex gap-5">
+	<section class="not-prose my-2 flex gap-3">
 		<UButton v-for="item in data"
 			:to="item.to"
 			target="_blank"
@@ -10,7 +10,7 @@ import data from '~/assets/social_links.json'
 			color="black"
 			:padded="false"
 		>
-			<UIcon :name="item.icon" dynamic class="w-6 h-6" />
+			<UIcon :name="item.icon" dynamic class="w-4 h-4 md:w-6 md:h-6" />
 		</UButton>
 	</section>
 </template>

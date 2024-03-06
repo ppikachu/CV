@@ -10,7 +10,7 @@ import data from '~/assets/social_links.json'
 			color="black"
 			:padded="false"
 		>
-			<UIcon :name="item.icon" dynamic class="w-4 h-4 md:w-6 md:h-6" />
+			<UIcon :name="item.icon" dynamic class="w-5 h-5 sm:w-6 sm:h-6" />
 		</UButton>
 	</section>
 </template>

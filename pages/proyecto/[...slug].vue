@@ -2,16 +2,20 @@
 	<div class="mx-auto prose dark:prose-invert">
 		<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
 			<div class="prose-lg prose-a:no-underline my-8">
-				<NuxtLink v-if="data.url" :to="data.url" target="_blank" class="mb-1 flex items-center gap-1">
-					<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
-					<UIcon name="i-heroicons-arrow-top-right-on-square" class="w-7 h-7 text-primary" />
-				</NuxtLink>
-				<ProseH1 v-else class="mb-1">{{ data.title }}</ProseH1>
+				<div v-if="data.url" class="flex justify-between items-center gap-1 w-full">
+					<NuxtLink :to="data.url" target="_blank" class="mb-1 flex items-center gap-1">
+						<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
+						<UIcon name="i-heroicons-arrow-top-right-on-square" class="w-7 h-7 text-primary" />
+					</NuxtLink>
+					<UBadge v-if="data.wip" size="xs" variant="outline" label="Work in progress" class="h-fit" />
+				</div>
+				<div v-else class="flex justify-between items-center gap-1 w-full">
+					<ProseH1 class="mb-1">{{ data.title }}</ProseH1>
+					<UBadge v-if="data.wip" size="xs" variant="outline" label="Work in progress" class="h-fit" />
+				</div>
 				<ProseH2>{{ data.description }}</ProseH2>
 				<ProjectSkills v-if="data.tags" :skills="data.tags" />
 			</div>
-			<!-- <NuxtImg v-if="data.image" :src="data.image" class="w-full rounded-md mt-4" /> -->
-			<ProseImg v-if="data.image" :src="data.image" :alt="data.title" :show-alt="false" />
 			<ContentRenderer :value="data" />
 			<div class="flex justify-center not-prose mt-8">
 				<UButton

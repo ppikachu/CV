@@ -7,6 +7,8 @@ tags: ['Nuxt', 'Three.js']
 current: true
 ---
 
+![Luz Negra](/images/web_luznegra-1620x769.png)
+
 Landing page interactiva y portfolio online para estudio multimedia especializado en animación, motion graphics y web interactivas.
 
 - Three.js scene with night/day mode

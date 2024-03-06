@@ -32,7 +32,7 @@
 								</template>
 									<div class="flex justify-between gap-1 w-full">
 										<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
-										<UBadge v-if="article.wip" size="xs" color="white" label="WIP" :ui="{ color: { white: { solid: 'text-gray-400 dark:text-gray-500'} } }" />
+										<UBadge v-if="article.wip" size="xs" variant="outline" label="WIP" />
 									</div>
 								</UTooltip>
 								</NuxtLink>

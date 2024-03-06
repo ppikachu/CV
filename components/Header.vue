@@ -13,7 +13,7 @@
 				:padded="false"
 				/>
 			</div>
-			<div class="flex items-center gap-4 h-fit">
+			<div class="flex flex-col sm:flex-row mt-1.5 items-end sm:items-center gap-3 sm:gap-4 h-fit">
 				<Social />
 				<ColorScheme>
 					<UToggle

@@ -1,11 +1,13 @@
 ---
 title: 'Sanders'
-description: 'Sitio web oficial'
+description: 'Sitio web oficial para el salón de belleza'
 image: '/images/web_sanders-1620x769.png'
 url: 'https://sanders.com.ar'
 tags: ['Nuxt', 'GLSL', 'Vercel']
 current: true
 ---
+
+![Sanders](/images/web_sanders-1620x769.png)
 
 Planificación, desarrollo y mantenimiento del sitio web oficial.
 

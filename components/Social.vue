@@ -2,7 +2,7 @@
 import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="not-prose my-2 flex gap-3">
+	<section class="not-prose flex gap-3">
 		<UButton v-for="item in data"
 			:to="item.to"
 			target="_blank"

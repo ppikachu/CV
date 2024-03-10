@@ -4,9 +4,9 @@ tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 
 ---
 **Qué puedo hacer:**  
 
-- Dirección de arte
-- Identidad de marca + producto
 - Producción audiovisual
+- Identidad de marca + producto
+- Dirección de arte
 - Prototipado + Desarrollo front-end
 
 **Idiomas:**  

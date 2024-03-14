@@ -1,3 +1,3 @@
 <template>
-	<ContentDoc path="/about"/>
+	<ContentDoc :path="`${$i18n.locale}/about`"/>
 </template>

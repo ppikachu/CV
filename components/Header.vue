@@ -29,6 +29,7 @@
 					}"
 					/>
 				</ColorScheme>
+				<LocaleSwitch />
 			</div>
 			<!-- <UAvatar
 				src="/images/avatar-128x128.png"

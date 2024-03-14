@@ -1,6 +1,6 @@
 <template>
 	<section>
-		<ContentQuery path="/skills" find="one" v-slot="{ data }">
+		<ContentQuery :path="`${$i18n.locale}/skills`" find="one" v-slot="{ data }">
 
 			<ContentRenderer :value="data" />
 

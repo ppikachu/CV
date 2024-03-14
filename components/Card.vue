@@ -1,6 +1,6 @@
 <template>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4">
-		<ContentList path="/proyecto" :where="{current:props.current}" v-slot="{ list }">
+		<ContentList :path="`${$i18n.locale}/proyecto`" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
 				class="not-prose"
 				v-for="article in list"

@@ -9,7 +9,7 @@ export default defineI18nConfig(() => ({
 	fallbackLocale: 'es',
 	messages: {
 		en: {
-			role: 'Visual Artist',
+			role: 'Multimedia Designer',
 			welcome: 'Welcome',
 			herramientas: 'Tools',
 			proyectos_en_desarrollo: 'Projects in development',
@@ -18,7 +18,7 @@ export default defineI18nConfig(() => ({
 			regresar: 'Back',
 		},
 		es: {
-			role: 'Artista Visual',
+			role: 'Diseñador Multimedia',
 			welcome: 'Bienvenido',
 			herramientas: 'Herramientas',
 			proyectos_en_desarrollo: 'Proyectos en desarrollo',

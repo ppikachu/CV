@@ -1,0 +1,21 @@
+---
+title: 'Luz Negra'
+description: 'Landing page and online portfolio'
+image: '/images/web_luznegra-1620x769.png'
+url: 'https://luz-negra.com'
+tags: ['Nuxt', 'Three.js']
+current: true
+---
+
+![Luz Negra](/images/web_luznegra-1620x769.png)
+
+Interactive landing page and online portfolio for a multimedia studio specialized in animation, motion graphics, and interactive web design.
+
+- Three.js scene with night/day mode
+- Custom 3D models as gltf
+- Nuxt frontend
+- Responsive (tablet & mobile friendly)
+- Contentful CMS and media storage
+- Contact form using Formspark and Turnstile for CAPTCHA
+
+![Autocine 3D](/images/autocine-1096x740.png)

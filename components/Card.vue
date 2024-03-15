@@ -45,7 +45,7 @@
 					</div>
 					<UButton
 						size="xs"
-						label="Ver proyecto"
+						:label="$t('ver_proyecto')"
 						variant="solid"
 						color="white"
 						class="mt-5"

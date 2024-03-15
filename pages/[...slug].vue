@@ -21,7 +21,7 @@
 				<UButton
 				size="lg"
 				icon="i-heroicons-arrow-left-20-solid"
-				label="Regresar"
+				:label="$t('regresar')"
 				variant="solid"
 				color="white"
 				@click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"

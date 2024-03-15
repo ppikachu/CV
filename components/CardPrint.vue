@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col">
-		<ContentList path="/proyecto" :where="{current:props.current}" v-slot="{ list }">
+		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
 			<div
 					v-for="article in list"
 					:key="article._path"

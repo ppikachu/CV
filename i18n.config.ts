@@ -9,10 +9,22 @@ export default defineI18nConfig(() => ({
 	fallbackLocale: 'es',
 	messages: {
 		en: {
-			welcome: 'Welcome'
+			role: 'Visual Artist',
+			welcome: 'Welcome',
+			herramientas: 'Tools',
+			proyectos_en_desarrollo: 'Projects in development',
+			proyectos_destacados: 'Featured projects',
+			ver_proyecto: 'View project',
+			regresar: 'Back',
 		},
 		es: {
-			welcome: 'Bienvenido'
+			role: 'Artista Visual',
+			welcome: 'Bienvenido',
+			herramientas: 'Herramientas',
+			proyectos_en_desarrollo: 'Proyectos en desarrollo',
+			proyectos_destacados: 'Proyectos destacados',
+			ver_proyecto: 'Ver proyecto',
+			regresar: 'Regresar',
 		}
 	}
 }))

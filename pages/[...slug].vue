@@ -17,7 +17,7 @@
 				<ProjectSkills v-if="data.tags" :skills="data.tags" />
 			</div>
 			<ContentRenderer :value="data" />
-			<div class="flex justify-center not-prose mt-8">
+			<div class="flex justify-center not-prose my-8">
 				<UButton
 				size="lg"
 				icon="i-heroicons-arrow-left-20-solid"

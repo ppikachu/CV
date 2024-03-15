@@ -10,16 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@iconify-json/circle-flags": "^1.1.46",
+    "@iconify-json/ph": "^1.1.11",
     "@nuxt/devtools": "^1.0.8",
     "@nuxt/image": "^1.4.0",
     "@nuxt/ui": "^2.14.2",
-    "@nuxtjs/google-fonts": "^3.1.3",
-    "@nuxtjs/i18n": "^8.1.1",
+    "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.2.0",
     "@vueuse/nuxt": "^10.9.0",
-    "nuxt": "^3.10.2"
+    "nuxt": "^3.10.3"
   },
   "dependencies": {
-    "@iconify-json/ph": "^1.1.11",
     "@nuxt/content": "^2.12.1",
     "@vercel/analytics": "^1.2.2",
     "glslCanvas": "^0.2.6"

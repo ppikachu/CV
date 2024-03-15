@@ -6,6 +6,7 @@ export default defineNuxtConfig({
 		"@nuxt/devtools",
 		"@nuxtjs/google-fonts",
 		"@nuxt/image",
+		'@nuxtjs/i18n',
 	],
 
 	googleFonts: {
@@ -15,7 +16,7 @@ export default defineNuxtConfig({
 	},
 
 	ui: {
-		icons: ["ph"],
+		icons: ["ph", "circle-flags"],
 	},
 
 	app: {
@@ -46,6 +47,4 @@ export default defineNuxtConfig({
 			// remarkPlugins: ["remark-unwrap-images"],
 		},
 	},
-
-	// extends: ["@nuxtjs/i18n"],
 });

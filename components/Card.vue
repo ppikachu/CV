@@ -1,19 +1,19 @@
 <template>
 	<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-4">
-		<ContentList path="/proyecto" :where="{current:props.current}" v-slot="{ list }">
+		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
-				class="not-prose"
-				v-for="article in list"
-				:key="article._path"
-				:ui="{
-					background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-900',
-					ring: 'ring-0 sm:ring-1',
-					shadow: 'shadow-none',
-					body: {
-						base: 'h-full',
-						padding: 'px-0 py-3 sm:p-3 sm:px-3 md:py-3 md:px-3'
-					},
-				}"
+			class="not-prose"
+			v-for="article in list"
+			:key="article._path"
+			:ui="{
+				background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-900',
+				ring: 'ring-0 sm:ring-1',
+				shadow: 'shadow-none',
+				body: {
+					base: 'h-full',
+					padding: 'px-0 py-3 sm:p-3 sm:px-3 md:py-3 md:px-3'
+				},
+			}"
 			>
 				<div class="h-full flex flex-col justify-between">
 					<div>
@@ -45,7 +45,7 @@
 					</div>
 					<UButton
 						size="xs"
-						label="Ver proyecto"
+						:label="$t('ver_proyecto')"
 						variant="solid"
 						color="white"
 						class="mt-5"

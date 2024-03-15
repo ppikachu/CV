@@ -1,3 +1,4 @@
 <template>
-	<ContentDoc :path="`${$i18n.locale}/about`"/>
+	<!-- {{ shortLocale() }} -->
+	<ContentDoc :path="shortLocale()+'/about'"/>
 </template>

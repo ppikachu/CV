@@ -3,9 +3,10 @@
 
 export default defineI18nConfig(() => ({
 	// strategy: 'no_prefix',
-	// legacy: false,
+	legacy: false,
 	locales: ['es', 'en'], // used in URL path prefix
 	defaultLocale: 'es', // default locale of your project for Nuxt pages and routings
+	fallbackLocale: 'es',
 	messages: {
 		en: {
 			welcome: 'Welcome'

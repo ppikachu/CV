@@ -13,7 +13,7 @@
 				/>
 				<Social />
 			</div>
-			<div id="switches" class="flex flex-row sm:items-start gap-2 sm:gap-4 mt-1">
+			<div id="switches" class="flex flex-row sm:items-start gap-2 sm:gap-4 mt-1 h-fit">
 				<!-- <UAvatar src="/images/avatar-128x128.png" alt="Santiago's avatar" :ui="{ size: { sm: 'w-24 h-24' } }" /> -->
 				<LocaleSwitch />
 				<LightDarkSwitch />

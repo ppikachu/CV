@@ -24,7 +24,7 @@
 			}"
 			class="rounded-lg overflow-hidden"
 		>
-			<ProseImg :src="'/images/'+item" :alt="item" :show-alt="false" />
+			<NuxtImg :src="'/images/'+item" :alt="item" class="w-full h-auto" />
 		</UCarousel>
 	</section>
 </template>

@@ -6,7 +6,7 @@
 			class="mb-0 w-full h-auto rounded-md"
 			:width="dimensionedSrc.width"
 			:height="dimensionedSrc.height"
-			placeholder
+			:placeholder="[dimensionedSrc.width, dimensionedSrc.height]"
 		/>
 		<p v-if="alt!=='' && showAlt" class="mt-2 mb-4 text-sm text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
 	</div>

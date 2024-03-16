@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 		"@nuxt/devtools",
 		"@nuxtjs/google-fonts",
 		"@nuxt/image",
-		'@nuxtjs/i18n',
+		"@nuxtjs/i18n",
 	],
 
 	googleFonts: {
@@ -23,7 +23,12 @@ export default defineNuxtConfig({
 		pageTransition: { name: "page", mode: "out-in" },
 	},
 
-	devtools: { enabled: true },
+	devtools: {
+		enabled: true,
+		timeline: {
+			enabled: true,
+		},
+	},
 
 	runtimeConfig: {
 		public: {

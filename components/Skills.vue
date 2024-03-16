@@ -4,7 +4,8 @@
 
 			<ContentRenderer :value="data" />
 
-			<div class="prose dark:prose-invert my-4">
+			<!-- TODO mostrar o no mostrar skills?-->
+			<!-- <div class="prose dark:prose-invert my-4">
 				<ProseH1>{{ data.title }}</ProseH1>
 			</div>
 
@@ -18,7 +19,7 @@
 					:key="skill"
 					:label="skill"
 				/>
-			</div>
+			</div> -->
 		</ContentQuery>
 	</section>
 </template>

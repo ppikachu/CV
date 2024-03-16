@@ -6,7 +6,7 @@
 			<Social />
 		</div>
 
-		<NuxtImg src="/robot2.png" class="w-32 dark:opacity-40 sm:self-end" />
+		<NuxtImg src="/robot2.png" class="w-32 dark:opacity-60 sm:self-end" />
 
 	</footer>
 </template>

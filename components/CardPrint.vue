@@ -24,7 +24,7 @@ const props = defineProps({
 </script>
 
 <style scoped>
-.prose .no-print {
-	@apply hidden;
+.no-print {
+	display: none !important;
 }
 </style>

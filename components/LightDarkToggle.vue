@@ -1,12 +1,16 @@
 <template>
 	<ColorScheme>
-		<UButton
+		<UToggle
 			v-model="isDark"
-			:icon="colorMode.value === 'dark' ? 'i-heroicons-moon-solid' : 'i-heroicons-sun-solid'"
-			color="gray"
+			on-icon="i-heroicons-moon-solid"
+			off-icon="i-heroicons-sun-solid"
+			size="lg"
 			@click="isDark = !isDark"
 			:ui="{
-				rounded: 'rounded-full',
+				active: 'bg-gray-500 dark:bg-gray-700',
+				icon: {
+					on: 'dark:text-gray-400'
+				}
 			}"
 		/>
 	</ColorScheme>

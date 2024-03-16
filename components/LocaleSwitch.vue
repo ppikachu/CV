@@ -1,13 +1,13 @@
 <template>
-	<div class="flex items-center gap-2">
-		<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-			<UButton
-				color="white"
-				:trailing-icon="shlocale === 'en' ? 'i-circle-flags-us' : 'i-circle-flags-es'"
-				:ui="{ rounded: 'rounded-full' }"
-			/>
-		</UDropdown>
-	</div>
+	<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+		<UButton
+			color="white"
+			class="h-fit"
+			size="xs"
+			:trailing-icon="shlocale === 'en' ? 'i-circle-flags-us' : 'i-circle-flags-es'"
+			:ui="{ rounded: 'rounded-full' }"
+		/>
+	</UDropdown>
 </template>
 
 <script lang="ts" setup>

@@ -4,6 +4,8 @@
 			v-model="isDark"
 			:icon="colorMode.value === 'dark' ? 'i-heroicons-moon-solid' : 'i-heroicons-sun-solid'"
 			color="gray"
+			class="h-fit"
+			size="xs"
 			@click="isDark = !isDark"
 			:ui="{
 				rounded: 'rounded-full',

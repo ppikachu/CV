@@ -10,4 +10,4 @@ tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 
 - Prototyping + Front-End Development
 
 **Languages:**  
-Spanish (native), English (medium)
+Spanish (native), English (B1)

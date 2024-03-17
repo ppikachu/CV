@@ -6,6 +6,7 @@
 			color="gray"
 			class="h-fit"
 			size="xs"
+			variant="ghost"
 			@click="isDark = !isDark"
 			:ui="{
 				rounded: 'rounded-full',

@@ -1,9 +1,10 @@
 <template>
-	<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
+	<UDropdown :items="items" :popper="{ placement: 'bottom-start' }" :ui="{width: 'w-fit'}">
 		<UButton
 			color="white"
 			class="h-fit"
 			size="xs"
+			variant="ghost"
 			:trailing-icon="shlocale === 'en' ? 'i-circle-flags-us' : 'i-circle-flags-es'"
 			:ui="{ rounded: 'rounded-full' }"
 		/>

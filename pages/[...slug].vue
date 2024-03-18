@@ -1,7 +1,7 @@
 <template>
 	<div class="mx-auto prose dark:prose-invert">
 		<ContentQuery :path="$route.path" find="one" v-slot="{ data }">
-			<div class="prose-lg prose-a:no-underline my-8">
+			<div class="prose-lg prose-a:no-underline my-8 slide-enter-content">
 				<div v-if="data.url" class="flex justify-between items-center gap-1 w-full">
 					<NuxtLink :to="data.url" target="_blank" class="mb-1 flex items-center gap-1">
 						<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
@@ -16,7 +16,7 @@
 				<ProseH2>{{ data.description }}</ProseH2>
 				<ProjectSkills v-if="data.tags" :skills="data.tags" />
 			</div>
-			<ContentRenderer :value="data" />
+			<ContentRenderer :value="data" class="slide-enter-content" />
 			<div class="flex justify-center not-prose my-8">
 				<UButton
 				size="lg"

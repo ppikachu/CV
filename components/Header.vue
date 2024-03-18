@@ -1,6 +1,6 @@
 <template>
 	<section class="mb-4 flex flex-row gap-4 justify-between not-prose">
-			<div id="title">
+			<div id="title" class="slide-enter-content">
 				<ProseH1>Santiago Toyos</ProseH1>
 				<ProseH2>{{ $t('role') }}</ProseH2>
 				<UButton

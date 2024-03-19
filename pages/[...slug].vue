@@ -19,13 +19,20 @@
 			<ContentRenderer :value="data" class="slide-enter-content" />
 			<div class="flex justify-center not-prose my-8">
 				<UButton
-				size="lg"
-				icon="i-heroicons-arrow-left-20-solid"
-				:label="$t('regresar')"
-				variant="solid"
-				color="white"
-				@click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
-				block
+					size="lg"
+					icon="i-heroicons-arrow-left-20-solid"
+					:label="$t('regresar')"
+					variant="solid"
+					color="gray"
+					@click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
+					block
+					:ui="{
+						color: {
+							gray: {
+								solid: 'dark:bg-gray-950'
+							},
+						}
+					}"
 				/>
 			</div>
 		</ContentQuery>

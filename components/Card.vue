@@ -6,8 +6,8 @@
 			v-for="article in list"
 			:key="article._path"
 			:ui="{
-				background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-900',
-				ring: 'ring-0 sm:ring-1',
+				background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-950',
+				ring: 'ring-0 sm:ring-1 dark:ring-gray-900',
 				shadow: 'shadow-none',
 				body: {
 					base: 'h-full',
@@ -38,7 +38,7 @@
 								</NuxtLink>
 								<span v-else>{{ article.title }}</span>
 						</h2>
-						<p class="text-gray-700 dark:text-gray-400 mb-4 leading-snug">
+						<p class="text-gray-700 dark:text-gray-300 mb-4 leading-snug">
 							{{ article.description }}
 						</p>
 						<ProjectSkills :skills="article.tags" />
@@ -47,10 +47,17 @@
 						size="xs"
 						:label="$t('ver_proyecto')"
 						variant="solid"
-						color="white"
+						color="gray"
 						class="mt-5"
 						block
 						:to="article._path"
+						:ui="{
+							color: {
+								gray: {
+									solid: 'dark:bg-gray-950'
+								},
+							}
+						}"
 					>
 						<template #trailing>
 							<UIcon name="i-heroicons-arrow-right-20-solid" />

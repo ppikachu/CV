@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+
 useSeoMeta({
 	title: runtimeConfig.public.NAME,
 	description: runtimeConfig.public.DESCRIPTION,
@@ -15,7 +16,10 @@ useSeoMeta({
 
 useHead({
 	htmlAttrs: {
-		lang: 'es'
+		lang: useI18n().locale
+	},
+	bodyAttrs: {
+		class: 'dark:bg-black'
 	},
 	link: [
 		{

@@ -15,25 +15,20 @@
 const { setLocale } = useI18n()
 const shlocale = ref(shortLocale())
 
-function SwitchEnglish() {
-	setLocale('en')
-	shlocale.value = 'en'
-}
-
-function SwitchSpanish() {
-	setLocale('es')
-	shlocale.value = 'es'
+function SwitchLanguage(lang: string) {
+	setLocale(lang)
+	shlocale.value = lang
 }
 
 const items = [
 	[{
 		label: 'Español',
 		icon: 'i-circle-flags-es',
-		click: () => { SwitchSpanish() }
+		click: () => { SwitchLanguage('es') }
 	}, {
 		label: 'English',
 		icon: 'i-circle-flags-us',
-		click: () => { SwitchEnglish() }
+		click: () => { SwitchLanguage('en') }
 	}]
 ]
 </script>

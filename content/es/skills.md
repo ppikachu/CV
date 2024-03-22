@@ -8,6 +8,3 @@ tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 
 - Identidad de marca + producto
 - Dirección de arte
 - Prototipado + Desarrollo front-end
-
-**Idiomas:**  
-Español (nativo), Inglés (B1)

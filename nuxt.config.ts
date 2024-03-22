@@ -11,7 +11,7 @@ export default defineNuxtConfig({
 
 	googleFonts: {
 		families: {
-			"JetBrains Mono": [400, 700],
+			"JetBrains Mono": [400, 600, 700],
 		},
 	},
 

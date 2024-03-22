@@ -17,7 +17,7 @@
 			>
 				<div class="h-full flex flex-col justify-between">
 					<div>
-						<h2 class="mb-2 leading-tight">
+						<h2 class="mb-2 leading-tight font-bold">
 							<NuxtLink v-if="article.url" :to="article.url" target="_blank">
 								<UTooltip
 									class="w-full"

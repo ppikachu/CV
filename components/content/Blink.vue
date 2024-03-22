@@ -3,9 +3,17 @@
 		<UButton
 			:to="props.url"
 			target="_blank"
-			variant="soft"
+			variant="solid"
+			color="gray"
 			size="xs"
 			block
+			:ui="{
+				color: {
+					gray: {
+						solid: 'dark:bg-gray-950'
+					},
+				}
+			}"
 		>
 			<ContentSlot />
 			<template #trailing>

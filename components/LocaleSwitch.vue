@@ -1,5 +1,10 @@
 <template>
-	<UDropdown :items="items" :popper="{ placement: 'bottom-start' }" :ui="{width: 'w-fit'}">
+	<UDropdown
+		:items="items"
+		:popper="{ placement: 'bottom-start' }"
+		:ui="{width: 'w-fit'}"
+		mode="hover"
+	>
 		<UButton
 			color="white"
 			class="h-fit"

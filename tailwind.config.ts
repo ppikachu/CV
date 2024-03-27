@@ -12,6 +12,11 @@ export default {
 	theme: {
 		fontFamily: { sans: ["JetBrains Mono", "sans-serif"] },
 		extend: {
+			aspectRatio: {
+				auto: 'auto',
+				square: '1 / 1',
+				video: '16 / 9'
+			},
 			typography: (theme: any) => ({
 				DEFAULT: {
 					css: {
@@ -55,12 +60,7 @@ export default {
 						},
 					},
 				},
-			}),
-		},
-	},
-	plugins: [
-		// require("@tailwindcss/typography"),
-		// require("@tailwindcss/aspect-ratio"),
-		// require('@tailwindcss/forms'),
-	],
+			})
+		}
+	}
 } satisfies Config;

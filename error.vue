@@ -8,12 +8,12 @@ const props = defineProps({
 
 <template>
 	<UContainer class="flex flex-col gap-4 h-svh items-center justify-center">
-		<span class="text-8xl" v-if="error.statusCode === 404">🤦🏻‍♂️</span>
-		<span class="text-8xl" v-else>{{ error.statusCode }}</span>
-		<h1 class="text-2xl">{{ error.message }}</h1>
+		<h1 class="text-8xl">🤦🏻‍♂️</h1>
+		<h2 class="text-6xl">{{ error.statusCode }}</h2>
+		<p class="text-center">{{ error.message }}</p>
 		<UButton
 			variant="link"
-			label="Volver al inicio"
+			:label="$t('regresar')"
 			icon="i-ph-arrow-fat-lines-left-bold"
 			@click="navigateTo('/')"
 		/>

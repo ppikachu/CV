@@ -33,7 +33,7 @@ useHead({
 <template>
 	<UContainer>
 		<NuxtLoadingIndicator color="#a3e635" />
-		<main class="prose dark:prose-invert max-w-3xl mx-auto mt-4 sm:mt-8">
+		<main class="prose dark:prose-invert max-w-4xl mx-auto mt-4 sm:mt-8">
 			<NuxtPage />
 		</main>
 	</UContainer>

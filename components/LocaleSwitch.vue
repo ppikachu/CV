@@ -1,4 +1,5 @@
 <template>
+	<!-- //HACK: mode="hover"? -->
 	<UDropdown
 		:items="items"
 		:popper="{ placement: 'bottom-start' }"

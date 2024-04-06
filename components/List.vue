@@ -1,19 +1,20 @@
 <template>
-	<div class="flex flex-col md:grid md:grid-cols-2 gap-8 md:gap-4">
+	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 my-12 divide-dotted divide-y-2 divide-primary-950 md:divide-none">
 		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
 				class="not-prose"
 				v-for="article in list"
 				:key="article._path"
 				:ui="{
-					base: 'flex',
-					background: 'bg-transparent dark:bg-transparent sm:bg-white dark:sm:bg-gray-950',
+					base: 'flex py-10 md:py-0 overflow-hidden',
+					rounded: 'rounded-none md:rounded-lg',
+					background: 'bg-transparent dark:bg-transparent',
 					divide: 'divide-0 divide-y-0',
-					ring: 'ring-0 sm:ring-1 dark:ring-gray-900',
+					ring: 'ring-0 md:ring-1 dark:ring-gray-900',
 					shadow: 'shadow-none',
 					body: {
 						base: 'w-full flex flex-col justify-between',
-						padding: 'pl-0 pr-3 py-0 sm:p-3 sm:pl-3 md:py-3 md:px-3'
+						padding: 'pl-0 pr-3 py-0 md:py-3 md:px-3'
 					},
 					footer: {
 						padding: 'px-0 py-0 sm:p-0 sm:px-0'
@@ -22,7 +23,7 @@
 			>
 				
 						<div>
-							<h2 class="mb-2 leading-tight font-bold">
+							<h2 class="mb-1 leading-tight font-bold">
 								<NuxtLink v-if="article.url" :to="article.url" target="_blank">
 									<UTooltip
 										class="w-full"
@@ -71,7 +72,7 @@
 						v-if="article.image"
 						:src="article.image"
 						:alt="article.title"
-						class="w-36 sm:w-40 aspect-square object-cover object-center rounded-r"
+						class="w-36 sm:w-40 h-full object-cover object-center"
 					/>
 				</template>
 			</UCard>

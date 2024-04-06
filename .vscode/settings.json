@@ -2,4 +2,7 @@
   "files.associations": {
 		"*.css": "tailwindcss"
 	},
+	"markdown.validate.ignoredLinks": [
+		"/images/**"
+	],
 }

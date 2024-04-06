@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 my-12 divide-dotted divide-y-2 divide-primary-950 md:divide-none">
+	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 divide-dotted divide-y-2 divide-primary-950 md:divide-none">
 		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
 				class="not-prose"

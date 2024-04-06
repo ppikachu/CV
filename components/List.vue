@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 divide-dotted divide-y-2 divide-primary-950 md:divide-none">
+	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 divide-dotted divide-y-2 divide-primary-300 dark:divide-primary-900 md:divide-none">
 		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
 			<UCard
 				class="not-prose"
@@ -72,7 +72,7 @@
 						v-if="article.image"
 						:src="article.image"
 						:alt="article.title"
-						class="w-36 sm:w-40 h-full object-cover object-center"
+						class="w-36 sm:w-40 aspect-square md:aspect-auto md:h-full object-cover object-center"
 					/>
 				</template>
 			</UCard>

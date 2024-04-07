@@ -2,9 +2,7 @@
 	<!-- //HACK: mode="hover"? -->
 	<UDropdown
 		:items="items"
-		:popper="{ placement: 'bottom-start' }"
-		:ui="{width: 'w-fit'}"
-		mode="hover"
+		:ui="{ width: 'w-fit' }"
 	>
 		<UButton
 			color="white"

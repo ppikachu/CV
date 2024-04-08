@@ -1,17 +1,16 @@
 <template>
-	<div>
-		<LocaleSwitch />
-		<UDropdown :items="items" :popper="{ placement: 'bottom-start' }">
-			<UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid" />
-		</UDropdown>
-		<p>{{ $t('welcome') }}</p>
-		<About />
-		<Skills />
-	</div>
+  <div id ="testPage">
+    <!-- <LocaleSwitch /> -->
+    <UDropdown :items="itemsB" v-model:open="open">
+      <UButton color="white" label="Options" trailing-icon="i-heroicons-chevron-down-20-solid"
+        @click.prevent="open = !open"
+      />
+    </UDropdown>
+  </div>
 </template>
 
 <script lang="ts" setup>
-const items = [
+const itemsB = [
   [{
     label: 'Profile',
     avatar: {
@@ -41,4 +40,5 @@ const items = [
     shortcuts: ['⌘', 'D']
   }]
 ]
+const open = ref(false)
 </script>

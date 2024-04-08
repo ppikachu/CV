@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "cv-toyos",
   "private": true,
   "type": "module",
   "scripts": {
@@ -12,6 +12,7 @@
   "devDependencies": {
     "@iconify-json/circle-flags": "^1.1.46",
     "@iconify-json/ph": "^1.1.11",
+    "@nuxt/content": "^2.12.1",
     "@nuxt/devtools": "^1.1.5",
     "@nuxt/image": "^1.5.0",
     "@nuxt/ui": "^2.15.1",
@@ -20,7 +21,6 @@
     "nuxt": "^3.11.2"
   },
   "dependencies": {
-    "@nuxt/content": "^2.12.1",
     "@vercel/analytics": "^1.2.2",
     "glslCanvas": "^0.2.6"
   }

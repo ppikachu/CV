@@ -6,6 +6,7 @@
 		<Skills />
 		<Current />
 		<Projects />
+		<Personal />
 		<SiteFooter />
 	</div>
 </template>

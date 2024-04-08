@@ -1,79 +1,58 @@
 <template>
-	<div class="flex flex-col md:grid md:grid-cols-2 md:gap-8 divide-dotted divide-y-2 divide-primary-300 dark:divide-primary-900 md:divide-none">
-		<ContentList :path="shortLocale()+'/proyecto'" :where="{current:props.current}" v-slot="{ list }">
+	<div class="flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-8">
+		<ContentList :path="shortLocale()+'/proyecto'" :where="{ tipo:props.tipo }" v-slot="{ list }">
 			<UCard
 				class="not-prose"
 				v-for="article in list"
 				:key="article._path"
 				:ui="{
-					base: 'flex py-10 md:py-0 overflow-hidden',
+					base: 'flex overflow-hidden',
 					rounded: 'rounded-none md:rounded-lg',
 					background: 'bg-transparent dark:bg-transparent',
 					divide: 'divide-0 divide-y-0',
 					ring: 'ring-0 md:ring-1 dark:ring-gray-900',
 					shadow: 'shadow-none',
 					body: {
-						base: 'w-full flex flex-col justify-between',
+						base: 'w-full flex flex-col justify-center md:justify-start',
 						padding: 'pl-0 pr-3 py-0 md:py-3 md:px-3'
 					},
 					footer: {
-						padding: 'px-0 py-0 sm:p-0 sm:px-0'
+						padding: 'px-0 py-0 sm:p-0 sm:px-0 flex-shrink-0'
 					}
 				}"
 			>
-				
-						<div>
-							<h2 class="mb-1 leading-tight font-bold">
-								<NuxtLink v-if="article.url" :to="article.url" target="_blank">
-									<UTooltip
-										class="w-full"
-										:popper="{
-											placement: 'top',
-											text: 'Online. Click para ver.'
-											// offsetDistance: 10,
-										}"
-									>
-									<template #text>
-										Online. Click para ver.
-									</template>
-										<div class="flex justify-between gap-1 w-full">
-											<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
-											<UBadge v-if="article.wip" size="xs" variant="outline" label="WIP" />
-										</div>
-									</UTooltip>
-									</NuxtLink>
-									<span v-else>{{ article.title }}</span>
-							</h2>
-							<p class="text-gray-700 dark:text-gray-400 md:text-sm leading-snug">{{ article.description }}</p>
-							<!-- <ProjectSkills :skills="article.tags" /> -->
-						</div>
-						<UButton
-							size="xs"
-							:label="$t('ver_proyecto')"
-							variant="solid"
-							color="gray"
-							class="mt-3 w-fit"
-							:to="article._path"
-							:ui="{
-								color: {
-									gray: {
-										solid: 'dark:bg-gray-950'
-									},
-								}
+				<h2 class="mb-1 leading-tight font-bold">
+					<NuxtLink v-if="article.url" :to="article.url" target="_blank">
+						<UTooltip
+							class="w-full"
+							:popper="{
+								placement: 'top',
+								text: 'Online. Click para ver.'
+								// offsetDistance: 10,
 							}"
 						>
-							<template #trailing>
-								<UIcon name="i-heroicons-arrow-right-20-solid" />
-							</template>
-						</UButton>
-				
+						<template #text>
+							Online. Click para ver.
+						</template>
+							<div class="flex justify-between gap-1 w-full">
+								<span class="text-primary space-x-1"><span>{{ article.title }}</span><UIcon name="i-heroicons-arrow-top-right-on-square" class="-mb-0.5" /></span>
+								<UBadge v-if="article.wip" size="xs" variant="outline" label="WIP" />
+							</div>
+						</UTooltip>
+					</NuxtLink>
+					<span v-else>{{ article.title }}</span>
+				</h2>
+				<p class="text-gray-700 dark:text-gray-400 md:text-sm leading-snug">{{ article.description }}</p>
 				<template #footer v-if="article.image">
-					<NuxtImg
-						v-if="article.image"
-						:src="article.image"
-						:alt="article.title"
-						class="w-36 sm:w-40 aspect-square md:aspect-auto md:h-full object-cover object-center"
-					/>
+					<NuxtLink :to="article._path" class="flex items-center 0w-36 0sm:w-40 h-full">
+						<NuxtImg
+							v-if="article.image"
+							:src="article.image"
+							:alt="article.title"
+							class="aspect-square object-cover object-center w-28 h-full"
+						/>
+						<UIcon name="i-heroicons-chevron-right-16-solid" class="p-4"/>
+					</NuxtLink>
 				</template>
 			</UCard>
 		</ContentList>
@@ -82,8 +61,8 @@
 
 <script lang="ts" setup>
 const props = defineProps({
-	current: {
-		type: Boolean
+	tipo: {
+		type: String
 	}
 })
 </script>

@@ -5,6 +5,7 @@ image: '/images/web_GL-1620x769.png'
 url: 'https://greatlengthslatinoamerica.com'
 tags: ['Nuxt', 'Tailwind', 'Git', 'Vercel']
 current: true
+tipo: 'wip'
 ---
 
 ![Great Lengths](/images/web_GL-1620x769.png)

@@ -14,6 +14,7 @@ export default defineI18nConfig(() => ({
 			herramientas: 'Tools',
 			proyectos_en_desarrollo: 'Projects in development',
 			proyectos_destacados: 'Featured projects',
+			proyectos_personales: 'Personal projects',
 			ver_proyecto: 'View project',
 			regresar: 'Back',
 		},
@@ -23,6 +24,7 @@ export default defineI18nConfig(() => ({
 			herramientas: 'Herramientas',
 			proyectos_en_desarrollo: 'Proyectos en desarrollo',
 			proyectos_destacados: 'Proyectos destacados',
+			proyectos_personales: 'Proyectos personales',
 			ver_proyecto: 'Ver proyecto',
 			regresar: 'Regresar',
 		}

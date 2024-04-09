@@ -29,7 +29,7 @@
 					:ui="{
 						color: {
 							gray: {
-								solid: 'dark:bg-gray-950'
+								solid: 'bg-transparent hover:ring-primary hover:bg-transparent dark:bg-transparent dark:hover:ring-primary dark:hover:bg-transparent transition-all duration-400',
 							},
 						}
 					}"

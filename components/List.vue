@@ -6,7 +6,7 @@
 				v-for="article in list"
 				:key="article._path"
 				:ui="{
-					base: 'flex overflow-hidden',
+					base: 'flex',
 					rounded: 'rounded-none md:rounded-lg',
 					background: 'bg-transparent dark:bg-transparent',
 					divide: 'divide-0 divide-y-0',
@@ -44,7 +44,7 @@
 				</h2>
 				<p class="text-gray-700 dark:text-gray-400 md:text-sm leading-snug">{{ article.description }}</p>
 				<template #footer v-if="article.image">
-					<NuxtLink :to="article._path" class="flex items-center 0w-36 0sm:w-40 h-full">
+					<NuxtLink :to="article._path" class="flex items-center 0w-36 0sm:w-40 h-full border border-transparent hover:border-primary overflow-hidden rounded-r-lg transition-colors duration-400">
 						<NuxtImg
 							v-if="article.image"
 							:src="article.image"

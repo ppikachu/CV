@@ -22,6 +22,9 @@ export default {
 					css: {
 						h1: {
 							fontSize: theme("fontSize.2xl")[0],
+							marginTop: '3rem',
+							marginBottom: '2rem',
+							fontWeight: 400,
 						},
 						h2: {
 							fontSize: theme("fontSize.xl")[0],
@@ -32,7 +35,7 @@ export default {
 						h4: {
 							fontSize: theme("fontSize.base")[0],
 						},
-						"h1, h2, h3, h4": {
+						"h2, h3, h4": {
 							marginTop: '3rem',
 							marginBottom: '1rem',
 							fontWeight: 400,

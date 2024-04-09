@@ -6,8 +6,11 @@
 			:label="skill"
 			variant="outline"
 			color="gray"
-			:ui="{ variant: { outline: 'ring-gray-200 dark:ring-gray-800' } }"
-			/>
+			:ui="{
+				variant: { outline: 'ring-gray-200 dark:ring-gray-800' },
+				rounded: 'rounded-full'
+			}"
+		/>
 	</section>
 </template>
 

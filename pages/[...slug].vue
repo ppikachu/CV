@@ -10,7 +10,7 @@
 					<UBadge v-if="data.wip" size="xs" variant="outline" label="Work in progress" class="h-fit" />
 				</div>
 				<div v-else class="flex justify-between items-center gap-1 w-full">
-					<ProseH1 class="mb-1">{{ data.title }}</ProseH1>
+					<ProseH1 class="mb-0">{{ data.title }}</ProseH1>
 					<UBadge v-if="data.wip" size="xs" variant="outline" label="Work in progress" class="h-fit" />
 				</div>
 				<ProseH2>{{ data.description }}</ProseH2>

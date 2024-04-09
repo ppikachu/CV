@@ -1,5 +1,5 @@
 <template>
-	<section class="not-prose my-8 mx-auto no-print">
+	<section class="not-prose my-4 mx-auto no-print">
 		<UCarousel
 			v-slot="{ item }"
 			:items="props.images"

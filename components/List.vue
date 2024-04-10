@@ -18,8 +18,8 @@
 						class="rounded-lg md:rounded-none aspect-square object-cover object-center w-28 md:h-full"
 					/>
 
-					<div class="flex flex-col leading-tight m-4 mr-0 gap-2">
-						<h2 class="font-bold">{{ article.title }}</h2>
+					<div class="flex flex-col grow leading-tight m-4 mr-0 gap-2">
+						<h2 class="font-bold text-pretty">{{ article.title }}</h2>
 						<p class="text-gray-700 dark:text-gray-400 md:text-sm">{{ article.description }}</p>
 					</div>
 						

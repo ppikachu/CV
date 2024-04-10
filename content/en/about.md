@@ -1,1 +1,1 @@
-I'm a self-taught designer with over 20 years of experience. Working on multimedia content production, web applications, 3D, and animation technologies. With meticulous attention to detail, I strive to create empathetic designs that seamlessly blend aesthetics with functionality.
+I'm a self-taught designer with over 20 years of experience. Working on multimedia content production, web applications, 3D, and animation technologies.

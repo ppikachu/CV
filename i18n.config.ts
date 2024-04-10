@@ -16,6 +16,7 @@ export default defineI18nConfig(() => ({
 			proyectos_destacados: 'Featured projects',
 			proyectos_personales: 'Personal projects',
 			ver_proyecto: 'View project',
+			web_url: 'Go to website',
 			regresar: 'Back',
 		},
 		es: {
@@ -26,6 +27,7 @@ export default defineI18nConfig(() => ({
 			proyectos_destacados: 'Proyectos destacados',
 			proyectos_personales: 'Proyectos personales',
 			ver_proyecto: 'Ver proyecto',
+			web_url: 'Ir al sitio web',
 			regresar: 'Regresar',
 		}
 	}

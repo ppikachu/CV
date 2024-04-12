@@ -23,7 +23,7 @@
 						<p class="text-gray-700 dark:text-gray-400 md:text-sm">{{ article.description }}</p>
 					</div>
 						
-					<UIcon name="i-heroicons-chevron-right-16-solid" class="w-8 h-8 self-center shrink-0 dark:group-hover/item:text-primary group-hover/item:translate-x-0.5 transition-all duration-400 delay-200"/>
+					<UIcon name="i-heroicons-chevron-right-16-solid" class="w-8 h-8 self-center shrink-0 dark:md:group-hover/item:text-primary md:group-hover/item:translate-x-0.5 transition-all duration-400 delay-200"/>
 
 				</NuxtLink>
 			</div>

@@ -1,5 +1,5 @@
 ---
-title: 'Piezas. Proyecto personal'
+title: 'Piezas'
 description: 'Máquina de movimiento perpetuo'
 image: '/images/piezas-980x480.png'
 url: 'https://piezas.vercel.app'

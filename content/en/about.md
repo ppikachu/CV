@@ -1,1 +1,1 @@
-I'm a self-taught designer with over 20 years of experience. Working on multimedia content production, web applications, 3D, and animation technologies.
+I'm a designer with over 20 years of experience working on multimedia content production, web applications, 3D, and animation technologies.

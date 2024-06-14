@@ -1,5 +1,4 @@
 export default defineI18nConfig(() => ({
-	// strategy: 'no_prefix',
 	legacy: false,
 	locales: ['es', 'en'], // used in URL path prefix
 	defaultLocale: 'es', // default locale of your project for Nuxt pages and routings
@@ -12,6 +11,7 @@ export default defineI18nConfig(() => ({
 			proyectos_en_desarrollo: 'Projects in development',
 			proyectos_destacados: 'Featured projects',
 			proyectos_personales: 'Personal projects',
+			faqs: 'FAQs',
 			ver_proyecto: 'View project',
 			web_url: 'Go to website',
 			regresar: 'Back',
@@ -23,6 +23,7 @@ export default defineI18nConfig(() => ({
 			proyectos_en_desarrollo: 'Proyectos en desarrollo',
 			proyectos_destacados: 'Proyectos destacados',
 			proyectos_personales: 'Proyectos personales',
+			faqs: 'Preguntas frecuentes',
 			ver_proyecto: 'Ver proyecto',
 			web_url: 'Ir al sitio web',
 			regresar: 'Regresar',

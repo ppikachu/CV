@@ -7,23 +7,23 @@ const faqs = computed(() => {
   return [
     { label: t("q_how_do_i_start_a_project"), content: t("r_how_do_i_start_a_project") },
     { label: t("q_project_duration"), content: t("r_project_duration") },
-    { label: t("q_how_do_you_handle_project_communication"), content: t("r_how_do_you_handle_project_communication") },
+    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
+    { label: t("q_project_communication"), content: t("r_project_communication") },
     { label: t("q_payment_process"), content: t("r_payment_process") },
     { label: t("q_can_i_incorporate"), content: t("r_can_i_incorporate") },
-    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     { label: t("q_can_i_train"), content: t("r_can_i_train") },
     { label: t("q_how_i_handle_changes"), content: t("r_how_i_handle_changes") },
     { label: t("q_offer_additional_services"), content: t("r_offer_additional_services") },
-    { label: t("q_what_project_management_tools"), content: t("r_what_project_management_tools") },
-    { label: t("q_what_customization_options_are_available"), content: t("r_what_customization_options_are_available") },
-    { label: t("q_what_if_i_am_not_happy_with_the_results"), content: t("r_what_if_i_am_not_happy_with_the_results") },
-    { label: t("q_do_you_have_refund_policy"), content: t("r_do_you_have_refund_policy") },
+    { label: t("q_project_management_tools"), content: t("r_project_management_tools") },
+    { label: t("q_customization_options"), content: t("r_customization_options") },
+    { label: t("q_what_if_not_happy_with_results"), content: t("r_what_if_not_happy_with_results") },
+    { label: t("q_refund_policy"), content: t("r_refund_policy") },
   ]
 })
 </script>
 
 <template>
-  <section>
+  <section id="faqs">
     <ProseH1>{{ $t('faqs') }}</ProseH1>
     <p>{{ t('intro') }}</p>
     <UAccordion :items="faqs" />
@@ -50,18 +50,18 @@ const faqs = computed(() => {
       "r_how_i_handle_changes": "I can discuss ongoing service agreements that cover updates and modifications to your project as your business evolves.",
       "q_how_do_i_start_a_project": "How do we start a project with you?",
       "r_how_do_i_start_a_project": "The first step is a consultation call to discuss your needs and project scope. From there, I will provide a detailed proposal and timeline.",
-      "q_what_project_management_tools": "What project management tools do you use?",
-      "r_what_project_management_tools": "I use Notion to ensure a simple & transparent and effective management process.",
-      "q_how_do_you_handle_project_communication": "How do you handle project communication?",
-      "r_how_do_you_handle_project_communication": "I maintain regular communication via emails or other preferred options, scheduled calls, and updates on Notion to keep you informed at every stage.",
-      "q_what_customization_options_are_available": "What customization options are available?",
-      "r_what_customization_options_are_available": "From builiding interactive components, to building a full app like experience in the browser, Theming to match your brand, and custom integrations, I can tailor your project to your exact needs.",
+      "q_project_management_tools": "What project management tools do you use?",
+      "r_project_management_tools": "I use Notion to ensure a simple & transparent and effective management process.",
+      "q_project_communication": "How do you handle project communication?",
+      "r_project_communication": "I maintain regular communication via emails or other preferred options, scheduled calls, and updates on Notion to keep you informed at every stage.",
+      "q_customization_options": "What customization options are available?",
+      "r_customization_options": "From builiding interactive components, to building a full app like experience in the browser, Theming to match your brand, and custom integrations, I can tailor your project to your exact needs.",
       "q_what_happens_if_the_project_changes_midway": "What happens if the project changes midway?",
       "r_what_happens_if_the_project_changes_midway": "I have flexible project management practices that can accommodate scope changes with prior agreement on new timelines and costs.",
-      "q_what_if_i_am_not_happy_with_the_results": "What if I'm not happy with the results?",
-      "r_what_if_i_am_not_happy_with_the_results": "If you're not happy, I'll continue refining the project until you're 100% statisfied under the condition that it is within the agreed project scope.",
-      "q_do_you_have_refund_policy": "Do you have refund policy?",
-      "r_do_you_have_refund_policy": "I don't offer refunds, but if you decide for whatever reason to quit the project midway, I will charge you just for the work done until that point."
+      "q_what_if_not_happy_with_results": "What if I'm not happy with the results?",
+      "r_what_if_not_happy_with_results": "If you're not happy, I'll continue refining the project until you're 100% statisfied under the condition that it is within the agreed project scope.",
+      "q_refund_policy": "Do you have refund policy?",
+      "r_refund_policy": "I don't offer refunds, but if you decide for whatever reason to quit the project midway, I will charge you just for the work done until that point."
     },
     "es": {
       "intro": "Al colaborar en tu próximo proyecto, es importante tener una comprensión clara del proceso. A continuación, contesto respuestas frecuentes sobre los planes de pago, el tiempo de duración de un proyecto y más. ¡Vamos a profundizar!",
@@ -81,18 +81,24 @@ const faqs = computed(() => {
       "r_how_i_handle_changes": "Puedo discutir acuerdos de servicio que cubren actualizaciones y modificaciones de su proyecto a medida que su negocio evoluciona.",
       "q_how_do_i_start_a_project": "¿Cómo iniciamos un proyecto contigo?",
       "r_how_do_i_start_a_project": "El primer paso es una llamada de consulta para analizar sus necesidades y el alcance del proyecto. A partir de ahí, le proporcionaré una propuesta detallada y un cronograma.",
-      "q_what_project_management_tools": "¿Qué herramientas de gestión de proyectos utilizas?",
-      "r_what_project_management_tools": "Utilizo Notion para garantizar un proceso de gestión simple, transparente y eficaz.",
-      "q_how_do_you_handle_project_communication": "¿Cómo manejas la comunicación del proyecto?",
-      "r_how_do_you_handle_project_communication": "Mantengo comunicación regular a través de correos electrónicos u otras opciones preferidas, llamadas programadas y actualizaciones en Notion para mantenerlo informado en cada etapa.",
-      "q_what_customization_options_are_available": "¿Qué opciones de personalización están disponibles?",
-      "r_what_customization_options_are_available": "Desde la creación de componentes interactivos hasta la creación de una experiencia similar a una aplicación en el navegador, temas que coincidan con su marca e integraciones personalizadas, puedo adaptar su proyecto a sus necesidades exactas.",
+      "q_project_management_tools": "¿Qué herramientas de gestión de proyectos utilizas?",
+      "r_project_management_tools": "Utilizo Notion para garantizar un proceso de gestión simple, transparente y eficaz.",
+      "q_project_communication": "¿Cómo manejas la comunicación del proyecto?",
+      "r_project_communication": "Mantengo comunicación regular a través de correos electrónicos u otras opciones preferidas, llamadas programadas y actualizaciones en Notion para mantenerlo informado en cada etapa.",
+      "q_customization_options": "¿Qué opciones de personalización están disponibles?",
+      "r_customization_options": "Desde la creación de componentes interactivos hasta la creación de una experiencia similar a una aplicación en el navegador, temas que coincidan con su marca e integraciones personalizadas, puedo adaptar su proyecto a sus necesidades exactas.",
       "q_what_happens_if_the_project_changes_midway": "¿Qué pasa si el proyecto cambia a mitad de camino?",
       "r_what_happens_if_the_project_changes_midway": "Tengo prácticas de gestión de proyectos flexibles que pueden adaptarse a cambios de alcance con un acuerdo previo sobre nuevos cronogramas y costos.",
-      "q_what_if_i_am_not_happy_with_the_results": "¿Qué pasa si no estoy satisfecho con los resultados?",
-      "r_what_if_i_am_not_happy_with_the_results": "Si no estás satisfecho, continuaré refinando el proyecto hasta que estés 100% satisfecho bajo la condición de que esté dentro del alcance acordado del proyecto.",
-      "q_do_you_have_refund_policy": "¿Tiene una política de reembolso?",
-      "r_do_you_have_refund_policy": "No ofrezco reembolsos, pero si por cualquier motivo decides abandonar el proyecto a mitad de camino, te cobraré sólo por el trabajo realizado hasta ese momento."
+      "q_what_if_not_happy_with_results": "¿Qué pasa si no estoy satisfecho con los resultados?",
+      "r_what_if_not_happy_with_results": "Si no estás satisfecho, continuaré refinando el proyecto hasta que estés 100% satisfecho bajo la condición de que esté dentro del alcance acordado del proyecto.",
+      "q_refund_policy": "¿Tiene una política de reembolso?",
+      "r_refund_policy": "No ofrezco reembolsos, pero si por cualquier motivo decides abandonar el proyecto a mitad de camino, te cobraré sólo por el trabajo realizado hasta ese momento."
     }
   }
 </i18n>
+
+<style>
+#faqs button {
+	text-align: left;
+}
+</style>

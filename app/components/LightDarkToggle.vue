@@ -7,7 +7,7 @@
 			size="lg"
 			@click="isDark = !isDark"
 			:ui="{
-				active: 'bg-gray-500 dark:bg-gray-700',
+				active: 'bg-gray-200 dark:bg-gray-900',
 				icon: {
 					on: 'dark:text-gray-400'
 				}

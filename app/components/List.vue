@@ -1,5 +1,5 @@
 <template>
-	<div class="not-prose flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-8">
+	<div class="not-prose flex flex-col md:grid md:grid-cols-2 gap-8">
 		<ContentList :path="shortLocale()+'/proyecto'" :where="{ tipo:props.tipo }" v-slot="{ list }">
 
 			<div

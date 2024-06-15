@@ -1,5 +1,4 @@
 <template>
-	<!-- {{ $i18n.localeProperties.code }} > {{ shortLocale() }} -->
 	<div class="flex items-center gap-2">
 		<UToggle
 			v-model="localeState"
@@ -15,7 +14,6 @@
 				}
 			}"
 		/>
-		<!-- {{ shortLocale() === 'en' ? 'English' : 'Español' }} -->
 	</div>
 </template>
 

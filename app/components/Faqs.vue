@@ -7,17 +7,17 @@ const faqs = computed(() => {
   return [
     { label: t("q_how_do_i_start_a_project"), content: t("r_how_do_i_start_a_project") },
     { label: t("q_project_duration"), content: t("r_project_duration") },
-    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
+    // { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     { label: t("q_project_communication"), content: t("r_project_communication") },
     { label: t("q_payment_process"), content: t("r_payment_process") },
-    { label: t("q_can_i_incorporate"), content: t("r_can_i_incorporate") },
+    // { label: t("q_can_i_incorporate"), content: t("r_can_i_incorporate") },
     { label: t("q_can_i_train"), content: t("r_can_i_train") },
     { label: t("q_how_i_handle_changes"), content: t("r_how_i_handle_changes") },
     { label: t("q_offer_additional_services"), content: t("r_offer_additional_services") },
     { label: t("q_project_management_tools"), content: t("r_project_management_tools") },
     { label: t("q_customization_options"), content: t("r_customization_options") },
-    { label: t("q_what_if_not_happy_with_results"), content: t("r_what_if_not_happy_with_results") },
-    { label: t("q_refund_policy"), content: t("r_refund_policy") },
+    // { label: t("q_what_if_not_happy_with_results"), content: t("r_what_if_not_happy_with_results") },
+    // { label: t("q_refund_policy"), content: t("r_refund_policy") },
   ]
 })
 </script>
@@ -26,7 +26,7 @@ const faqs = computed(() => {
   <section id="faqs">
     <ProseH1>{{ $t('faqs') }}</ProseH1>
     <p>{{ t('intro') }}</p>
-    <UAccordion :items="faqs" />
+    <UAccordion :items="faqs" variant="ghost" />
   </section>
 </template>
 
@@ -55,11 +55,11 @@ const faqs = computed(() => {
       "q_project_communication": "How do you handle project communication?",
       "r_project_communication": "I maintain regular communication via emails or other preferred options, scheduled calls, and updates on Notion to keep you informed at every stage.",
       "q_customization_options": "What customization options are available?",
-      "r_customization_options": "From builiding interactive components, to building a full app like experience in the browser, Theming to match your brand, and custom integrations, I can tailor your project to your exact needs.",
+      "r_customization_options": "From builiding interactive components, to building a full app like experience in the browser, Theming to match your brand, I can tailor your project to your exact needs.",
       "q_what_happens_if_the_project_changes_midway": "What happens if the project changes midway?",
       "r_what_happens_if_the_project_changes_midway": "I have flexible project management practices that can accommodate scope changes with prior agreement on new timelines and costs.",
       "q_what_if_not_happy_with_results": "What if I'm not happy with the results?",
-      "r_what_if_not_happy_with_results": "If you're not happy, I'll continue refining the project until you're 100% statisfied under the condition that it is within the agreed project scope.",
+      "r_what_if_not_happy_with_results": "If you're not happy, I'll continue refining the project until you're 100% satisfied under the condition that it is within the agreed project scope.",
       "q_refund_policy": "Do you have refund policy?",
       "r_refund_policy": "I don't offer refunds, but if you decide for whatever reason to quit the project midway, I will charge you just for the work done until that point."
     },
@@ -86,9 +86,9 @@ const faqs = computed(() => {
       "q_project_communication": "¿Cómo manejas la comunicación del proyecto?",
       "r_project_communication": "Mantengo comunicación regular a través de correos electrónicos u otras opciones preferidas, llamadas programadas y actualizaciones en Notion para mantenerlo informado en cada etapa.",
       "q_customization_options": "¿Qué opciones de personalización están disponibles?",
-      "r_customization_options": "Desde la creación de componentes interactivos hasta la creación de una experiencia similar a una aplicación en el navegador, temas que coincidan con su marca e integraciones personalizadas, puedo adaptar su proyecto a sus necesidades exactas.",
+      "r_customization_options": "Desde la creación de componentes interactivos hasta la creación de una experiencia similar a una aplicación en el navegador, identidad visual que coincida con su marca, puedo adaptar su proyecto a sus necesidades exactas.",
       "q_what_happens_if_the_project_changes_midway": "¿Qué pasa si el proyecto cambia a mitad de camino?",
-      "r_what_happens_if_the_project_changes_midway": "Tengo prácticas de gestión de proyectos flexibles que pueden adaptarse a cambios de alcance con un acuerdo previo sobre nuevos cronogramas y costos.",
+      "r_what_happens_if_the_project_changes_midway": "Soy flexible a adaptarme a cambios mediante un acuerdo previo acordando nuevos cronogramas y costos.",
       "q_what_if_not_happy_with_results": "¿Qué pasa si no estoy satisfecho con los resultados?",
       "r_what_if_not_happy_with_results": "Si no estás satisfecho, continuaré refinando el proyecto hasta que estés 100% satisfecho bajo la condición de que esté dentro del alcance acordado del proyecto.",
       "q_refund_policy": "¿Tiene una política de reembolso?",

@@ -3,6 +3,7 @@ export default defineNuxtConfig({
   future: {
     compatibilityVersion: 4,
   },
+
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
@@ -17,10 +18,6 @@ export default defineNuxtConfig({
     families: {
       "JetBrains Mono": [400, 600, 700],
     },
-  },
-
-  ui: {
-    icons: ["ph", "circle-flags"],
   },
 
   app: {
@@ -56,4 +53,11 @@ export default defineNuxtConfig({
       // remarkPlugins: ["remark-unwrap-images"],
     },
   },
+
+  i18n: {
+    vueI18n: './i18n.config.ts'
+  },
+
+  //HACK: https://nuxt.com/docs/api/nuxt-config#compatibilitydate
+  compatibilityDate: "2024-07-02",
 });

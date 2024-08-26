@@ -55,7 +55,7 @@ const faqs = computed(() => {
       "q_project_communication": "How do you handle project communication?",
       "r_project_communication": "I maintain regular communication via emails or other preferred options, scheduled calls, and updates on Notion to keep you informed at every stage.",
       "q_customization_options": "What customization options are available?",
-      "r_customization_options": "From builiding interactive components, to building a full app like experience in the browser, Theming to match your brand, I can tailor your project to your exact needs.",
+      "r_customization_options": "From building interactive components, to building a full app like experience in the browser, Theming to match your brand, I can tailor your project to your exact needs.",
       "q_what_happens_if_the_project_changes_midway": "What happens if the project changes midway?",
       "r_what_happens_if_the_project_changes_midway": "I have flexible project management practices that can accommodate scope changes with prior agreement on new timelines and costs.",
       "q_what_if_not_happy_with_results": "What if I'm not happy with the results?",

@@ -10,7 +10,7 @@
 			:ui="{
 				color: {
 					gray: {
-						solid: 'bg-transparent hover:ring-primary hover:bg-transparent dark:hover:text-primary dark:bg-transparent dark:hover:ring-primary dark:hover:bg-transparent transition-all duration-400',
+						solid: 'bg-transparent dark:text-gray-400 hover:ring-primary hover:bg-transparent dark:hover:text-primary dark:bg-transparent dark:hover:ring-primary dark:hover:bg-transparent transition-all duration-400',
 					},
 				}
 			}"

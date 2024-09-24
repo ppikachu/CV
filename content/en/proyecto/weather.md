@@ -7,10 +7,15 @@ tags: ['Nuxt', 'GLSL']
 tipo: 'personal'
 ---
 
-::local-video{:src='/images/weather.mp4' :poster='/images/weather-512x512.jpg'}
-
-Note: This app needs location permission to get the current location. Please enable location in your browser.
+::local-video
+---
+src: /images/weather.mp4
+poster: /images/weather-512x512.jpg
+---
+::
 
 - Geolocalization
 - Current weather
 - GLSL rain effect
+
+Note: This app needs location permission to get the current location. Please enable location in your browser.

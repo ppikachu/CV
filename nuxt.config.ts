@@ -14,6 +14,10 @@ export default defineNuxtConfig({
     "@nuxthq/studio",
   ],
 
+  colorMode: {
+    preference: "dark",
+  },
+
   googleFonts: {
     families: {
       "JetBrains Mono": [400, 600, 700],

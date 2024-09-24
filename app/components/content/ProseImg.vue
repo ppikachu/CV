@@ -1,15 +1,13 @@
 <template>
-	<div class="no-print">
-		<NuxtImg
-			:src="refinedSrc"
-			:alt="alt"
-			class="mb-0 mt-4 w-full h-auto rounded-md"
-			:width="dimensionedSrc.width"
-			:height="dimensionedSrc.height"
-			:placeholder="[dimensionedSrc.width, dimensionedSrc.height]"
-		/>
-		<p v-if="alt!=='' && showAlt" class="mt-2 mb-8 text-xs text-center text-gray-700 dark:text-gray-400">{{ alt }}</p>
-	</div>
+	<NuxtImg
+		:src="refinedSrc"
+		:alt="alt"
+		class="no-print mb-0 mt-4 w-full h-auto rounded-md"
+		:width="dimensionedSrc.width"
+		:height="dimensionedSrc.height"
+		:placeholder="[dimensionedSrc.width, dimensionedSrc.height]"
+	/>
+	<span v-if="alt!=='' && showAlt" class="no-print block mt-2 mb-8 text-xs text-center text-gray-700 dark:text-gray-400">{{ alt }}</span>
 </template>
 
 <script setup lang="ts">

@@ -8,10 +8,10 @@ export default defineNuxtConfig({
     "@nuxt/ui",
     "@nuxt/content",
     "@nuxt/devtools",
-    "@nuxtjs/google-fonts",
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxthq/studio",
+    "@nuxt/fonts",
   ],
 
   colorMode: {

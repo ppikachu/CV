@@ -7,7 +7,8 @@
 		<Current />
 		<Projects />
 		<Personal />
-		<!-- <Faqs /> -->
+		<Faqs />
+		<Contact />
 		<SiteFooter />
 	</div>
 </template>

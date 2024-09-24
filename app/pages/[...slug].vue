@@ -20,6 +20,11 @@
 				size="lg"
 				block
 				class="not-prose my-8"
+				:ui="{
+					variant: {
+						solid: 'bg-lime-700'
+					}
+				}"
 			/>
 		</ContentQuery>
 
@@ -35,7 +40,7 @@
 			:ui="{
 				color: {
 					gray: {
-						solid: 'bg-transparent hover:ring-primary hover:bg-transparent dark:hover:text-primary dark:bg-transparent dark:hover:ring-primary dark:hover:bg-transparent transition-all duration-400',
+						solid: 'bg-transparent hover:ring-lime-700 hover:bg-transparent hover:text-lime-700 dark:hover:text-primary dark:bg-transparent dark:hover:ring-primary dark:hover:bg-transparent transition-all duration-400',
 					},
 				}
 			}"

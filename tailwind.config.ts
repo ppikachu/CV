@@ -23,7 +23,7 @@ export default <Partial<Config>>{
 					css: {
 						h1: {
 							fontSize: theme("fontSize.2xl")[0],
-							marginTop: '3rem',
+							marginTop: '2rem',
 							marginBottom: '2rem',
 							fontWeight: 400,
 						},

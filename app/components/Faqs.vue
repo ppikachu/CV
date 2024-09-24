@@ -5,17 +5,17 @@ const { t } = useI18n({
 
 const faqs = computed(() => {
   return [
+    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     { label: t("q_how_do_i_start_a_project"), content: t("r_how_do_i_start_a_project") },
     { label: t("q_project_duration"), content: t("r_project_duration") },
-    // { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     { label: t("q_project_communication"), content: t("r_project_communication") },
     { label: t("q_payment_process"), content: t("r_payment_process") },
     // { label: t("q_can_i_incorporate"), content: t("r_can_i_incorporate") },
     { label: t("q_can_i_train"), content: t("r_can_i_train") },
     { label: t("q_how_i_handle_changes"), content: t("r_how_i_handle_changes") },
     { label: t("q_offer_additional_services"), content: t("r_offer_additional_services") },
-    { label: t("q_project_management_tools"), content: t("r_project_management_tools") },
-    { label: t("q_customization_options"), content: t("r_customization_options") },
+    // { label: t("q_project_management_tools"), content: t("r_project_management_tools") },
+    // { label: t("q_customization_options"), content: t("r_customization_options") },
     // { label: t("q_what_if_not_happy_with_results"), content: t("r_what_if_not_happy_with_results") },
     // { label: t("q_refund_policy"), content: t("r_refund_policy") },
   ]
@@ -23,17 +23,30 @@ const faqs = computed(() => {
 </script>
 
 <template>
-  <section id="faqs">
+  <section id="faqs" class="my-12">
     <ProseH1>{{ $t('faqs') }}</ProseH1>
     <p>{{ t('intro') }}</p>
-    <UAccordion :items="faqs" variant="ghost" />
+    <UAccordion :items="faqs">
+      <template #default="{ item, open }">
+        <UButton variant="link" :padded="false" class="py-3" :ui="{ variant: { link: 'text-lime-700' } }">
+          <span class="truncate">{{ item.label }}</span>
+          <template #trailing>
+            <UIcon
+              name="i-heroicons-chevron-right-20-solid"
+              class="w-5 h-5 ms-auto transform transition-transform duration-200"
+              :class="[open && 'rotate-90']"
+            />
+          </template>
+        </UButton>
+      </template>
+    </UAccordion> 
   </section>
 </template>
 
 <i18n lang="json">
   {
     "en": {
-      "intro": "As we collaborate on your next project, it's essential to have a clear understanding of our process. Below, find answers to frequently asked questions about payment terms, project duration, and more. Let's dive in!",
+      "intro": "As we collaborate on your next project, it's essential to have a clear understanding of our process. Below, find answers to frequently asked questions.",
       "q_payment_process": "How does the payment process work?",
       "r_payment_process": "Once we agree on the service package, payment is structured as 50% upfront and the remaining 50% upon project completion. I also offer flexible payment plans for larger projects. The handoff will be done once the final payment is received.",
       "q_project_duration": "How long does a typical project take?",
@@ -64,7 +77,7 @@ const faqs = computed(() => {
       "r_refund_policy": "I don't offer refunds, but if you decide for whatever reason to quit the project midway, I will charge you just for the work done until that point."
     },
     "es": {
-      "intro": "Al colaborar en tu próximo proyecto, es importante tener una comprensión clara del proceso. A continuación, contesto respuestas frecuentes sobre los planes de pago, el tiempo de duración de un proyecto y más. ¡Vamos a profundizar!",
+      "intro": "Al colaborar en tu próximo proyecto, es importante tener una comprensión clara del proceso. A continuación, contesto respuestas frecuentes.",
       "q_payment_process": "¿Cómo funciona el proceso de pago?",
       "r_payment_process": "Una vez que acordamos el paquete de servicios, el pago se estructura en un 50 % por adelantado y el 50 % restante al finalizar el proyecto. También ofrezco planes de pago flexibles para proyectos más grandes. La transferencia se realizará una vez que se reciba el pago final.",
       "q_project_duration": "¿Cuánto tiempo lleva un proyecto típico?",

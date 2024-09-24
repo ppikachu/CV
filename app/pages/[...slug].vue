@@ -35,7 +35,7 @@
       color="gray"
       @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
       block
-      class="flex justify-center not-prose my-8"
+      class="flex justify-center not-prose my-16"
       :ui="{
         color: {
           gray: {

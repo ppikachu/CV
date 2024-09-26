@@ -18,12 +18,6 @@ export default defineNuxtConfig({
     preference: "dark",
   },
 
-  googleFonts: {
-    families: {
-      "JetBrains Mono": [400, 600, 700],
-    },
-  },
-
   app: {
     pageTransition: { name: "page", mode: "out-in" },
   },

@@ -64,10 +64,18 @@ export default defineNuxtConfig({
     }
   },
 
+  content: {
+    experimental: {
+      sqliteConnector: "native"
+    }
+  },
+
   nitro: {
     experimental: {
       tasks: true
     },
-    external: ['better-sqlite3', 'sharp']
+    externals: {
+      external: ['sharp']
+    }
   }
 });

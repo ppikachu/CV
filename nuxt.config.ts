@@ -67,6 +67,7 @@ export default defineNuxtConfig({
   nitro: {
     experimental: {
       tasks: true
-    }
+    },
+    external: ['better-sqlite3', 'sharp']
   }
 });

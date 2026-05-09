@@ -1,8 +1,13 @@
+<script setup lang="ts">
+	const { locale } = useI18n()
+	const shortLoc = computed(() => locale.value.split('-')[0])
+
+	const { data: page } = await useAsyncData(`skills-${shortLoc.value}`, () => queryCollection('content').path('/' + shortLoc.value + '/skills').first(), { watch: [shortLoc] })
+</script>
+
 <template>
 	<section>
-		<ContentQuery :path="shortLocale()+'/skills'" find="one" v-slot="{ data }">
-
-			<ContentRenderer :value="data" />
+			<ContentRenderer v-if="page" :value="page" />
 
 			<!-- TODO mostrar o no mostrar skills?-->
 			<!-- <div class="prose dark:prose-invert my-4">
@@ -20,6 +25,5 @@
 					:label="skill"
 				/>
 			</div> -->
-		</ContentQuery>
 	</section>
 </template>

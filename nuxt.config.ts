@@ -10,7 +10,6 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "@nuxt/image",
     "@nuxtjs/i18n",
-    "@nuxthq/studio",
     "@nuxt/fonts",
   ],
 
@@ -31,12 +30,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      DEFAULT_LANGUAGE: "es-AR",
       NAME: "Santiago Toyos",
       DESCRIPTION: "Diseñador con experiencia en contenido multimedia",
       OG_IMAGE: "/OG.png",
       TWITTER_IMAGE: "/twitter.png",
       ICON: "/icon.png",
+      // used by useSeoMeta ogUrl:
       HOST:
         process.env.NODE_ENV === "production"
           ? "https://toyos.vercel.app"
@@ -44,18 +43,24 @@ export default defineNuxtConfig({
     },
   },
 
-  content: {
-    contentHead: false,
-    markdown: {
-      anchorLinks: false,
-      // remarkPlugins: ["remark-unwrap-images"],
-    },
-  },
-
   i18n: {
-    vueI18n: './i18n.config.ts'
+    vueI18n: '~~/i18n.config.ts',
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    strategy: 'no_prefix',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+    },
+    bundle: {
+      optimizeTranslationDirective: false
+    }
   },
 
-  //HACK: https://nuxt.com/docs/api/nuxt-config#compatibilitydate
-  compatibilityDate: "2024-07-02",
+  vite: {
+    optimizeDeps: {
+      include: ['@vercel/analytics']
+    }
+  },
 });

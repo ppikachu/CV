@@ -1,14 +1,30 @@
+<script lang="ts" setup>
+const props = defineProps({
+	tipo: {
+		type: String,
+		default: 'proyecto'
+	}
+})
+
+const { locale } = useI18n()
+const shortLoc = computed(() => locale.value.split('-')[0])
+
+const { data: proyectos } = await useAsyncData(`list-${props.tipo}-${shortLoc.value}`, () => {
+	return queryCollection('content')
+	.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
+	.where('tipo','=', props.tipo)
+	.all()
+}, { watch: [shortLoc] })
+</script>
+
 <template>
 	<div class="not-prose flex flex-col md:grid md:grid-cols-2 gap-8">
-		<ContentList :path="shortLocale()+'/proyecto'" :where="{ tipo:props.tipo }" v-slot="{ list }">
-
 			<div
-				v-for="article in list"
-				:key="article._path"
+				v-for="article in proyectos"
+				:key="article.path"
 				class="flex group/item md:rounded-lg md:outline outline-1 outline-gray-200 dark:outline-gray-900 hover:dark:outline-primary transition-all duration-300 overflow-hidden"
 			>
-
-				<NuxtLink v-if="article.image" :to="article._path" class="w-full relative flex items-center">
+				<NuxtLink :to="article.path" class="w-full relative flex items-center">
 					<NuxtImg
 						v-if="article.image"
 						:src="article.image"
@@ -27,14 +43,5 @@
 
 				</NuxtLink>
 			</div>
-		</ContentList>
 	</div>
 </template>
-
-<script lang="ts" setup>
-const props = defineProps({
-	tipo: {
-		type: String
-	}
-})
-</script>

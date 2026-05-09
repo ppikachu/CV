@@ -5,7 +5,6 @@
 			on-icon="i-circle-flags-us"
 			off-icon="i-circle-flags-es"
 			size="lg"
-			@click="functionSwitchLocale()"
 			:ui="{
 				active: 'bg-gray-200 dark:bg-gray-900',
 				inactive: 'dark:bg-gray-900',
@@ -18,12 +17,10 @@
 </template>
 
 <script lang="ts" setup>
-const { setLocale } = useI18n()
-const localeState = ref(shortLocale() === 'en' ? true : false)
-const shlocale = ref(shortLocale())
+const { locale, setLocale } = useI18n()
 
-function functionSwitchLocale() {
-	setLocale(shlocale.value === 'en' ? 'es' : 'en')
-	shlocale.value = shlocale.value === 'en' ? 'es' : 'en'
-}
+const localeState = computed({
+  get: () => locale.value.startsWith('en'),
+  set: (val) => setLocale(val ? 'en' : 'es')
+})
 </script>

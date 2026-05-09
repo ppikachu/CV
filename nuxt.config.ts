@@ -63,4 +63,10 @@ export default defineNuxtConfig({
       include: ['@vercel/analytics']
     }
   },
+
+  nitro: {
+    experimental: {
+      tasks: true
+    }
+  }
 });

@@ -7,9 +7,9 @@ export default defineContentConfig({
       source: '**/*.md',
       // Define custom schema for collection
       schema: z.object({
-        tags: z.array(z.string()),
-        image: z.string(),
-        tipo: z.string()
+        tags: z.array(z.string()).optional(),
+        image: z.string().optional(),
+        tipo: z.string().optional()
       })
     })
   }

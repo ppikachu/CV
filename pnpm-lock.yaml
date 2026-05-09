@@ -11,9 +11,15 @@ importers:
       '@vercel/analytics':
         specifier: ^1.4.0
         version: 1.6.1(vue-router@4.6.4(vue@3.5.34(typescript@5.9.3)))(vue@3.5.34(typescript@5.9.3))
+      better-sqlite3:
+        specifier: ^12.9.0
+        version: 12.9.0
       glslCanvas:
         specifier: ^0.2.6
         version: 0.2.6
+      sharp:
+        specifier: ^0.34.5
+        version: 0.34.5
       vue-md-player:
         specifier: ^2.1.2
         version: 2.1.2(vue@3.5.34(typescript@5.9.3))
@@ -54,15 +60,9 @@ importers:
       '@types/node':
         specifier: ^25.6.2
         version: 25.6.2
-      better-sqlite3:
-        specifier: ^12.9.0
-        version: 12.9.0
       nuxt:
         specifier: ^4.4.4
         version: 4.4.4(@babel/core@7.29.0)(@babel/plugin-proposal-decorators@7.29.0(@babel/core@7.29.0))(@babel/plugin-syntax-jsx@7.28.6(@babel/core@7.29.0))(@parcel/watcher@2.5.6)(@types/node@25.6.2)(@vue/compiler-sfc@3.5.34)(better-sqlite3@12.9.0)(cac@6.7.14)(db0@0.3.4(better-sqlite3@12.9.0))(eslint@10.3.0(jiti@2.7.0))(ioredis@5.10.1)(magicast@0.5.2)(optionator@0.9.4)(rollup-plugin-visualizer@7.0.1(rollup@4.60.3))(rollup@4.60.3)(srvx@0.11.15)(terser@5.47.1)(typescript@5.9.3)(vite@7.3.3(@types/node@25.6.2)(jiti@2.7.0)(terser@5.47.1)(yaml@2.8.4))(yaml@2.8.4)
-      sharp:
-        specifier: ^0.34.5
-        version: 0.34.5
 
 packages:
 

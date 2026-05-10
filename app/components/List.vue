@@ -36,8 +36,8 @@ const { data: proyectos } = await useAsyncData<ContentArticle[]>(`list-${props.t
 				class="block group"
 			>
 				<UCard
-					class="transition-all duration-300 hover:ring-primary-500"
-					:ui="{ body: 'p-0 sm:p-0' }"
+					class="transition-all duration-300 hover:ring hover:ring-primary-500"
+					:ui="{ root: 'ring-0 shadow-none', body: 'p-0 sm:p-0' }"
 				>
 					<div class="flex h-full">
 						<NuxtImg

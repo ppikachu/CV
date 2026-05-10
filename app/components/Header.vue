@@ -1,9 +1,14 @@
+<script setup lang="ts">
+import { h1 } from '#build/ui/prose';
+
+</script>
+
 <template>
 	<section class="mb-4 flex flex-row gap-4 justify-between not-prose">
 		<div class="flex gap-2 items-center">
-			<div id="title" class="slide-enter-content">
-				<ProseH1 class="!my-0">Santiago Toyos</ProseH1>
-				<ProseH2 class="!capitalize">{{ $t('role') }}</ProseH2>
+			<div id="title" class="text-primary slide-enter-content">
+				<h1 class="uppercase text-2xl">Santiago Toyos</h1>
+				<h2 class="text-lg">{{ $t('role') }}</h2>
 			</div>
 		</div>
 		<div id="switches" class="flex flex-row sm:items-start gap-3 h-fit">

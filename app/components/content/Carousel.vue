@@ -1,15 +1,12 @@
 <template>
-	<div class="not-prose my-8 mb-12 block w-full no-print">
+	<div class="not-prose my-8 mb-18 block w-full no-print">
 		<ClientOnly>
 			<UCarousel
 				v-slot="{ item }"
 				:items="props.images"
 				dots
 				arrows
-				:prev="{ color: 'neutral', variant: 'outline', icon: 'i-heroicons-chevron-left-16-solid' }"
-				:next="{ color: 'neutral', variant: 'outline', icon: 'i-heroicons-chevron-right-16-solid' }"
 				:ui="{
-					item: 'basis-full',
 					viewport: 'rounded-lg overflow-hidden',
 				}"
 			>

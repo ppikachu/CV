@@ -15,6 +15,7 @@
         v-if="data.url"
         :to="data.url"
         :label="$t('web_url')"
+        variant="outline"
         target="_blank"
         icon="i-heroicons-arrow-top-right-on-square-16-solid"
         block
@@ -29,7 +30,7 @@
       variant="outline"
       @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
       block
-      class="mb-16 cursor-pointer"
+      class="mt-8 mb-16 cursor-pointer"
     />
   </div>
 </template>

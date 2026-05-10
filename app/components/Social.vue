@@ -7,7 +7,7 @@ import data from '~/assets/social_links.json'
 			:to="item.to"
 			target="_blank"
 			variant="ghost"
-			color="black"
+			color="neutral"
 		>
 			<ClientOnly>
 				<UIcon :name="item.icon" dynamic class="w-6 h-6" />

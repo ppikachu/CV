@@ -1,6 +1,7 @@
 export default function () {
-  if (useI18n().locale.value.length>2)
-    return useI18n().locale.value.split('-')[0]
-  else
-    return useI18n().locale.value
+	const { locale } = useI18n()
+	if (locale.value.length > 2)
+		return locale.value.split('-')[0]
+	else
+		return locale.value
 }

@@ -5,7 +5,7 @@
 		class="no-print mb-0 mt-4 w-full h-auto rounded-md"
 		:width="dimensionedSrc.width"
 		:height="dimensionedSrc.height"
-		:placeholder="[dimensionedSrc.width, dimensionedSrc.height]"
+		:placeholder="placeholderDimensions"
 	/>
 	<span v-if="alt!=='' && showAlt" class="no-print block mt-2 mb-8 text-xs text-center text-gray-700 dark:text-gray-400">{{ alt }}</span>
 </template>
@@ -56,5 +56,12 @@ const dimensionedSrc = computed(() => {
 	} else {
 		return { width: props.width, height: props.height }
 	}
+})
+
+const placeholderDimensions = computed(() => {
+	if (dimensionedSrc.value.width && dimensionedSrc.value.height) {
+		return [Number(dimensionedSrc.value.width), Number(dimensionedSrc.value.height)] as [number, number]
+	}
+	return undefined
 })
 </script>

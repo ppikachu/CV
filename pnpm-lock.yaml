@@ -17,6 +17,9 @@ importers:
       sharp:
         specifier: ^0.34.5
         version: 0.34.5
+      ufo:
+        specifier: ^1.6.4
+        version: 1.6.4
       vue-md-player:
         specifier: ^2.1.2
         version: 2.1.2(vue@3.5.34(typescript@5.9.3))
@@ -26,9 +29,6 @@ importers:
         version: 1.2.10
       '@iconify-json/heroicons':
         specifier: ^1.2.1
-        version: 1.2.3
-      '@iconify-json/mdi':
-        specifier: ^1.2.3
         version: 1.2.3
       '@iconify-json/ph':
         specifier: ^1.2.1
@@ -807,9 +807,6 @@ packages:
 
   '@iconify-json/heroicons@1.2.3':
     resolution: {integrity: sha512-n+vmCEgTesRsOpp5AB5ILB6srsgsYK+bieoQBNlafvoEhjVXLq8nIGN4B0v/s4DUfa0dOrjwE/cKJgIKdJXOEg==}
-
-  '@iconify-json/mdi@1.2.3':
-    resolution: {integrity: sha512-O3cLwbDOK7NNDf2ihaQOH5F9JglnulNDFV7WprU2dSoZu3h3cWH//h74uQAB87brHmvFVxIOkuBX2sZSzYhScg==}
 
   '@iconify-json/ph@1.2.2':
     resolution: {integrity: sha512-PgkEZNtqa8hBGjHXQa4pMwZa93hmfu8FUSjs/nv4oUU6yLsgv+gh9nu28Kqi8Fz9CCVu4hj1MZs9/60J57IzFw==}
@@ -7203,10 +7200,6 @@ snapshots:
       '@iconify/types': 2.0.0
 
   '@iconify-json/heroicons@1.2.3':
-    dependencies:
-      '@iconify/types': 2.0.0
-
-  '@iconify-json/mdi@1.2.3':
     dependencies:
       '@iconify/types': 2.0.0
 

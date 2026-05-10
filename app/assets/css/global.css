@@ -7,10 +7,6 @@
 	--aspect-ratio-square: 1 / 1;
 	--aspect-ratio-video: 16 / 9;
 	
-	--color-default: #000000;
-	--ui-bg: #000000;
-	--ui-bg-elevated: #000000;
-
 	--color-primary-50: var(--color-lime-50);
 	--color-primary-100: var(--color-lime-100);
 	--color-primary-200: var(--color-lime-200);
@@ -49,13 +45,15 @@
 }
 
 :root {
-	--ui-bg: #000000;
-	--ui-bg-elevated: #000000;
+	--color-default: var(--color-slate-50);
+	--ui-bg: var(--color-slate-50);
+	--ui-bg-elevated: var(--color-slate-100);
 	--ui-primary: var(--color-lime-500);
 	--ui-neutral: var(--color-slate-500);
 }
 
 .dark {
+	--color-default: #000000;
 	--ui-bg: #000000;
 	--ui-bg-elevated: #000000;
 	--ui-primary: var(--color-lime-400);
@@ -72,23 +70,8 @@
 	}
 }
 
-.caja-int {
-	@apply w-full md:w-7/12 px-4 py-8 mx-auto prose prose-invert lg:prose-lg;
-}
-.caja-int-no-image {
-	@apply w-full px-4 py-8 prose-lg;
-}
-.caja-img {
-	@apply object-cover w-full md:w-5/12 md:rounded-r;
-}
-.caja-out {
-	@apply md:rounded-lg flex flex-col-reverse md:flex-row;
-}
 address {
 	@apply not-italic;
-}
-.butoff {
-	@apply inline-flex p-0.5 mr-2 mt-2 no-underline rounded-lg bg-gradient-to-br from-purple-600 to-pink-600 group-hover:from-purple-500 group-hover:to-pink-500 hover:text-white focus:ring-2 focus:outline-none focus:ring-pink-600;
 }
 
 .aspect-video {

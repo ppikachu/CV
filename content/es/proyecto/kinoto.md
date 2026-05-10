@@ -5,6 +5,7 @@ image: '/images/kinoto_coleccion_dark.png'
 url: 'https://kinoto.com.ar'
 tags: ['Nuxt 4', 'E-commerce', 'Analytics', ' Mercado Pago', 'Netlify']
 tipo: 'wip'
+wip: true
 ---
 
 # Kinoto – E-commerce de Indumentaria

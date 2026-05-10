@@ -1,4 +1,13 @@
 <script lang="ts" setup>
+interface ContentArticle {
+	title?: string
+	description?: string
+	path: string
+	image?: string
+	tags?: string[]
+	tipo?: string
+}
+
 const props = defineProps({
 	tipo: {
 		type: String,
@@ -9,8 +18,8 @@ const props = defineProps({
 const { locale } = useI18n()
 const shortLoc = computed(() => locale.value.split('-')[0])
 
-const { data: proyectos } = await useAsyncData(`list-${props.tipo}-${shortLoc.value}`, () => {
-	return queryCollection('content')
+const { data: proyectos } = await useAsyncData<ContentArticle[]>(`list-${props.tipo}-${shortLoc.value}`, () => {
+	return (queryCollection as any)('content')
 	.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
 	.where('tipo','=', props.tipo)
 	.select('title', 'description', 'path', 'image', 'tags', 'tipo')
@@ -50,10 +59,12 @@ const { data: proyectos } = await useAsyncData(`list-${props.tipo}-${shortLoc.va
 						</div>
 						
 						<div class="flex items-center pr-4">
-							<UIcon 
-								name="i-heroicons-chevron-right-20-solid" 
-								class="w-5 h-5 group-hover:text-primary-500 group-hover:translate-x-1 transition-all"
-							/>
+							<ClientOnly>
+								<UIcon 
+									name="i-heroicons-chevron-right-20-solid" 
+									class="w-5 h-5 group-hover:text-primary-500 group-hover:translate-x-1 transition-all"
+								/>
+							</ClientOnly>
 						</div>
 					</div>
 				</UCard>

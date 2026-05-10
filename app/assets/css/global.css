@@ -10,21 +10,60 @@
 	--color-default: #000000;
 	--ui-bg: #000000;
 	--ui-bg-elevated: #000000;
+
+	--color-primary-50: var(--color-lime-50);
+	--color-primary-100: var(--color-lime-100);
+	--color-primary-200: var(--color-lime-200);
+	--color-primary-300: var(--color-lime-300);
+	--color-primary-400: var(--color-lime-400);
+	--color-primary-500: var(--color-lime-500);
+	--color-primary-600: var(--color-lime-600);
+	--color-primary-700: var(--color-lime-700);
+	--color-primary-800: var(--color-lime-800);
+	--color-primary-900: var(--color-lime-900);
+	--color-primary-950: var(--color-lime-950);
+
+	--ui-color-primary-50: var(--color-lime-50);
+	--ui-color-primary-100: var(--color-lime-100);
+	--ui-color-primary-200: var(--color-lime-200);
+	--ui-color-primary-300: var(--color-lime-300);
+	--ui-color-primary-400: var(--color-lime-400);
+	--ui-color-primary-500: var(--color-lime-500);
+	--ui-color-primary-600: var(--color-lime-600);
+	--ui-color-primary-700: var(--color-lime-700);
+	--ui-color-primary-800: var(--color-lime-800);
+	--ui-color-primary-900: var(--color-lime-900);
+	--ui-color-primary-950: var(--color-lime-950);
+
+	--ui-color-neutral-50: var(--color-slate-50);
+	--ui-color-neutral-100: var(--color-slate-100);
+	--ui-color-neutral-200: var(--color-slate-200);
+	--ui-color-neutral-300: var(--color-slate-300);
+	--ui-color-neutral-400: var(--color-slate-400);
+	--ui-color-neutral-500: var(--color-slate-500);
+	--ui-color-neutral-600: var(--color-slate-600);
+	--ui-color-neutral-700: var(--color-slate-700);
+	--ui-color-neutral-800: var(--color-slate-800);
+	--ui-color-neutral-900: var(--color-slate-900);
+	--ui-color-neutral-950: var(--color-slate-950);
+}
+
+:root {
+	--ui-bg: #000000;
+	--ui-bg-elevated: #000000;
+	--ui-primary: var(--color-lime-500);
+	--ui-neutral: var(--color-slate-500);
 }
 
 .dark {
 	--ui-bg: #000000;
 	--ui-bg-elevated: #000000;
+	--ui-primary: var(--color-lime-400);
+	--ui-neutral: var(--color-slate-400);
 }
 
 /* Typography Overrides */
 .prose {
-	h1 {
-		@apply text-2xl font-normal;
-	}
-	h2 {
-		@apply text-xl font-normal;
-	}
 	h3 {
 		@apply text-lg font-normal;
 	}

@@ -19,11 +19,6 @@
         icon="i-heroicons-arrow-top-right-on-square-16-solid"
         block
         class="not-prose my-8"
-        :ui="{
-          variant: {
-            solid: 'bg-lime-700'
-          }
-        }"
       />
     </div>
 

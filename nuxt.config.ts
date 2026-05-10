@@ -54,20 +54,33 @@ export default defineNuxtConfig({
     vueI18n: '~~/i18n.config.ts',
     locales: ['es', 'en'],
     defaultLocale: 'es',
-    strategy: 'no_prefix',
+    strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
+      alwaysRedirect: true,
     },
-    bundle: {
-      optimizeTranslationDirective: false
-    }
   },
 
   vite: {
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
+    },
     optimizeDeps: {
-      include: ['@vercel/analytics']
+      include: ['@vercel/analytics'],
+      exclude: [
+        '@nuxtjs/mdc > remark-gfm',
+        '@nuxtjs/mdc > remark-emoji',
+        '@nuxtjs/mdc > remark-mdc',
+        '@nuxtjs/mdc > remark-rehype',
+        '@nuxtjs/mdc > rehype-raw',
+        '@nuxtjs/mdc > parse5',
+        '@nuxtjs/mdc > unist-util-visit',
+        '@nuxtjs/mdc > unified',
+        '@nuxtjs/mdc > debug',
+        '@nuxtjs/mdc > extend'
+      ]
     }
   },
 

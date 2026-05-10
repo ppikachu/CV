@@ -1,7 +1,7 @@
 
 <template>
-	<section id="proyectos-personales" class="my-12">
-		<ProseH1>{{ $t('proyectos_personales') }}</ProseH1>
+	<section id="proyectos-personales" class="my-6">
+		<ProseH2>{{ $t('proyectos_personales') }}</ProseH2>
 		<List tipo="personal" />
 	</section>
 </template>

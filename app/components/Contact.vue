@@ -6,13 +6,11 @@
       icon="i-ph-envelope-simple-bold"
       :label="t('contact')"
       size="xl"
-      class="not-prose"
       variant="outline"
       to="mailto:ppikachu@gmail.com"
+      class="not-prose"
       :ui="{
-        variant: {
-          outline: 'ring-lime-700 hover:ring-primary text-lime-700 dark:hover:ring-primary hover:bg-transparent dark:hover:bg-transparent transition-all duration-400',
-        }
+        base: 'hover:ring-primary dark:hover:ring-primary hover:bg-transparent transition-all duration-400',
       }"
     />
   </section>

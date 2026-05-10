@@ -1,18 +1,15 @@
 <template>
-	<!-- //HACK: mode="hover"? -->
-	<UDropdown
+	<UDropdownMenu
 		:items="items"
-		:ui="{ width: 'w-fit' }"
+		:ui="{ content: 'w-fit' }"
 	>
 		<UButton
-			color="white"
 			class="h-fit"
 			size="xs"
 			variant="ghost"
 			:trailing-icon="locale.startsWith('en') ? 'i-circle-flags-us' : 'i-circle-flags-es'"
-			:ui="{ rounded: 'rounded-full' }"
 		/>
-	</UDropdown>
+	</UDropdownMenu>
 </template>
 
 <script lang="ts" setup>
@@ -26,11 +23,11 @@ const items = [
 	[{
 		label: 'Español',
 		icon: 'i-circle-flags-es',
-		click: () => { SwitchLanguage('es') }
+		onSelect: () => SwitchLanguage('es')
 	}, {
 		label: 'English',
 		icon: 'i-circle-flags-us',
-		click: () => { SwitchLanguage('en') }
+		onSelect: () => SwitchLanguage('en')
 	}]
 ]
 </script>

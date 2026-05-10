@@ -5,15 +5,15 @@ const { t } = useI18n({
 
 const faqs = computed(() => {
   return [
-    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     { label: t("q_how_do_i_start_a_project"), content: t("r_how_do_i_start_a_project") },
     { label: t("q_project_duration"), content: t("r_project_duration") },
     { label: t("q_project_communication"), content: t("r_project_communication") },
     { label: t("q_payment_process"), content: t("r_payment_process") },
     // { label: t("q_can_i_incorporate"), content: t("r_can_i_incorporate") },
-    { label: t("q_can_i_train"), content: t("r_can_i_train") },
     { label: t("q_how_i_handle_changes"), content: t("r_how_i_handle_changes") },
+    { label: t("q_can_i_train"), content: t("r_can_i_train") },
     { label: t("q_offer_additional_services"), content: t("r_offer_additional_services") },
+    { label: t("q_provide_services_internationally"), content: t("r_provide_services_internationally") },
     // { label: t("q_project_management_tools"), content: t("r_project_management_tools") },
     // { label: t("q_customization_options"), content: t("r_customization_options") },
     // { label: t("q_what_if_not_happy_with_results"), content: t("r_what_if_not_happy_with_results") },
@@ -24,22 +24,23 @@ const faqs = computed(() => {
 
 <template>
   <section id="faqs" class="my-12">
-    <ProseH1>{{ $t('faqs') }}</ProseH1>
-    <p>{{ t('intro') }}</p>
-    <UAccordion :items="faqs">
-      <template #default="{ item, open }">
-        <UButton variant="link" :padded="false" class="py-3" :ui="{ variant: { link: 'text-lime-700' } }">
-          <span class="truncate">{{ item.label }}</span>
-          <template #trailing>
-            <UIcon
-              name="i-heroicons-chevron-right-20-solid"
-              class="w-5 h-5 ms-auto transform transition-transform duration-200"
-              :class="[open && 'rotate-90']"
-            />
-          </template>
-        </UButton>
-      </template>
-    </UAccordion> 
+    <ProseH2>{{ $t('faqs') }}</ProseH2>
+    <p class="mb-4">{{ t('intro') }}</p>
+    <ClientOnly>
+      <UAccordion 
+        :items="faqs" 
+        trailing-icon="i-heroicons-chevron-right-20-solid"
+        :ui="{ 
+          trigger: 'text-primary py-3 font-medium hover:no-underline',
+          label: 'truncate',
+          trailingIcon: 'size-5 transition-transform duration-200 group-data-[state=open]:rotate-90'
+        }"
+      >
+        <template #body="{ item }">
+          {{ item.content }}
+        </template>
+      </UAccordion>
+    </ClientOnly> 
   </section>
 </template>
 
@@ -48,7 +49,7 @@ const faqs = computed(() => {
     "en": {
       "intro": "As we collaborate on your next project, it's essential to have a clear understanding of our process. Below, find answers to frequently asked questions.",
       "q_payment_process": "How does the payment process work?",
-      "r_payment_process": "Once we agree on the service package, payment is structured as 50% upfront and the remaining 50% upon project completion. I also offer flexible payment plans for larger projects. The handoff will be done once the final payment is received.",
+      "r_payment_process": "Once we agree on the service package, payment is structured as 25% upfront and the remaining 75% upon project completion. I also offer flexible payment plans for larger projects. The handoff will be done once the final payment is received.",
       "q_project_duration": "How long does a typical project take?",
       "r_project_duration": "A basic project can be completed in approximately 2-3 weeks, while more advanced projects may take 7-8 weeks, depending on the complexity and scope.",
       "q_can_i_incorporate": "Can I incorporate my existing content?",
@@ -79,7 +80,7 @@ const faqs = computed(() => {
     "es": {
       "intro": "Al colaborar en tu próximo proyecto, es importante tener una comprensión clara del proceso. A continuación, contesto respuestas frecuentes.",
       "q_payment_process": "¿Cómo funciona el proceso de pago?",
-      "r_payment_process": "Una vez que acordamos el paquete de servicios, el pago se estructura en un 50 % por adelantado y el 50 % restante al finalizar el proyecto. También ofrezco planes de pago flexibles para proyectos más grandes. La transferencia se realizará una vez que se reciba el pago final.",
+      "r_payment_process": "Una vez que acordamos el paquete de servicios, el pago se estructura en un 25 % por adelantado y el 75 % restante al finalizar el proyecto. También ofrezco planes de pago flexibles para proyectos más grandes. La transferencia se realizará una vez que se reciba el pago final.",
       "q_project_duration": "¿Cuánto tiempo lleva un proyecto típico?",
       "r_project_duration": "Un proyecto básico se puede completar en aproximadamente 2 a 3 semanas, mientras que los proyectos más complejos pueden tardar entre 7 y 8 semanas, dependiendo de la complejidad y el alcance.",
       "q_can_i_incorporate": "¿Puedo incorporar mi contenido existente?",
@@ -109,9 +110,3 @@ const faqs = computed(() => {
     }
   }
 </i18n>
-
-<style>
-#faqs button {
-	text-align: left;
-}
-</style>

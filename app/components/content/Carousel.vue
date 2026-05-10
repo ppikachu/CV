@@ -1,32 +1,21 @@
 <template>
-	<section class="not-prose my-4 mx-auto no-print">
+	<div class="not-prose my-8 mb-12 block w-full no-print">
 		<UCarousel
 			v-slot="{ item }"
 			:items="props.images"
-			indicators
+			dots
 			arrows
-			:prev-button="{
-				color: 'gray',
-				// variant: 'outline',
-				icon: 'i-heroicons-chevron-left-16-solid',
-			}"
-			:next-button="{
-				color: 'gray',
-				// variant: 'outline',
-				icon: 'i-heroicons-chevron-right-16-solid',
-			}"
+			:prev="{ color: 'neutral', variant: 'outline', icon: 'i-heroicons-chevron-left-16-solid' }"
+			:next="{ color: 'neutral', variant: 'outline', icon: 'i-heroicons-chevron-right-16-solid' }"
 			:ui="{
 				item: 'basis-full',
-				indicators: {
-					active: 'bg-gray-200 dark:bg-gray-200',
-					inactive: 'bg-opacity-30 dark:bg-opacity-30 mix-blend-normal',
-				}
+				viewport: 'rounded-lg overflow-hidden',
 			}"
-			class="rounded-lg overflow-hidden"
 		>
-			<NuxtImg :src="'/images/'+item" :alt="item" class="w-full h-auto" />
+			<NuxtImg :src="'/images/'+item" :alt="item" class="w-full h-auto block" />
 		</UCarousel>
-	</section>
+	</div>
+	<slot />
 </template>
 
 <script lang="ts" setup>

@@ -4,7 +4,7 @@ description: 'Official website for beauty salon'
 image: '/images/web_sanders-1620x769.png'
 url: 'https://sanders.com.ar'
 tags: ['Nuxt', 'GLSL', 'Vercel']
-tipo: 'wip'
+tipo: 'proyecto'
 ---
 
 ![Sanders](/images/web_sanders-1620x769.png)

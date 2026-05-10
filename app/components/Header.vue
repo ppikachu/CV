@@ -8,15 +8,20 @@
 			</div>
 		</div>
 		<div id="switches" class="flex flex-row sm:items-start gap-3 h-fit">
-			<LightDarkToggle />
-			<!-- <LightDarkSwitch /> -->
+			<UColorModeSwitch
+				size="lg"
+				:ui="{
+					base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
+					icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
+				}"
+ 			/>
 			<LocaleToggle />
-			<!-- <LocaleSwitch /> -->
 		</div>
 	</section>
 </template>
 
 <style scoped>
+@reference "tailwindcss";
 h1 {
 	@apply text-2xl;
 }

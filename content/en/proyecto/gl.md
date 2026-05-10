@@ -4,7 +4,7 @@ description: 'Website for Great Lengths representative in Latin America'
 image: '/images/web_GL-1620x769.png'
 url: 'https://greatlengthslatinoamerica.com'
 tags: ['Nuxt', 'Tailwind', 'Git', 'Vercel']
-tipo: 'wip'
+tipo: 'proyecto'
 ---
 
 ![Great Lengths](/images/web_GL-1620x769.png)

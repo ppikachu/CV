@@ -1,8 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
+  compatibilityDate: '2026-05-09',
+  
+  experimental: {
+    payloadExtraction: false
   },
+  
+  css: ['~/assets/css/global.css'],
 
   modules: [
     "@nuxt/ui",
@@ -13,6 +16,10 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
+  ui: {
+    prose: true
+  },
+
   colorMode: {
     preference: "dark",
   },
@@ -22,7 +29,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
     timeline: {
       enabled: true,
     },

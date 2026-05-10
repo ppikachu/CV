@@ -1,16 +1,13 @@
 <template>
 	<div class="flex items-center gap-2">
-		<UToggle
+		<USwitch
 			v-model="localeState"
-			on-icon="i-circle-flags-us"
-			off-icon="i-circle-flags-es"
+			checked-icon="i-circle-flags-us"
+			unchecked-icon="i-circle-flags-es"
 			size="lg"
+			color="neutral"
 			:ui="{
-				active: 'bg-gray-200 dark:bg-gray-900',
-				inactive: 'dark:bg-gray-900',
-				icon: {
-					on: 'dark:text-gray-400',
-				}
+				base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
 			}"
 		/>
 	</div>

@@ -5,10 +5,9 @@
       :key="i"
       :label="skill"
       variant="outline"
-      color="gray"
+      color="neutral"
       :ui="{
-        variant: { outline: 'ring-gray-200 dark:ring-gray-800' },
-        rounded: 'rounded-full'
+        base: 'rounded-full',
       }"
     />
   </section>

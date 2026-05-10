@@ -1,29 +1,25 @@
 <template>
-	<div class="flex items-center gap-2">
-		<UToggle
-			v-model="localeState"
-			on-icon="i-circle-flags-us"
-			off-icon="i-circle-flags-es"
-			size="lg"
-			@click="functionSwitchLocale()"
-			:ui="{
-				active: 'bg-gray-200 dark:bg-gray-900',
-				inactive: 'dark:bg-gray-900',
-				icon: {
-					on: 'dark:text-gray-400',
-				}
-			}"
-		/>
-	</div>
+	<ClientOnly>
+		<div class="flex items-center gap-2">
+			<USwitch
+				v-model="localeState"
+				checked-icon="i-circle-flags-us"
+				unchecked-icon="i-circle-flags-es"
+				size="lg"
+				color="neutral"
+				:ui="{
+					base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
+				}"
+			/>
+		</div>
+	</ClientOnly>
 </template>
 
 <script lang="ts" setup>
-const { setLocale } = useI18n()
-const localeState = ref(shortLocale() === 'en' ? true : false)
-const shlocale = ref(shortLocale())
+const { locale, setLocale } = useI18n()
 
-function functionSwitchLocale() {
-	setLocale(shlocale.value === 'en' ? 'es' : 'en')
-	shlocale.value = shlocale.value === 'en' ? 'es' : 'en'
-}
+const localeState = computed({
+  get: () => locale.value.startsWith('en'),
+  set: (val) => setLocale(val ? 'en' : 'es')
+})
 </script>

@@ -18,9 +18,6 @@ useHead({
 	htmlAttrs: {
 		lang: useI18n().locale
 	},
-	bodyAttrs: {
-		class: 'dark:bg-black'
-	},
 	link: [
 		{
 			rel: 'icon',
@@ -31,12 +28,14 @@ useHead({
 })
 </script>
 <template>
-	<UContainer>
-		<NuxtLoadingIndicator color="#a3e635" />
-		<main class="prose dark:prose-invert max-w-4xl mx-auto mt-8 sm:mt-8">
-			<NuxtPage />
-		</main>
-	</UContainer>
+	<UApp>
+		<UContainer>
+			<NuxtLoadingIndicator color="#a3e635" />
+			<main class="prose dark:prose-invert prose-a:no-underlines max-w-4xl mx-auto mt-8 sm:mt-8">
+				<NuxtPage />
+			</main>
+		</UContainer>
+	</UApp>
 </template>
 
 <style>

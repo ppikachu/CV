@@ -1,7 +1,6 @@
 export default defineI18nConfig(() => ({
 	legacy: false,
-	locales: ['es', 'en'], // used in URL path prefix
-	defaultLocale: 'es', // default locale of your project for Nuxt pages and routings
+	baseUrl: useRuntimeConfig().public.HOST,
 	fallbackLocale: 'es',
 	messages: {
 		en: {

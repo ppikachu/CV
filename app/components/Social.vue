@@ -9,7 +9,9 @@ import data from '~/assets/social_links.json'
 			variant="ghost"
 			color="black"
 		>
-			<UIcon :name="item.icon" dynamic class="w-6 h-6" />
+			<ClientOnly>
+				<UIcon :name="item.icon" dynamic class="w-6 h-6" />
+			</ClientOnly>
 		</UButton>
 	</section>
 </template>

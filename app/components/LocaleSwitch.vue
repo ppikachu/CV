@@ -1,38 +1,33 @@
 <template>
-	<!-- //HACK: mode="hover"? -->
-	<UDropdown
+	<UDropdownMenu
 		:items="items"
-		:ui="{ width: 'w-fit' }"
+		:ui="{ content: 'w-fit' }"
 	>
 		<UButton
-			color="white"
 			class="h-fit"
 			size="xs"
 			variant="ghost"
-			:trailing-icon="shlocale === 'en' ? 'i-circle-flags-us' : 'i-circle-flags-es'"
-			:ui="{ rounded: 'rounded-full' }"
+			:trailing-icon="locale.startsWith('en') ? 'i-circle-flags-us' : 'i-circle-flags-es'"
 		/>
-	</UDropdown>
+	</UDropdownMenu>
 </template>
 
 <script lang="ts" setup>
-const { setLocale } = useI18n()
-const shlocale = ref(shortLocale())
+const { locale, setLocale } = useI18n()
 
-function SwitchLanguage(lang: string) {
+function SwitchLanguage(lang: 'es' | 'en') {
 	setLocale(lang)
-	shlocale.value = lang
 }
 
 const items = [
 	[{
 		label: 'Español',
 		icon: 'i-circle-flags-es',
-		click: () => { SwitchLanguage('es') }
+		onSelect: () => SwitchLanguage('es')
 	}, {
 		label: 'English',
 		icon: 'i-circle-flags-us',
-		click: () => { SwitchLanguage('en') }
+		onSelect: () => SwitchLanguage('en')
 	}]
 ]
 </script>

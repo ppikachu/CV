@@ -1,8 +1,11 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
+  compatibilityDate: '2026-05-09',
+  
+  experimental: {
+    payloadExtraction: false
   },
+  
+  css: ['~/assets/css/global.css'],
 
   modules: [
     "@nuxt/ui",
@@ -10,9 +13,12 @@ export default defineNuxtConfig({
     "@nuxt/devtools",
     "@nuxt/image",
     "@nuxtjs/i18n",
-    "@nuxthq/studio",
     "@nuxt/fonts",
   ],
+
+  ui: {
+    prose: true
+  },
 
   colorMode: {
     preference: "dark",
@@ -23,7 +29,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: true,
+    enabled: false,
     timeline: {
       enabled: true,
     },
@@ -31,12 +37,12 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      DEFAULT_LANGUAGE: "es-AR",
       NAME: "Santiago Toyos",
       DESCRIPTION: "Diseñador con experiencia en contenido multimedia",
       OG_IMAGE: "/OG.png",
       TWITTER_IMAGE: "/twitter.png",
       ICON: "/icon.png",
+      // used by useSeoMeta ogUrl:
       HOST:
         process.env.NODE_ENV === "production"
           ? "https://toyos.vercel.app"
@@ -44,18 +50,52 @@ export default defineNuxtConfig({
     },
   },
 
-  content: {
-    contentHead: false,
-    markdown: {
-      anchorLinks: false,
-      // remarkPlugins: ["remark-unwrap-images"],
+  i18n: {
+    vueI18n: '~~/i18n.config.ts',
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    strategy: 'prefix_except_default',
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      alwaysRedirect: true,
     },
   },
 
-  i18n: {
-    vueI18n: './i18n.config.ts'
+  vite: {
+    define: {
+      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
+    },
+    optimizeDeps: {
+      include: ['@vercel/analytics'],
+      exclude: [
+        '@nuxtjs/mdc > remark-gfm',
+        '@nuxtjs/mdc > remark-emoji',
+        '@nuxtjs/mdc > remark-mdc',
+        '@nuxtjs/mdc > remark-rehype',
+        '@nuxtjs/mdc > rehype-raw',
+        '@nuxtjs/mdc > parse5',
+        '@nuxtjs/mdc > unist-util-visit',
+        '@nuxtjs/mdc > unified',
+        '@nuxtjs/mdc > debug',
+        '@nuxtjs/mdc > extend'
+      ]
+    }
   },
 
-  //HACK: https://nuxt.com/docs/api/nuxt-config#compatibilitydate
-  compatibilityDate: "2024-07-02",
+  content: {
+    experimental: {
+      sqliteConnector: "native"
+    }
+  },
+
+  nitro: {
+    experimental: {
+      tasks: true
+    },
+    externals: {
+      external: ['sharp']
+    }
+  }
 });

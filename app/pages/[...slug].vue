@@ -4,7 +4,7 @@
       <div class="prose-lg prose-a:no-underline my-8 slide-enter-content space-y-4">
         <div class="flex justify-between gap-2 w-full">
           <ProseH1 class="mb-0">{{ data.title }}</ProseH1>
-          <UBadge v-if="data.wip" size="xs" variant="outline" label="Work in progress" class="h-fit mt-1 text-nowrap" />
+          <UBadge v-if="data.wip" variant="outline" label="Work in progress" class="h-fit mt-1 text-nowrap" />
         </div>
         <ProseH3 class="leading-tight">{{ data.description }}</ProseH3>
         <ProjectSkills v-if="data.tags" :skills="data.tags" />

@@ -2,12 +2,12 @@
 		{
 			"to": "mailto:ppikachu@gmail.com",
 			"label": "ppikachu@gmail.com",
-			"icon": "i-ph-envelope-simple-bold"
+			"icon": "i-lucide-mail"
 		},
 		{
 			"to": "https://github.com/ppikachu",
 			"label": "github.com/ppikachu",
-			"icon": "i-ph-github-logo-bold"
+			"icon": "i-lucide-github"
 		},
 		{
 			"to": "https://www.behance.net/stoyos",
@@ -17,6 +17,6 @@
 		{
 			"to": "https://www.linkedin.com/in/santiago-toyos",
 			"label": "www.linkedin.com/in/santiago-toyos",
-			"icon": "i-ph-linkedin-logo-bold"
+			"icon": "i-lucide-linkedin"
 		}
 	]

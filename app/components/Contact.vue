@@ -3,7 +3,7 @@
     <NuxtImg src="/robot2.png" class="w-32 not-prose" />
     <ProseH1>{{ t('cta') }}</ProseH1>
     <UButton
-      icon="i-ph-envelope-simple-bold"
+      icon="i-lucide-mail"
       :label="t('contact')"
       size="xl"
       variant="outline"

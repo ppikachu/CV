@@ -61,7 +61,7 @@ const { data: proyectos } = await useAsyncData<ContentArticle[]>(`list-${props.t
 						<div class="flex items-center pr-4">
 							<ClientOnly>
 								<UIcon 
-									name="i-heroicons-chevron-right-20-solid" 
+									name="i-lucide-chevron-right" 
 									class="w-5 h-5 group-hover:text-primary-500 group-hover:translate-x-1 transition-all"
 								/>
 							</ClientOnly>

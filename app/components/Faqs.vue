@@ -29,7 +29,7 @@ const faqs = computed(() => {
     <ClientOnly>
       <UAccordion 
         :items="faqs" 
-        trailing-icon="i-heroicons-chevron-right-20-solid"
+        trailing-icon="i-lucide-chevron-right"
         :ui="{ 
           trigger: 'text-primary py-3 font-medium hover:no-underline',
           label: 'truncate',

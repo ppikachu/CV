@@ -17,7 +17,7 @@
         :label="$t('web_url')"
         variant="outline"
         target="_blank"
-        icon="i-heroicons-arrow-top-right-on-square-16-solid"
+        icon="i-lucide-external-link"
         block
         class="not-prose my-8"
       />
@@ -25,7 +25,7 @@
 
     <UButton
       size="lg"
-      icon="i-heroicons-arrow-left-20-solid"
+      icon="i-lucide-arrow-left"
       :label="$t('regresar')"
       variant="outline"
       @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"

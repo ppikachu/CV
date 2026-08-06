@@ -20,6 +20,17 @@ export default defineNuxtConfig({
     prose: true
   },
 
+  icon: {
+    clientBundle: {
+      scan: {
+        globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,json}']
+      }
+    },
+    serverBundle: {
+      collections: ['ph', 'circle-flags', 'lucide']
+    }
+  },
+
   colorMode: {
     preference: "dark",
   },

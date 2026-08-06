@@ -5,7 +5,7 @@
       target="_blank"
       variant="outline"
       block
-      icon="i-heroicons-arrow-right-20-solid"
+      icon="i-lucide-arrow-right"
       class="[&>p]:m-0"
     >
       <slot>{{ props.label || $t('ver_proyecto') }}</slot>

@@ -12,32 +12,25 @@
   "devDependencies": {
     "@iconify-json/circle-flags": "^1.2.1",
     "@iconify-json/heroicons": "^1.2.1",
+    "@iconify-json/lucide": "^1.2.121",
     "@iconify-json/ph": "^1.2.1",
-    "@nuxt/content": "^3.0.0",
+    "@nuxt/content": "^3.15.2",
     "@nuxt/devtools": "4.0.0-alpha.4",
     "@nuxt/fonts": "^0.14.0",
-    "@nuxt/image": "^2.0.0",
-    "@nuxt/ui": "^4.7.1",
-    "@nuxtjs/i18n": "^10.3.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@types/node": "^25.6.2",
-    "nuxt": "^4.4.4"
+    "@nuxt/image": "^2.1.0",
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/i18n": "^10.6.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "@types/node": "^26.1.2",
+    "nuxt": "^4.5.2",
+    "tailwindcss": "^4.3.3"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
-    "better-sqlite3": "^12.9.0",
-    "sharp": "^0.34.5",
+    "better-sqlite3": "^13.0.3",
+    "sharp": "^0.35.3",
     "ufo": "^1.6.4",
     "vue-md-player": "^2.1.2"
   },
-  "packageManager": "pnpm@10.33.4",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "better-sqlite3",
-      "esbuild",
-      "sharp",
-      "vue-demi"
-    ]
-  }
+  "packageManager": "pnpm@10.33.4"
 }

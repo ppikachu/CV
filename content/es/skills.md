@@ -1,10 +1,16 @@
 ---
-title: 'Herramientas'
-tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 'Git', 'Ilustración Digital', 'Final Cut', 'Apple Motion', 'Modo', 'Nuke', 'Moho' ]
+title: 'Qué hago'
+tags: [ 'UI/UX', 'Figma', 'TypeScript', 'Nuxt 4', 'Vue 3', 'Tailwind CSS', 'Three.js', 'GLSL', 'Final Cut Pro', 'Apple Motion', 'Modelado 3D', 'Nuke', 'Moho' ]
 ---
-**Qué puedo hacer:**  
 
-- Producción audiovisual
-- Identidad de marca + producto
-- Dirección de arte
-- Prototipado + Desarrollo front-end
+**Marca**  
+Sistemas de identidad · Dirección de arte · Diseño de producto
+
+**Digital**  
+Sitios web · UX/UI · Experiencias interactivas
+
+**Motion**  
+Animación · Motion graphics · Video · 3D
+
+**Código**  
+Creative development · Prototipado · Front-end

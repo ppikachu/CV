@@ -1,10 +1,16 @@
 ---
-title: 'Skills'
-tags: [ 'UI', 'Figma', 'Javascript', 'NuxtJS', 'WordPress', 'Three.js', 'GLSL', 'Git', 'Ilustración Digital', 'Final Cut', 'Apple Motion', 'Modo', 'Nuke', 'Moho' ]
+title: 'What I Do'
+tags: [ 'UI/UX', 'Figma', 'TypeScript', 'Nuxt 4', 'Vue 3', 'Tailwind CSS', 'Three.js', 'GLSL', 'Final Cut Pro', 'Apple Motion', '3D Modeling', 'Nuke', 'Moho' ]
 ---
-**What I do:**  
 
-- Audiovisual production
-- Brand Identity + Product Design
-- Art Direction
-- Prototyping + Front-End Development
+**Brand**  
+Identity systems · Art direction · Product design
+
+**Digital**  
+Websites · UX/UI · Interactive experiences
+
+**Motion**  
+Animation · Motion graphics · Video · 3D
+
+**Code**  
+Creative development · Prototyping · Front-end

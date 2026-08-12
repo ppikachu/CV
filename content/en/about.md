@@ -1,1 +1,1 @@
-I'm a designer with over 20 years of experience working on multimedia content production, web applications, 3D, and animation technologies.
+I design and build visual experiences across brand, digital, motion and interactive media. With over 20 years of making things for screens, spaces and people, I bridge the gap between creative direction and technical execution.

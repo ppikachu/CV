@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       NAME: "Santiago Toyos",
-      DESCRIPTION: "Diseñador con experiencia en contenido multimedia",
+      DESCRIPTION: "Santiago Toyos - Designer & Creative Developer",
       OG_IMAGE: "/OG.png",
       TWITTER_IMAGE: "/twitter.png",
       ICON: "/icon.png",

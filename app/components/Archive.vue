@@ -4,11 +4,11 @@ import type { Project } from '~/components/ProjectCard.vue'
 const { locale } = useI18n()
 const shortLoc = computed(() => locale.value.split('-')[0])
 
-const { data: projects } = await useAsyncData<Project[]>(
-	`selected-projects-${shortLoc.value}`,
+const { data: archive } = await useAsyncData<Project[]>(
+	`archive-projects-${shortLoc.value}`,
 	() => (queryCollection as any)('content')
 		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
-		.where('tipo', '=', 'selected')
+		.where('tipo', '=', 'archive')
 		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url')
 		.all(),
 	{ watch: [shortLoc] }
@@ -16,20 +16,23 @@ const { data: projects } = await useAsyncData<Project[]>(
 </script>
 
 <template>
-	<section id="selected-work" class="my-10 not-prose">
+	<section id="archive" class="my-10 not-prose">
 		<div class="space-y-4">
-			<div class="flex items-center justify-between">
+			<div class="space-y-1">
 				<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
-					{{ $t('selected_work') }}
+					{{ $t('archive_title') }}
 				</h2>
+				<p class="text-xs text-gray-500 dark:text-gray-400">
+					{{ $t('archive_intro') }}
+				</p>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<div class="space-y-2">
 				<ProjectCard
-					v-for="item in projects"
+					v-for="item in archive"
 					:key="item.path"
 					:project="item"
-					variant="card"
+					variant="row"
 				/>
 			</div>
 		</div>

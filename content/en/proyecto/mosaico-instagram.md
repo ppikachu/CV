@@ -1,14 +1,22 @@
 ---
 title: 'Grillagram'
-description: 'Grillagram is an application to generate a perfect 9x9 grid for Instagram'
+description: 'Interactive web utility for generating and customizing seamless 9x9 photo and typography grids for social feeds.'
 image: '/images/test-previa-768x768.jpg'
 url: 'https://grillagram.vercel.app'
-tags: ['Nuxt']
-tipo: 'personal'
+tags: ['Nuxt', 'Vue 3', 'Canvas API', 'Tailwind CSS', 'Vercel']
+tipo: 'experiment'
+category: 'Interactive Web Tool & Utility'
+role: ['Product Design & UX', 'Front-End Architecture', 'Client-Side Image Processing']
+client: 'Self-initiated'
+year: '2023'
+featured: true
 ---
 
 ![Mosaico](/images/test-previa-768x768.jpg)
 
-- Generate a 9x9 grid for the Instagram feed
-- Customization options with texts and colors in each cell
-- Save generated images to your device for future use
+## The Tool
+Grillagram is a focused creative tool engineered to streamline the creation of structured 9x9 Instagram feeds, mood boards, and typographic mosaics directly in the browser.
+
+* **Client-Side Canvas Processing:** Fast in-browser image splitting, slicing, and rendering without server uploads.
+* **Granular Customization:** Custom color palettes, typography overlays, and cell-by-cell controls.
+* **Instant Export:** High-resolution multi-tile export packaged for direct social posting.

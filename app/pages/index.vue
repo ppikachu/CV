@@ -1,12 +1,12 @@
 <template>
-	<div class="flex flex-col relative slide-enter-content">
-		<!-- <ClientOnly><Hero /></ClientOnly> -->
+	<div class="flex flex-col relative slide-enter-content space-y-4">
 		<Header />
-		<About />
 		<Skills />
 		<Current />
 		<Projects />
 		<Personal />
+		<Timeline />
+		<Archive />
 		<Faqs />
 		<Contact />
 		<SiteFooter />

@@ -1,27 +1,57 @@
 <script setup lang="ts">
-import { h1 } from '#build/ui/prose';
-
 </script>
 
 <template>
-	<section class="mb-4 flex flex-row gap-4 justify-between not-prose">
-		<div class="flex gap-2 items-center">
-			<div id="title" class="text-primary slide-enter-content">
-				<h1 class="uppercase text-2xl">Santiago Toyos</h1>
-				<h2 class="text-lg">{{ $t('role') }}</h2>
+	<header class="pt-4 pb-8 flex flex-col gap-6 not-prose border-b border-gray-100 dark:border-gray-800">
+		<div class="flex flex-row justify-between items-start">
+			<div class="space-y-1">
+				<p class="text-xs uppercase tracking-widest text-primary-500 font-semibold">Portfolio & Works</p>
+				<h1 class="uppercase text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+					Santiago Toyos
+				</h1>
+				<h2 class="text-lg sm:text-xl text-gray-600 dark:text-gray-300 font-medium tracking-wide">
+					{{ $t('role') }}
+				</h2>
+			</div>
+
+			<div class="flex flex-row items-center gap-3">
+				<ClientOnly>
+					<UColorModeSwitch
+						size="lg"
+						:ui="{
+							base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
+							icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
+						}"
+					/>
+					<LocaleToggle />
+				</ClientOnly>
 			</div>
 		</div>
-		<div id="switches" class="flex flex-row sm:items-start gap-3 h-fit">
-			<ClientOnly>
-				<UColorModeSwitch
-					size="lg"
-					:ui="{
-						base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
-						icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
-					}"
-				/>
-				<LocaleToggle />
-			</ClientOnly>
+
+		<div class="flex flex-wrap items-center gap-2 text-xs font-mono">
+			<span class="text-gray-600 dark:text-gray-400">Design · Motion · Digital · Interactive</span>
+			<span class="text-gray-400 dark:text-gray-600">/</span>
+			<span class="text-gray-500 dark:text-gray-400">{{ $t('hero_location') }}</span>
 		</div>
-	</section>
+
+		<Approach />
+
+		<div class="flex flex-wrap gap-3 pt-2">
+			<UButton
+				to="#selected-work"
+				:label="$t('btn_selected_work')"
+				icon="i-lucide-arrow-down-right"
+				variant="solid"
+				color="primary"
+				size="md"
+			/>
+			<UButton
+				to="#contact"
+				:label="$t('btn_contact')"
+				icon="i-lucide-mail"
+				variant="outline"
+				size="md"
+			/>
+		</div>
+	</header>
 </template>

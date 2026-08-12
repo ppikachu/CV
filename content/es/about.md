@@ -1,1 +1,1 @@
-Soy un profesional multidisciplinario con más de 20 años de experiencia produciendo contenido multimedia, aplicaciones web, 3D y tecnologías de animación.
+Diseño y construyo experiencias visuales combinando identidad de marca, motion, interfaces y tecnología interactiva. Con más de 20 años creando para pantallas, espacios y personas, uno la dirección creativa con la ejecución técnica.

@@ -1,27 +1,35 @@
 ---
 title: 'Kinoto'
-description: 'Online store for apparel brand Kinoto'
-image: '/images/kinoto_coleccion_dark-960x540.png'
+description: 'Independent apparel brand and high-performance e-commerce platform designed and built from scratch.'
+image: '/images/kinoto_item_dark-960x540.png'
 url: 'https://kinoto.com.ar'
-tags: ['Nuxt 4', 'E-commerce', 'Analytics', 'Mercado Pago', 'Netlify']
-tipo: 'wip'
-wip: true
+tags: ['Nuxt 4', 'E-commerce', 'Analytics', 'Mercado Pago', 'Netlify', 'Tailwind CSS']
+tipo: 'flagship'
+category: 'Brand · E-Commerce · Creative Development'
+role: ['Brand Identity', 'Product Design', 'UX/UI', 'Nuxt 4 Full-Stack', 'Server-Side Analytics']
+client: 'Kinoto'
+year: '2024 - Present'
+featured: true
+wip: false
 ---
 
-**High-performance online store developed with Nuxt 4, focused on pop culture and user experience.**
-
-Kinoto is an e-commerce platform for t-shirts and tote bags featuring original designs inspired by music, film, and cult culture. The project was conceived to offer a fluid and simple shopping experience, combining a modern aesthetic with a robust technical infrastructure.
+Kinoto is an independent apparel brand developed from the ground up — spanning from visual identity, product graphics, and packaging to a custom, high-performance Nuxt 4 e-commerce ecosystem.
 
 ::carousel{:images='["web_kinoto_light-1620x769.png", "web_kinoto_dark-1620x769.png", "kinoto_coleccion_dark-960x540.png", "kinoto_coleccion_light-960x540.png", "kinoto_carrito_dark-960x540.png", "kinoto_carrito_light-960x540.png"]'}
+::
 
-## Stack
-*   **Frontend:** Nuxt 4, Vue 3, Nuxt UI (Tailwind CSS 4).
-*   **State:** Pinia with local persistence.
-*   **Integrations:** MercadoPago (Payments), PUDO (Logistics), Resend (Email).
+## The Idea & Visual Universe
+Create a distinctive lifestyle brand inspired by cult cinema, music, and contemporary pop aesthetics. Every touchpoint was designed as an integrated system: minimal typography, bold apparel graphics, tactile packaging, and a digital storefront that feels frictionless, modern, and alive.
 
-## Main Features
-*   **Modern Architecture:** Implementation of the latest Nuxt 4 capabilities, ensuring minimal load times and optimized SEO.
-*   **Transactional Ecosystem:** Complete checkout flow integrated with payment gateways and real-time shipping calculation.
-*   **Precision Tracking:** Advanced measurement using Google Analytics and **Meta Conversions API (Server-side)**.
-*   **QR Analytics System:** Custom analytics system for offline marketing (QR stickers).
-*   **Content Automation:** Intelligent mockup generation and automatic image discovery system by attributes (color/type).
+## My Role
+* **Brand Identity & Art Direction:** Concept, typography, logotypes, color palettes, and apparel design systems.
+* **UX/UI & Interaction Design:** Minimalist, mobile-first shopping flow with dynamic dark/light themes.
+* **Full-Stack Development:** Built entirely with Nuxt 4, Vue 3, and Tailwind CSS on Nitro serverless endpoints.
+* **Commerce & Logistics Infrastructure:** Custom integration with MercadoPago checkout and PUDO smart-locker logistics.
+* **Server-Side Tracking & Growth:** Dual measurement pipeline using Google Analytics and Meta Conversions API (server-side tracking to prevent ad-blocker signal loss).
+* **Physical-to-Digital Analytics:** Custom QR tracking infrastructure measuring offline street-marketing activations.
+
+## Technical Highlights
+* **Nuxt 4 Nitro Engine:** Instantaneous page loads, fluid view transitions, and full SSG/SSR optimization.
+* **Reactive Cart & State Management:** Pinia store with resilient localStorage synchronization.
+* **Smart Content Automation:** Automatic image and attribute discovery engine for fast product catalog updates.

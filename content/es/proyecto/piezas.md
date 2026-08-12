@@ -1,12 +1,24 @@
 ---
 title: 'Piezas'
-description: 'Máquina de movimiento perpetuo'
+description: 'Ilusión de máquina de movimiento perpetuo que explora movimiento 3D, simulación física y shaders WebGL en tiempo real.'
 image: '/images/piezas-980x480.png'
 url: 'https://piezas.vercel.app'
-tags: ['Vue', 'Three.js', 'GLSL']
-tipo: 'personal'
+tags: ['Vue', 'Three.js', 'GLSL', 'Física', 'Vercel']
+tipo: 'experiment'
+category: 'Creative Coding & Experimento Visual'
+role: ['Simulación 3D en tiempo real', 'Shaders GLSL', 'Desarrollo Front-End']
+client: 'Proyecto Propio'
+year: '2023'
+featured: true
 ---
 
 ![Piezas](/images/piezas-980x480.png)
 
-Dos piezas giran golpeándose. La pieza pesada hace que la pieza ligera gire? O es la ligera que mueve la más pesada? 🍿
+## El Experimento
+Una ilusión interactiva de movimiento perpetuo que explora la gravedad, las diferencias de masa y los materiales procedurales en el navegador.
+
+Dos cuerpos geométricos flotan en un espacio sin fricción. Uno posee sustancialmente más masa que el otro, generando un ritmo hipnótico de transferencia de energía cinética y rebote.
+
+* **Renderizado WebGL en tiempo real:** Construido con Three.js y shaders personalizados en GLSL.
+* **Cálculo de Físicas y Momento:** Matemática de colisión optimizada directamente en código sin motores externos pesados.
+* **Controles Interactivos:** Navegación orbital 3D y manipulación de parámetros lumínicos.

@@ -1,39 +1,89 @@
 <template>
   <div class="mx-auto prose dark:prose-invert">
     <div v-if="data">
-      <div class="prose-lg prose-a:no-underline my-8 slide-enter-content space-y-4">
-        <div class="flex justify-between gap-2 w-full">
-          <ProseH1 class="mb-0">{{ data.title }}</ProseH1>
-          <UBadge v-if="data.wip" variant="outline" label="Work in progress" class="h-fit mt-1 text-nowrap" />
+      <div class="not-prose my-6 space-y-4 pb-6">
+        <div class="flex flex-col gap-2">
+          <div class="flex flex-wrap items-center justify-between gap-2">
+            <span v-if="data.category" class="text-xs font-mono uppercase tracking-widest text-primary-500 font-bold">
+              {{ data.category }}
+            </span>
+            <div class="flex items-center gap-2">
+              <span v-if="data.year" class="text-xs font-mono text-gray-500 dark:text-gray-400">
+                {{ data.year }}
+              </span>
+              <UBadge v-if="data.wip" variant="outline" label="Work in progress" size="xs" />
+            </div>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+            {{ data.title }}
+          </h1>
+
+          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+            {{ data.description }}
+          </p>
         </div>
-        <ProseH3 class="leading-tight">{{ data.description }}</ProseH3>
-        <ProjectSkills v-if="data.tags" :skills="data.tags" />
+
+        <!-- Case Study Metadata Spec Bar -->
+        <div
+          v-if="data.role || data.client || (data.tags && data.tags.length)"
+          class="flex flex-wrap items-center gap-x-8 gap-y-3 py-3.5 border-y border-default text-xs"
+        >
+          <div v-if="data.role" class="flex items-center gap-2">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('role_label') }}:</span>
+            <span class="text-highlighted font-medium">{{ Array.isArray(data.role) ? data.role.join(' · ') : data.role }}</span>
+          </div>
+
+          <div v-if="data.client" class="flex items-center gap-2">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('client_label') }}:</span>
+            <span class="text-highlighted font-medium">{{ data.client }}</span>
+          </div>
+
+          <div v-if="data.tags && data.tags.length" class="flex items-center gap-2">
+            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('tech_label') }}:</span>
+            <div class="flex flex-wrap gap-1">
+              <UBadge
+                v-for="tag in data.tags"
+                :key="tag"
+                :label="tag"
+                variant="subtle"
+                color="neutral"
+                size="xs"
+                class="font-mono text-[10px]"
+              />
+            </div>
+          </div>
+        </div>
       </div>
+
       <ContentRenderer :value="data" class="slide-enter-content" />
 
-      <UButton
-        v-if="data.url"
-        :to="data.url"
-        :label="$t('web_url')"
-        variant="outline"
-        target="_blank"
-        icon="i-lucide-external-link"
-        block
-        class="not-prose my-8"
-      />
-    </div>
+      <div class="not-prose my-10 flex flex-col sm:flex-row items-center gap-3">
+        <UButton
+          v-if="data.url"
+          :to="data.url"
+          :label="$t('web_url')"
+          variant="solid"
+          color="primary"
+          target="_blank"
+          icon="i-lucide-external-link"
+          block
+          class="sm:w-auto grow"
+        />
 
-    <UButton
-      size="lg"
-      icon="i-lucide-arrow-left"
-      :label="$t('regresar')"
-      variant="outline"
-      @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
-      block
-      class="mt-8 mb-16 cursor-pointer"
-    />
+        <UButton
+          icon="i-lucide-arrow-left"
+          :label="$t('regresar')"
+          variant="outline"
+          @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
+          block
+          class="sm:w-auto cursor-pointer"
+        />
+      </div>
+    </div>
   </div>
 </template>
+
 
 <script setup>
 const route = useRoute()

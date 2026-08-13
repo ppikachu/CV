@@ -27,7 +27,7 @@ const { data: experiments } = await useAsyncData<Project[]>(
 				</p>
 			</div>
 
-			<div class="space-y-2">
+			<div class="space-y-8">
 				<ProjectRow
 					v-for="item in experiments"
 					:key="item.path"

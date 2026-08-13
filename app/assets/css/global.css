@@ -75,10 +75,8 @@ address {
 }
 
 .aspect-video {
-	@apply w-full;
 	aspect-ratio: 16 / 9;
 }
 .aspect-square {
-	@apply w-full;
 	aspect-ratio: 1 / 1;
 }

@@ -24,7 +24,7 @@ export default defineAppConfig({
 			},
 			h4: {
 				slots: {
-					base: 'text-sm font-semibold text-primary'
+					base: 'text-xs uppercase font-semibold text-primary mt-0 mb-0'
 				}
 			}
 		},
@@ -34,16 +34,16 @@ export default defineAppConfig({
 			},
 			slots: {
 				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary',
-				header: 'relative pointer-events-none shrink-0 size-20 sm:size-24',
-				image: 'size-full object-cover object-center !aspect-square',
+				header: 'relative pointer-events-none shrink-0 self-stretch w-28 sm:w-36 overflow-hidden',
+				image: 'size-full object-cover object-center',
 				title: 'text-primary uppercase font-normal text-base',
 				description: 'text-xs'
 			},
 			variants: {
 				orientation: {
 					horizontal: {
-						root: 'flex flex-row items-center lg:flex lg:flex-row lg:grid-cols-none gap-3.5 sm:gap-4 p-3 sm:p-3.5',
-						body: 'min-w-0 flex-1 p-0 sm:p-0 lg:px-0 justify-center'
+						root: 'flex flex-row items-stretch lg:flex lg:flex-row lg:grid-cols-none gap-3.5 sm:gap-4 p-0 sm:p-0',
+						body: 'min-w-0 flex-1 p-3.5 sm:p-4 lg:px-4 justify-center'
 					}
 				}
 			}

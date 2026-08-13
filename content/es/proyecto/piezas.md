@@ -5,7 +5,7 @@ image: '/images/piezas-980x480.png'
 url: 'https://piezas.vercel.app'
 tags: ['Vue', 'Three.js', 'GLSL', 'Física', 'Vercel']
 tipo: 'experiment'
-category: 'Creative Coding & Experimento Visual'
+category: 'Experimento Visual'
 role: ['Simulación 3D en tiempo real', 'Shaders GLSL', 'Desarrollo Front-End']
 client: 'Proyecto Propio'
 year: '2023'

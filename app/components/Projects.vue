@@ -19,9 +19,9 @@ const { data: projects } = await useAsyncData<Project[]>(
 	<section id="selected-work" class="my-10 not-prose">
 		<div class="space-y-4">
 			<div class="flex items-center justify-between">
-				<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+				<ProseH2>
 					{{ $t('selected_work') }}
-				</h2>
+				</ProseH2>
 			</div>
 
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -29,7 +29,6 @@ const { data: projects } = await useAsyncData<Project[]>(
 					v-for="item in projects"
 					:key="item.path"
 					:project="item"
-					variant="card"
 				/>
 			</div>
 		</div>

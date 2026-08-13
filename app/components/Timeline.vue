@@ -45,9 +45,9 @@ const milestones = computed<TimelineItem[]>(() => [
 		<div class="space-y-6">
 			<div class="space-y-1">
 				<div class="flex items-center gap-2">
-					<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+					<ProseH2>
 						{{ $t('timeline_title') }}
-					</h2>
+					</ProseH2>
 				</div>
 				<p class="text-xs text-gray-500 dark:text-gray-400">
 					{{ $t('timeline_intro') }}

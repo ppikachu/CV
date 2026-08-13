@@ -19,20 +19,19 @@ const { data: experiments } = await useAsyncData<Project[]>(
 	<section id="experiments" class="my-10 not-prose">
 		<div class="space-y-3">
 			<div class="space-y-1">
-				<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+				<ProseH2>
 					{{ $t('experiments') }}
-				</h2>
+				</ProseH2>
 				<p class="text-xs text-muted">
 					{{ $t('experiments_intro') }}
 				</p>
 			</div>
 
-			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-				<ProjectCard
+			<div class="space-y-2">
+				<ProjectRow
 					v-for="item in experiments"
 					:key="item.path"
 					:project="item"
-					variant="compact"
 				/>
 			</div>
 		</div>

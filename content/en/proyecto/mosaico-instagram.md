@@ -5,7 +5,7 @@ image: '/images/test-previa-768x768.jpg'
 url: 'https://grillagram.vercel.app'
 tags: ['Nuxt', 'Vue 3', 'Canvas API', 'Tailwind CSS', 'Vercel']
 tipo: 'experiment'
-category: 'Interactive Web Tool & Utility'
+category: 'Interactive Web Tool'
 role: ['Product Design & UX', 'Front-End Architecture', 'Client-Side Image Processing']
 client: 'Self-initiated'
 year: '2023'

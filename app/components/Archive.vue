@@ -19,20 +19,19 @@ const { data: archive } = await useAsyncData<Project[]>(
 	<section id="archive" class="my-10 not-prose">
 		<div class="space-y-4">
 			<div class="space-y-1">
-				<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+				<ProseH2>
 					{{ $t('archive_title') }}
-				</h2>
+				</ProseH2>
 				<p class="text-xs text-gray-500 dark:text-gray-400">
 					{{ $t('archive_intro') }}
 				</p>
 			</div>
 
 			<div class="space-y-2">
-				<ProjectCard
+				<ProjectRow
 					v-for="item in archive"
 					:key="item.path"
 					:project="item"
-					variant="row"
 				/>
 			</div>
 		</div>

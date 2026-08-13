@@ -15,9 +15,9 @@
             </div>
           </div>
 
-          <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-gray-900 dark:text-gray-50">
+          <ProseH1>
             {{ data.title }}
-          </h1>
+          </ProseH1>
 
           <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
             {{ data.description }}

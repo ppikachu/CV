@@ -36,10 +36,10 @@ const disciplines = computed(() => [
 	<section id="what-i-do" class="my-8 not-prose">
 		<div class="space-y-6">
 			<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-				<h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+				<ProseH2>
 					{{ $t('what_i_do') }}
-				</h2>
-				<span class="text-xs text-gray-500 dark:text-gray-400 font-mono">
+				</ProseH2>
+				<span class="text-xs text-muted">
 					{{ $t('disciplines_tagline') }}
 				</span>
 			</div>
@@ -51,10 +51,10 @@ const disciplines = computed(() => [
 					:ui="{ body: 'p-4 sm:p-4 space-y-1.5' }"
 				>
 					<div class="flex items-center gap-2">
-						<UIcon :name="disc.icon" class="w-4 h-4 text-primary-500" />
-						<h3 class="font-bold text-base text-gray-900 dark:text-gray-100">{{ disc.title }}</h3>
+						<UIcon :name="disc.icon" class="w-4 h-4 text-primary" />
+						<ProseH3>{{ disc.title }}</ProseH3>
 					</div>
-					<p class="text-xs text-gray-600 dark:text-gray-400 leading-normal">
+					<p class="text-base text-muted leading-normal">
 						{{ disc.desc }}
 					</p>
 				</UCard>

@@ -19,9 +19,9 @@ const faqs = computed(() => {
   <section id="faqs" class="my-12 not-prose">
     <div class="space-y-4">
       <div class="space-y-1">
-        <h2 class="text-xs uppercase tracking-widest text-primary-500 font-semibold font-mono">
+        <ProseH2>
           {{ $t('faqs') }}
-        </h2>
+        </ProseH2>
         <p class="text-xs text-gray-500 dark:text-gray-400">
           {{ t('intro') }}
         </p>
@@ -32,9 +32,8 @@ const faqs = computed(() => {
           :items="faqs" 
           trailing-icon="i-lucide-chevron-right"
           :ui="{ 
-            trigger: 'text-primary-600 dark:text-primary-400 py-3.5 font-medium hover:no-underline text-left',
-            label: 'text-sm font-semibold text-gray-900 dark:text-gray-100',
-            body: 'text-xs text-gray-600 dark:text-gray-300 leading-relaxed pb-4',
+            trigger: 'text-primary',
+            body: 'leading-relaxed',
             trailingIcon: 'size-4 transition-transform duration-200 group-data-[state=open]:rotate-90'
           }"
         >

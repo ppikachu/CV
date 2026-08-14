@@ -9,7 +9,7 @@ export default defineAppConfig({
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-3xl sm:text-4xl font-normal uppercase tracking-tight text-primary mb-0'
+					base: 'text-2xl sm:text-4xl font-normal uppercase tracking-tight leading-none text-primary mb-0'
 				}
 			},
 			h2: {

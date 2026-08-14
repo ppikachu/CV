@@ -32,7 +32,7 @@ useHead({
 	<UApp>
 		<UContainer>
 			<NuxtLoadingIndicator color="#a3e635" />
-			<main class="prose dark:prose-invert prose-a:no-underlines max-w-4xl mx-auto mt-8 sm:mt-8">
+			<main class="prose dark:prose-invert prose-a:no-underlines max-w-4xl mx-auto mt-4 sm:mt-6">
 				<NuxtPage />
 			</main>
 		</UContainer>

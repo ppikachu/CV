@@ -1,14 +1,14 @@
 <template>
   <div class="mx-auto prose dark:prose-invert">
     <div v-if="data">
-      <div class="not-prose my-6 space-y-4 pb-6">
+      <div class="not-prose space-y-4 pb-6">
         <div class="flex flex-col gap-2">
           <div class="flex flex-wrap items-center justify-between gap-2">
             <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary-500 font-bold">
               {{ data.category }}
             </span>
             <div class="flex items-center gap-2">
-              <span v-if="data.year" class="text-xs text-gray-500 dark:text-gray-400">
+              <span v-if="data.year" class="text-xs text-muted">
                 {{ data.year }}
               </span>
               <UBadge v-if="data.wip" variant="outline" label="Work in progress" size="xs" />
@@ -19,7 +19,7 @@
             {{ data.title }}
           </ProseH1>
 
-          <p class="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed font-normal">
+          <p class="text-base sm:text-lg text-toned mt-2">
             {{ data.description }}
           </p>
         </div>

@@ -4,11 +4,11 @@
 <template>
 	<header class="pb-8 flex flex-col gap-4 not-prose">
 		<div class="flex flex-row justify-between items-start">
-			<div class="">
-				<ProseH1 class="">
+			<div>
+				<ProseH1>
 					Santiago Toyos
 				</ProseH1>
-				<ProseH2 class="text-default leading-tight mt-2">
+				<ProseH2 class="text-default leading-none mt-2 sm:mt-3">
 					{{ $t('role') }}
 				</ProseH2>
 			</div>
@@ -38,14 +38,14 @@
 				icon="i-lucide-layout-grid"
 				variant="solid"
 				color="primary"
-				size="md"
+				size="sm"
 			/>
 			<UButton
 				to="#contact"
 				:label="$t('btn_contact')"
 				icon="i-lucide-mail"
 				variant="outline"
-				size="md"
+				size="sm"
 			/>
 		</UFieldGroup>
 	</header>

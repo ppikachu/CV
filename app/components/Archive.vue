@@ -22,7 +22,7 @@ const { data: archive } = await useAsyncData<Project[]>(
 				<ProseH2>
 					{{ $t('archive_title') }}
 				</ProseH2>
-				<p class="text-xs text-gray-500 dark:text-gray-400">
+				<p class="text-xs text-muted">
 					{{ $t('archive_intro') }}
 				</p>
 			</div>

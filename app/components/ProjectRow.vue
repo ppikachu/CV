@@ -9,17 +9,16 @@ defineProps<{
 <template>
 	<NuxtLink
 		:to="project.path"
-		class="group relative flex items-center gap-3.5 sm:gap-4 p-0 rounded-lg overflow-hidden ring ring-default bg-default hover:bg-elevated/50 transition-all duration-200 hover:ring-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+		class="group relative flex items-center gap-3.5 sm:gap-4 p-0 rounded-lg overflow-hidden ring ring-default bg-default transition-all duration-200 hover:ring-primary/50"
 	>
 		<!-- Video Thumbnail (no padding, flush with left/top/bottom) -->
-		<div class="shrink-0 w-40 sm:w-52 aspect-video overflow-hidden bg-gray-900">
+		<div class="shrink-0 w-1/4 md:w-1/3 aspect-video-card overflow-hidden">
 			<NuxtImg
 				v-if="project.image"
 				:src="project.image"
 				:alt="project.title"
-				width="240"
-				height="135"
-				class="size-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
+				width="400"
+				class="size-full object-contain object-center"
 			/>
 			<div v-else class="size-full flex items-center justify-center text-muted">
 				<UIcon name="i-lucide-image" class="size-6" />

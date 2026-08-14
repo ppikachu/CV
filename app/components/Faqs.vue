@@ -22,7 +22,7 @@ const faqs = computed(() => {
         <ProseH2>
           {{ $t('faqs') }}
         </ProseH2>
-        <p class="text-xs text-gray-500 dark:text-gray-400">
+        <p class="text-xs text-muted">
           {{ t('intro') }}
         </p>
       </div>

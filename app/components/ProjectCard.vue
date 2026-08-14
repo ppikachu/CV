@@ -37,7 +37,7 @@ const props = withDefaults(defineProps<{
 			<div class="flex flex-col gap-3 w-full p-4 pt-0">
 				<!-- Tags & Year -->
 				<div v-if="(project.tags && project.tags.length) || project.year" class="flex items-center justify-between gap-2">
-					<div v-if="project.tags && project.tags.length" class="flex flex-wrap gap-1.5">
+					<div v-if="project.tags && project.tags.length" class="flex flex-wrap gap-1">
 						<UBadge
 							v-for="tag in project.tags.slice(0, featured ? 6 : 4)"
 							:key="tag"
@@ -53,7 +53,7 @@ const props = withDefaults(defineProps<{
 				</div>
 
 				<!-- Actions -->
-				<div class="flex items-center justify-between gap-2 pt-2 border-t border-default/50 relative z-10">
+				<div class="flex items-center justify-between gap-2 pt-2">
 					<UButton
 						:to="project.path"
 						:label="$t('ver_proyecto')"

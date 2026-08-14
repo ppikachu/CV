@@ -7,7 +7,7 @@
 		:height="dimensionedSrc.height"
 		:placeholder="placeholderDimensions"
 	/>
-	<span v-if="alt!=='' && showAlt" class="no-print block mt-2 mb-8 text-xs text-center text-gray-700 dark:text-gray-400">{{ alt }}</span>
+	<span v-if="alt!=='' && showAlt" class="no-print block mt-2 mb-8 text-xs text-center text-toned">{{ alt }}</span>
 </template>
 
 <script setup lang="ts">

@@ -49,7 +49,7 @@ const milestones = computed<TimelineItem[]>(() => [
 						{{ $t('timeline_title') }}
 					</ProseH2>
 				</div>
-				<p class="text-xs text-gray-500 dark:text-gray-400">
+				<p class="text-xs text-muted">
 					{{ $t('timeline_intro') }}
 				</p>
 			</div>
@@ -60,9 +60,9 @@ const milestones = computed<TimelineItem[]>(() => [
 				:default-value="milestones.length - 1"
 				size="sm"
 				:ui="{
-					date: 'text-xs font-semibold text-primary-500',
-					title: 'font-semibold text-sm text-highlighted',
-					description: 'text-xs text-muted leading-relaxed max-w-2xl mt-0.5'
+					date: 'text-sm font-semibold text-primary',
+					title: 'font-semibold text-sm',
+					description: 'text-xs text-muted leading-relaxed max-w-2xl mt-2'
 				}"
 			/>
 		</div>

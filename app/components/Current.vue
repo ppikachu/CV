@@ -22,7 +22,7 @@ const { data: kinoto } = await useAsyncData<Project | null>(
 				<ProseH2>
 					{{ $t('currently') }}
 				</ProseH2>
-				<UBadge variant="subtle" color="primary" size="sm" class="font-mono text-[11px]">
+				<UBadge variant="subtle" color="primary" size="sm" class="text-[11px]">
 					Featured Case Study
 				</UBadge>
 			</div>

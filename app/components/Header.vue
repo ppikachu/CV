@@ -2,13 +2,13 @@
 </script>
 
 <template>
-	<header class="pt-4 pb-8 flex flex-col gap-4 not-prose">
+	<header class="pb-8 flex flex-col gap-4 not-prose">
 		<div class="flex flex-row justify-between items-start">
 			<div class="">
 				<ProseH1 class="">
 					Santiago Toyos
 				</ProseH1>
-				<ProseH2 class="text-default">
+				<ProseH2 class="text-default leading-tight mt-2">
 					{{ $t('role') }}
 				</ProseH2>
 			</div>

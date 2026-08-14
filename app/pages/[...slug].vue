@@ -4,11 +4,11 @@
       <div class="not-prose my-6 space-y-4 pb-6">
         <div class="flex flex-col gap-2">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <span v-if="data.category" class="text-xs font-mono uppercase tracking-widest text-primary-500 font-bold">
+            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary-500 font-bold">
               {{ data.category }}
             </span>
             <div class="flex items-center gap-2">
-              <span v-if="data.year" class="text-xs font-mono text-gray-500 dark:text-gray-400">
+              <span v-if="data.year" class="text-xs text-gray-500 dark:text-gray-400">
                 {{ data.year }}
               </span>
               <UBadge v-if="data.wip" variant="outline" label="Work in progress" size="xs" />
@@ -30,17 +30,17 @@
           class="flex flex-wrap items-center gap-x-8 gap-y-3 py-3.5 border-y border-default text-xs"
         >
           <div v-if="data.role" class="flex items-center gap-2">
-            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('role_label') }}:</span>
+            <span class="text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('role_label') }}:</span>
             <span class="text-highlighted font-medium">{{ Array.isArray(data.role) ? data.role.join(' · ') : data.role }}</span>
           </div>
 
           <div v-if="data.client" class="flex items-center gap-2">
-            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('client_label') }}:</span>
+            <span class="text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('client_label') }}:</span>
             <span class="text-highlighted font-medium">{{ data.client }}</span>
           </div>
 
           <div v-if="data.tags && data.tags.length" class="flex items-center gap-2">
-            <span class="font-mono text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('tech_label') }}:</span>
+            <span class="text-[10px] uppercase tracking-wider text-muted font-semibold">{{ $t('tech_label') }}:</span>
             <div class="flex flex-wrap gap-1">
               <UBadge
                 v-for="tag in data.tags"
@@ -49,7 +49,7 @@
                 variant="subtle"
                 color="neutral"
                 size="xs"
-                class="font-mono text-[10px]"
+                class="text-[10px]"
               />
             </div>
           </div>
@@ -85,7 +85,7 @@
 </template>
 
 
-<script setup>
+<script setup lang="ts">
 const route = useRoute()
 const nuxtApp = useNuxtApp()
 const { locale } = useI18n()
@@ -105,11 +105,34 @@ const { data } = await useAsyncData(`slug-${localizedPath.value}`, () => {
 }, { watch: [localizedPath] })
 
 if (!data.value) {
-  throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
+  throw createError({ statusCode: 404, statusMessage: 'Page not found' })
 }
 
+const runtimeConfig = useRuntimeConfig()
+
 useSeoMeta({
-  title: data.value?.title,
-  description: data.value?.description
+  title: data.value?.title ? `${data.value.title} · ${runtimeConfig.public.NAME}` : runtimeConfig.public.NAME,
+  description: data.value?.description || runtimeConfig.public.DESCRIPTION,
+  ogTitle: data.value?.title || runtimeConfig.public.NAME,
+  ogDescription: data.value?.description || runtimeConfig.public.DESCRIPTION,
+  ogImage: data.value?.image || runtimeConfig.public.OG_IMAGE,
+  ogUrl: `${runtimeConfig.public.HOST}${route.path}`,
+  twitterTitle: data.value?.title || runtimeConfig.public.NAME,
+  twitterDescription: data.value?.description || runtimeConfig.public.DESCRIPTION,
+  twitterImage: data.value?.image || runtimeConfig.public.TWITTER_IMAGE,
+  twitterCard: 'summary'
+})
+
+useHead({
+  htmlAttrs: {
+    lang: () => locale.value
+  },
+  link: [
+    {
+      rel: 'icon',
+      type: 'image/png',
+      href: runtimeConfig.public.ICON
+    }
+  ]
 })
 </script>

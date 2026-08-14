@@ -34,7 +34,7 @@ defineProps<{
 					variant="subtle"
 					color="neutral"
 					size="xs"
-					class="font-mono text-[10px]"
+					class="text-[10px]"
 				/>
 			</div>
 

@@ -3,7 +3,6 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--font-sans: "JetBrains Mono", "sans-serif";
 	--aspect-ratio-square: 1 / 1;
 	--aspect-ratio-video: 16 / 9;
 	
@@ -44,6 +43,12 @@
 	--ui-color-neutral-950: var(--color-slate-950);
 }
 
+@layer base {
+	body {
+		font-family: "JetBrains Mono", monospace;
+	}
+}
+
 :root {
 	--color-default: var(--color-slate-50);
 	--ui-bg: var(--color-slate-50);
@@ -79,4 +84,9 @@ address {
 }
 .aspect-square {
 	aspect-ratio: 1 / 1;
+}
+
+::selection {
+	background-color: var(--ui-primary);
+	color: #000000;
 }

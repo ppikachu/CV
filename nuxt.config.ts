@@ -10,7 +10,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/ui",
     "@nuxt/content",
-    "@nuxt/devtools",
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxt/fonts",
@@ -18,6 +17,12 @@ export default defineNuxtConfig({
 
   ui: {
     prose: true
+  },
+
+  fonts: {
+    families: [
+      { name: 'JetBrains Mono', global: true }
+    ]
   },
 
   icon: {
@@ -40,7 +45,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: false,
+    enabled: true,
     timeline: {
       enabled: true,
     },
@@ -98,6 +103,10 @@ export default defineNuxtConfig({
   content: {
     experimental: {
       sqliteConnector: "native"
+    },
+    // Habilita el SEO usando meta tags y Open Graph
+    renderer: {
+      anchorLinks: { h2: false, h3: false, h4: false }
     }
   },
 

@@ -1,8 +1,9 @@
 {
   "files.associations": {
-		"*.css": "tailwindcss"
-	},
-	"markdown.validate.ignoredLinks": [
-		"/images/**"
-	],
+    "*.css": "css"
+  },
+  "css.lint.unknownAtRules": "ignore",
+  "markdown.validate.ignoredLinks": [
+    "/images/**"
+  ]
 }

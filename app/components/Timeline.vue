@@ -60,7 +60,7 @@ const milestones = computed<TimelineItem[]>(() => [
 				:default-value="milestones.length - 1"
 				size="sm"
 				:ui="{
-					date: 'font-mono text-xs font-semibold text-primary-500',
+					date: 'text-xs font-semibold text-primary-500',
 					title: 'font-semibold text-sm text-highlighted',
 					description: 'text-xs text-muted leading-relaxed max-w-2xl mt-0.5'
 				}"

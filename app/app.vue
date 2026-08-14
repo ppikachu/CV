@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+const { locale } = useI18n()
 
 useSeoMeta({
 	title: runtimeConfig.public.NAME,
@@ -16,7 +17,7 @@ useSeoMeta({
 
 useHead({
 	htmlAttrs: {
-		lang: useI18n().locale
+		lang: () => locale.value
 	},
 	link: [
 		{

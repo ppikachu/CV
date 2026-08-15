@@ -1,6 +1,11 @@
 <template>
   <section id="contact" class="my-16 not-prose text-center flex flex-col items-center justify-center space-y-6">
-      <NuxtImg src="/robot2.png" alt="Santiago Toyos Mascot" class="w-28 drop-shadow-md" />
+      <img
+        src="/robot2.png"
+        alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
+        class="w-28 h-auto drop-shadow-md"
+        loading="lazy"
+      />
       
       <div class="space-y-2 max-w-lg">
         <ProseH2>
@@ -24,7 +29,7 @@
       />
 
       <ProseP class="text-xs text-muted pt-2">
-        Buenos Aires, Argentina · Available Worldwide
+        {{ $t('contact_location') }}
       </ProseP>
   </section>
 </template>

@@ -54,7 +54,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       NAME: "Santiago Toyos",
-      DESCRIPTION: "Santiago Toyos - Designer & Creative Developer",
+      DESCRIPTION: "Santiago Toyos — Designer / Creative Developer | Design · Motion · Interactive · Code",
       OG_IMAGE: "/OG.png",
       TWITTER_IMAGE: "/twitter.png",
       ICON: "/icon.png",
@@ -63,11 +63,21 @@ export default defineNuxtConfig({
         process.env.NODE_ENV === "production"
           ? "https://toyos.vercel.app"
           : "http://localhost:3000",
+      i18n: {
+        baseUrl:
+          process.env.NODE_ENV === "production"
+            ? "https://toyos.vercel.app"
+            : "http://localhost:3000",
+      },
     },
   },
 
   i18n: {
-    vueI18n: '~~/i18n.config.ts',
+    baseUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://toyos.vercel.app"
+        : "http://localhost:3000",
+    vueI18n: 'i18n.config.ts',
     locales: ['es', 'en'],
     defaultLocale: 'es',
     strategy: 'prefix_except_default',
@@ -80,9 +90,6 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    define: {
-      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
-    },
     optimizeDeps: {
       include: ['@vercel/analytics'],
       exclude: [

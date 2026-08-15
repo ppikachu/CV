@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toyos.vercel.app/sitemap.xml

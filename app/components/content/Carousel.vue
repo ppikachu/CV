@@ -10,7 +10,12 @@
 					viewport: 'rounded-lg overflow-hidden',
 				}"
 			>
-				<NuxtImg :src="'/images/'+item" :alt="item" class="w-full h-auto block" />
+				<NuxtImg
+					:src="'/images/' + item"
+					:alt="cleanAlt(item)"
+					class="w-full h-auto block"
+					loading="lazy"
+				/>
 			</UCarousel>
 		</ClientOnly>
 	</div>
@@ -21,4 +26,13 @@
 const props = defineProps({
 	images: Array<string>
 })
+
+function cleanAlt(filename: string) {
+	if (!filename) return 'Project slide image'
+	return filename
+		.replace(/\.\w+$/, '')
+		.replace(/-\d+x\d+$/, '')
+		.replace(/[-_]/g, ' ')
+		.trim()
+}
 </script>

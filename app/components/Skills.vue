@@ -1,12 +1,5 @@
 <script setup lang="ts">
-const { locale, t } = useI18n()
-const shortLoc = computed(() => locale.value.split('-')[0])
-
-const { data: page } = await useAsyncData(
-	`skills-${shortLoc.value}`,
-	() => queryCollection('content').path('/' + shortLoc.value + '/skills').first(),
-	{ watch: [shortLoc] }
-)
+const { t } = useI18n()
 
 const disciplines = computed(() => [
 	{

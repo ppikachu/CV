@@ -75,7 +75,7 @@
           icon="i-lucide-arrow-left"
           :label="$t('regresar')"
           variant="outline"
-          @click="nuxtApp.$router.options.history.state.back ? nuxtApp.$router.back() : nuxtApp.$router.push('/')"
+          :to="homeFallback"
           block
           class="sm:w-auto cursor-pointer"
         />
@@ -84,13 +84,15 @@
   </div>
 </template>
 
-
 <script setup lang="ts">
 const route = useRoute()
-const nuxtApp = useNuxtApp()
 const { locale } = useI18n()
 
 const shortLoc = computed(() => locale.value.split('-')[0])
+
+const homeFallback = computed(() => {
+  return shortLoc.value === 'en' ? '/en' : '/'
+})
 
 const localizedPath = computed(() => {
   const segments = route.path.split('/').filter(Boolean)
@@ -120,7 +122,7 @@ useSeoMeta({
   twitterTitle: data.value?.title || runtimeConfig.public.NAME,
   twitterDescription: data.value?.description || runtimeConfig.public.DESCRIPTION,
   twitterImage: data.value?.image || runtimeConfig.public.TWITTER_IMAGE,
-  twitterCard: 'summary'
+  twitterCard: 'summary_large_image'
 })
 
 useHead({

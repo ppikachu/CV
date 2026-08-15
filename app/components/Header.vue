@@ -11,6 +11,9 @@
 				<ProseH2 class="text-default leading-none mt-2 sm:mt-3">
 					{{ $t('role') }}
 				</ProseH2>
+				<p class="text-sm text-primary font-mono tracking-wider mt-2">
+					{{ $t('hero_tagline') }}
+				</p>
 			</div>
 
 			<div class="flex flex-row items-center gap-3">
@@ -33,7 +36,7 @@
 
 		<UFieldGroup>
 			<UButton
-				to="#selected-work"
+				to="#featured-work"
 				:label="$t('btn_selected_work')"
 				icon="i-lucide-layout-grid"
 				variant="solid"

@@ -12,7 +12,7 @@ useSeoMeta({
 	twitterTitle: runtimeConfig.public.NAME,
 	twitterDescription: runtimeConfig.public.DESCRIPTION,
 	twitterImage: runtimeConfig.public.TWITTER_IMAGE,
-	twitterCard: 'summary'
+	twitterCard: 'summary_large_image'
 })
 
 useHead({
@@ -30,6 +30,7 @@ useHead({
 </script>
 <template>
 	<UApp>
+		<Nav />
 		<UContainer>
 			<NuxtLoadingIndicator color="#a3e635" />
 			<main class="prose dark:prose-invert prose-a:no-underlines max-w-4xl mx-auto mt-4 sm:mt-6">

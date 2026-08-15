@@ -35,7 +35,7 @@ const props = withDefaults(defineProps<{
 			header: 'w-full aspect-video overflow-hidden',
 			title: 'text-xl font-extrabold',
 			image: 'size-full object-cover group-hover/blog-post:scale-105 transition-transform duration-300',
-			body: 'p-4 sm:p-5 px-4 sm:px-5 flex-1 flex flex-col justify-between'
+			body: 'p-4 sm:p-5 px-4 sm:px-5'
 		}"
 	>
 		<!-- Actions -->

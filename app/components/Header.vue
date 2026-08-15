@@ -2,35 +2,20 @@
 </script>
 
 <template>
-	<header class="pb-8 flex flex-col gap-4 not-prose">
-		<div class="flex flex-row justify-between items-start">
-			<div>
-				<ProseH1>
-					Santiago Toyos
-				</ProseH1>
-				<ProseH2 class="text-default leading-none mt-2 sm:mt-3">
-					{{ $t('role') }}
-				</ProseH2>
-				<p class="text-sm text-primary font-mono tracking-wider mt-2">
-					{{ $t('hero_tagline') }}
-				</p>
-			</div>
-
-			<div class="flex flex-row items-center gap-3">
-				<ClientOnly>
-					<UColorModeSwitch
-						size="lg"
-						:ui="{
-							base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
-							icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
-						}"
-					/>
-					<LocaleToggle />
-				</ClientOnly>
-			</div>
+	<header class="pb-8 flex flex-col gap-2 not-prose">
+		<div>
+			<ProseH1>
+				Santiago Toyos
+			</ProseH1>
+			<ProseH2 class="text-default font-normal leading-none mt-2 sm:mt-3">
+				{{ $t('role') }}
+			</ProseH2>
+			<span class="text-sm text-primary font-mono tracking-wider font-semibold uppercase">
+				{{ $t('hero_tagline') }}
+			</span>
 		</div>
 
-		<ProseP>
+		<ProseP class="text-toned text-base sm:text-lg leading-relaxed max-w-3xl">
 			{{ $t('approach_text') }}
 		</ProseP>
 

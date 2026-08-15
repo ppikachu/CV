@@ -1,5 +1,7 @@
 <script setup lang="ts">
-const { locale } = useI18n()
+import type { NavigationMenuItem } from '@nuxt/ui'
+
+const { locale, t } = useI18n()
 const route = useRoute()
 
 const isHome = computed(() => {
@@ -11,60 +13,42 @@ const homePath = computed(() => {
 	return locale.value.startsWith('en') ? '/en' : '/'
 })
 
-const navLinks = computed(() => [
-	{ label: 'featured_work', to: '#featured-work' },
-	{ label: 'more_work', to: '#more-work' },
-	{ label: 'archive_title', to: '#archive' },
-	{ label: 'btn_contact', to: '#contact' },
-])
+const navItems = computed<NavigationMenuItem[]>(() => {
+	if (!isHome.value) return []
+	return [
+		{ label: t('featured_work'), to: '#featured-work' },
+		{ label: t('more_work'), to: '#more-work' },
+		{ label: t('experiments'), to: '#experiments' },
+		{ label: t('archive_title'), to: '#archive' },
+		{ label: t('btn_contact'), to: '#contact' },
+	]
+})
 </script>
 
 <template>
-	<nav class="sticky top-0 z-50 bg-default/80 backdrop-blur-md border-b border-muted/20 not-prose" aria-label="Main navigation">
-		<div class="max-w-4xl mx-auto px-4 flex items-center justify-between h-11">
-			<div class="flex items-center gap-3">
-				<NuxtLink
-					:to="homePath"
-					class="text-xs font-mono font-bold text-default uppercase tracking-wider hover:text-primary transition-colors flex items-center gap-1.5"
-					aria-label="Santiago Toyos Home"
-				>
-					<span>ST</span>
-				</NuxtLink>
-				<span v-if="!isHome" class="text-muted text-xs font-mono">/</span>
-				<NuxtLink
-					v-if="!isHome"
-					:to="homePath"
-					class="text-[11px] font-mono text-muted hover:text-primary transition-colors flex items-center gap-1"
-				>
+	<UHeader :to="homePath">
+		<template #title>
+			<span class="text-xs font-mono font-bold uppercase tracking-wider">ST</span>
+			<template v-if="!isHome">
+				<span class="text-muted text-xs font-mono">/</span>
+				<span class="text-[11px] font-mono text-muted flex items-center gap-1 font-normal">
 					<UIcon name="i-lucide-arrow-left" class="size-3" />
 					<span>{{ $t('regresar') }}</span>
-				</NuxtLink>
-			</div>
+				</span>
+			</template>
+		</template>
 
-			<div v-if="isHome" class="hidden sm:flex items-center gap-4">
-				<a
-					v-for="link in navLinks"
-					:key="link.to"
-					:href="link.to"
-					class="text-[11px] font-mono text-muted uppercase tracking-wider hover:text-primary transition-colors"
-				>
-					{{ $t(link.label) }}
-				</a>
-			</div>
+		<UNavigationMenu v-if="isHome" :items="navItems" />
 
-			<div class="flex items-center gap-2">
-				<ClientOnly>
-					<UColorModeSwitch
-						size="sm"
-						aria-label="Toggle color mode"
-						:ui="{
-							base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
-							icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
-						}"
-					/>
-					<LocaleToggle size="sm" />
-				</ClientOnly>
-			</div>
-		</div>
-	</nav>
+		<template #right>
+			<ClientOnly>
+				<UColorModeSwitch size="sm" />
+				<LocaleToggle size="sm" />
+			</ClientOnly>
+		</template>
+
+		<template #body>
+			<UNavigationMenu v-if="isHome" :items="navItems" orientation="vertical" class="-mx-2.5" />
+		</template>
+	</UHeader>
 </template>

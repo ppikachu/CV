@@ -9,7 +9,7 @@ const { data: experiments } = await useAsyncData<Project[]>(
 	() => (queryCollection as any)('content')
 		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
 		.where('tipo', '=', 'experiment')
-		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url')
+		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip')
 		.all(),
 	{ watch: [shortLoc] }
 )
@@ -17,17 +17,17 @@ const { data: experiments } = await useAsyncData<Project[]>(
 
 <template>
 	<section id="experiments" class="my-10 not-prose">
-		<div class="space-y-3">
+		<div class="space-y-4">
 			<div class="space-y-1">
 				<ProseH2>
 					{{ $t('experiments') }}
 				</ProseH2>
-				<p class="text-xs text-muted">
+				<ProseP class="text-xs text-muted mb-0">
 					{{ $t('experiments_intro') }}
-				</p>
+				</ProseP>
 			</div>
 
-			<div class="space-y-8">
+			<div class="space-y-4">
 				<ProjectRow
 					v-for="item in experiments"
 					:key="item.path"

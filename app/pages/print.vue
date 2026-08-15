@@ -6,7 +6,7 @@
 		<SocialPrint />
 		<section>
 			<ProseH1>Proyectos en curso</ProseH1>
-			<p>Proyectos en los que estoy involucrado actualmente:</p>
+			<ProseP>Proyectos en los que estoy involucrado actualmente:</ProseP>
 			<CardPrint :current="true" />
 		</section>
 		<section>

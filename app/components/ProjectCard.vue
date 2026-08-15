@@ -11,6 +11,7 @@ export interface Project {
 	client?: string
 	year?: string
 	featured?: boolean
+	wip?: boolean
 	url?: string
 }
 
@@ -30,54 +31,39 @@ const props = withDefaults(defineProps<{
 		:image="project.image"
 		:badge="project.category"
 		:ui="{
-			body: 'p-4 sm:p-4 px-4 sm:px-4'
+			root: 'flex flex-col h-full',
+			header: 'w-full aspect-video overflow-hidden',
+			title: 'text-xl font-extrabold',
+			image: 'size-full object-cover group-hover/blog-post:scale-105 transition-transform duration-300',
+			body: 'p-4 sm:p-5 px-4 sm:px-5 flex-1 flex flex-col justify-between'
 		}"
 	>
+		<!-- Actions -->
 		<template #footer>
-			<div class="flex flex-col gap-3 w-full p-4 pt-0">
-				<!-- Tags & Year -->
-				<div v-if="(project.tags && project.tags.length) || project.year" class="flex items-center justify-between gap-2">
-					<div v-if="project.tags && project.tags.length" class="flex flex-wrap gap-1">
-						<UBadge
-							v-for="tag in project.tags.slice(0, featured ? 6 : 4)"
-							:key="tag"
-							:label="tag"
-							size="sm"
-							color="neutral"
-							variant="subtle"
-						/>
-					</div>
-					<span v-if="project.year" class="text-xs text-muted shrink-0 ml-auto">
-						{{ project.year }}
-					</span>
-				</div>
+			<div class="flex items-center justify-between gap-2 p-4">
+				<UButton
+					:to="project.path"
+					:label="$t('ver_proyecto')"
+					icon="i-lucide-arrow-right"
+					trailing
+					:variant="featured ? 'solid' : 'ghost'"
+					color="primary"
+					size="xs"
+				/>
 
-				<!-- Actions -->
-				<div class="flex items-center justify-between gap-2 pt-2">
-					<UButton
-						:to="project.path"
-						:label="$t('ver_proyecto')"
-						icon="i-lucide-arrow-right"
-						trailing
-						:variant="featured ? 'solid' : 'ghost'"
-						color="primary"
-						size="xs"
-					/>
-
-					<UButton
-						v-if="project.url"
-						:to="project.url"
-						target="_blank"
-						:label="$t('see_live')"
-						icon="i-lucide-external-link"
-						trailing
-						variant="ghost"
-						color="neutral"
-						size="xs"
-						class="text-muted hover:text-highlighted"
-						@click.stop
-					/>
-				</div>
+				<UButton
+					v-if="project.url"
+					:to="project.url"
+					target="_blank"
+					:label="$t('see_live')"
+					icon="i-lucide-external-link"
+					trailing
+					variant="ghost"
+					color="neutral"
+					size="xs"
+					class="text-muted hover:text-highlighted"
+					@click.stop
+				/>
 			</div>
 		</template>
 	</UBlogPost>

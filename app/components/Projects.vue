@@ -13,20 +13,32 @@ const { data: projects } = await useAsyncData<Project[]>(
 		.all(),
 	{ watch: [shortLoc] }
 )
+
+const leadProject = computed(() => projects.value?.[0])
+const gridProjects = computed(() => projects.value?.slice(1) || [])
 </script>
 
 <template>
 	<section id="featured-work" class="my-10 not-prose">
-		<div class="space-y-4">
+		<div class="space-y-6">
 			<div class="flex items-center justify-between">
 				<ProseH2>
 					{{ $t('featured_work') }}
 				</ProseH2>
 			</div>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<!-- Flagship Lead Project: Luz Negra Web (Full-width showcase) -->
+			<div v-if="leadProject">
 				<ProjectCard
-					v-for="item in projects"
+					:project="leadProject"
+					:featured="true"
+				/>
+			</div>
+
+			<!-- Secondary Featured Projects: 2-Column Grid -->
+			<div v-if="gridProjects.length" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+				<ProjectCard
+					v-for="item in gridProjects"
 					:key="item.path"
 					:project="item"
 				/>

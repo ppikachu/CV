@@ -1,1 +1,1 @@
-Diseño y construyo experiencias visuales combinando identidad de marca, motion, interfaces y tecnología interactiva. Con más de 20 años creando para pantallas, espacios y personas, uno la dirección creativa con la ejecución técnica.
+Diseño y construyo experiencias visuales combinando identidad de marca, interfaces, motion y tecnología interactiva. Con más de 20 años creando para pantallas, espacios y personas, uno la dirección creativa con la ejecución técnica.

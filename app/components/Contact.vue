@@ -11,10 +11,10 @@
         <ProseH2>
           {{ t('cta_title') }}
         </ProseH2>
-        <ProseP class="">
+        <ProseP class="text-xl sm:text-2xl font-bold text-primary font-mono mb-0">
           {{ t('cta_sub') }}
         </ProseP>
-        <ProseP>
+        <ProseP class="text-muted text-sm">
           {{ t('cta_desc') }}
         </ProseP>
       </div>
@@ -28,7 +28,7 @@
         to="mailto:ppikachu@gmail.com"
       />
 
-      <ProseP class="text-xs text-muted pt-2">
+      <ProseP class="text-xs text-muted pt-2 font-mono">
         {{ $t('contact_location') }}
       </ProseP>
   </section>
@@ -46,13 +46,13 @@ const { t } = useI18n({
       "badge": "Get in touch",
       "cta_title": "Have something interesting in mind?",
       "cta_sub": "Let's make it.",
-      "cta_desc": "For a new project, design consultation, creative code, or just to say hello:"
+      "cta_desc": "For a new project, creative direction, interactive design, or technical execution:"
     },
     "es": {
       "badge": "Contacto",
       "cta_title": "¿Tenés un proyecto o idea en mente?",
       "cta_sub": "Hagámoslo realidad.",
-      "cta_desc": "Para un nuevo proyecto, consultoría de diseño, creative code o simplemente saludar:"
+      "cta_desc": "Para un nuevo proyecto, dirección creativa, diseño interactivo o ejecución técnica:"
     }
   }
 </i18n>

@@ -7,7 +7,7 @@
 					class="h-full flex flex-col justify-between prose prose-invert"
 			>
 				<ProseH2>{{ article.title }}: <span>{{ article.description }}</span></ProseH2>
-				<p class="text-sm mb-4">{{ article.url }}</p>
+				<ProseP class="text-sm mb-4">{{ article.url }}</ProseP>
 				<ContentDoc :path="article._path" class="text-xs" />
 				<ProjectSkills :skills="article.tags" />
 			</div>

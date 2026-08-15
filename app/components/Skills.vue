@@ -23,11 +23,27 @@ const disciplines = computed(() => [
 		icon: 'i-lucide-code-2'
 	}
 ])
+
+const tools = [
+	'Figma',
+	'TypeScript',
+	'Nuxt',
+	'Vue',
+	'Tailwind CSS',
+	'Three.js',
+	'GLSL',
+	'Modo 3D',
+	'Nuke',
+	'Moho',
+	'Final Cut Pro',
+	'Logic Pro'
+]
 </script>
 
 <template>
-	<section id="what-i-do" class="my-8 not-prose">
+	<section id="what-i-do" class="my-10 not-prose">
 		<div class="space-y-6">
+			<!-- Section Header -->
 			<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
 				<ProseH2>
 					{{ $t('what_i_do') }}
@@ -37,20 +53,44 @@ const disciplines = computed(() => [
 				</span>
 			</div>
 
+			<!-- Core Expertise Cards -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
 				<UCard 
 					v-for="disc in disciplines" 
 					:key="disc.title"
-					:ui="{ body: 'p-4 sm:p-4 space-y-1.5' }"
+					:ui="{ body: 'p-4 sm:p-5 space-y-1.5' }"
 				>
 					<div class="flex items-center gap-2">
 						<UIcon :name="disc.icon" class="w-4 h-4 text-primary" />
-						<ProseH3>{{ disc.title }}</ProseH3>
+						<ProseH3 class="text-base font-semibold">{{ disc.title }}</ProseH3>
 					</div>
-					<p class="text-base text-muted leading-normal">
+					<ProseP class="text-sm text-muted leading-relaxed mb-0">
 						{{ disc.desc }}
-					</p>
+					</ProseP>
 				</UCard>
+			</div>
+
+			<!-- Understated Tools Sub-section -->
+			<div class="pt-2 border-t border-muted/20">
+				<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
+					<span class="text-xs font-mono font-semibold uppercase tracking-wider text-toned">
+						{{ $t('tools_title') }}
+					</span>
+					<span class="text-[11px] text-muted font-mono">
+						{{ $t('tools_subtitle') }}
+					</span>
+				</div>
+				<div class="flex flex-wrap gap-1.5">
+					<UBadge
+						v-for="tool in tools"
+						:key="tool"
+						:label="tool"
+						variant="subtle"
+						color="neutral"
+						size="sm"
+						class="text-xs font-mono"
+					/>
+				</div>
 			</div>
 		</div>
 	</section>

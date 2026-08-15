@@ -9,22 +9,32 @@ export default defineAppConfig({
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-2xl sm:text-4xl font-normal uppercase tracking-tight leading-none text-primary mb-0'
+					base: 'text-2xl sm:text-4xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mb-0'
 				}
 			},
 			h2: {
 				slots: {
-					base: 'text-lg uppercase text-primary font-semibold mb-2 mt-0'
+					base: 'text-3xl uppercase font-heading text-primary font-extrabold mb-2 mt-0'
 				}
 			},
 			h3: {
 				slots: {
-					base: 'text-base uppercase font-bold text-primary mt-0 mb-0'
+					base: 'text-2xl uppercase font-heading font-bold text-primary mt-0 mb-0'
 				}
 			},
 			h4: {
 				slots: {
-					base: 'text-xs uppercase font-semibold text-primary mt-0 mb-0'
+					base: 'text-xl uppercase font-heading font-semibold text-primary mt-0 mb-0'
+				}
+			},
+			h5: {
+				slots: {
+					base: 'text-lg uppercase font-heading font-semibold text-primary mt-0 mb-0'
+				}
+			},
+			h6: {
+				slots: {
+					base: 'text-md uppercase font-heading font-semibold text-primary mt-0 mb-0'
 				}
 			}
 		},
@@ -36,7 +46,7 @@ export default defineAppConfig({
 				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary-800',
 				header: 'relative pointer-events-none w-full aspect-video overflow-hidden',
 				image: 'size-full object-cover',
-				title: 'text-primary uppercase font-normal text-base',
+				title: 'text-primary uppercase font-normal font-heading text-base',
 				description: 'text-sm'
 			},
 			variants: {

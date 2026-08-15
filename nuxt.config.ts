@@ -21,6 +21,7 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
+      { name: 'Plus Jakarta Sans', global: true },
       { name: 'JetBrains Mono', global: true }
     ]
   },

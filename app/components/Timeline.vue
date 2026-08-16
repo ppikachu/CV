@@ -42,27 +42,21 @@ const milestones = computed<TimelineItem[]>(() => [
 
 <template>
 	<section id="timeline" class="my-12 not-prose">
-		<div class="space-y-6">
-			<div class="space-y-1">
-				<ProseH2>
-					{{ $t('timeline_title') }}
-				</ProseH2>
-				<ProseP class="text-xs text-muted mb-0">
-					{{ $t('timeline_intro') }}
-				</ProseP>
-			</div>
+		<UPageFeature
+			:title="$t('timeline_title')"
+			:description="$t('timeline_intro')"
+		/>
 
-			<UTimeline 
-				:items="milestones" 
-				color="primary"
-				:default-value="milestones.length - 1"
-				size="sm"
-				:ui="{
-					date: 'text-sm font-mono font-semibold text-primary',
-					title: 'font-semibold text-sm text-highlighted',
-					description: 'text-xs text-muted leading-relaxed max-w-2xl mt-1.5'
-				}"
-			/>
-		</div>
+		<UTimeline 
+			:items="milestones" 
+			color="primary"
+			:default-value="milestones.length - 1"
+			size="sm"
+			:ui="{
+				date: 'text-sm font-mono font-semibold text-primary',
+				title: 'font-semibold text-sm text-highlighted',
+				description: 'text-xs text-muted leading-relaxed max-w-2xl mt-1.5'
+			}"
+		/>
 	</section>
 </template>

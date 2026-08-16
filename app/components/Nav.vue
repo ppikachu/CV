@@ -19,7 +19,6 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 		{ label: t('featured_work'), to: '#featured-work' },
 		{ label: t('more_work'), to: '#more-work' },
 		{ label: t('experiments'), to: '#experiments' },
-		{ label: t('archive_title'), to: '#archive' },
 		{ label: t('btn_contact'), to: '#contact' },
 	]
 })

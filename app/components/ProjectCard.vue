@@ -30,13 +30,6 @@ const props = withDefaults(defineProps<{
 		:to="project.path"
 		:image="project.image"
 		:badge="project.category"
-		:ui="{
-			root: 'flex flex-col h-full',
-			header: 'w-full aspect-video overflow-hidden',
-			title: 'text-xl font-extrabold',
-			image: 'size-full object-cover group-hover/blog-post:scale-105 transition-transform duration-300',
-			body: 'p-4 sm:p-5 px-4 sm:px-5'
-		}"
 	>
 		<!-- Actions -->
 		<template #footer>

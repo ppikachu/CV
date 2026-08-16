@@ -1,5 +1,5 @@
 <template>
-  <section id="contact" class="my-16 not-prose text-center flex flex-col items-center justify-center space-y-6">
+  <section id="contact" class="my-6 not-prose text-center flex flex-col items-center justify-center space-y-6">
       <img
         src="/robot2.png"
         alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
@@ -11,10 +11,10 @@
         <ProseH2>
           {{ t('cta_title') }}
         </ProseH2>
-        <ProseP class="text-xl sm:text-2xl font-bold text-primary font-mono mb-0">
+        <ProseP class="text-lg sm:text-xl mb-0">
           {{ t('cta_sub') }}
         </ProseP>
-        <ProseP class="text-muted text-sm">
+        <ProseP class="text-toned">
           {{ t('cta_desc') }}
         </ProseP>
       </div>

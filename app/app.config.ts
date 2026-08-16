@@ -14,7 +14,7 @@ export default defineAppConfig({
 			},
 			h2: {
 				slots: {
-					base: 'text-3xl uppercase font-heading text-primary font-extrabold mb-2 mt-0'
+					base: 'text-xl uppercase font-heading text-primary font-extrabold mb-2 mt-0'
 				}
 			},
 			h3: {
@@ -38,23 +38,29 @@ export default defineAppConfig({
 				}
 			}
 		},
+		pageFeature: {
+			slots: {
+				root: 'mt-16 mb-6',
+				title: 'uppercase font-heading text-primary text-2xl font-bold',
+				description: 'text-sm'
+			}
+		},
 		blogPost: {
 			defaultVariants: {
 				variant: 'outline'
 			},
 			slots: {
 				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary-800',
-				header: 'relative pointer-events-none w-full aspect-video overflow-hidden',
+				header: 'relative w-full aspect-video overflow-hidden',
 				image: 'size-full object-cover',
-				title: 'text-primary uppercase font-normal font-heading text-base',
+				title: 'text-primary uppercase font-bold text-base',
 				description: 'text-sm'
 			},
 			variants: {
 				orientation: {
 					horizontal: {
-						root: 'flex flex-row items-stretch lg:flex lg:flex-row lg:grid-cols-none gap-3.5 sm:gap-4 p-0 sm:p-0',
-						header: 'relative pointer-events-none shrink-0 self-stretch w-28 sm:w-36 overflow-hidden',
-						body: 'min-w-0 flex-1 p-3.5 sm:p-4 lg:px-4 justify-center'
+						root: 'flex-row gap-3.5 sm:gap-4',
+						header: 'w-28 sm:w-36 overflow-hidden',
 					}
 				}
 			}

@@ -18,11 +18,9 @@ const { data: moreProjects } = await useAsyncData<Project[]>(
 <template>
 	<section id="more-work" class="my-10 not-prose">
 		<div class="space-y-4">
-			<div class="space-y-1">
-				<ProseH2>
-					{{ $t('more_work') }}
-				</ProseH2>
-			</div>
+			<UPageFeature
+				:title="$t('more_work')"
+			/>
 
 			<div class="space-y-4">
 				<ProjectRow

@@ -44,14 +44,10 @@ const tools = [
 	<section id="what-i-do" class="my-10 not-prose">
 		<div class="space-y-6">
 			<!-- Section Header -->
-			<div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-1">
-				<ProseH2>
-					{{ $t('what_i_do') }}
-				</ProseH2>
-				<span class="text-xs text-muted">
-					{{ $t('disciplines_tagline') }}
-				</span>
-			</div>
+			<UPageFeature
+				:title="$t('what_i_do')"
+				:description="$t('disciplines_tagline')"
+			/>
 
 			<!-- Core Expertise Cards -->
 			<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -71,15 +67,12 @@ const tools = [
 			</div>
 
 			<!-- Understated Tools Sub-section -->
-			<div class="pt-2 border-t border-muted/20">
-				<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-					<span class="text-xs font-mono font-semibold uppercase tracking-wider text-toned">
-						{{ $t('tools_title') }}
-					</span>
-					<span class="text-[11px] text-muted font-mono">
-						{{ $t('tools_subtitle') }}
-					</span>
-				</div>
+			<div class="pt-2">
+				<UPageFeature
+					:title="$t('tools_title')"
+					:description="$t('tools_subtitle')"
+					class="mb-3"
+				/>
 				<div class="flex flex-wrap gap-1.5">
 					<UBadge
 						v-for="tool in tools"

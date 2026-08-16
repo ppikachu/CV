@@ -17,32 +17,26 @@ const faqs = computed(() => {
 
 <template>
   <section id="faqs" class="my-12 not-prose">
-    <div class="space-y-4">
-      <div class="space-y-1">
-        <ProseH2>
-          {{ $t('faqs') }}
-        </ProseH2>
-        <ProseP class="text-xs text-muted mb-0">
-          {{ t('intro') }}
-        </ProseP>
-      </div>
+    <UPageFeature
+      :title="$t('faqs')"
+      :description="t('intro')"
+    />
 
-      <ClientOnly>
-        <UAccordion 
-          :items="faqs" 
-          trailing-icon="i-lucide-chevron-right"
-          :ui="{ 
-            trigger: 'text-primary',
-            body: 'leading-relaxed',
-            trailingIcon: 'size-4 transition-transform duration-200 group-data-[state=open]:rotate-90'
-          }"
-        >
-          <template #body="{ item }">
-            {{ item.content }}
-          </template>
-        </UAccordion>
-      </ClientOnly> 
-    </div>
+    <ClientOnly>
+      <UAccordion 
+        :items="faqs" 
+        trailing-icon="i-lucide-chevron-right"
+        :ui="{ 
+          trigger: 'text-primary',
+          body: 'leading-relaxed',
+          trailingIcon: 'size-4 transition-transform duration-200 group-data-[state=open]:rotate-90'
+        }"
+      >
+        <template #body="{ item }">
+          {{ item.content }}
+        </template>
+      </UAccordion>
+    </ClientOnly> 
   </section>
 </template>
 

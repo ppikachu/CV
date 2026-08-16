@@ -21,11 +21,9 @@ const gridProjects = computed(() => projects.value?.slice(1) || [])
 <template>
 	<section id="featured-work" class="my-10 not-prose">
 		<div class="space-y-6">
-			<div class="flex items-center justify-between">
-				<ProseH2>
-					{{ $t('featured_work') }}
-				</ProseH2>
-			</div>
+			<UPageFeature
+				:title="$t('featured_work')"
+			/>
 
 			<!-- Flagship Lead Project: Luz Negra Web (Full-width showcase) -->
 			<div v-if="leadProject">

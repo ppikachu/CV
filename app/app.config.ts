@@ -3,18 +3,18 @@ export default defineAppConfig({
 		primary: "lime",
 		gray: "slate",
 		icons: {
-			dark: 'i-lucide-moon',
-			light: 'i-lucide-sun'
+			dark: 'i-ph-moon',
+			light: 'i-ph-sun'
 		},
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-2xl sm:text-4xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mb-0'
+					base: 'text-3xl sm:text-4xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mb-0'
 				}
 			},
 			h2: {
 				slots: {
-					base: 'text-xl uppercase font-heading text-primary font-extrabold mb-2 mt-0'
+					base: 'text-xl uppercase font-heading text-primary font-extrabold mb-2'
 				}
 			},
 			h3: {
@@ -46,21 +46,28 @@ export default defineAppConfig({
 			}
 		},
 		blogPost: {
-			defaultVariants: {
-				variant: 'outline'
-			},
 			slots: {
 				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary-800',
-				header: 'relative w-full aspect-video overflow-hidden',
+				header: 'relative w-full aspect-video',
 				image: 'size-full object-cover',
+				badge: 'p-0 text-muted',
 				title: 'text-primary uppercase font-bold text-base',
 				description: 'text-sm'
 			},
 			variants: {
 				orientation: {
+					vertical: {
+						body: 'p-3 sm:p-4'
+					},
 					horizontal: {
-						root: 'flex-row gap-3.5 sm:gap-4',
-						header: 'w-28 sm:w-36 overflow-hidden',
+						root: 'gap-0 flex-row lg:flex lg:flex-row',
+						header: 'w-2/5 sm:w-1/4 overflow-hidden',
+						body: 'sm:p-4 lg:p-4'
+					}
+				},
+				variant: {
+					outline: {
+						description: 'text-toned'
 					}
 				}
 			}

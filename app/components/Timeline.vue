@@ -11,7 +11,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: shortLoc.value === 'es'
 			? 'Rigging de personajes, animación 2D/3D, composición digital VFX y masterización para televisión pública y cine independiente.'
 			: 'Character rigging, 2D/3D animation, digital VFX compositing, and broadcast mastering for public TV and indie film.',
-		icon: 'i-lucide-film'
+		icon: 'i-ph-film-strip'
 	},
 	{
 		date: '2010s',
@@ -19,7 +19,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: shortLoc.value === 'es'
 			? 'Desarrollo de marcas integrales, sitios comerciales de alto rendimiento, quioscos interactivos para museos y dirección visual.'
 			: 'Comprehensive brand identity systems, high-performance commercial websites, interactive museum kiosks, and visual art direction.',
-		icon: 'i-lucide-layout'
+		icon: 'i-ph-layout'
 	},
 	{
 		date: '2020s',
@@ -27,7 +27,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: shortLoc.value === 'es'
 			? 'Ecosistemas de e-commerce completos (Nuxt 4), experiencias 3D interactivas con Three.js, shaders GLSL y tracking server-side.'
 			: 'End-to-end e-commerce platforms (Nuxt 4), interactive WebGL 3D with Three.js, custom GLSL shaders, and server-side analytics.',
-		icon: 'i-lucide-code-2'
+		icon: 'i-ph-code'
 	},
 	{
 		date: shortLoc.value === 'es' ? 'Hoy' : 'Today',
@@ -35,7 +35,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: shortLoc.value === 'es'
 			? 'Uniendo visión estratégica, lenguaje visual refinado e implementación técnica moderna de forma directa y fluida.'
 			: 'Unifying strategic vision, refined visual aesthetics, and modern front-end execution without intermediaries.',
-		icon: 'i-lucide-sparkles'
+		icon: 'i-ph-sparkle'
 	}
 ])
 </script>
@@ -53,9 +53,10 @@ const milestones = computed<TimelineItem[]>(() => [
 			:default-value="milestones.length - 1"
 			size="sm"
 			:ui="{
-				date: 'text-sm font-mono font-semibold text-primary',
-				title: 'font-semibold text-sm text-highlighted',
-				description: 'text-xs text-muted leading-relaxed max-w-2xl mt-1.5'
+				wrapper: 'space-y-3',
+				date: 'text-sm text-primary',
+				title: 'font-semibold text-md leading-tight',
+				description: 'text-sm text-muted leading-relaxed max-w-2xl mt-1.5'
 			}"
 		/>
 	</section>

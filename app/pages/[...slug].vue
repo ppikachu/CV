@@ -15,7 +15,7 @@
             </div>
           </div>
 
-          <ProseH1>
+          <ProseH1 class="text-balance">
             {{ data.title }}
           </ProseH1>
 
@@ -66,13 +66,13 @@
           variant="solid"
           color="primary"
           target="_blank"
-          icon="i-lucide-external-link"
+          icon="i-ph-arrow-square-out"
           block
           class="sm:w-auto grow"
         />
 
         <UButton
-          icon="i-lucide-arrow-left"
+          icon="i-ph-arrow-left"
           :label="$t('regresar')"
           variant="outline"
           :to="homeFallback"

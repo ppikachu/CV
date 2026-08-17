@@ -1,1 +1,0 @@
-I design and build visual experiences across brand, digital, motion, and interactive media. With over 20 years of making things for screens, spaces, and people, I bridge creative direction with front-end and interactive execution.

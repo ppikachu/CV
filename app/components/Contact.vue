@@ -1,16 +1,16 @@
 <template>
-  <section id="contact" class="my-6 not-prose text-center flex flex-col items-center justify-center space-y-6">
-      <img
+  <section id="contact" class="not-prose text-center flex flex-col items-center">
+      <NuxtImg
         src="/robot2.png"
         alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
-        class="w-28 h-auto drop-shadow-md"
+        class="w-18 md:w-28 h-auto mb-6"
         loading="lazy"
       />
       
       <div class="space-y-2 max-w-lg">
-        <ProseH2>
+        <ProseH4 class="text-balance">
           {{ t('cta_title') }}
-        </ProseH2>
+        </ProseH4>
         <ProseP class="text-lg sm:text-xl mb-0">
           {{ t('cta_sub') }}
         </ProseP>
@@ -20,7 +20,7 @@
       </div>
 
       <UButton
-        icon="i-lucide-mail"
+        icon="i-ph-envelope-simple"
         label="ppikachu@gmail.com"
         size="lg"
         variant="solid"

@@ -29,17 +29,23 @@ const props = withDefaults(defineProps<{
 		:description="project.description"
 		:to="project.path"
 		:image="project.image"
-		:badge="project.category"
+		:badge="{
+			label: project.category,
+			variant: 'soft',
+			ui: {
+				label: 'text-wrap'
+			}
+		}"
 	>
 		<!-- Actions -->
 		<template #footer>
-			<div class="flex items-center justify-between gap-2 p-4">
+			<div class="relative z-10 flex items-center justify-between gap-2 p-3 pt-0 sm:px-4">
 				<UButton
 					:to="project.path"
 					:label="$t('ver_proyecto')"
-					icon="i-lucide-arrow-right"
+					icon="i-ph-arrow-right"
 					trailing
-					:variant="featured ? 'solid' : 'ghost'"
+					:variant="featured ? 'solid' : 'soft'"
 					color="primary"
 					size="xs"
 				/>
@@ -49,7 +55,7 @@ const props = withDefaults(defineProps<{
 					:to="project.url"
 					target="_blank"
 					:label="$t('see_live')"
-					icon="i-lucide-external-link"
+					icon="i-ph-arrow-square-out"
 					trailing
 					variant="ghost"
 					color="neutral"

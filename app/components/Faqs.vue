@@ -25,7 +25,7 @@ const faqs = computed(() => {
     <ClientOnly>
       <UAccordion 
         :items="faqs" 
-        trailing-icon="i-lucide-chevron-right"
+        trailing-icon="i-ph-caret-right"
         :ui="{ 
           trigger: 'text-primary',
           body: 'leading-relaxed',

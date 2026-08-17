@@ -12,7 +12,12 @@ defineProps<{
 		:description="project.description"
 		:to="project.path"
 		:image="project.image"
-		:badge="project.category"
+		:badge="{
+			label: project.category,
+			variant: 'soft',
+			ui: { label: 'text-wrap' }
+		}"
+		:ui="{ description: 'leading-tight' }"
 		orientation="horizontal"
 	/>
 </template>

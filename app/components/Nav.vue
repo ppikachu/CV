@@ -31,7 +31,7 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 			<template v-if="!isHome">
 				<span class="text-muted text-xs font-mono">/</span>
 				<span class="text-[11px] font-mono text-muted flex items-center gap-1 font-normal">
-					<UIcon name="i-lucide-arrow-left" class="size-3" />
+					<UIcon name="i-ph-arrow-left" class="size-3" />
 					<span>{{ $t('regresar') }}</span>
 				</span>
 			</template>

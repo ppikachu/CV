@@ -9,12 +9,12 @@ export default defineAppConfig({
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-3xl sm:text-4xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mb-0'
+					base: 'text-3xl sm:text-5xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mt-12 mb-0'
 				}
 			},
 			h2: {
 				slots: {
-					base: 'text-xl uppercase font-heading text-primary font-extrabold mb-2'
+					base: 'text-xl uppercase font-heading text-primary leading-tight font-extrabold mb-2'
 				}
 			},
 			h3: {
@@ -40,18 +40,16 @@ export default defineAppConfig({
 		},
 		pageFeature: {
 			slots: {
-				root: 'mt-16 mb-6',
-				title: 'uppercase font-heading text-primary text-2xl font-bold',
+				root: 'mt-24 mb-6',
+				title: 'uppercase font-heading text-primary text-2xl md:text-3xl font-bold',
 				description: 'text-sm'
 			}
 		},
 		blogPost: {
 			slots: {
 				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary-800',
-				header: 'relative w-full aspect-video',
-				image: 'size-full object-cover',
 				badge: 'p-0 text-muted',
-				title: 'text-primary uppercase font-bold text-base',
+				title: 'text-primary uppercase font-bold text-base leading-none',
 				description: 'text-sm'
 			},
 			variants: {

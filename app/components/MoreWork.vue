@@ -9,7 +9,7 @@ const { data: moreProjects } = await useAsyncData<Project[]>(
 	() => (queryCollection as any)('content')
 		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
 		.where('tipo', '=', 'more')
-		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip')
+		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip', 'group', 'isGroup')
 		.all(),
 	{ watch: [shortLoc] }
 )
@@ -22,7 +22,7 @@ const { data: moreProjects } = await useAsyncData<Project[]>(
 				:title="$t('more_work')"
 			/>
 
-			<div class="space-y-4">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<ProjectRow
 					v-for="item in moreProjects"
 					:key="item.path"

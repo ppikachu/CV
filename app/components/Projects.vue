@@ -9,7 +9,7 @@ const { data: projects } = await useAsyncData<Project[]>(
 	() => (queryCollection as any)('content')
 		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
 		.where('tipo', '=', 'featured')
-		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url')
+		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip', 'group', 'isGroup')
 		.all(),
 	{ watch: [shortLoc] }
 )
@@ -34,7 +34,7 @@ const gridProjects = computed(() => projects.value?.slice(1) || [])
 			</div>
 
 			<!-- Secondary Featured Projects: 2-Column Grid -->
-			<div v-if="gridProjects.length" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+			<div v-if="gridProjects.length" class="grid grid-cols-1 md:grid-cols-2 gap-6">
 				<ProjectCard
 					v-for="item in gridProjects"
 					:key="item.path"

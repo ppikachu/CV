@@ -9,7 +9,7 @@ const { data: experiments } = await useAsyncData<Project[]>(
 	() => (queryCollection as any)('content')
 		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
 		.where('tipo', '=', 'experiment')
-		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip')
+		.select('title', 'description', 'path', 'image', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'featured', 'url', 'wip', 'group', 'isGroup')
 		.all(),
 	{ watch: [shortLoc] }
 )

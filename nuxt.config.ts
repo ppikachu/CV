@@ -8,6 +8,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.css'],
 
   modules: [
+    "@vueuse/nuxt",
     "@nuxt/ui",
     "@nuxt/content",
     "@nuxt/image",

@@ -21,6 +21,8 @@ export default defineContentConfig({
         year: z.string().optional(),
         featured: z.boolean().optional(),
         wip: z.boolean().optional(),
+        group: z.boolean().optional(),
+        isGroup: z.boolean().optional(),
         url: z.string().optional()
       })
     })

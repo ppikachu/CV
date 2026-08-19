@@ -4,6 +4,7 @@ export interface Project {
 	description?: string
 	path: string
 	image?: string
+	video?: string
 	tags?: string[]
 	tipo?: string
 	category?: string
@@ -20,9 +21,11 @@ const props = withDefaults(defineProps<{
 	project: Project
 	featured?: boolean
 	group?: boolean
+	video?: string
 }>(), {
 	featured: false,
-	group: undefined
+	group: undefined,
+	video: undefined
 })
 
 const isGroup = computed(() => {
@@ -31,10 +34,29 @@ const isGroup = computed(() => {
 	}
 	return Boolean(props.project.group || props.project.isGroup)
 })
+
+const videoSrc = computed(() => props.video || props.project?.video)
+
+const isHovered = ref(false)
+const videoRef = ref<HTMLVideoElement | null>(null)
+
+watch(isHovered, (hovering) => {
+	if (!videoSrc.value || !videoRef.value) return
+	if (hovering) {
+		videoRef.value.currentTime = 0
+		videoRef.value.play().catch(() => {})
+	} else {
+		videoRef.value.pause()
+	}
+})
 </script>
 
 <template>
-	<div class="relative">
+	<div
+		class="relative h-full flex flex-col"
+		@mouseenter="isHovered = true"
+		@mouseleave="isHovered = false"
+	>
 		<!-- Floating Type Badge on Top Left (only for project collections) -->
 		<UBadge
 			v-if="isGroup"
@@ -48,7 +70,7 @@ const isGroup = computed(() => {
 			:title="project.title || project.path.split('/').pop()"
 			:description="project.description"
 			:to="project.path"
-			:image="project.image"
+			:image="project.image || videoSrc"
 			:badge="{
 				label: project.category,
 				variant: 'soft',
@@ -56,10 +78,35 @@ const isGroup = computed(() => {
 					label: 'text-wrap'
 				}
 			}"
+			class="h-full flex flex-col flex-1"
 		>
+			<template v-if="project.image || videoSrc" #header="{ ui }">
+				<div class="relative w-full h-full overflow-hidden">
+					<NuxtImg
+						v-if="project.image"
+						:src="project.image"
+						:alt="project.title || 'Project thumbnail'"
+						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center w-full h-full'"
+					/>
+					<video
+						v-if="videoSrc"
+						ref="videoRef"
+						:src="videoSrc"
+						muted
+						loop
+						playsinline
+						preload="metadata"
+						:class="[
+							'object-cover object-center absolute inset-0 pointer-events-none transition-opacity duration-300',
+							isHovered ? 'opacity-100' : 'opacity-0'
+						]"
+					/>
+				</div>
+			</template>
+
 			<!-- Actions -->
 			<template #footer>
-				<div class="relative z-10 flex items-center justify-between gap-2 p-3 pt-0 sm:px-4">
+				<div class="relative z-10 flex items-center justify-between gap-2 p-2 sm:p-2 md:p-4">
 					<UButton
 						:to="project.path"
 						:label="isGroup ? $t('ver_proyectos') : $t('ver_proyecto')"

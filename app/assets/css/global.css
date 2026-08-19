@@ -59,14 +59,7 @@
 	}
 }
 
-:root {
-	--color-default: var(--color-slate-50);
-	--ui-bg: var(--color-slate-50);
-	--ui-bg-elevated: var(--color-slate-100);
-	--ui-primary: var(--color-lime-500);
-	--ui-neutral: var(--color-slate-500);
-}
-
+:root,
 .dark {
 	--color-default: #000000;
 	--ui-bg: #000000;

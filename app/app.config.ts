@@ -9,7 +9,7 @@ export default defineAppConfig({
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-3xl sm:text-5xl font-extrabold font-heading uppercase tracking-tight leading-none text-primary mt-12 mb-0'
+					base: 'text-3xl sm:text-5xl font-extrabold font-heading uppercase tracking-tighter leading-none text-primary mt-12 mb-0'
 				}
 			},
 			h2: {
@@ -47,25 +47,36 @@ export default defineAppConfig({
 		},
 		blogPost: {
 			slots: {
-				root: 'relative group/blog-post transition-all duration-200 hover:ring-primary-800',
-				badge: 'p-0 text-muted',
-				title: 'text-primary uppercase font-bold text-base leading-none',
-				description: 'text-sm'
+				root: 'gap-0 relative group/blog-post transition-all duration-200 hover:ring-primary-800 h-full',
+				image: 'object-cover object-center w-full h-full',
+				meta: 'mb-0',
+				badge: 'p-0 text-primary/70 ring-0',
+				title: 'text-primary uppercase font-heading font-extrabold text-lg leading-none',
+				body: 'flex-1 flex flex-col gap-1',
+				description: 'text-sm text-wrap',
+				footer: 'mt-auto'
 			},
 			variants: {
 				orientation: {
 					vertical: {
-						body: 'p-3 sm:p-4'
+						root: 'flex flex-col h-full',
+						body: 'sm:p-2 md:p-4 p-2 flex-1 flex flex-col'
 					},
 					horizontal: {
-						root: 'gap-0 flex-row lg:flex lg:flex-row',
-						header: 'w-2/5 sm:w-1/4 overflow-hidden',
-						body: 'sm:p-4 lg:p-4'
+						root: 'gap-0 flex-row lg:flex lg:flex-row h-full',
+						header: 'w-2/5 sm:w-2/5 overflow-hidden aspect-video-card shrink-0',
+						body: 'p-0 py-2 lg:py-4 sm:p-3 px-4 lg:px-4',
+						description: 'text-xs'
 					}
 				},
 				variant: {
 					outline: {
-						description: 'text-toned'
+						description: 'text-default'
+					}
+				},
+				to: {
+					true: {
+						image: ''
 					}
 				}
 			}

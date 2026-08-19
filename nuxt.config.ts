@@ -22,8 +22,8 @@ export default defineNuxtConfig({
 
   fonts: {
     families: [
-      { name: 'Plus Jakarta Sans', global: true },
-      { name: 'JetBrains Mono', global: true }
+      { name: 'Plus Jakarta Sans', weights: [400, 500, 600, 700, 800], global: true },
+      { name: 'JetBrains Mono', weights: [400, 500, 600, 700, 800], global: true }
     ]
   },
 
@@ -40,6 +40,7 @@ export default defineNuxtConfig({
 
   colorMode: {
     preference: "dark",
+    fallback: "dark",
   },
 
   app: {

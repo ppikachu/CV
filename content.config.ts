@@ -19,7 +19,6 @@ export default defineContentConfig({
         role: z.union([z.string(), z.array(z.string())]).optional(),
         client: z.string().optional(),
         year: z.string().optional(),
-        featured: z.boolean().optional(),
         wip: z.boolean().optional(),
         group: z.boolean().optional(),
         isGroup: z.boolean().optional(),

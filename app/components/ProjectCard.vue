@@ -10,7 +10,6 @@ export interface Project {
 	role?: string | string[]
 	client?: string
 	year?: string
-	featured?: boolean
 	wip?: boolean
 	url?: string
 	group?: boolean

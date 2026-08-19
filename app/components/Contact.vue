@@ -1,36 +1,36 @@
 <template>
-  <section id="contact" class="not-prose text-center flex flex-col items-center">
-      <NuxtImg
-        src="/robot2.png"
-        alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
-        class="w-18 md:w-28 h-auto mb-6"
-        loading="lazy"
-      />
-      
-      <div class="space-y-2 max-w-lg">
-        <ProseH4 class="text-balance">
-          {{ t('cta_title') }}
-        </ProseH4>
-        <ProseP class="text-lg sm:text-xl mb-0">
-          {{ t('cta_sub') }}
-        </ProseP>
-        <ProseP class="text-toned">
-          {{ t('cta_desc') }}
-        </ProseP>
-      </div>
-
-      <UButton
-        icon="i-ph-envelope-simple"
-        label="ppikachu@gmail.com"
-        size="lg"
-        variant="solid"
-        color="primary"
-        to="mailto:ppikachu@gmail.com"
-      />
-
-      <ProseP class="text-xs text-muted pt-2 font-mono">
-        {{ $t('contact_location') }}
+  <section class="not-prose text-center flex flex-col items-center">
+    <NuxtImg
+      src="/robot2.png"
+      alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
+      class="w-18 md:w-28 h-auto mb-6"
+      loading="lazy"
+    />
+    
+    <div class="space-y-2 max-w-lg">
+      <ProseH4 class="text-balance">
+        {{ t('cta_title') }}
+      </ProseH4>
+      <ProseP class="text-lg sm:text-xl mb-0">
+        {{ t('cta_sub') }}
       </ProseP>
+      <ProseP class="text-toned">
+        {{ t('cta_desc') }}
+      </ProseP>
+    </div>
+
+    <UButton
+      icon="i-ph-envelope-simple"
+      label="ppikachu@gmail.com"
+      size="lg"
+      variant="solid"
+      color="primary"
+      to="mailto:ppikachu@gmail.com"
+    />
+
+    <ProseP class="text-xs text-muted pt-2 font-mono">
+      {{ $t('contact_location') }}
+    </ProseP>
   </section>
 </template>
 

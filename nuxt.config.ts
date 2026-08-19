@@ -110,9 +110,9 @@ export default defineNuxtConfig({
   },
 
   content: {
-    experimental: {
-      sqliteConnector: "native"
-    },
+    // experimental: {
+    //   sqliteConnector: "native"
+    // },
     // Habilita el SEO usando meta tags y Open Graph
     renderer: {
       anchorLinks: { h2: false, h3: false, h4: false }

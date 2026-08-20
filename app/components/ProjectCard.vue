@@ -106,31 +106,24 @@ watch(isHovered, (hovering) => {
 
 			<!-- Actions -->
 			<template #footer>
-				<div class="relative z-10 flex items-center justify-between gap-2 p-2 sm:p-2 md:p-4">
-					<UButton
-						:to="project.path"
-						:label="isGroup ? $t('ver_proyectos') : $t('ver_proyecto')"
-						icon="i-ph-arrow-right"
-						trailing
-						:variant="featured ? 'solid' : 'soft'"
-						color="primary"
-						size="xs"
-					/>
+				<UButton
+					:to="project.path"
+					:label="isGroup ? $t('ver_proyectos') : $t('ver_proyecto')"
+					icon="i-ph-arrow-right"
+					trailing
+					:variant="featured ? 'solid' : 'outline'"
+				/>
 
-					<UButton
-						v-if="project.url"
-						:to="project.url"
-						target="_blank"
-						:label="$t('see_live')"
-						icon="i-ph-arrow-square-out"
-						trailing
-						variant="ghost"
-						color="neutral"
-						size="xs"
-						class="text-muted hover:text-highlighted"
-						@click.stop
-					/>
-				</div>
+				<UButton
+					v-if="project.url"
+					:to="project.url"
+					target="_blank"
+					:label="$t('see_live')"
+					icon="i-ph-arrow-square-out"
+					trailing
+					variant="outline"
+					@click.stop
+				/>
 			</template>
 		</UBlogPost>
 	</div>

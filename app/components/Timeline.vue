@@ -17,7 +17,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		date: '2010s',
 		title: shortLoc.value === 'es' ? 'Diseño Digital · Identidad de Marca · Plataformas Web' : 'Digital Design · Brand Systems · Web Platforms',
 		description: shortLoc.value === 'es'
-			? 'Desarrollo de marcas integrales, sitios comerciales de alto rendimiento, quioscos interactivos para museos y dirección visual.'
+			? 'Desarrollo de marcas integrales, sitios comerciales de alto rendimiento.'
 			: 'Comprehensive brand identity systems, high-performance commercial websites, interactive museum kiosks, and visual art direction.',
 		icon: 'i-ph-layout'
 	},
@@ -25,7 +25,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		date: '2020s',
 		title: shortLoc.value === 'es' ? 'Creative Development · Ecosistema Nuxt · Shaders GLSL' : 'Creative Development · Nuxt Ecosystem · WebGL & GLSL',
 		description: shortLoc.value === 'es'
-			? 'Ecosistemas de e-commerce completos (Nuxt 4), experiencias 3D interactivas con Three.js, shaders GLSL y tracking server-side.'
+			? 'Ecosistemas de e-commerce completos (Nuxt 4), experiencias 3D interactivas con Three.js, shaders GLSL.'
 			: 'End-to-end e-commerce platforms (Nuxt 4), interactive WebGL 3D with Three.js, custom GLSL shaders, and server-side analytics.',
 		icon: 'i-ph-code'
 	},
@@ -33,7 +33,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		date: shortLoc.value === 'es' ? 'Hoy' : 'Today',
 		title: shortLoc.value === 'es' ? 'Ejecución Integral: Concepto → Diseño → Motion → Código' : 'Full-Cycle Execution: Concept → Design → Motion → Code',
 		description: shortLoc.value === 'es'
-			? 'Uniendo visión estratégica, lenguaje visual refinado e implementación técnica moderna de forma directa y fluida.'
+			? 'Uniendo visión estratégica, lenguaje visual e implementación técnica moderna.'
 			: 'Unifying strategic vision, refined visual aesthetics, and modern front-end execution without intermediaries.',
 		icon: 'i-ph-sparkle'
 	}

@@ -16,7 +16,7 @@ const { data: experiments } = await useAsyncData<Project[]>(
 </script>
 
 <template>
-	<section id="experiments" class="my-10 not-prose space-y-4">
+	<section id="experiments" class="not-prose">
 		<UPageFeature
 			:title="$t('experiments')"
 			:description="$t('experiments_intro')"

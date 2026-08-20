@@ -4,22 +4,22 @@ const { t } = useI18n()
 const disciplines = computed(() => [
 	{
 		title: t('brand_title'),
-		desc: t('brand_desc'),
+		description: t('brand_desc'),
 		icon: 'i-ph-palette'
 	},
 	{
 		title: t('digital_title'),
-		desc: t('digital_desc'),
+		description: t('digital_desc'),
 		icon: 'i-ph-layout'
 	},
 	{
 		title: t('motion_title'),
-		desc: t('motion_desc'),
+		description: t('motion_desc'),
 		icon: 'i-ph-film-strip'
 	},
 	{
 		title: t('code_title'),
-		desc: t('code_desc'),
+		description: t('code_desc'),
 		icon: 'i-ph-code'
 	}
 ])
@@ -38,6 +38,22 @@ const tools = [
 	'Final Cut Pro',
 	'Logic Pro'
 ]
+
+const toolsWithSpectrum = computed(() => {
+	const total = tools.length
+	return tools.map((tool, index) => {
+		// Infrared (0° deep crimson) across the visible spectrum to Ultraviolet (315° violet/magenta)
+		const hue = Math.round((index / (total - 1)) * 315)
+		return {
+			name: tool,
+			style: {
+				backgroundColor: `hsla(${hue}, 85%, 55%, 0.15)`,
+				color: `hsl(${hue}, 90%, 80%)`,
+				boxShadow: `inset 0 0 0 1px hsla(${hue}, 85%, 60%, 0.35)`
+			}
+		}
+	})
+})
 </script>
 
 <template>
@@ -50,19 +66,18 @@ const tools = [
 
 		<!-- Core Expertise Cards -->
 		<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 not-prose">
-			<UCard 
+			<UPageCard 
 				v-for="disc in disciplines" 
 				:key="disc.title"
-				:ui="{ body: 'p-3 sm:p-3' }"
-			>
-				<div class="flex items-center gap-2 mb-2">
-					<UIcon :name="disc.icon" class="w-4 h-4 text-primary" />
-					<ProseH3 class="text-base font-semibold">{{ disc.title }}</ProseH3>
-				</div>
-				<ProseP class="text-muted leading-normal my-0">
-					{{ disc.desc }}
-				</ProseP>
-			</UCard>
+				:title="disc.title"
+				:description="disc.description"
+				:icon="disc.icon"
+				spotlight
+				:ui="{
+					leadingIcon: 'size-8',
+					title: 'text-primary font-heading font-extrabold text-2xl',
+				}"
+			/>
 		</div>
 
 		<!-- Understated Tools Sub-section -->
@@ -74,13 +89,10 @@ const tools = [
 			/>
 			<div class="flex flex-wrap gap-1.5">
 				<UBadge
-					v-for="tool in tools"
-					:key="tool"
-					:label="tool"
-					variant="subtle"
-					color="neutral"
-					size="sm"
-					class="text-xs font-mono"
+					v-for="tool in toolsWithSpectrum"
+					:key="tool.name"
+					:label="tool.name"
+					:style="tool.style"
 				/>
 			</div>
 		</div>

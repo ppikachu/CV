@@ -17,18 +17,16 @@ const { data: moreProjects } = await useAsyncData<Project[]>(
 
 <template>
 	<section id="more-work" class="my-10 not-prose">
-		<div class="space-y-4">
-			<UPageFeature
-				:title="$t('more_work')"
-			/>
+		<UPageFeature
+			:title="$t('more_work')"
+		/>
 
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				<ProjectRow
-					v-for="item in moreProjects"
-					:key="item.path"
-					:project="item"
-				/>
-			</div>
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+			<ProjectRow
+				v-for="item in moreProjects"
+				:key="item.path"
+				:project="item"
+			/>
 		</div>
 	</section>
 </template>

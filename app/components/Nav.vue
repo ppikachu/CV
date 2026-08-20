@@ -105,8 +105,7 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 					class="rounded-full w-[30px] [image-rendering:pixelated]"
 				/>
 				<template v-if="!isHome">
-					<span class="text-muted text-xs font-mono">/</span>
-					<span class="text-[11px] font-mono text-muted flex items-center gap-1 font-normal">
+					<span class="text-sm font-mono text-muted flex items-center gap-1">
 						<UIcon name="i-ph-arrow-left" class="size-3" />
 						<span>{{ $t('regresar') }}</span>
 					</span>
@@ -120,7 +119,7 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 			highlight
 			:ui="{
 				item: 'py-0',
-				link: 'uppercase'
+				link: 'uppercase after:bottom-0'
 			}"
 		/>
 

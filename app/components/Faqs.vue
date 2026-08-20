@@ -45,7 +45,7 @@ const faqs = computed(() => {
     "en": {
       "intro": "Direct answers on collaboration, multidisciplinary capabilities, and workflow.",
       "q_what_projects": "What kind of projects do you take on?",
-      "r_what_projects": "Brand identities, digital products, high-performance web applications, motion design, 3D visualization, and interactive experiences — especially projects that benefit from bridging visual craft with engineering.",
+      "r_what_projects": "Brand identities, digital products, high-performance web applications, motion design, 3D visualization, and interactive experiences - especially projects that benefit from bridging visual craft with engineering.",
       "q_design_and_code": "Can you handle both design and front-end development?",
       "r_design_and_code": "Yes. My core advantage is taking an idea from visual concept, wireframing, and UI/UX design directly into robust, production-ready front-end code (Nuxt, Vue, Tailwind, Three.js/GLSL) without design fidelity lost in translation.",
       "q_team_collaboration": "Do you collaborate with existing teams or other designers?",
@@ -60,7 +60,7 @@ const faqs = computed(() => {
     "es": {
       "intro": "Respuestas directas sobre colaboración, capacidades multidisciplinarias y flujo de trabajo.",
       "q_what_projects": "¿Qué tipo de proyectos realizás?",
-      "r_what_projects": "Identidades de marca, aplicaciones web de alta performance, productos digitales, motion graphics, visualización 3D y experiencias interactivas — especialmente proyectos que se benefician de unir diseño y desarrollo.",
+      "r_what_projects": "Identidades de marca, aplicaciones web de alta performance, productos digitales, motion graphics, visualización 3D y experiencias interactivas - especialmente proyectos que se benefician de unir diseño y desarrollo.",
       "q_design_and_code": "¿Podés encargarte tanto del diseño como del desarrollo?",
       "r_design_and_code": "Sí. Mi mayor diferencial es llevar una idea desde el concepto visual, wireframes y diseño UX/UI directamente hasta el código front-end (Nuxt, Vue, Tailwind, Three.js/GLSL), sin perder calidad ni fidelidad de diseño.",
       "q_team_collaboration": "¿Trabajás con equipos existentes o agencias?",

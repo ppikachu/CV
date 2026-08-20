@@ -5,7 +5,7 @@
         <!-- Metadata -->
         <div class="flex flex-col gap-2">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary font-mono font-bold">
+            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary/70 font-mono font-bold">
               {{ data.category }}
             </span>
             <span v-if="data.year" class="text-xs text-muted font-mono">
@@ -15,7 +15,7 @@
           </div>
 
           <div class="flex flex-wrap items-center justify-between gap-4">
-            <ProseH1 class="text-balance mt-0">
+            <ProseH1 class="text-balance mt-1">
               {{ data.title }}
             </ProseH1>
 

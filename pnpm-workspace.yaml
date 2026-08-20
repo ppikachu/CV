@@ -1,3 +1,6 @@
+packages:
+  - '.'
+
 minimumReleaseAge: 0
 
 allowBuilds:
@@ -6,3 +9,4 @@ allowBuilds:
   esbuild: true
   sharp: true
   vue-demi: true
+

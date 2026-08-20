@@ -1,11 +1,19 @@
+<script setup lang="ts">
+import sdf1Frag from '~/assets/sdf1.frag';
+</script>
+
 <template>
-	<header class="not-prose">
-			<ProseH1>
-				Santiago Toyos
-			</ProseH1>
-			<ProseH2 class="text-muted font-normal leading-none mt-1 sm:mt-2">
-				{{ $t('role') }}
-			</ProseH2>
+	<header class="not-prose relative">
+		<div class="absolute inset-0 -z-10">
+			<ShaderToy 
+			:shaderCode="sdf1Frag" />
+		</div>
+		<ProseH1>
+			Santiago Toyos
+		</ProseH1>
+		<ProseH2 class="text-muted font-normal leading-none mt-1 sm:mt-2">
+			{{ $t('role') }}
+		</ProseH2>
 
 <!-- 			<span class="text-sm text-primary font-mono leading-none font-semibold uppercase">
 				{{ $t('hero_tagline') }}

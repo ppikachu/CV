@@ -1,3 +1,5 @@
+import glsl from 'vite-plugin-glsl';
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-05-09',
   
@@ -93,6 +95,11 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    plugins: [
+      glsl({
+        warnDuplicatedImports: false
+      })
+    ],
     optimizeDeps: {
       include: ['@vercel/analytics'],
       exclude: [

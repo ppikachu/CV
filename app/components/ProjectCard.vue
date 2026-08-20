@@ -62,8 +62,8 @@ watch(isHovered, (hovering) => {
 			v-if="isGroup"
 			:label="$t('project_group')"
 			icon="i-ph-squares-four"
-			variant="subtle"
-			class="absolute top-3 left-3 z-20 backdrop-blur-md"
+			color="warning"
+			class="absolute top-3 left-3 z-20 backdrop-blur"
 		/>
 
 		<UBlogPost
@@ -73,11 +73,9 @@ watch(isHovered, (hovering) => {
 			:image="project.image || videoSrc"
 			:badge="{
 				label: project.category,
-				variant: 'soft',
-				ui: {
-					label: 'text-wrap'
-				}
+				variant: 'soft'
 			}"
+			variant="ghost"
 			class="h-full flex flex-col flex-1"
 		>
 			<template v-if="project.image || videoSrc" #header="{ ui }">

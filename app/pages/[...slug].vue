@@ -1,11 +1,11 @@
 <template>
   <div v-if="data" class="not-prose">
     <div class="mx-auto prose dark:prose-invert">
-      <div class="not-prose space-y-4 pb-6">
+      <div class="not-prose space-y-4">
         <!-- Metadata -->
-        <div class="flex flex-col gap-2">
+        <div class="flex flex-col gap-2 my-8">
           <div class="flex flex-wrap items-center justify-between gap-2">
-            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary/70 font-mono font-bold">
+            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary/70 font-mono">
               {{ data.category }}
             </span>
             <span v-if="data.year" class="text-xs text-muted font-mono">
@@ -46,6 +46,7 @@
         headline: 'uppercase text-lg justify-start',
         description: 'text-left',
         body: 'my-0',
+        features: 'gap-0',
         footer: 'mt-6'
       }"
     >
@@ -56,6 +57,7 @@
           v-bind="feature"
           :ui="{
             root: 'mt-8',
+            wrapper: 'mb-0',
             title: 'text-base! font-mono uppercase',
             description: 'text-xs'
           }"

@@ -6,6 +6,11 @@ export default defineAppConfig({
 			dark: 'i-ph-moon',
 			light: 'i-ph-sun'
 		},
+		badge: {
+			slots: {
+				label: 'text-wrap'
+			}
+		},
 		prose: {
 			h1: {
 				slots: {
@@ -48,14 +53,13 @@ export default defineAppConfig({
 		},
 		blogPost: {
 			slots: {
-				root: 'gap-0 relative group/blog-post transition-all duration-200 hover:ring-primary-800 h-full',
+				root: 'gap-0 relative group/blog-post transition-all duration-200 hover:ring-1 hover:ring-primary h-full',
 				image: 'object-cover object-center w-full h-full',
 				meta: 'mb-0',
-				badge: 'p-0 text-primary/70 ring-0',
+				badge: 'p-0 text-primary/70 ring-0 leading-tight',
 				title: 'text-primary font-extrabold leading-none text-pretty',
-				body: 'flex-1 flex flex-col gap-2',
-				description: 'text-sm text-wrap mt-0',
-				footer: 'mt-auto'
+				body: 'flex-1 flex flex-col gap-1.5',
+				description: 'text-sm mt-0',
 			},
 			variants: {
 				orientation: {
@@ -69,11 +73,6 @@ export default defineAppConfig({
 						header: 'w-2/5 sm:w-2/5 overflow-hidden aspect-video-card shrink-0',
 						body: 'p-0 py-4 md:py-4 sm:p-3 px-4 lg:px-4',
 						description: 'text-xs'
-					}
-				},
-				variant: {
-					outline: {
-						description: 'text-default'
 					}
 				},
 				to: {

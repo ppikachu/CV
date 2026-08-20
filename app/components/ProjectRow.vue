@@ -46,8 +46,7 @@ const badge = computed(() => {
 	return {
 		label: props.project.category,
 		variant: 'outline' as const,
-		class: 'hidden md:inline-flex',
-		ui: { label: 'text-wrap' }
+		class: 'hidden md:inline-flex'
 	}
 })
 </script>
@@ -64,11 +63,11 @@ const badge = computed(() => {
 			:to="project.path"
 			:image="project.image || videoSrc"
 			:badge="badge"
+			variant="ghost"
 			:ui="{
 				meta: !isGroup ? 'hidden md:flex' : undefined
 			}"
 			orientation="horizontal"
-			class="h-full flex-1"
 		>
 			<template v-if="project.image || videoSrc" #header="{ ui }">
 				<div class="relative w-full h-full overflow-hidden">

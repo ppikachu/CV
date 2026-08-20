@@ -48,10 +48,12 @@
 	html {
 		scroll-behavior: smooth;
 		scroll-padding-top: 7rem;
+		overflow-x: clip;
 	}
 
 	body {
 		font-family: "JetBrains Mono", monospace;
+		overflow-x: clip;
 	}
 
 	h1, h2, h3, h4, h5, h6 {

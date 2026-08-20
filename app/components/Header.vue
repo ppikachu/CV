@@ -3,14 +3,14 @@ import sdf1Frag from '~/assets/sdf1.frag';
 </script>
 
 <template>
-	<header class="not-prose relative">
-		<div class="absolute inset-0 -z-10">
+	<header class="not-prose relative h-[calc(100dvh-var(--ui-header-height))] flex flex-col justify-center">
+		<div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10">
 			<ShaderToy 
-			:shaderCode="sdf1Frag" />
+				:shaderCode="sdf1Frag" />
 		</div>
-		<ProseH1>
+		<ProseH1 class="mt-0">
 			Santiago Toyos
-		</ProseH1>
+		</ProseH1 >
 		<ProseH2 class="text-muted font-normal leading-none mt-1 sm:mt-2">
 			{{ $t('role') }}
 		</ProseH2>

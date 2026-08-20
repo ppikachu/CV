@@ -1,16 +1,23 @@
 <template>
 	<ClientOnly>
-		<div class="flex items-center gap-2">
-			<USwitch
-				v-model="localeState"
-				checked-icon="i-circle-flags-us"
-				unchecked-icon="i-circle-flags-es"
-				:size="size || 'lg'"
-				color="neutral"
-				aria-label="Switch language / Cambiar idioma"
-				:ui="{
-					base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
-				}"
+		<div class="inline-flex items-center rounded-lg border border-neutral-800 bg-neutral-900/60 p-0.5 font-mono">
+			<UButton
+				label="ES"
+				:color="isEs ? 'primary' : 'neutral'"
+				:variant="isEs ? 'soft' : 'ghost'"
+				:size="size || 'xs'"
+				class="font-mono text-xs font-semibold px-2 py-1 rounded-md transition-colors"
+				aria-label="Español"
+				@click="setLocale('es')"
+			/>
+			<UButton
+				label="EN"
+				:color="isEn ? 'primary' : 'neutral'"
+				:variant="isEn ? 'soft' : 'ghost'"
+				:size="size || 'xs'"
+				class="font-mono text-xs font-semibold px-2 py-1 rounded-md transition-colors"
+				aria-label="English"
+				@click="setLocale('en')"
 			/>
 		</div>
 	</ClientOnly>
@@ -23,8 +30,6 @@ defineProps<{
 
 const { locale, setLocale } = useI18n()
 
-const localeState = computed({
-  get: () => locale.value.startsWith('en'),
-  set: (val) => setLocale(val ? 'en' : 'es')
-})
+const isEs = computed(() => locale.value.startsWith('es'))
+const isEn = computed(() => locale.value.startsWith('en'))
 </script>

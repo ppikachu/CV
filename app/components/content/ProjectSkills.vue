@@ -6,7 +6,7 @@ const route = useRoute()
 </script>
 
 <template>
-  <section class="select-none flex gap-1 flex-wrap" :class="{ 'my-8': route.path.includes('proyecto') }">
+  <section class="select-none flex gap-2 flex-wrap" :class="{ 'my-8': route.path.includes('proyecto') }">
     <UBadge
       v-for="(skill, i) in skills"
       :key="i"

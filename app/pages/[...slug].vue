@@ -4,18 +4,23 @@
       <div class="not-prose space-y-4">
         <!-- Metadata -->
         <div class="flex flex-col gap-2 my-8">
-          <div class="flex flex-wrap items-center justify-between gap-2">
-            <span v-if="data.category" class="text-xs uppercase tracking-widest text-primary/70 font-mono">
+          <div class="flex items-start justify-between gap-2 text-xs font-mono font-bold">
+            <span v-if="data.category" class="uppercase text-primary/70">
               {{ data.category }}
             </span>
-            <span v-if="data.year" class="text-xs text-muted font-mono">
+            <span v-if="data.year"class="text-muted shrink-0">
               {{ data.year }}
             </span>
-            <UBadge v-if="data.wip" size="sm" variant="outline" :label="$t('currently_badge')" />
+            <UBadge v-if="data.wip"
+              :label="$t('currently_badge')"
+              size="sm"
+              variant="outline"
+              class="-mt-0.5"
+            />
           </div>
 
-          <div class="flex flex-wrap items-center justify-between gap-4">
-            <ProseH1 class="text-balance mt-1">
+          <div class="flex items-center justify-between gap-4">
+            <ProseH1 class="text-balance mt-1 leading-none mt-0">
               {{ data.title }}
             </ProseH1>
 
@@ -26,7 +31,6 @@
               :label="$t('see_live')"
               icon="i-ph-arrow-square-out"
               trailing
-              variant="link"
               size="sm"
             />
           </div>
@@ -42,12 +46,12 @@
       :description="data.description"
       :links="links"
       :ui="{
-        container: '',
-        headline: 'uppercase text-lg justify-start',
-        description: 'text-left mb-4',
-        body: 'mt-0',
-        features: 'gap-2',
-        footer: 'mt-6'
+        container: 'py-4 sm:py-6 lg:py-8 bg-muted/30 rounded-xl my-16',
+        headline: 'uppercase text-xl justify-start',
+        description: 'text-left text-sm!',
+        body: 'mt-8',
+        features: 'gap-2 sm:gap-4',
+        footer: 'mt-6 sm:mt-8'
       }"
     >
       <template #features>
@@ -56,14 +60,16 @@
           :key="index"
           v-bind="feature"
           :ui="{
-            root: 'my-2',
+            root: 'my-0',
             wrapper: 'mb-0',
-            title: 'text-base! font-mono uppercase mb-0',
-            description: 'text-xs mt-0'
+            title: 'text-base! font-mono uppercase mb-1',
+            description: 'text-xs mt-0 text-balance'
           }"
         />
       </template>
     </UPageSection>
+
+    <SiteFooter />
   </div>
 </template>
 
@@ -97,7 +103,6 @@ const features = computed<PageFeatureProps[]>(() => [
   ...(isGroup.value
     ? [
         {
-          icon: 'i-ph-squares-four',
           title: t('project_type_label'),
           description: t('project_group')
         }
@@ -106,7 +111,6 @@ const features = computed<PageFeatureProps[]>(() => [
   ...(data.value?.role
     ? [
         {
-          icon: 'i-ph-user',
           title: t('role_label'),
           description: Array.isArray(data.value.role) ? data.value.role.join(' · ') : data.value.role
         }
@@ -115,7 +119,6 @@ const features = computed<PageFeatureProps[]>(() => [
   ...(data.value?.client
     ? [
         {
-          icon: 'i-ph-buildings',
           title: t('client_label'),
           description: data.value.client
         }
@@ -124,7 +127,6 @@ const features = computed<PageFeatureProps[]>(() => [
   ...(data.value?.tags && data.value.tags.length
     ? [
         {
-          icon: 'i-ph-tag',
           title: t('tech_label'),
           description: data.value.tags.join(' · ')
         }
@@ -140,8 +142,9 @@ const links = computed<ButtonProps[]>(() => [
           to: data.value.url,
           target: '_blank',
           icon: 'i-ph-arrow-square-out',
+          trailing: true,
           color: 'primary' as const,
-          variant: 'solid' as const
+          variant: 'outline' as const
         }
       ]
     : [])

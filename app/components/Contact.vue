@@ -8,10 +8,10 @@
     />
     
     <div class="space-y-2 max-w-lg">
-      <ProseH4 class="text-balance">
+      <ProseH3 class="font-extrabold text-balanced!">
         {{ t('cta_title') }}
-      </ProseH4>
-      <ProseP class="text-lg sm:text-xl mb-0">
+      </ProseH3>
+      <ProseP class="text-xl sm:text-xl mb-0 font-bold">
         {{ t('cta_sub') }}
       </ProseP>
       <ProseP class="text-toned">

@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v'
+
 const { t } = useI18n()
 
 const disciplines = computed(() => [
@@ -72,10 +74,13 @@ const toolsWithSpectrum = computed(() => {
 				:title="disc.title"
 				:description="disc.description"
 				:icon="disc.icon"
+				variant="ghost"
 				spotlight
 				:ui="{
+					leading: 'mb-0',
 					leadingIcon: 'size-8',
 					title: 'text-primary font-heading font-extrabold text-2xl',
+					description: 'mb-0 font-bold text-lg leading-tight'
 				}"
 			/>
 		</div>
@@ -88,12 +93,20 @@ const toolsWithSpectrum = computed(() => {
 				class="mb-3"
 			/>
 			<div class="flex flex-wrap gap-1.5">
-				<UBadge
-					v-for="tool in toolsWithSpectrum"
+				<Motion
+					v-for="(tool, index) in toolsWithSpectrum"
 					:key="tool.name"
-					:label="tool.name"
-					:style="tool.style"
-				/>
+					:initial="{ scale: 0, opacity: 0 }"
+					:while-in-view="{ scale: 1, opacity: 1 }"
+					:in-view-options="{ once: true, amount: 'all', margin: '0px 0px -30px 0px' }"
+					:transition="{ duration: 0.35, delay: index * 0.1, ease: [0.25, 1, 0.5, 1] }"
+				>
+					<UBadge
+						:label="tool.name"
+						:style="tool.style"
+						class="rounded-full"
+					/>
+				</Motion>
 			</div>
 		</div>
 	</section>

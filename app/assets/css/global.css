@@ -9,7 +9,7 @@
 
 @layer base {
 	html {
-		scroll-behavior: smooth;
+		/* scroll-behavior: smooth; */
 		scroll-padding-top: 7rem;
 		overflow-x: clip;
 	}

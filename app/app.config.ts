@@ -2,16 +2,12 @@ export default defineAppConfig({
 	ui: {
 		colors: {
 			primary: "lime",
-			secondary: "cyan",
+			secondary: "pink",
 			neutral: "mist"
-		},
-		icons: {
-			dark: 'i-ph-moon',
-			light: 'i-ph-sun'
 		},
 		badge: {
 			slots: {
-				label: 'text-wrap'
+				label: 'text-wrap rounded-full overflow-visible'
 			}
 		},
 		prose: {
@@ -22,7 +18,7 @@ export default defineAppConfig({
 			},
 			h2: {
 				slots: {
-					base: 'text-xl font-heading text-primary leading-tight font-extrabold mb-2'
+					base: 'text-xl font-heading text-primary leading-none font-extrabold mb-2'
 				}
 			},
 			h3: {
@@ -59,7 +55,7 @@ export default defineAppConfig({
 		},
 		blogPost: {
 			slots: {
-				root: 'gap-0 relative group/blog-post transition-all duration-200 hover:ring-1 hover:ring-primary h-full',
+				root: 'gap-0 relative group/blog-post transition-all duration-200 ring-1 ring-transparent! hover:ring-primary! h-full',
 				image: 'object-cover object-center w-full h-full',
 				meta: 'mb-0',
 				badge: 'p-0 text-primary/70 bg-transparent ring-0 leading-tight',
@@ -76,7 +72,7 @@ export default defineAppConfig({
 					},
 					horizontal: {
 						root: 'gap-0 flex-row lg:flex lg:flex-row h-full',
-						header: 'w-2/5 sm:w-2/5 overflow-hidden aspect-video-card shrink-0',
+						header: 'w-2/5 sm:w-2/5',
 						body: 'p-0 py-4 md:py-4 sm:p-3 px-4 lg:px-4',
 						description: 'text-xs'
 					}
@@ -91,6 +87,14 @@ export default defineAppConfig({
 					}
 				}
 			]
+		},
+		button: {
+			slots: {
+				base: 'rounded-full'
+			},
+			defaultVariants: {
+				variant: 'outline'
+			}
 		}
 	},
 });

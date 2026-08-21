@@ -21,8 +21,7 @@ import sdf1Frag from '~/assets/sdf1.frag';
 
 		<UTheme :props="{
 			button: {
-				color: 'secondary',
-				variant: 'ghost',
+				variant: 'outline',
 				size: 'xl'
 			},
 		}">

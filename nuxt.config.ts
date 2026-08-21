@@ -10,6 +10,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.css'],
 
   modules: [
+    "motion-v/nuxt",
     "@vueuse/nuxt",
     "@nuxt/ui",
     "@nuxt/content",

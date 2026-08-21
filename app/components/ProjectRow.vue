@@ -52,7 +52,11 @@ const badge = computed(() => {
 </script>
 
 <template>
-	<div
+	<Motion
+		:initial="{ opacity: 0, y: 20 }"
+		:while-in-view="{ opacity: 1, y: 0 }"
+		:in-view-options="{ once: true, amount: 0.5, margin: '0px 0px -60px 0px' }"
+		:transition="{ duration: 0.45, ease: [0.25, 1, 0.5, 1] }"
 		class="relative h-full flex flex-col"
 		@mouseenter="isHovered = true"
 		@mouseleave="isHovered = false"
@@ -92,6 +96,6 @@ const badge = computed(() => {
 				</div>
 			</template>
 		</UBlogPost>
-	</div>
+	</Motion>
 </template>
 

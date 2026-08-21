@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v'
 import type { TimelineItem } from '@nuxt/ui'
 
 const { locale } = useI18n()
@@ -46,17 +47,54 @@ const milestones = computed<TimelineItem[]>(() => [
 			:description="$t('timeline_intro')"
 		/>
 
-		<UTimeline 
-			:items="milestones" 
-			color="primary"
-			:default-value="milestones.length - 1"
-			size="sm"
-			:ui="{
-				wrapper: 'space-y-3',
-				date: 'text-sm text-primary',
-				title: 'font-semibold text-md leading-tight',
-				description: 'text-sm text-muted leading-relaxed max-w-2xl mt-1.5'
-			}"
-		/>
+		<div class="flex flex-col gap-1.5">
+			<div
+				v-for="(item, index) in milestones"
+				:key="index"
+				class="group relative flex flex-1 gap-3"
+				:data-state="index === milestones.length - 1 ? 'active' : 'completed'"
+			>
+				<!-- Container: Entire Circle (Animated) + Separator Line -->
+				<div class="relative flex flex-col items-center gap-1.5">
+					<Motion
+						:initial="{ scale: 0, opacity: 0 }"
+						:while-in-view="{ scale: 1, opacity: 1 }"
+						:in-view-options="{ once: true, amount: 'all', margin: '0px 0px -40px 0px' }"
+						:transition="{ duration: 0.45, ease: [0.25, 1, 0.5, 1] }"
+					>
+						<UAvatar
+							size="xl"
+							:icon="item.icon"
+							class="group-data-[state=completed]:bg-primary group-data-[state=active]:bg-primary group-data-[state=completed]:text-inverted group-data-[state=active]:text-inverted text-muted"
+							:ui="{ icon: 'text-inherit size-6', fallback: 'text-inherit' }"
+						/>
+					</Motion>
+
+					<div
+						v-if="index < milestones.length - 1"
+						class="w-0.5 flex-1 rounded-full bg-primary"
+					/>
+				</div>
+
+				<!-- Content Wrapper (Animated) -->
+				<Motion
+					:initial="{ opacity: 0, x: -32 }"
+					:while-in-view="{ opacity: 1, x: 0 }"
+					:in-view-options="{ once: true, amount: 'all', margin: '0px 0px -40px 0px' }"
+					:transition="{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }"
+					class="w-full mt-2.5 pb-7.5 space-y-1"
+				>
+					<div v-if="item.date" class="text-sm text-primary">
+						{{ item.date }}
+					</div>
+					<div v-if="item.title" class="font-semibold text-md leading-tight">
+						{{ item.title }}
+					</div>
+					<div v-if="item.description" class="text-sm text-muted leading-relaxed max-w-2xl mt-1.5">
+						{{ item.description }}
+					</div>
+				</Motion>
+			</div>
+		</div>
 	</section>
 </template>

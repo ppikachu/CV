@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { Motion } from 'motion-v'
+
 export interface Project {
 	title?: string
 	description?: string
@@ -52,7 +54,11 @@ watch(isHovered, (hovering) => {
 </script>
 
 <template>
-	<div
+	<Motion
+		:initial="{ opacity: 0, y: 24 }"
+		:while-in-view="{ opacity: 1, y: 0 }"
+		:in-view-options="{ once: true, amount: 0.5, margin: '0px 0px -40px 0px' }"
+		:transition="{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }"
 		class="relative h-full flex flex-col"
 		@mouseenter="isHovered = true"
 		@mouseleave="isHovered = false"
@@ -62,7 +68,7 @@ watch(isHovered, (hovering) => {
 			v-if="isGroup"
 			:label="$t('project_group')"
 			icon="i-ph-squares-four"
-			color="warning"
+			variant="solid"
 			class="absolute top-3 left-3 z-20 backdrop-blur"
 		/>
 
@@ -75,7 +81,6 @@ watch(isHovered, (hovering) => {
 				label: project.category,
 				variant: 'soft'
 			}"
-			class="h-full flex flex-col flex-1"
 		>
 			<template v-if="project.image || videoSrc" #header="{ ui }">
 				<div class="relative w-full h-full overflow-hidden">
@@ -123,5 +128,5 @@ watch(isHovered, (hovering) => {
 				/>
 			</template>
 		</UBlogPost>
-	</div>
+	</Motion>
 </template>

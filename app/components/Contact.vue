@@ -1,18 +1,36 @@
 <template>
-  <section id="contact" class="flex flex-col items-center justify-center my-12">
-    <NuxtImg src="/robot2.png" class="w-32 not-prose" />
-    <ProseH1>{{ t('cta') }}</ProseH1>
-    <UButton
-      icon="i-lucide-mail"
-      :label="t('contact')"
-      size="xl"
-      variant="outline"
-      to="mailto:ppikachu@gmail.com"
-      class="not-prose"
-      :ui="{
-        base: 'hover:ring-primary dark:hover:ring-primary hover:bg-transparent transition-all duration-400',
-      }"
+  <section class="not-prose text-center flex flex-col items-center">
+    <NuxtImg
+      src="/robot2.png"
+      alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
+      class="w-18 md:w-28 h-auto mb-6"
+      loading="lazy"
     />
+    
+    <div class="space-y-2 max-w-lg">
+      <ProseH3 class="font-extrabold text-balanced!">
+        {{ t('cta_title') }}
+      </ProseH3>
+      <ProseP class="text-xl sm:text-xl mb-0 font-bold">
+        {{ t('cta_sub') }}
+      </ProseP>
+      <ProseP class="text-toned">
+        {{ t('cta_desc') }}
+      </ProseP>
+    </div>
+
+    <UButton
+      icon="i-ph-envelope-simple"
+      label="ppikachu@gmail.com"
+      size="lg"
+      variant="solid"
+      color="primary"
+      to="mailto:ppikachu@gmail.com"
+    />
+
+    <ProseP class="text-xs text-muted pt-2 font-mono">
+      {{ $t('contact_location') }}
+    </ProseP>
   </section>
 </template>
 
@@ -25,12 +43,14 @@ const { t } = useI18n({
 <i18n lang="json">
   {
     "en": {
-      "cta": "Let's work together",
-      "contact": "Contact"
+      "cta_title": "Have something interesting in mind?",
+      "cta_sub": "Let's make it.",
+      "cta_desc": "For a new project, creative direction, interactive design, or technical execution:"
     },
     "es": {
-      "cta": "Trabajemos juntos",
-      "contact": "Contacto"
+      "cta_title": "¿Tenés un proyecto o idea en mente?",
+      "cta_sub": "Hagámoslo realidad.",
+      "cta_desc": "Para un nuevo proyecto, dirección creativa, diseño interactivo o ejecución técnica:"
     }
   }
 </i18n>

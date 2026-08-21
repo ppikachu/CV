@@ -1,0 +1,12 @@
+packages:
+  - '.'
+
+minimumReleaseAge: 0
+
+allowBuilds:
+  '@parcel/watcher': true
+  better-sqlite3: true
+  esbuild: true
+  sharp: true
+  vue-demi: true
+

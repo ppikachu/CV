@@ -1,3 +1,5 @@
+import glsl from 'vite-plugin-glsl';
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-05-09',
   
@@ -8,31 +10,36 @@ export default defineNuxtConfig({
   css: ['~/assets/css/global.css'],
 
   modules: [
+    "motion-v/nuxt",
+    "@vueuse/nuxt",
     "@nuxt/ui",
     "@nuxt/content",
-    "@nuxt/devtools",
     "@nuxt/image",
     "@nuxtjs/i18n",
     "@nuxt/fonts",
   ],
 
-  ui: {
-    prose: true
+  fonts: {
+    families: [
+      { name: 'Plus Jakarta Sans', weights: [400, 500, 600, 700, 800], global: true },
+      { name: 'JetBrains Mono', weights: [400, 500, 600, 700, 800], global: true }
+    ]
   },
 
   icon: {
     clientBundle: {
       scan: {
-        globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,json}']
+        globInclude: ['**/*.{vue,ts,jsx,tsx,md,mdc,mdx,json}']
       }
     },
     serverBundle: {
-      collections: ['ph', 'circle-flags', 'lucide']
+      collections: ['ph']
     }
   },
 
   colorMode: {
     preference: "dark",
+    fallback: "dark",
   },
 
   app: {
@@ -40,7 +47,7 @@ export default defineNuxtConfig({
   },
 
   devtools: {
-    enabled: false,
+    enabled: true,
     timeline: {
       enabled: true,
     },
@@ -49,7 +56,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       NAME: "Santiago Toyos",
-      DESCRIPTION: "Diseñador con experiencia en contenido multimedia",
+      DESCRIPTION: "Santiago Toyos - Designer / Creative Developer | Design · Motion · Interactive · Code",
       OG_IMAGE: "/OG.png",
       TWITTER_IMAGE: "/twitter.png",
       ICON: "/icon.png",
@@ -58,11 +65,21 @@ export default defineNuxtConfig({
         process.env.NODE_ENV === "production"
           ? "https://toyos.vercel.app"
           : "http://localhost:3000",
+      i18n: {
+        baseUrl:
+          process.env.NODE_ENV === "production"
+            ? "https://toyos.vercel.app"
+            : "http://localhost:3000",
+      },
     },
   },
 
   i18n: {
-    vueI18n: '~~/i18n.config.ts',
+    baseUrl:
+      process.env.NODE_ENV === "production"
+        ? "https://toyos.vercel.app"
+        : "http://localhost:3000",
+    vueI18n: 'i18n.config.ts',
     locales: ['es', 'en'],
     defaultLocale: 'es',
     strategy: 'prefix_except_default',
@@ -75,9 +92,11 @@ export default defineNuxtConfig({
   },
 
   vite: {
-    define: {
-      __VUE_PROD_HYDRATION_MISMATCH_DETAILS__: true
-    },
+    plugins: [
+      glsl({
+        warnDuplicatedImports: false
+      })
+    ],
     optimizeDeps: {
       include: ['@vercel/analytics'],
       exclude: [
@@ -96,15 +115,13 @@ export default defineNuxtConfig({
   },
 
   content: {
-    experimental: {
-      sqliteConnector: "native"
+    // Habilita el SEO usando meta tags y Open Graph
+    renderer: {
+      anchorLinks: { h2: false, h3: false, h4: false }
     }
   },
 
   nitro: {
-    experimental: {
-      tasks: true
-    },
     externals: {
       external: ['sharp']
     }

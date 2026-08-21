@@ -14,8 +14,15 @@ export default defineContentConfig({
         description: z.string().optional(),
         tags: z.array(z.string()).optional(),
         image: z.string().optional(),
+        video: z.string().optional(),
         tipo: z.string().optional(),
+        category: z.string().optional(),
+        role: z.union([z.string(), z.array(z.string())]).optional(),
+        client: z.string().optional(),
+        year: z.string().optional(),
         wip: z.boolean().optional(),
+        group: z.boolean().optional(),
+        isGroup: z.boolean().optional(),
         url: z.string().optional()
       })
     })

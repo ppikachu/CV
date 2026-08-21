@@ -1,27 +1,42 @@
 <script setup lang="ts">
-import { h1 } from '#build/ui/prose';
-
+import sdf1Frag from '~/assets/sdf1.frag';
 </script>
 
 <template>
-	<section class="mb-4 flex flex-row gap-4 justify-between not-prose">
-		<div class="flex gap-2 items-center">
-			<div id="title" class="text-primary slide-enter-content">
-				<h1 class="uppercase text-2xl">Santiago Toyos</h1>
-				<h2 class="text-lg">{{ $t('role') }}</h2>
-			</div>
+	<header class="not-prose relative h-[calc(100svh-var(--ui-header-height))] flex flex-col justify-center">
+		<div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10">
+			<ShaderToy 
+				:shaderCode="sdf1Frag" />
 		</div>
-		<div id="switches" class="flex flex-row sm:items-start gap-3 h-fit">
-			<ClientOnly>
-				<UColorModeSwitch
-					size="lg"
-					:ui="{
-						base: 'data-[state=checked]:bg-muted data-[state=unchecked]:bg-muted',
-						icon: 'group-data-[state=checked]:text-muted group-data-[state=unchecked]:text-muted',
-					}"
+		<ProseH1 class="">
+			Santiago Toyos
+		</ProseH1 >
+		<ProseH2 class="text-toned uppercase mt-1 sm:mt-2">
+			{{ $t('role') }}
+		</ProseH2>
+
+		<ProseP class="md:max-w-3/4 my-8 text-xl">
+			{{ $t('approach_text') }}
+		</ProseP>
+
+		<UTheme :props="{
+			button: {
+				variant: 'outline',
+				size: 'xl'
+			},
+		}">
+			<div class="flex flex-wrap gap-2">
+				<UButton
+					to="#featured-work"
+					:label="$t('btn_selected_work')"
+					icon="i-ph-squares-four"
 				/>
-				<LocaleToggle />
-			</ClientOnly>
-		</div>
-	</section>
+				<UButton
+					to="#contact"
+					:label="$t('btn_contact')"
+					icon="i-ph-envelope-simple"
+				/>
+			</div>
+		</UTheme>
+	</header>
 </template>

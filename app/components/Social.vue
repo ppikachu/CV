@@ -2,9 +2,11 @@
 import data from '~/assets/social_links.json'
 </script>
 <template>
-	<section class="flex gap-1">
+	<section class="flex gap-1" aria-label="Social links">
 		<UButton v-for="item in data"
+			:key="item.to"
 			:to="item.to"
+			:aria-label="item.label"
 			target="_blank"
 			variant="ghost"
 			color="neutral"

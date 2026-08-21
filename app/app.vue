@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+const { locale } = useI18n()
 
 useSeoMeta({
 	title: runtimeConfig.public.NAME,
@@ -11,12 +12,12 @@ useSeoMeta({
 	twitterTitle: runtimeConfig.public.NAME,
 	twitterDescription: runtimeConfig.public.DESCRIPTION,
 	twitterImage: runtimeConfig.public.TWITTER_IMAGE,
-	twitterCard: 'summary'
+	twitterCard: 'summary_large_image'
 })
 
 useHead({
 	htmlAttrs: {
-		lang: useI18n().locale
+		lang: () => locale.value
 	},
 	link: [
 		{
@@ -29,9 +30,10 @@ useHead({
 </script>
 <template>
 	<UApp>
+		<Nav />
 		<UContainer>
 			<NuxtLoadingIndicator color="#a3e635" />
-			<main class="prose dark:prose-invert prose-a:no-underlines max-w-4xl mx-auto mt-8 sm:mt-8">
+			<main class="prose dark:prose-invert prose-a:no-underline max-w-4xl mx-auto">
 				<NuxtPage />
 			</main>
 		</UContainer>

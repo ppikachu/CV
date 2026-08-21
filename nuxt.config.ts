@@ -18,10 +18,6 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
-  ui: {
-    prose: true
-  },
-
   fonts: {
     families: [
       { name: 'Plus Jakarta Sans', weights: [400, 500, 600, 700, 800], global: true },

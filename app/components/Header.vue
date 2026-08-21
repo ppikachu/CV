@@ -8,10 +8,10 @@ import sdf1Frag from '~/assets/sdf1.frag';
 			<ShaderToy 
 				:shaderCode="sdf1Frag" />
 		</div>
-		<ProseH1 class="mt-0">
+		<ProseH1 class="">
 			Santiago Toyos
 		</ProseH1 >
-		<ProseH2 class="text-muted font-normal leading-none mt-1 sm:mt-2">
+		<ProseH2 class="text-default font-normal uppercase mt-1 sm:mt-2">
 			{{ $t('role') }}
 		</ProseH2>
 
@@ -20,34 +20,29 @@ import sdf1Frag from '~/assets/sdf1.frag';
 			</span>
  -->
 
-		<ProseP class="md:max-w-3/4 my-14">
+		<ProseP class="md:max-w-3/4 my-8">
 			{{ $t('approach_text') }}
 		</ProseP>
 
-		<div class="flex flex-wrap gap-2">
-			<UButton
-				to="#featured-work"
-				:label="$t('btn_selected_work')"
-				icon="i-ph-squares-four"
-				variant="soft"
-				color="primary"
-				size="sm"
-			/>
-			<UButton
-				to="#"
-				:label="'CV'"
-				icon="i-ph-file-text"
-				variant="soft"
-				color="primary"
-				size="sm"
-			/>
-			<UButton
-				to="#contact"
-				:label="$t('btn_contact')"
-				icon="i-ph-envelope-simple"
-				variant="soft"
-				size="sm"
-			/>
-		</div>
+		<UTheme :props="{
+			button: {
+				color: 'secondary',
+				variant: 'solid',
+				size: 'lg'
+			},
+		}">
+			<div class="flex flex-wrap gap-2">
+				<UButton
+					to="#featured-work"
+					:label="$t('btn_selected_work')"
+					icon="i-ph-squares-four"
+				/>
+				<UButton
+					to="#contact"
+					:label="$t('btn_contact')"
+					icon="i-ph-envelope-simple"
+				/>
+			</div>
+		</UTheme>
 	</header>
 </template>

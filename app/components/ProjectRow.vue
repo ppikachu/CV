@@ -63,7 +63,6 @@ const badge = computed(() => {
 			:to="project.path"
 			:image="project.image || videoSrc"
 			:badge="badge"
-			variant="ghost"
 			:ui="{
 				meta: !isGroup ? 'hidden md:flex' : undefined
 			}"

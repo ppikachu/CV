@@ -213,6 +213,11 @@ export class InspiraShaderToy {
     this.renderer.setSize(width, height);
     this.renderer.setViewport(width * dpr, height * dpr);
     this.updateProgramResolution();
+    
+    // Draw immediately to prevent flickering during resize
+    if (this.program && this.mesh) {
+      this.draw();
+    }
   }
 
   private addEventListener(

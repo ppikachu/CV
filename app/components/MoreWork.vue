@@ -2,16 +2,15 @@
 import type { Project } from '~/components/ProjectCard.vue'
 
 const { locale } = useI18n()
-const shortLoc = computed(() => locale.value.split('-')[0])
 
 const { data: moreProjects } = await useAsyncData<Project[]>(
-	`more-projects-${shortLoc.value}`,
+	`more-projects-${locale.value}`,
 	() => (queryCollection as any)('content')
-		.where('path', 'LIKE', '/' + shortLoc.value + '/proyecto/%')
+		.where('path', 'LIKE', `/${locale.value}/proyecto/%`)
 		.where('tipo', '=', 'more')
 		.select('title', 'description', 'path', 'image', 'video', 'tags', 'tipo', 'category', 'role', 'client', 'year', 'url', 'wip', 'group', 'isGroup')
 		.all(),
-	{ watch: [shortLoc] }
+	{ watch: [locale] }
 )
 </script>
 

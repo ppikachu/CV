@@ -1,7 +1,10 @@
 export default defineAppConfig({
 	ui: {
-		primary: "lime",
-		gray: "slate",
+		colors: {
+			primary: "lime",
+			secondary: "cyan",
+			neutral: "mist"
+		},
 		icons: {
 			dark: 'i-ph-moon',
 			light: 'i-ph-sun'
@@ -14,7 +17,7 @@ export default defineAppConfig({
 		prose: {
 			h1: {
 				slots: {
-					base: 'text-3xl sm:text-5xl font-extrabold font-heading tracking-tighter leading-none text-primary mt-12 mb-0'
+					base: 'text-5xl sm:text-5xl font-extrabold font-heading tracking-tighter leading-tight text-primary mt-12 mb-0'
 				}
 			},
 			h2: {
@@ -41,6 +44,9 @@ export default defineAppConfig({
 				slots: {
 					base: 'text-md font-heading font-semibold text-primary mt-0 mb-0'
 				}
+			},
+			li: {
+				base: 'my-4 leading-6 marker:text-primary'
 			}
 		},
 		pageFeature: {
@@ -56,7 +62,7 @@ export default defineAppConfig({
 				root: 'gap-0 relative group/blog-post transition-all duration-200 hover:ring-1 hover:ring-primary h-full',
 				image: 'object-cover object-center w-full h-full',
 				meta: 'mb-0',
-				badge: 'p-0 text-primary/70 ring-0 leading-tight',
+				badge: 'p-0 text-primary/70 bg-transparent ring-0 leading-tight',
 				title: 'text-primary font-extrabold leading-none text-pretty',
 				body: 'flex-1 flex flex-col gap-1.5',
 				description: 'text-sm mt-0',
@@ -74,13 +80,17 @@ export default defineAppConfig({
 						body: 'p-0 py-4 md:py-4 sm:p-3 px-4 lg:px-4',
 						description: 'text-xs'
 					}
-				},
-				to: {
-					true: {
-						image: ''
+				}
+			},
+			compoundVariants: [
+				{
+					variant: 'outline',
+					to: true,
+					class: {
+						root: 'hover:bg-transparent'
 					}
 				}
-			}
+			]
 		}
 	},
 });

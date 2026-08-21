@@ -44,9 +44,9 @@
       :ui="{
         container: '',
         headline: 'uppercase text-lg justify-start',
-        description: 'text-left',
-        body: 'my-0',
-        features: 'gap-0',
+        description: 'text-left mb-4',
+        body: 'mt-0',
+        features: 'gap-2',
         footer: 'mt-6'
       }"
     >
@@ -56,10 +56,10 @@
           :key="index"
           v-bind="feature"
           :ui="{
-            root: 'mt-8',
+            root: 'my-2',
             wrapper: 'mb-0',
-            title: 'text-base! font-mono uppercase',
-            description: 'text-xs'
+            title: 'text-base! font-mono uppercase mb-0',
+            description: 'text-xs mt-0'
           }"
         />
       </template>
@@ -73,18 +73,12 @@ import type { ButtonProps, PageFeatureProps } from '@nuxt/ui'
 const route = useRoute()
 const { locale, t } = useI18n()
 
-const shortLoc = computed(() => locale.value.split('-')[0])
-
-const homeFallback = computed(() => {
-  return shortLoc.value === 'en' ? '/en' : '/'
-})
-
 const localizedPath = computed(() => {
   const segments = route.path.split('/').filter(Boolean)
   if (segments[0] === 'es' || segments[0] === 'en') {
     segments.shift()
   }
-  return `/${shortLoc.value}/${segments.join('/')}`
+  return `/${locale.value}/${segments.join('/')}`
 })
 
 const { data } = await useAsyncData(`slug-${localizedPath.value}`, () => {

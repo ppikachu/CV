@@ -1,22 +1,26 @@
 <script setup lang="ts">
-//@ts-ignore
+// @ts-expect-error - vue-md-player lacks type declarations
 import { VideoPlayer } from 'vue-md-player'
 import 'vue-md-player/dist/style.css'
-/* Define props */
-const props = defineProps({
-	src: {
-		type: String,
-	},
-	poster: {
-		type: String,
-		default: '/video/video_placeholder.png'
-	}
+
+withDefaults(defineProps<{
+	src?: string
+	poster?: string
+}>(), {
+	src: undefined,
+	poster: '/video/video_placeholder.png'
 })
 </script>
 
 <template>
-	<!--videos component-->
-	<section v-if="props.src" class="not-prose mt-8">
-		<VideoPlayer :src="props.src" :poster="props.poster" :width="640" :height="360" playsinline class="aspect-video rounded-t-lg" />
+	<section v-if="src" class="not-prose mt-8">
+		<VideoPlayer
+			:src="src"
+			:poster="poster"
+			:width="640"
+			:height="360"
+			playsinline
+			class="aspect-video rounded-t-lg"
+		/>
 	</section>
 </template>

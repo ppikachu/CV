@@ -75,7 +75,6 @@ watch(isHovered, (hovering) => {
 				label: project.category,
 				variant: 'soft'
 			}"
-			variant="ghost"
 			class="h-full flex flex-col flex-1"
 		>
 			<template v-if="project.image || videoSrc" #header="{ ui }">

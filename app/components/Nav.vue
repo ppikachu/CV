@@ -65,6 +65,9 @@ function setupObserver() {
 }
 
 onMounted(() => {
+	if (route.hash) {
+		activeSection.value = route.hash.replace('#', '')
+	}
 	nextTick(() => setupObserver())
 })
 
@@ -81,7 +84,7 @@ watch(() => route.hash, (hash) => {
 	if (hash) {
 		activeSection.value = hash.replace('#', '')
 	}
-}, { immediate: true })
+})
 
 onUnmounted(() => {
 	stopObserver?.()

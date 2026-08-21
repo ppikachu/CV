@@ -43,13 +43,11 @@ const { t } = useI18n({
 <i18n lang="json">
   {
     "en": {
-      "badge": "Get in touch",
       "cta_title": "Have something interesting in mind?",
       "cta_sub": "Let's make it.",
       "cta_desc": "For a new project, creative direction, interactive design, or technical execution:"
     },
     "es": {
-      "badge": "Contacto",
       "cta_title": "¿Tenés un proyecto o idea en mente?",
       "cta_sub": "Hagámoslo realidad.",
       "cta_desc": "Para un nuevo proyecto, dirección creativa, diseño interactivo o ejecución técnica:"

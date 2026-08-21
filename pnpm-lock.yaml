@@ -32,9 +32,6 @@ importers:
       ufo:
         specifier: ^1.6.4
         version: 1.6.4
-      vue-md-player:
-        specifier: ^2.1.2
-        version: 2.1.2(vue@3.5.41(typescript@5.9.3))
     devDependencies:
       '@iconify-json/lucide':
         specifier: ^1.2.124
@@ -6197,11 +6194,6 @@ packages:
     engines: {node: '>= 22'}
     peerDependencies:
       vue: ^3.0.0
-
-  vue-md-player@2.1.2:
-    resolution: {integrity: sha512-w2afMlU/TqNsDGSEPfGBBTXpLfyfQ6XN9mF2c101ejsIBECJxQn/w/w+a6EAqVmrP6V5z9sz7szsVBg5hRNEHQ==}
-    peerDependencies:
-      vue: ^3.2.41
 
   vue-router@4.6.4:
     resolution: {integrity: sha512-Hz9q5sa33Yhduglwz6g9skT8OBPii+4bFn88w6J+J4MfEo4KRRpmiNG/hHHkdbRFlLBOqxN8y8gf2Fb0MTUgVg==}
@@ -13411,10 +13403,6 @@ snapshots:
       '@intlify/devtools-types': 11.4.8
       '@intlify/shared': 11.4.8
       '@vue/devtools-api': 6.6.4
-      vue: 3.5.41(typescript@5.9.3)
-
-  vue-md-player@2.1.2(vue@3.5.41(typescript@5.9.3)):
-    dependencies:
       vue: 3.5.41(typescript@5.9.3)
 
   vue-router@4.6.4(vue@3.5.41(typescript@5.9.3)):

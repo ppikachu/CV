@@ -34,8 +34,7 @@
     "ogl": "^1.0.11",
     "sharp": "^0.35.3",
     "tailwind-merge": "^3.0.0",
-    "ufo": "^1.6.4",
-    "vue-md-player": "^2.1.2"
+    "ufo": "^1.6.4"
   },
   "packageManager": "pnpm@11.22.0"
 }

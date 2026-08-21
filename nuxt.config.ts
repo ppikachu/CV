@@ -29,11 +29,11 @@ export default defineNuxtConfig({
   icon: {
     clientBundle: {
       scan: {
-        globInclude: ['**/*.{vue,jsx,tsx,md,mdc,mdx,json}']
+        globInclude: ['**/*.{vue,ts,jsx,tsx,md,mdc,mdx,json}']
       }
     },
     serverBundle: {
-      collections: ['ph', 'lucide']
+      collections: ['ph']
     }
   },
 

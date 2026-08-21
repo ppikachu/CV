@@ -5,6 +5,13 @@ export default defineAppConfig({
 			secondary: "pink",
 			neutral: "mist"
 		},
+		icons: {
+			menu: 'i-ph-list',
+			close: 'i-ph-x',
+			loading: 'i-ph-spinner',
+			external: 'i-ph-arrow-square-out',
+			chevronDown: 'i-ph-caret-down'
+		},
 		badge: {
 			slots: {
 				label: 'text-wrap rounded-full overflow-visible'
@@ -48,7 +55,7 @@ export default defineAppConfig({
 		pageFeature: {
 			slots: {
 				root: 'mt-24',
-				wrapper: 'space-y-2 mb-6',
+				wrapper: 'space-y-4 mb-6',
 				title: 'font-heading font-extrabold tracking-tight text-primary text-3xl md:text-4xl leading-7',
 				description: 'text-sm'
 			}

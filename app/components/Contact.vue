@@ -3,7 +3,7 @@
     <NuxtImg
       src="/robot2.png"
       alt="Santiago Toyos Mascot - Vintage robot watering an organic plant"
-      class="w-18 md:w-28 h-auto mb-6"
+      class="w-18 md:w-28 h-auto my-12"
       loading="lazy"
     />
     

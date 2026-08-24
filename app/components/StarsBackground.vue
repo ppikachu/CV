@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { SpringOptions } from "motion-v";
 import { motion, useMotionValue, useSpring } from "motion-v";
-import { useWindowScroll, useWindowSize } from "@vueuse/core";
+import { useMouse, useWindowSize, useElementVisibility, useMounted } from "@vueuse/core";
 
 interface StarsBackgroundProps {
   factor?: number;
@@ -9,7 +9,6 @@ interface StarsBackgroundProps {
   transition?: SpringOptions;
   starColor?: string;
   class?: string;
-  threshold?: number;
 }
 
 const props = withDefaults(defineProps<StarsBackgroundProps>(), {
@@ -17,23 +16,17 @@ const props = withDefaults(defineProps<StarsBackgroundProps>(), {
   speed: 50,
   transition: () => ({ stiffness: 50, damping: 20 }),
   starColor: "#fff",
-  threshold: 700,
 });
 
 // For slot content
 defineSlots();
 
-// VueUse window scroll and viewport size
-const { y: scrollY } = useWindowScroll();
-const { height: windowHeight } = useWindowSize();
+const isMounted = useMounted();
+const containerRef = ref<HTMLElement | null>(null);
+const isVisible = useElementVisibility(containerRef);
 
-// Active only when scrolled near the bottom of the page
-const isNearBottom = computed(() => {
-  if (!import.meta.client) return false;
-  const documentHeight = typeof document !== "undefined" ? document.documentElement.scrollHeight : 0;
-  const distanceToBottom = documentHeight - (scrollY.value + windowHeight.value);
-  return distanceToBottom <= props.threshold;
-});
+const { x: mouseX, y: mouseY } = useMouse();
+const { width: windowWidth, height: windowHeight } = useWindowSize();
 
 function generateStars(count: number, starColor: string) {
   const shadows: string[] = [];
@@ -45,21 +38,20 @@ function generateStars(count: number, starColor: string) {
   return shadows.join(", ");
 }
 
-const offsetX = useMotionValue(1);
-const offsetY = useMotionValue(1);
+const offsetX = useMotionValue(0);
+const offsetY = useMotionValue(0);
 
 const springX = useSpring(offsetX, props.transition);
 const springY = useSpring(offsetY, props.transition);
 
-function handleMouseMove(e: MouseEvent) {
-  if (!isNearBottom.value) return;
-  const centerX = window.innerWidth / 2;
-  const centerY = window.innerHeight / 2;
-  const newOffsetX = -(e.clientX - centerX) * props.factor;
-  const newOffsetY = -(e.clientY - centerY) * props.factor;
-  offsetX.set(newOffsetX);
-  offsetY.set(newOffsetY);
-}
+// Reactively calculate parallax offset when visible using VueUse
+watch([mouseX, mouseY, isVisible], () => {
+  if (!isVisible.value) return;
+  const centerX = windowWidth.value / 2;
+  const centerY = windowHeight.value / 2;
+  offsetX.set(-(mouseX.value - centerX) * props.factor);
+  offsetY.set(-(mouseY.value - centerY) * props.factor);
+});
 
 const boxShadow1 = ref("");
 const boxShadow2 = ref("");
@@ -75,11 +67,10 @@ function ensureStarsGenerated() {
   }
 }
 
-// Generate stars lazily only when scrolling near bottom
 watch(
-  isNearBottom,
-  (active) => {
-    if (active) {
+  isMounted,
+  (mounted) => {
+    if (mounted) {
       ensureStarsGenerated();
     }
   },
@@ -119,13 +110,18 @@ const starLayer3Transition = computed(() => ({
 
 <template>
   <div
+    ref="containerRef"
     :class="[
-      'relative size-full overflow-hidden bg-radial-[ellipse_55%_40%_at_50%_35%] from-slate-700 to-black',
+      'overflow-hidden bg-radial-[ellipse_55%_40%_at_50%_35%] from-slate-700 to-black',
+      $attrs.class?.toString().includes('absolute') ? '' : 'relative',
       props.class,
     ]"
-    @mousemove="handleMouseMove"
   >
-    <motion.div v-if="isNearBottom" :style="{ x: springX, y: springY }">
+    <motion.div
+      v-if="isMounted"
+      class="absolute inset-0 pointer-events-none"
+      :style="{ x: springX, y: springY }"
+    >
       <!-- Star Layer 1 -->
       <motion.div
         class="absolute top-0 left-0 h-[2000px] w-full pointer-events-none will-change-transform"

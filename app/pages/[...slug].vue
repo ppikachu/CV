@@ -48,7 +48,7 @@
       :ui="{
         container: 'py-4 sm:py-6 lg:py-8 bg-muted/30 rounded-xl my-16',
         headline: 'uppercase text-xl justify-start',
-        description: 'text-left text-sm!',
+        description: 'text-left text-sm! text-wrap',
         body: 'mt-8',
         features: 'gap-2 sm:gap-4',
         footer: 'mt-6 sm:mt-8'
@@ -63,7 +63,7 @@
             root: 'my-0',
             wrapper: 'mb-0',
             title: 'text-base! font-mono uppercase mb-1',
-            description: 'text-xs mt-0 text-balance'
+            description: 'text-xs mt-0'
           }"
         />
       </template>

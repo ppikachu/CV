@@ -13,7 +13,7 @@
 
 		<!-- Sticky Bottom Reveal: appears under content as you scroll to the bottom -->
 		<StarsBackground class="sticky bottom-0 z-0 py-8 flex flex-col items-center justify-center">
-			<div class="z-10 flex min-h-dvh flex-col items-center justify-end">
+			<div class="z-10 flex min-h-svh flex-col items-center justify-end">
 				<Contact />
 				<SiteFooter />
 			</div>

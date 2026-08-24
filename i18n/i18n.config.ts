@@ -45,7 +45,7 @@ export default defineI18nConfig(() => ({
 			role: 'Diseñador / Creative Developer',
 			btn_selected_work: 'Trabajos destacados',
 			btn_contact: 'Contactar',
-			approach_text: 'Diseñador senior multidisciplinario que une dirección creativa, lenguaje visual, motion y ejecución técnica.',
+			approach_text: 'Diseñador multidisciplinario que une dirección creativa, lenguaje visual, motion y ejecución técnica.',
 			what_i_do: 'Qué hago',
 			brand_title: 'Marca',
 			brand_desc: 'Sistemas de identidad · Dirección de arte · Diseño de producto',

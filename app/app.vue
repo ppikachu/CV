@@ -1,8 +1,7 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
-const { locale } = useI18n()
 
-useSeoMeta({
+useServerSeoMeta({
 	title: runtimeConfig.public.NAME,
 	description: runtimeConfig.public.DESCRIPTION,
 	ogTitle: runtimeConfig.public.NAME,
@@ -13,19 +12,6 @@ useSeoMeta({
 	twitterDescription: runtimeConfig.public.DESCRIPTION,
 	twitterImage: runtimeConfig.public.TWITTER_IMAGE,
 	twitterCard: 'summary_large_image'
-})
-
-useHead({
-	htmlAttrs: {
-		lang: () => locale.value
-	},
-	link: [
-		{
-			rel: 'icon',
-			type: 'image/png',
-			href: runtimeConfig.public.ICON
-		}
-	]
 })
 </script>
 <template>

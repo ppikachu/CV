@@ -119,12 +119,10 @@ const starLayer3Transition = computed(() => ({
 
 <template>
   <div
-    :class="
-      cn(
-        `relative size-full overflow-hidden bg-radial-[ellipse_55%_40%_at_50%_35%] from-slate-700 to-black`,
-        props.class,
-      )
-    "
+    :class="[
+      'relative size-full overflow-hidden bg-radial-[ellipse_55%_40%_at_50%_35%] from-slate-700 to-black',
+      props.class,
+    ]"
     @mousemove="handleMouseMove"
   >
     <motion.div v-if="isNearBottom" :style="{ x: springX, y: springY }">

@@ -5,6 +5,7 @@ import type { NavigationMenuItem } from '@nuxt/ui'
 
 const { locale, t } = useI18n()
 const route = useRoute()
+const router = useRouter()
 
 const isHome = computed(() => {
 	const path = route.path
@@ -26,7 +27,7 @@ function onNavClick(id: string) {
 	if (!import.meta.client) return
 
 	// Update the URL hash
-	window.history.pushState({}, '', `#${id}`)
+	router.replace({ hash: `#${id}` })
 
 	// Wait for the modal/drawer to close and release body scroll-lock
 	setTimeout(() => {

@@ -164,17 +164,4 @@ useSeoMeta({
   twitterImage: data.value?.image || runtimeConfig.public.TWITTER_IMAGE,
   twitterCard: 'summary_large_image'
 })
-
-useHead({
-  htmlAttrs: {
-    lang: () => locale.value
-  },
-  link: [
-    {
-      rel: 'icon',
-      type: 'image/png',
-      href: runtimeConfig.public.ICON
-    }
-  ]
-})
 </script>

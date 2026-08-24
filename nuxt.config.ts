@@ -43,6 +43,13 @@ export default defineNuxtConfig({
   },
 
   app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/png', href: '/icon.png' },
+        { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' },
+        { rel: 'manifest', href: '/site.webmanifest' }
+      ]
+    },
     pageTransition: { name: "page", mode: "out-in" },
   },
 

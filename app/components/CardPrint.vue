@@ -1,4 +1,6 @@
 <script lang="ts" setup>
+import type { Project } from '~/components/ProjectCard.vue'
+
 const props = defineProps({
 	current: {
 		type: Boolean,
@@ -8,7 +10,7 @@ const props = defineProps({
 
 const { locale } = useI18n()
 
-const { data: list } = await useAsyncData(
+const { data: list } = await useAsyncData<Project[]>(
 	`print-projects-${locale.value}-${props.current ? 'current' : 'all'}`,
 	() => {
 		let query = (queryCollection as any)('content')

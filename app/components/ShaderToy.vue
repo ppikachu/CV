@@ -47,10 +47,16 @@ const emit = defineEmits<{
 
 const containerRef = useTemplateRef("containerRef");
 const isInViewport = shallowRef(true);
-const isDocumentVisible = shallowRef(true);
+const visibility = useDocumentVisibility();
+const isDocumentVisible = computed(() => visibility.value === "visible");
 
 let shader: InspiraShaderToy | undefined;
-let intersectionObserver: IntersectionObserver | undefined;
+
+if (props.autoPause) {
+  useIntersectionObserver(containerRef, ([entry]) => {
+    isInViewport.value = entry?.isIntersecting ?? true;
+  });
+}
 
 const backgroundSize = computed(() => `${(props.noise?.scale || 0) * 200}%`);
 const noiseOpacity = computed(() => Math.min(1, Math.max(0, (props.noise?.opacity ?? 0) / 2)));
@@ -82,10 +88,6 @@ function setShaderSource(source: string) {
   updatePlayback();
 }
 
-function handleVisibilityChange() {
-  isDocumentVisible.value = document.visibilityState === "visible";
-}
-
 onMounted(() => {
   if (!containerRef.value) return;
 
@@ -111,21 +113,10 @@ onMounted(() => {
   shader.setMouseDamping(props.damping);
   setShaderSource(props.shaderCode);
 
-  if (props.autoPause) {
-    intersectionObserver = new IntersectionObserver(([entry]) => {
-      isInViewport.value = entry?.isIntersecting ?? true;
-    });
-    intersectionObserver.observe(containerRef.value);
-  }
-
-  document.addEventListener("visibilitychange", handleVisibilityChange);
-  handleVisibilityChange();
   updatePlayback();
 });
 
 onUnmounted(() => {
-  document.removeEventListener("visibilitychange", handleVisibilityChange);
-  intersectionObserver?.disconnect();
   shader?.dispose();
   shader = undefined;
 });
@@ -222,13 +213,11 @@ watch(shouldPlay, updatePlayback);
 <template>
   <div
     ref="containerRef"
-    :class="
-      cn(
-        'relative isolate block h-full w-full overflow-hidden [&>canvas]:block [&>canvas]:h-full [&>canvas]:w-full [&>canvas]:max-w-full',
-        props.interactive ? '[&>canvas]:cursor-pointer' : 'pointer-events-none',
-        props.class,
-      )
-    "
+    :class="[
+      'relative isolate block h-full w-full overflow-hidden [&>canvas]:block [&>canvas]:h-full [&>canvas]:w-full [&>canvas]:max-w-full',
+      props.interactive ? '[&>canvas]:cursor-pointer' : 'pointer-events-none',
+      props.class,
+    ]"
   >
     <div
       v-if="props.noise && props.noise.opacity > 0"

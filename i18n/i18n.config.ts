@@ -39,7 +39,10 @@ export default defineI18nConfig(() => ({
 			role_label: 'Role',
 			tech_label: 'Stack',
 			client_label: 'Client',
-			contact_location: 'Buenos Aires, Argentina · Available Worldwide'
+			contact_location: 'Buenos Aires, Argentina · Available Worldwide',
+			print_current_projects: 'Current Projects',
+			print_selected_projects: 'Selected Projects',
+			print_btn: 'Print / Save PDF'
 		},
 		es: {
 			role: 'Diseñador / Creative Developer',
@@ -78,7 +81,10 @@ export default defineI18nConfig(() => ({
 			role_label: 'Rol',
 			tech_label: 'Stack',
 			client_label: 'Cliente',
-			contact_location: 'Buenos Aires, Argentina · Disponible para todo el mundo'
+			contact_location: 'Buenos Aires, Argentina · Disponible para todo el mundo',
+			print_current_projects: 'Proyectos en Curso',
+			print_selected_projects: 'Proyectos Destacados',
+			print_btn: 'Imprimir / Guardar PDF'
 		}
 	}
 }))

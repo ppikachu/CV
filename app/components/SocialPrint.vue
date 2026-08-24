@@ -3,17 +3,10 @@ import data from '~/assets/social_links.json'
 </script>
 
 <template>
-	<section class="not-prose mt-6 flex flex-col gap-2">
-		<strong>Links:</strong>
-		<UButton
-			v-for="item in data"
-			:key="item.to"
-			:to="item.to"
-			:label="item.label"
-			:icon="item.icon"
-			target="_blank"
-			variant="link"
-			color="neutral"
-		/>
-	</section>
+	<address class="not-prose text-sm font-mono flex flex-wrap gap-x-2">
+		<template v-for="(item, index) in data" :key="item.to">
+			<a :href="item.to" target="_blank" class="font-medium underline">{{ item.label }}</a>
+			<span v-if="index < data.length - 1" class="font-normal opacity-50">·</span>
+		</template>
+	</address>
 </template>

@@ -37,3 +37,43 @@
 	background-color: var(--ui-primary);
 	color: #000000;
 }
+
+/* ── Print-Friendly Overrides ── */
+@media print {
+	/* Force light theme */
+	:root,
+	body,
+	.dark {
+		background: white !important;
+		color: #1a1a1a !important;
+		--ui-bg: white !important;
+		color-scheme: light !important;
+	}
+
+	/* Hide interactive chrome */
+	header[data-ui="header"],
+	nav,
+	.nuxt-loading-indicator,
+	.print-no-print {
+		display: none !important;
+	}
+
+	/* Kill animations and transitions */
+	*,
+	*::before,
+	*::after {
+		animation: none !important;
+		transition: none !important;
+	}
+
+	/* Page-break control */
+	/* section,
+	article {
+		break-inside: avoid;
+	} */
+
+	/* Tighten margins for paper */
+	@page {
+		margin: 1.5cm;
+	}
+}

@@ -3,7 +3,6 @@
 		<!-- Main Content (scrolls over the sticky bottom contact section) -->
 		<div class="relative z-10 bg-default space-y-4 pb-12">
 			<Header />
-			<Skills />
 			<Projects />
 			<Timeline />
 			<MoreWork />

@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { Motion } from 'motion-v'
-import { useIntersectionObserver } from '@vueuse/core'
-import type { NavigationMenuItem } from '@nuxt/ui'
+import type { NavigationMenuItem } from '@nuxt/ui/components/NavigationMenu.vue'
 
 const { locale, t } = useI18n()
 const route = useRoute()
@@ -95,28 +94,16 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 	if (!isHome.value) return []
 	return [
 		{
-			label: t('featured_work'),
-			to: '#featured-work',
-			active: activeSection.value === 'featured-work',
-			onSelect: () => onNavClick('featured-work')
-		},
-		{
 			label: t('what_i_do'),
 			to: '#what-i-do',
 			active: activeSection.value === 'what-i-do',
 			onSelect: () => onNavClick('what-i-do')
 		},
 		{
-			label: t('nav_timeline'),
-			to: '#timeline',
-			active: activeSection.value === 'timeline',
-			onSelect: () => onNavClick('timeline')
-		},
-		{
-			label: t('more_work'),
-			to: '#more-work',
-			active: activeSection.value === 'more-work',
-			onSelect: () => onNavClick('more-work')
+			label: t('featured_work'),
+			to: '#featured-work',
+			active: activeSection.value === 'featured-work',
+			onSelect: () => onNavClick('featured-work')
 		},
 		{
 			label: t('experiments'),

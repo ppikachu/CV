@@ -23,5 +23,5 @@ logs
 .env.*
 !.env.example
 
-# lygia
-assets/shaders/lygia
+# Raw screen recordings
+/captures/

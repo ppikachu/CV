@@ -57,7 +57,7 @@ export default defineAppConfig({
 				root: 'mt-24',
 				wrapper: 'space-y-4 mb-6',
 				title: 'font-heading font-extrabold tracking-tight text-primary text-3xl md:text-4xl leading-7',
-				description: 'text-sm'
+				description: 'text-sm text-default'
 			}
 		},
 		blogPost: {

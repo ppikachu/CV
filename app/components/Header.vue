@@ -8,22 +8,18 @@ const disciplines = computed(() => [
 	{
 		title: t('brand_title'),
 		description: t('brand_desc'),
-		icon: 'i-ph-palette'
 	},
 	{
 		title: t('digital_title'),
 		description: t('digital_desc'),
-		icon: 'i-ph-layout'
 	},
 	{
 		title: t('motion_title'),
 		description: t('motion_desc'),
-		icon: 'i-ph-film-strip'
 	},
 	{
 		title: t('code_title'),
 		description: t('code_desc'),
-		icon: 'i-ph-code'
 	}
 ])
 
@@ -81,7 +77,7 @@ const toolsWithSpectrum = computed(() => {
 		</div>
 
 		<!-- Skills & Disciplines Sub-section -->
-		<section id="what-i-do" class="space-y-8">
+		<section id="what-i-do">
 			<!-- Section Header -->
 			<UPageFeature
 				:title="$t('what_i_do')"
@@ -95,14 +91,13 @@ const toolsWithSpectrum = computed(() => {
 					:key="disc.title"
 					:title="disc.title"
 					:description="disc.description"
-					:icon="disc.icon"
-					variant="ghost"
+					variant="soft"
 					spotlight
 					:ui="{
 						leading: 'mb-0',
-						leadingIcon: 'size-8',
-						title: 'text-primary font-heading font-extrabold text-2xl',
-						description: 'mb-0 font-bold text-lg leading-tight'
+						leadingIcon: 'size-6',
+						title: 'text-primary font-heading font-extrabold text-xl',
+						description: 'mb-0 font-bold leading-tight'
 					}"
 				/>
 			</div>

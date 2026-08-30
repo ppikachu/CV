@@ -25,3 +25,7 @@ logs
 
 # Raw screen recordings
 /captures/
+
+# Python caches
+__pycache__/
+*.pyc

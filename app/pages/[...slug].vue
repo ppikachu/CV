@@ -20,7 +20,7 @@
           </div>
 
           <div class="flex items-center justify-between gap-4">
-            <ProseH1 class="text-balance mt-1 leading-none mt-0">
+            <ProseH1 class="text-balance text-4xl! mt-1 leading-none mt-0">
               {{ data.title }}
             </ProseH1>
 

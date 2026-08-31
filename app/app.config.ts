@@ -85,7 +85,7 @@ export default defineAppConfig({
 						footer: 'relative z-10 flex items-center justify-between gap-2 p-2 sm:p-4'
 					},
 					horizontal: {
-						root: 'gap-0 flex-row lg:flex lg:flex-row h-full',
+						root: 'items-center gap-0 flex-row lg:flex lg:flex-row h-full',
 						header: 'w-2/5 sm:w-2/5',
 						body: 'p-0 py-4 md:py-4 sm:p-3 px-4 lg:px-4',
 						description: 'text-xs'

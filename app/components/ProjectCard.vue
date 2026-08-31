@@ -67,7 +67,7 @@ watch(isHovered, (hovering) => {
 		<UBadge
 			v-if="isGroup"
 			:label="$t('project_group')"
-			icon="i-ph-squares-four"
+			icon="i-pixelarticons-grid"
 			variant="solid"
 			class="absolute top-3 left-3 z-20 backdrop-blur"
 		/>
@@ -111,7 +111,7 @@ watch(isHovered, (hovering) => {
 				<UButton
 					:to="project.path"
 					:label="isGroup ? $t('ver_proyectos') : $t('ver_proyecto')"
-					icon="i-ph-arrow-right"
+					icon="i-pixelarticons-arrow-right"
 					trailing
 					:variant="featured ? 'solid' : 'outline'"
 				/>
@@ -121,7 +121,7 @@ watch(isHovered, (hovering) => {
 					:to="project.url"
 					target="_blank"
 					:label="$t('see_live')"
-					icon="i-ph-arrow-square-out"
+					icon="i-pixelarticons-external-link"
 					trailing
 					variant="outline"
 					@click.stop

@@ -6,15 +6,22 @@ export default defineAppConfig({
 			neutral: "mist"
 		},
 		icons: {
-			menu: 'i-ph-list',
-			close: 'i-ph-x',
-			loading: 'i-ph-spinner',
-			external: 'i-ph-arrow-square-out',
-			chevronDown: 'i-ph-caret-down'
+			menu: 'i-pixelarticons-menu',
+			close: 'i-pixelarticons-close',
+			loading: 'i-pixelarticons-loader',
+			external: 'i-pixelarticons-external-link',
+			chevronDown: 'i-pixelarticons-chevron-down',
+			chevronLeft: 'i-pixelarticons-chevron-left',
+			chevronRight: 'i-pixelarticons-chevron-right',
+			arrowLeft: 'i-pixelarticons-arrow-left',
+			arrowRight: 'i-pixelarticons-arrow-right',
+			search: 'i-pixelarticons-search'
 		},
 		badge: {
 			slots: {
-				label: 'text-wrap rounded-full overflow-visible'
+				label: 'text-wrap rounded-full overflow-visible',
+				leadingIcon: 'size-6 shrink-0',
+				trailingIcon: 'size-6 shrink-0'
 			}
 		},
 		prose: {
@@ -66,7 +73,7 @@ export default defineAppConfig({
 				image: 'object-cover object-center w-full h-full',
 				meta: 'mb-0',
 				badge: 'p-0 text-primary/70 bg-transparent ring-0 leading-tight',
-				title: 'text-primary font-extrabold leading-none text-pretty',
+				title: 'text-primary font-heading tracking-tighter leading-none text-pretty',
 				body: 'flex-1 flex flex-col gap-1.5',
 				description: 'text-sm mt-0',
 			},
@@ -97,7 +104,9 @@ export default defineAppConfig({
 		},
 		button: {
 			slots: {
-				base: 'rounded-full'
+				base: 'rounded-full',
+				leadingIcon: 'size-6 shrink-0',
+				trailingIcon: 'size-6 shrink-0'
 			},
 			defaultVariants: {
 				variant: 'outline'

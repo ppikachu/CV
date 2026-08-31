@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<{
 	src: undefined,
 	webm: undefined,
 	mp4: undefined,
-	poster: '/video/video_placeholder.png',
+	poster: '/videos/video_placeholder.png',
 	controls: true,
 	autoplay: false,
 	loop: false,

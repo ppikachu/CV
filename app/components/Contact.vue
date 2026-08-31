@@ -20,7 +20,7 @@
     </div>
 
     <UButton
-      icon="i-ph-envelope-simple"
+      icon="i-pixelarticons-mail"
       label="ppikachu@gmail.com"
       size="lg"
       variant="solid"

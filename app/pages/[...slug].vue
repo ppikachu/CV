@@ -29,7 +29,7 @@
               :to="data.url"
               target="_blank"
               :label="$t('see_live')"
-              icon="i-ph-arrow-square-out"
+              icon="i-pixelarticons-external-link"
               trailing
               size="sm"
             />
@@ -141,7 +141,7 @@ const links = computed<ButtonProps[]>(() => [
           label: t('web_url'),
           to: data.value.url,
           target: '_blank',
-          icon: 'i-ph-arrow-square-out',
+          icon: 'i-pixelarticons-external-link',
           trailing: true,
           color: 'primary' as const,
           variant: 'outline' as const

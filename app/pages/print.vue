@@ -25,7 +25,7 @@ function printPage() {
 				class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-neutral-100 border border-neutral-300 rounded-full hover:bg-neutral-200 transition-colors cursor-pointer shadow-xs"
 				@click="printPage"
 			>
-				<span class="i-ph-printer text-lg" />
+				<span class="i-pixelarticons-printer size-6" />
 				{{ t('print_btn') }}
 			</button>
 		</div>

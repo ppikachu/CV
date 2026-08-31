@@ -14,7 +14,7 @@ defineProps({
 		<UButton
 			variant="link"
 			:label="$t('regresar')"
-			icon="i-ph-arrow-left"
+			icon="i-pixelarticons-arrow-left"
 			@click="navigateTo('/')"
 		/>
 	</UContainer>

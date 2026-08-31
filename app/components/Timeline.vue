@@ -11,7 +11,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: locale.value === 'es'
 			? 'Rigging de personajes, animación 2D/3D, composición digital VFX y masterización para televisión pública y cine independiente.'
 			: 'Character rigging, 2D/3D animation, digital VFX compositing, and broadcast mastering for public TV and indie film.',
-		icon: 'i-ph-film-strip'
+		icon: 'i-pixelarticons-movie'
 	},
 	{
 		date: '2010s',
@@ -19,7 +19,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: locale.value === 'es'
 			? 'Desarrollo de marcas integrales, sitios comerciales de alto rendimiento.'
 			: 'Comprehensive brand identity systems, high-performance commercial websites, interactive museum kiosks, and visual art direction.',
-		icon: 'i-ph-layout'
+		icon: 'i-pixelarticons-layout'
 	},
 	{
 		date: '2020s',
@@ -27,7 +27,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: locale.value === 'es'
 			? 'Ecosistemas de e-commerce completos (Nuxt 4), experiencias 3D interactivas con Three.js, shaders GLSL.'
 			: 'End-to-end e-commerce platforms (Nuxt 4), interactive WebGL 3D with Three.js, custom GLSL shaders, and server-side analytics.',
-		icon: 'i-ph-code'
+		icon: 'i-pixelarticons-code'
 	},
 	{
 		date: locale.value === 'es' ? 'Hoy' : 'Today',
@@ -35,7 +35,7 @@ const milestones = computed<TimelineItem[]>(() => [
 		description: locale.value === 'es'
 			? 'Uniendo visión estratégica, lenguaje visual e implementación técnica moderna.'
 			: 'Unifying strategic vision, refined visual aesthetics, and modern front-end execution without intermediaries.',
-		icon: 'i-ph-sparkle'
+		icon: 'i-pixelarticons-sparkle'
 	}
 ])
 </script>
@@ -82,9 +82,9 @@ const milestones = computed<TimelineItem[]>(() => [
 					:while-in-view="{ opacity: 1, x: 0 }"
 					:in-view-options="{ once: true, amount: 'all', margin: '0px 0px -40px 0px' }"
 					:transition="{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }"
-					class="w-full mt-2.5 pb-7.5 space-y-1"
+					class="w-full mt-1.5 pb-7.5 space-y-1"
 				>
-					<div v-if="item.date" class="text-sm text-primary">
+					<div v-if="item.date" class="font-bold font-heading text-primary">
 						{{ item.date }}
 					</div>
 					<div v-if="item.title" class="font-semibold text-md leading-tight">

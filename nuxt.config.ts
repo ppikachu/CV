@@ -19,21 +19,22 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
   ],
 
-  fonts: {
-    families: [
-      { name: 'Plus Jakarta Sans', weights: [400, 500, 600, 700, 800], global: true },
-      { name: 'JetBrains Mono', weights: [400, 500, 600, 700, 800], global: true }
-    ]
-  },
+  // fonts: {
+  //   families: [
+  //     { name: 'Sixtyfour', global: true },
+  //     { name: 'JetBrains Mono', global: true }
+  //   ]
+  // },
 
   icon: {
+    size: '24px',
     clientBundle: {
       scan: {
         globInclude: ['**/*.{vue,ts,jsx,tsx,md,mdc,mdx,json}']
       }
     },
     serverBundle: {
-      collections: ['ph']
+      collections: ['pixelarticons']
     }
   },
 

@@ -25,11 +25,11 @@ const faqs = computed(() => {
     <ClientOnly>
       <UAccordion 
         :items="faqs" 
-        trailing-icon="i-ph-caret-right"
+        trailing-icon="i-pixelarticons-chevron-right"
         :ui="{ 
           trigger: 'text-primary',
           body: 'leading-relaxed',
-          trailingIcon: 'size-4 transition-transform duration-200 group-data-[state=open]:rotate-90'
+          trailingIcon: 'size-6 transition-transform duration-200 group-data-[state=open]:rotate-90'
         }"
       >
         <template #body="{ item }">

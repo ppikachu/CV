@@ -2,21 +2,21 @@
 	{
 		"to": "mailto:ppikachu@gmail.com",
 		"label": "ppikachu@gmail.com",
-		"icon": "i-ph-envelope-bold"
+		"icon": "i-pixelarticons-mail"
 	},
 	{
 		"to": "https://github.com/ppikachu",
 		"label": "github.com/ppikachu",
-		"icon": "i-ph-github-logo-bold"
+		"icon": "i-pixelarticons-github"
 	},
 	{
 		"to": "https://www.behance.net/stoyos",
 		"label": "www.behance.net/stoyos",
-		"icon": "i-ph-behance-logo-bold"
+		"icon": "i-pixelarticons-colors-swatch"
 	},
 	{
 		"to": "https://www.linkedin.com/in/santiago-toyos",
 		"label": "www.linkedin.com/in/santiago-toyos",
-		"icon": "i-ph-linkedin-logo-bold"
+		"icon": "i-pixelarticons-linkedin"
 	}
 ]

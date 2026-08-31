@@ -38,7 +38,7 @@ const badge = computed(() => {
 	if (isGroup.value) {
 		return {
 			label: t('project_group'),
-			icon: 'i-ph-squares-four',
+			icon: 'i-pixelarticons-grid',
 			variant: 'outline' as const
 		}
 	}
@@ -68,17 +68,17 @@ const badge = computed(() => {
 			:image="project.image || videoSrc"
 			:badge="badge"
 			:ui="{
-				meta: !isGroup ? 'hidden md:flex' : undefined
+				meta: !isGroup ? 'hidden md:flex' : undefined,
 			}"
 			orientation="horizontal"
 		>
 			<template v-if="project.image || videoSrc" #header="{ ui }">
-				<div class="relative w-full h-full overflow-hidden">
+				<div class="relative w-full h-auto aspect-video overflow-hidden">
 					<NuxtImg
 						v-if="project.image"
 						:src="project.image"
 						:alt="project.title || 'Project thumbnail'"
-						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center w-full h-full'"
+						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center'"
 					/>
 					<video
 						v-if="videoSrc"

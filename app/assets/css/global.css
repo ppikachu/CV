@@ -3,7 +3,8 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-	--font-heading: "Plus Jakarta Sans", sans-serif;
+	--font-heading: "Lexend", sans-serif;
+	--font-mono: "JetBrains Mono", monospace;
 	--aspect-video-card: 4 / 3;
 }
 
@@ -15,12 +16,8 @@
 	}
 
 	body {
-		font-family: "JetBrains Mono", monospace;
+		font-family: var(--font-mono);
 		overflow-x: clip;
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-family: "Plus Jakarta Sans", sans-serif;
 	}
 
 	address {

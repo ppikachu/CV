@@ -11,7 +11,7 @@
 				}"
 			>
 				<NuxtImg
-					:src="'/images/' + item"
+					:src="getImageSrc(item)"
 					:alt="cleanAlt(item)"
 					class="w-full h-auto block"
 					loading="lazy"
@@ -27,9 +27,18 @@ const props = defineProps({
 	images: Array<string>
 })
 
+function getImageSrc(item: string) {
+	if (!item) return ''
+	if (item.startsWith('http://') || item.startsWith('https://') || item.startsWith('/')) {
+		return item
+	}
+	return '/images/' + item
+}
+
 function cleanAlt(filename: string) {
 	if (!filename) return 'Project slide image'
 	return filename
+		.replace(/^.*\//, '')
 		.replace(/\.\w+$/, '')
 		.replace(/-\d+x\d+$/, '')
 		.replace(/[-_]/g, ' ')

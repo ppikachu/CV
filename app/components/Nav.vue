@@ -2,18 +2,21 @@
 import { Motion } from 'motion-v'
 import type { NavigationMenuItem } from '@nuxt/ui/components/NavigationMenu.vue'
 
-const { locale, t } = useI18n()
+const { t } = useI18n()
+const localePath = useLocalePath()
 const route = useRoute()
 const router = useRouter()
 
-const isHome = computed(() => {
-	const path = route.path
-	return path === '/' || path === '/es' || path === '/en' || path === '/es/' || path === '/en/'
-})
+const NAV_SECTIONS = [
+	{ id: 'what-i-do', labelKey: 'what_i_do' },
+	{ id: 'featured-work', labelKey: 'featured_work' },
+	{ id: 'experiments', labelKey: 'experiments' },
+	{ id: 'faqs', labelKey: 'nav_faqs' },
+	{ id: 'contact', labelKey: 'btn_contact' }
+] as const
 
-const homePath = computed(() => {
-	return locale.value.startsWith('en') ? '/en' : '/'
-})
+const homePath = computed(() => localePath('/'))
+const isHome = computed(() => route.path === homePath.value || route.path === `${homePath.value}/`)
 
 const activeSection = ref('')
 const isMenuOpen = ref(false)
@@ -25,15 +28,18 @@ function onNavClick(id: string) {
 	activeSection.value = id
 	if (!import.meta.client) return
 
+	if (!isHome.value) {
+		navigateTo(localePath({ path: '/', hash: `#${id}` }))
+		return
+	}
+
 	// Update the URL hash
 	router.replace({ hash: `#${id}` })
 
 	// Wait for the modal/drawer to close and release body scroll-lock
 	setTimeout(() => {
 		const target = document.getElementById(id)
-		if (target) {
-			target.scrollIntoView({ behavior: 'smooth', block: 'start' })
-		}
+		target?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 	}, 150)
 }
 
@@ -90,41 +96,14 @@ onUnmounted(() => {
 	stopObserver?.()
 })
 
-const navItems = computed<NavigationMenuItem[]>(() => {
-	if (!isHome.value) return []
-	return [
-		{
-			label: t('what_i_do'),
-			to: '#what-i-do',
-			active: activeSection.value === 'what-i-do',
-			onSelect: () => onNavClick('what-i-do')
-		},
-		{
-			label: t('featured_work'),
-			to: '#featured-work',
-			active: activeSection.value === 'featured-work',
-			onSelect: () => onNavClick('featured-work')
-		},
-		{
-			label: t('experiments'),
-			to: '#experiments',
-			active: activeSection.value === 'experiments',
-			onSelect: () => onNavClick('experiments')
-		},
-		{
-			label: t('nav_faqs'),
-			to: '#faqs',
-			active: activeSection.value === 'faqs',
-			onSelect: () => onNavClick('faqs')
-		},
-		{
-			label: t('btn_contact'),
-			to: '#contact',
-			active: activeSection.value === 'contact',
-			onSelect: () => onNavClick('contact')
-		},
-	]
-})
+const navItems = computed<NavigationMenuItem[]>(() =>
+	NAV_SECTIONS.map(({ id, labelKey }) => ({
+		label: t(labelKey),
+		to: isHome.value ? `#${id}` : localePath({ path: '/', hash: `#${id}` }),
+		active: isHome.value && activeSection.value === id,
+		onSelect: () => onNavClick(id)
+	}))
+)
 </script>
 
 <template>
@@ -146,7 +125,6 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 		</template>
 
 		<UNavigationMenu
-			v-if="isHome"
 			:items="navItems"
 			highlight
 			:ui="{
@@ -173,7 +151,6 @@ const navItems = computed<NavigationMenuItem[]>(() => {
 
 		<template #body>
 			<UNavigationMenu
-				v-if="isHome"
 				:items="navItems"
 				orientation="vertical"
 				class="-mx-2.5"

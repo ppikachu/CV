@@ -11,6 +11,7 @@ tipo: 'personal'
 ---
 src: /images/weather.mp4
 poster: /images/weather-512x512.jpg
+aspect: 1/1
 ---
 ::
 

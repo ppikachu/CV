@@ -9,6 +9,8 @@ const props = withDefaults(defineProps<{
 	loop?: boolean
 	muted?: boolean
 	playsinline?: boolean
+	aspect?: string | number
+	aspectRatio?: string | number
 }>(), {
 	src: undefined,
 	webm: undefined,
@@ -18,10 +20,25 @@ const props = withDefaults(defineProps<{
 	autoplay: false,
 	loop: false,
 	muted: false,
-	playsinline: true
+	playsinline: true,
+	aspect: undefined,
+	aspectRatio: undefined
 })
 
 const hasMedia = computed(() => Boolean(props.src || props.webm || props.mp4))
+
+const computedAspectRatio = computed(() => {
+	const val = props.aspect ?? props.aspectRatio
+	if (!val) return '16 / 9'
+	const str = String(val).trim()
+	if (str.includes(':')) {
+		return str.replace(':', ' / ')
+	}
+	if (str.includes('/')) {
+		return str.replace('/', ' / ')
+	}
+	return str
+})
 </script>
 
 <template>
@@ -34,7 +51,8 @@ const hasMedia = computed(() => Boolean(props.src || props.webm || props.mp4))
 			:muted="muted"
 			:playsinline="playsinline"
 			preload="metadata"
-			class="w-full aspect-video rounded-xl object-contain bg-black"
+			:style="{ aspectRatio: computedAspectRatio }"
+			class="w-full rounded-xl object-contain bg-black"
 		>
 			<source v-if="webm" :src="webm" type="video/webm">
 			<source v-if="mp4" :src="mp4" type="video/mp4">

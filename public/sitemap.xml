@@ -1,196 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://toyos.vercel.app/</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/print</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/print"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/print"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/print"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/print</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/print"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/print"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/print"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/luznegra-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/luznegra-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/luznegra-web"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/luznegra-web"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/luznegra-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/luznegra-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/luznegra-web"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/luznegra-web"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/kinoto</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/kinoto"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/kinoto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/kinoto"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/kinoto</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/kinoto"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/kinoto"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/kinoto"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/gl</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/gl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/gl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/gl"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/gl</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/gl"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/gl"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/gl"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/luznegra-video</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/luznegra-video"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/luznegra-video"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/luznegra-video"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/luznegra-video</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/luznegra-video"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/luznegra-video"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/luznegra-video"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/websites</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/websites"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/websites"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/websites"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/websites</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/websites"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/websites"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/websites"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/sanders-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/sanders-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/sanders-web"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/sanders-web"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/sanders-web</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/sanders-web"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/sanders-web"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/sanders-web"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/susan-ibitz</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/susan-ibitz"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/susan-ibitz"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/susan-ibitz"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/susan-ibitz</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/susan-ibitz"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/susan-ibitz"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/susan-ibitz"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/interactivos</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/interactivos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/interactivos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/interactivos"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/interactivos</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/interactivos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/interactivos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/interactivos"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/commercial-video</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/commercial-video"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/commercial-video"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/commercial-video"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/commercial-video</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/commercial-video"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/commercial-video"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/commercial-video"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/logos</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/logos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/logos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/logos"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/logos</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/logos"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/logos"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/logos"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/grafica</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/grafica"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/grafica"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/grafica"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/grafica</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/grafica"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/grafica"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/grafica"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/mosaico-instagram</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/mosaico-instagram"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/mosaico-instagram"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/mosaico-instagram"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/mosaico-instagram</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/mosaico-instagram"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/mosaico-instagram"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/mosaico-instagram"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/piezas</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/piezas"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/piezas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/piezas"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/piezas</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/piezas"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/piezas"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/piezas"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/proyecto/cnb</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/cnb"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/cnb"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/cnb"/>
   </url>
   <url>
     <loc>https://toyos.vercel.app/en/proyecto/cnb</loc>
-    <xhtml:link rel="alternate" hreflang="es" href="https://toyos.vercel.app/proyecto/cnb"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://toyos.vercel.app/en/proyecto/cnb"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://toyos.vercel.app/proyecto/cnb"/>
   </url>
 </urlset>

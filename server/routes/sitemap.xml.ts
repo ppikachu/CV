@@ -11,7 +11,6 @@ export default defineEventHandler(async (event) => {
     return fs.readFileSync(publicSitemapPath, 'utf-8')
   }
 
-  // Fallback programmatic generation
   const host = 'https://toyos.vercel.app'
   const projectSlugs = [
     'luznegra-web',
@@ -35,18 +34,22 @@ export default defineEventHandler(async (event) => {
   xml += '        xmlns:xhtml="http://www.w3.org/1999/xhtml">\n'
 
   const staticRoutes = [
-    { es: '/', en: '/en', priority: '1.0', changefreq: 'weekly' },
-    { es: '/print', en: '/en/print', priority: '0.5', changefreq: 'monthly' }
+    { es: '/', en: '/en' },
+    { es: '/print', en: '/en/print' }
   ]
 
   for (const route of staticRoutes) {
-    xml += `  <url>\n    <loc>${host}${route.es}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${host}${route.es}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${host}${route.en}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${host}${route.es}"/>\n    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority}</priority>\n  </url>\n`
-    xml += `  <url>\n    <loc>${host}${route.en}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${host}${route.es}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${host}${route.en}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${host}${route.es}"/>\n    <changefreq>${route.changefreq}</changefreq>\n    <priority>${route.priority === '1.0' ? '0.9' : route.priority}</priority>\n  </url>\n`
+    const esUrl = `${host}${route.es}`
+    const enUrl = `${host}${route.en}`
+    xml += `  <url>\n    <loc>${esUrl}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${esUrl}"/>\n  </url>\n`
+    xml += `  <url>\n    <loc>${enUrl}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${esUrl}"/>\n  </url>\n`
   }
 
   for (const slug of projectSlugs) {
-    xml += `  <url>\n    <loc>${host}/proyecto/${slug}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${host}/proyecto/${slug}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${host}/en/proyecto/${slug}"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`
-    xml += `  <url>\n    <loc>${host}/en/proyecto/${slug}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${host}/proyecto/${slug}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${host}/en/proyecto/${slug}"/>\n    <changefreq>monthly</changefreq>\n    <priority>0.8</priority>\n  </url>\n`
+    const esUrl = `${host}/proyecto/${slug}`
+    const enUrl = `${host}/en/proyecto/${slug}`
+    xml += `  <url>\n    <loc>${esUrl}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${esUrl}"/>\n  </url>\n`
+    xml += `  <url>\n    <loc>${enUrl}</loc>\n    <xhtml:link rel="alternate" hreflang="es" href="${esUrl}"/>\n    <xhtml:link rel="alternate" hreflang="en" href="${enUrl}"/>\n    <xhtml:link rel="alternate" hreflang="x-default" href="${esUrl}"/>\n  </url>\n`
   }
 
   xml += '</urlset>\n'

@@ -64,12 +64,12 @@ const toolsWithSpectrum = computed(() => {
 
 		<!-- Hero Intro -->
 		<div class="flex flex-col justify-center">
-			<ProseH1 class="">
-				Santiago Toyos
+			<ProseH1 class="flex flex-col">
+				<span>Santiago Toyos</span>
+				<span class="text-toned uppercase mt-1 sm:mt-2 text-xl font-heading leading-none font-extrabold">
+					{{ $t('role') }}
+				</span>
 			</ProseH1>
-			<ProseH2 class="text-toned uppercase mt-1 sm:mt-2">
-				{{ $t('role') }}
-			</ProseH2>
 
 			<ProseP class="md:max-w-3/4 my-8 text-xl">
 				{{ $t('approach_text') }}

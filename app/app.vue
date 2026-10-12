@@ -1,17 +1,106 @@
 <script setup lang="ts">
 const runtimeConfig = useRuntimeConfig()
+const { t, locale } = useI18n()
+const route = useRoute()
+
+const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.vercel.app').replace(/\/$/, ''))
+const ogImageUrl = computed(() => `${siteUrl.value}${runtimeConfig.public.OG_IMAGE}`)
+const twitterImageUrl = computed(() => `${siteUrl.value}${runtimeConfig.public.TWITTER_IMAGE}`)
+
+const title = computed(() => t('seo_title'))
+const description = computed(() => t('seo_description'))
 
 useServerSeoMeta({
-	title: runtimeConfig.public.NAME,
-	description: runtimeConfig.public.DESCRIPTION,
-	ogTitle: runtimeConfig.public.NAME,
-	ogDescription: runtimeConfig.public.DESCRIPTION,
-	ogImage: runtimeConfig.public.OG_IMAGE,
-	ogUrl: runtimeConfig.public.HOST,
-	twitterTitle: runtimeConfig.public.NAME,
-	twitterDescription: runtimeConfig.public.DESCRIPTION,
-	twitterImage: runtimeConfig.public.TWITTER_IMAGE,
+	title,
+	description,
+	ogTitle: title,
+	ogDescription: description,
+	ogImage: ogImageUrl,
+	ogUrl: computed(() => `${siteUrl.value}${route.path}`),
+	twitterTitle: title,
+	twitterDescription: description,
+	twitterImage: twitterImageUrl,
 	twitterCard: 'summary_large_image'
+})
+
+const i18nHead = useLocaleHead({
+	addSeoAttributes: true
+})
+
+const schemaGraph = computed(() => {
+	const isEn = locale.value === 'en'
+	const base = siteUrl.value
+	return {
+		'@context': 'https://schema.org',
+		'@graph': [
+			{
+				'@type': 'WebSite',
+				'@id': `${base}/#website`,
+				'url': base,
+				'name': 'Santiago Toyos',
+				'description': isEn
+					? 'Portfolio of Santiago Toyos: Graphic Designer and Creative Developer'
+					: 'Portfolio de Santiago Toyos: Diseñador Gráfico y Creative Developer',
+				'inLanguage': ['es-AR', 'en-US']
+			},
+			{
+				'@type': ['Person', 'ProfessionalService'],
+				'@id': `${base}/#person`,
+				'name': 'Santiago Toyos',
+				'url': base,
+				'image': ogImageUrl.value,
+				'jobTitle': isEn ? 'Graphic Designer & Creative Developer' : 'Diseñador Gráfico y Creative Developer',
+				'address': {
+					'@type': 'PostalAddress',
+					'addressLocality': 'Buenos Aires',
+					'addressRegion': 'CABA',
+					'addressCountry': 'AR'
+				},
+				'geo': {
+					'@type': 'GeoCoordinates',
+					'latitude': -34.6037,
+					'longitude': -58.3816
+				},
+				'priceRange': '$$',
+				'sameAs': [
+					'https://github.com/ppikachu',
+					'https://www.behance.net/stoyos',
+					'https://www.linkedin.com/in/santiago-toyos'
+				],
+				'knowsAbout': [
+					'Graphic Design',
+					'Creative Development',
+					'Three.js',
+					'WebGL',
+					'GLSL',
+					'Nuxt',
+					'Vue',
+					'Brand Identity',
+					'Motion Graphics',
+					'Front-End Engineering'
+				]
+			}
+		]
+	}
+})
+
+useHead({
+	htmlAttrs: {
+		lang: () => i18nHead.value.htmlAttrs?.lang || (locale.value === 'es' ? 'es-AR' : 'en-US'),
+		dir: () => i18nHead.value.htmlAttrs?.dir || 'ltr'
+	},
+	link: () => [
+		...(i18nHead.value.link || [])
+	],
+	meta: () => [
+		...(i18nHead.value.meta || [])
+	],
+	script: [
+		{
+			type: 'application/ld+json',
+			innerHTML: () => JSON.stringify(schemaGraph.value)
+		}
+	]
 })
 </script>
 <template>

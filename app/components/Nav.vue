@@ -112,7 +112,7 @@ const navItems = computed<NavigationMenuItem[]>(() =>
 			<div class="flex items-center gap-2">
 				<NuxtImg
 					src="/images/yo.png"
-					alt="ST"
+					alt="Santiago Toyos"
 					class="rounded-full w-[30px] [image-rendering:pixelated]"
 				/>
 				<template v-if="!isHome">

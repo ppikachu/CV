@@ -88,14 +88,17 @@ export default defineNuxtConfig({
         ? "https://toyos.vercel.app"
         : "http://localhost:3000",
     vueI18n: 'i18n.config.ts',
-    locales: ['es', 'en'],
+    locales: [
+      { code: 'es', language: 'es-AR', name: 'Español' },
+      { code: 'en', language: 'en-US', name: 'English' }
+    ],
     defaultLocale: 'es',
     strategy: 'prefix_except_default',
     detectBrowserLanguage: {
       useCookie: true,
       cookieKey: 'i18n_redirected',
       redirectOn: 'root',
-      alwaysRedirect: true,
+      alwaysRedirect: false,
     },
   },
 

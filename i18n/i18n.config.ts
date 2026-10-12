@@ -3,6 +3,8 @@ export default defineI18nConfig(() => ({
 	fallbackLocale: 'es',
 	messages: {
 		en: {
+			seo_title: 'Santiago Toyos — Graphic Designer & Creative Developer | Portfolio',
+			seo_description: 'Portfolio of Santiago Toyos, multidisciplinary designer & creative developer based in Buenos Aires. Visual direction, motion graphics, Three.js, and interactive code.',
 			role: 'Designer / Creative Developer',
 			btn_selected_work: 'Featured Work',
 			btn_contact: 'Get in touch',
@@ -45,6 +47,8 @@ export default defineI18nConfig(() => ({
 			print_btn: 'Print / Save PDF'
 		},
 		es: {
+			seo_title: 'Santiago Toyos — Diseñador Gráfico & Creative Developer | Buenos Aires',
+			seo_description: 'Portfolio de Santiago Toyos, diseñador multidisciplinario y creative developer en Buenos Aires. Dirección de arte, identidad visual, motion graphics, 3D interactivo y Nuxt.',
 			role: 'Diseñador / Creative Developer',
 			btn_selected_work: 'Trabajos destacados',
 			btn_contact: 'Contactar',

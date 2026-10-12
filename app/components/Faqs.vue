@@ -13,6 +13,28 @@ const faqs = computed(() => {
     { label: t("q_how_to_start"), content: t("r_how_to_start") },
   ]
 })
+
+const faqSchema = computed(() => ({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqs.value.map(faq => ({
+    '@type': 'Question',
+    'name': faq.label,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': faq.content
+    }
+  }))
+}))
+
+useHead({
+  script: [
+    {
+      type: 'application/ld+json',
+      innerHTML: () => JSON.stringify(faqSchema.value)
+    }
+  ]
+})
 </script>
 
 <template>

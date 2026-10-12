@@ -151,17 +151,85 @@ const links = computed<ButtonProps[]>(() => [
 ])
 
 const runtimeConfig = useRuntimeConfig()
+const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.vercel.app').replace(/\/$/, ''))
+
+const formatAbsoluteUrl = (path?: string) => {
+  if (!path) return undefined
+  if (path.startsWith('http://') || path.startsWith('https://')) return path
+  return `${siteUrl.value}${path.startsWith('/') ? '' : '/'}${path}`
+}
+
+const pageTitle = computed(() => data.value?.title ? `${data.value.title} · ${runtimeConfig.public.NAME}` : t('seo_title'))
+const pageDescription = computed(() => data.value?.description || t('seo_description'))
+const pageImage = computed(() => formatAbsoluteUrl(data.value?.image) || `${siteUrl.value}${runtimeConfig.public.OG_IMAGE}`)
 
 useSeoMeta({
-  title: data.value?.title ? `${data.value.title} · ${runtimeConfig.public.NAME}` : runtimeConfig.public.NAME,
-  description: data.value?.description || runtimeConfig.public.DESCRIPTION,
-  ogTitle: data.value?.title || runtimeConfig.public.NAME,
-  ogDescription: data.value?.description || runtimeConfig.public.DESCRIPTION,
-  ogImage: data.value?.image || runtimeConfig.public.OG_IMAGE,
-  ogUrl: `${runtimeConfig.public.HOST}${route.path}`,
-  twitterTitle: data.value?.title || runtimeConfig.public.NAME,
-  twitterDescription: data.value?.description || runtimeConfig.public.DESCRIPTION,
-  twitterImage: data.value?.image || runtimeConfig.public.TWITTER_IMAGE,
+  title: pageTitle,
+  description: pageDescription,
+  ogTitle: pageTitle,
+  ogDescription: pageDescription,
+  ogImage: pageImage,
+  ogUrl: computed(() => `${siteUrl.value}${route.path}`),
+  twitterTitle: pageTitle,
+  twitterDescription: pageDescription,
+  twitterImage: pageImage,
   twitterCard: 'summary_large_image'
+})
+
+const projectSchema = computed(() => {
+  if (!data.value) return null
+  const currentUrl = `${siteUrl.value}${route.path}`
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${currentUrl}#breadcrumb`,
+        'itemListElement': [
+          {
+            '@type': 'ListItem',
+            'position': 1,
+            'name': 'Home',
+            'item': `${siteUrl.value}${locale.value === 'es' ? '' : '/en'}`
+          },
+          {
+            '@type': 'ListItem',
+            'position': 2,
+            'name': data.value.title || 'Project',
+            'item': currentUrl
+          }
+        ]
+      },
+      {
+        '@type': 'CreativeWork',
+        '@id': `${currentUrl}#project`,
+        'name': data.value.title,
+        'description': data.value.description,
+        'url': currentUrl,
+        'image': pageImage.value,
+        'author': {
+          '@type': 'Person',
+          'name': 'Santiago Toyos',
+          'url': siteUrl.value
+        },
+        'creator': {
+          '@type': 'Person',
+          'name': 'Santiago Toyos'
+        },
+        ...(data.value.client ? { 'provider': { '@type': 'Organization', 'name': data.value.client } } : {}),
+        ...(data.value.category ? { 'genre': data.value.category } : {}),
+        ...(data.value.tags ? { 'keywords': data.value.tags.join(', ') } : {})
+      }
+    ]
+  }
+})
+
+useHead({
+  script: computed(() => projectSchema.value ? [
+    {
+      type: 'application/ld+json',
+      innerHTML: JSON.stringify(projectSchema.value)
+    }
+  ] : [])
 })
 </script>

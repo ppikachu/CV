@@ -77,7 +77,7 @@ const badge = computed(() => {
 					<NuxtImg
 						v-if="project.image"
 						:src="project.image"
-						:alt="project.title || 'Project thumbnail'"
+						:alt="project.title ? (project.category ? `${project.title} - ${project.category}` : project.title) : 'Santiago Toyos - Project'"
 						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center'"
 					/>
 					<video

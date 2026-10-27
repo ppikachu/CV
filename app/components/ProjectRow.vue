@@ -27,7 +27,9 @@ const videoRef = ref<HTMLVideoElement | null>(null)
 watch(isHovered, (hovering) => {
 	if (!videoSrc.value || !videoRef.value) return
 	if (hovering) {
-		videoRef.value.currentTime = 0
+		if (videoRef.value.readyState > 0) {
+			videoRef.value.currentTime = 0
+		}
 		videoRef.value.play().catch(() => {})
 	} else {
 		videoRef.value.pause()
@@ -79,6 +81,9 @@ const badge = computed(() => {
 						:src="project.image"
 						:alt="project.title ? (project.category ? `${project.title} - ${project.category}` : project.title) : 'Santiago Toyos - Project'"
 						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center'"
+						sizes="xs:100vw sm:320px md:380px"
+						format="webp"
+						loading="lazy"
 					/>
 					<video
 						v-if="videoSrc"
@@ -87,7 +92,7 @@ const badge = computed(() => {
 						muted
 						loop
 						playsinline
-						preload="metadata"
+						preload="none"
 						:class="[
 							'object-cover object-center w-full h-full absolute inset-0 pointer-events-none transition-opacity duration-300',
 							isHovered ? 'opacity-100' : 'opacity-0'

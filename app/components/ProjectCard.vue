@@ -45,7 +45,9 @@ const videoRef = ref<HTMLVideoElement | null>(null)
 watch(isHovered, (hovering) => {
 	if (!videoSrc.value || !videoRef.value) return
 	if (hovering) {
-		videoRef.value.currentTime = 0
+		if (videoRef.value.readyState > 0) {
+			videoRef.value.currentTime = 0
+		}
 		videoRef.value.play().catch(() => {})
 	} else {
 		videoRef.value.pause()
@@ -89,6 +91,9 @@ watch(isHovered, (hovering) => {
 						:src="project.image"
 						:alt="project.title ? (project.category ? `${project.title} - ${project.category}` : project.title) : 'Santiago Toyos - Project'"
 						:class="ui?.image ? ui.image({ to: false, class: 'object-center' }) : 'object-cover object-center w-full h-full'"
+						sizes="xs:100vw sm:100vw md:50vw lg:600px"
+						format="webp"
+						loading="lazy"
 					/>
 					<video
 						v-if="videoSrc"
@@ -97,7 +102,7 @@ watch(isHovered, (hovering) => {
 						muted
 						loop
 						playsinline
-						preload="metadata"
+						preload="none"
 						:class="[
 							'object-cover object-center absolute inset-0 pointer-events-none transition-opacity duration-300',
 							isHovered ? 'opacity-100' : 'opacity-0'

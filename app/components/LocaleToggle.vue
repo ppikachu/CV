@@ -7,7 +7,7 @@
 				:variant="isEs ? 'soft' : 'ghost'"
 				:size="size || 'xs'"
 				class="font-mono text-xs font-semibold px-2 py-1 rounded-md transition-colors"
-				aria-label="Español"
+				aria-label="ES - Español"
 				@click="setLocale('es')"
 			/>
 			<UButton
@@ -16,7 +16,7 @@
 				:variant="isEn ? 'soft' : 'ghost'"
 				:size="size || 'xs'"
 				class="font-mono text-xs font-semibold px-2 py-1 rounded-md transition-colors"
-				aria-label="English"
+				aria-label="EN - English"
 				@click="setLocale('en')"
 			/>
 		</div>

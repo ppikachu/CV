@@ -26,6 +26,11 @@ export default defineNuxtConfig({
   //   ]
   // },
 
+  image: {
+    quality: 85,
+    format: ['webp'],
+  },
+
   icon: {
     size: '24px',
     clientBundle: {

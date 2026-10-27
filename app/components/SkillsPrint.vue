@@ -10,7 +10,8 @@ const disciplines = computed(() => [
 
 const tools = [
 	'Figma', 'TypeScript', 'Nuxt', 'Vue', 'Tailwind CSS', 'Three.js',
-	'GLSL', 'Modo 3D', 'Nuke', 'Moho', 'Final Cut Pro', 'Logic Pro'
+	'GLSL', 'Modo 3D', 'Nuke', 'Moho', 'Final Cut Pro', 'Logic Pro',
+	'Claude', 'Gemini', 'Antigravity', 'MCP', 'Veo'
 ]
 </script>
 

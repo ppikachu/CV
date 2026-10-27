@@ -35,7 +35,12 @@ const tools = [
 	'Nuke',
 	'Moho',
 	'Final Cut Pro',
-	'Logic Pro'
+	'Logic Pro',
+	'Claude',
+	'Gemini',
+	'Antigravity',
+	'MCP',
+	'Veo'
 ]
 
 const toolsWithSpectrum = computed(() => {

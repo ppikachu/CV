@@ -30,6 +30,14 @@ const milestones = computed<TimelineItem[]>(() => [
 		icon: 'i-pixelarticons-code'
 	},
 	{
+		date: '2025',
+		title: locale.value === 'es' ? 'Flujo Aumentado con IA · Código Agéntico · Visuales Generativos' : 'AI-Augmented Workflow · Agentic Coding · Generative Visuals',
+		description: locale.value === 'es'
+			? 'IA como multiplicador de criterio y oficio: desarrollo asistido con Claude y Gemini, reglas y MCP para flujos reproducibles, y generación de imagen y video integrada al proceso creativo.'
+			: 'AI as a multiplier for judgment and craft: assisted development with Claude and Gemini, rules and MCP for repeatable workflows, and generative image and video folded into the creative process.',
+		icon: 'i-pixelarticons-robot'
+	},
+	{
 		date: locale.value === 'es' ? 'Hoy' : 'Today',
 		title: locale.value === 'es' ? 'Ejecución Integral: Concepto → Diseño → Motion → Código' : 'Full-Cycle Execution: Concept → Design → Motion → Code',
 		description: locale.value === 'es'

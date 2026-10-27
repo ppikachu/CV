@@ -77,7 +77,11 @@ const schemaGraph = computed(() => {
 					'Vue',
 					'Brand Identity',
 					'Motion Graphics',
-					'Front-End Engineering'
+					'Front-End Engineering',
+					'Artificial Intelligence',
+					'AI-Assisted Development',
+					'Generative AI',
+					'Model Context Protocol'
 				]
 			}
 		]

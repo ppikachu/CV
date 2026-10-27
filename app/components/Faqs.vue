@@ -10,6 +10,7 @@ const faqs = computed(() => {
     { label: t("q_team_collaboration"), content: t("r_team_collaboration") },
     { label: t("q_remote_work"), content: t("r_remote_work") },
     { label: t("q_project_scope"), content: t("r_project_scope") },
+    { label: t("q_ai_workflow"), content: t("r_ai_workflow") },
     { label: t("q_how_to_start"), content: t("r_how_to_start") },
   ]
 })
@@ -76,6 +77,8 @@ useHead({
       "r_remote_work": "Yes. I am based in Buenos Aires (UTC-3) and collaborate seamlessly with clients and studios across North America, Europe, and Latin America.",
       "q_project_scope": "Can I hire you for a focused or smaller task?",
       "r_project_scope": "Yes. Project scope ranges from specialized consulting, motion sequences, or shader development to full-cycle digital platforms and brand overhauls.",
+      "q_ai_workflow": "How do you use AI in your work?",
+      "r_ai_workflow": "As an accelerator, never a substitute for direction. I use agentic coding tools (Claude, Gemini) for development, generative image and video models for exploration and motion, and project rules plus MCP servers to keep output consistent with the design system. Every decision, from concept to final polish, stays human-led.",
       "q_how_to_start": "How do we start working together?",
       "r_how_to_start": "Send a short message with your project overview, timeline, or key objectives. We will schedule a brief introductory call to review scope and discuss next steps."
     },
@@ -91,6 +94,8 @@ useHead({
       "r_remote_work": "Sí. Resido en Buenos Aires (UTC-3) y trabajo con clientes y estudios en Norteamérica, Europa y Latinoamérica.",
       "q_project_scope": "¿Se te puede contratar para proyectos acotados o específicos?",
       "r_project_scope": "Sí. El alcance puede ir desde una animación puntual o shader específico hasta la construcción de una plataforma digital o identidad integral.",
+      "q_ai_workflow": "¿Cómo usás la IA en tu trabajo?",
+      "r_ai_workflow": "Como acelerador, nunca como reemplazo de la dirección. Uso herramientas de código agéntico (Claude, Gemini) para desarrollo, modelos generativos de imagen y video para exploración y motion, y reglas de proyecto con servidores MCP para mantener la coherencia con el sistema de diseño. Todas las decisiones, del concepto al acabado final, siguen siendo humanas.",
       "q_how_to_start": "¿Cómo empezamos un proyecto?",
       "r_how_to_start": "Escribime un mensaje con un resumen de tu proyecto, objetivos y tiempos estimados. Coordinamos una llamada breve para revisar el alcance y definir los próximos pasos."
     }

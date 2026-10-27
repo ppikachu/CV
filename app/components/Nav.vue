@@ -144,6 +144,17 @@ const navItems = computed<NavigationMenuItem[]>(() =>
 		</UNavigationMenu>
 
 		<template #right>
+			<UTooltip :text="$t('view_print_version')">
+				<UButton
+					icon="i-pixelarticons-printer"
+					:aria-label="$t('view_print_version')"
+					:to="localePath('/print')"
+					target="_blank"
+					color="neutral"
+					variant="ghost"
+					size="sm"
+				/>
+			</UTooltip>
 			<ClientOnly>
 				<LocaleToggle size="sm" />
 			</ClientOnly>
@@ -168,6 +179,20 @@ const navItems = computed<NavigationMenuItem[]>(() =>
 					</Motion>
 				</template>
 			</UNavigationMenu>
+
+			<USeparator class="my-6" />
+
+			<UButton
+				icon="i-pixelarticons-printer"
+				:label="$t('view_print_version')"
+				:to="localePath('/print')"
+				target="_blank"
+				color="neutral"
+				variant="subtle"
+				block
+				size="lg"
+				@click="isMenuOpen = false"
+			/>
 		</template>
 	</UHeader>
 </template>

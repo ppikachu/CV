@@ -4,7 +4,7 @@ export default defineI18nConfig(() => ({
 	messages: {
 		en: {
 			seo_title: 'Santiago Toyos — Graphic Designer & Creative Developer | Portfolio',
-			seo_description: 'Portfolio of Santiago Toyos, multidisciplinary designer & creative developer based in Buenos Aires. Visual direction, motion graphics, Three.js, and interactive code.',
+			seo_description: 'Portfolio of Santiago Toyos, multidisciplinary designer & creative developer based in Buenos Aires. Visual direction, motion graphics, Three.js, AI-augmented workflows, and interactive code.',
 			role: 'Designer / Creative Developer',
 			btn_selected_work: 'Featured Work',
 			btn_contact: 'Get in touch',
@@ -15,12 +15,12 @@ export default defineI18nConfig(() => ({
 			digital_title: 'Digital',
 			digital_desc: 'Websites · UX/UI · Interactive experiences',
 			motion_title: 'Motion',
-			motion_desc: 'Animation · Motion graphics · Video · 3D',
+			motion_desc: 'Animation · Motion graphics · Video · 3D · Generative visuals',
 			code_title: 'Code',
-			code_desc: 'Creative development · Prototyping · Front-end',
+			code_desc: 'Creative development · AI-assisted coding · Prototyping · Front-end',
 			disciplines_tagline: 'Different tools. One cohesive visual language.',
 			tools_title: 'Tools & Technologies',
-			tools_subtitle: 'Selected stack for design, 3D, motion, and creative coding',
+			tools_subtitle: 'Selected stack for design, 3D, motion, and creative coding, and AI',
 			currently_badge: 'WIP',
 			featured_work: 'Featured Work',
 			more_work: 'More Work',
@@ -44,11 +44,12 @@ export default defineI18nConfig(() => ({
 			contact_location: 'Buenos Aires, Argentina · Available Worldwide',
 			print_current_projects: 'Current Projects',
 			print_selected_projects: 'Selected Projects',
-			print_btn: 'Print / Save PDF'
+			print_btn: 'Print / Save PDF',
+			view_print_version: 'Print version (CV)'
 		},
 		es: {
 			seo_title: 'Santiago Toyos — Diseñador Gráfico & Creative Developer | Buenos Aires',
-			seo_description: 'Portfolio de Santiago Toyos, diseñador multidisciplinario y creative developer en Buenos Aires. Dirección de arte, identidad visual, motion graphics, 3D interactivo y Nuxt.',
+			seo_description: 'Portfolio de Santiago Toyos, diseñador multidisciplinario y creative developer en Buenos Aires. Dirección de arte, identidad visual, motion graphics, 3D interactivo, Nuxt y flujos de trabajo con IA.',
 			role: 'Diseñador / Creative Developer',
 			btn_selected_work: 'Trabajos destacados',
 			btn_contact: 'Contactar',
@@ -59,12 +60,12 @@ export default defineI18nConfig(() => ({
 			digital_title: 'Digital',
 			digital_desc: 'Sitios web · UX/UI · Experiencias interactivas',
 			motion_title: 'Motion',
-			motion_desc: 'Animación · Motion graphics · Video · 3D',
+			motion_desc: 'Animación · Motion graphics · Video · 3D · Visuales generativos',
 			code_title: 'Código',
-			code_desc: 'Creative development · Prototipado · Front-end',
+			code_desc: 'Creative development · Código asistido por IA · Prototipado · Front-end',
 			disciplines_tagline: 'Diferentes herramientas. Un único lenguaje visual.',
 			tools_title: 'Herramientas y Tecnologías',
-			tools_subtitle: 'Stack seleccionado para diseño, 3D, motion y código creativo',
+			tools_subtitle: 'Stack seleccionado para diseño, 3D, motion, código creativo e IA',
 			currently_badge: 'WIP',
 			featured_work: 'Trabajos Destacados',
 			more_work: 'Más Trabajos',
@@ -88,7 +89,8 @@ export default defineI18nConfig(() => ({
 			contact_location: 'Buenos Aires, Argentina · Disponible para todo el mundo',
 			print_current_projects: 'Proyectos en Curso',
 			print_selected_projects: 'Proyectos Destacados',
-			print_btn: 'Imprimir / Guardar PDF'
+			print_btn: 'Imprimir / Guardar PDF',
+			view_print_version: 'Versión para imprimir (CV)'
 		}
 	}
 }))

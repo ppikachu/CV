@@ -71,12 +71,12 @@ export default defineNuxtConfig({
       // used by useSeoMeta ogUrl:
       HOST:
         process.env.NODE_ENV === "production"
-          ? "https://toyos.vercel.app"
+          ? "https://toyos.ar"
           : "http://localhost:3000",
       i18n: {
         baseUrl:
           process.env.NODE_ENV === "production"
-            ? "https://toyos.vercel.app"
+            ? "https://toyos.ar"
             : "http://localhost:3000",
       },
     },
@@ -85,7 +85,7 @@ export default defineNuxtConfig({
   i18n: {
     baseUrl:
       process.env.NODE_ENV === "production"
-        ? "https://toyos.vercel.app"
+        ? "https://toyos.ar"
         : "http://localhost:3000",
     vueI18n: 'i18n.config.ts',
     locales: [

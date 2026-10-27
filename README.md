@@ -1,6 +1,6 @@
 # Santiago Toyos - Online Portfolio & CV
 
-This is the source code for my personal portfolio and online CV, available at [toyos.vercel.app](https://toyos.vercel.app). 
+This is the source code for my personal portfolio and online CV, available at [toyos.ar](https://toyos.ar). 
 It showcases my experience in multimedia content, design, motion graphics, and web development.
 
 ## 🚀 Tech Stack
@@ -52,3 +52,12 @@ pnpm run preview
 
 All portfolio projects are driven by Markdown files inside the `content/` directory. 
 To add or modify a project, simply create or edit a markdown file in the respective language folder (`content/en/proyecto` or `content/es/proyecto`), using the frontmatter for metadata (title, description, tags, images, etc.).
+
+### ⚠️ Sitemap Maintenance
+
+The sitemap is statically maintained at [`public/sitemap.xml`](public/sitemap.xml).
+
+Whenever you **add, rename, or remove** a project or page:
+1. Add the Spanish URL: `https://toyos.ar/proyecto/<slug>`
+2. Add the English URL: `https://toyos.ar/en/proyecto/<slug>`
+3. Check [`public/robots.txt`](public/robots.txt) if any route-level crawling rules change.

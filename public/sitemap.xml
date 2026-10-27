@@ -1,99 +1,105 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!--
+    NOTE: Statically maintained sitemap.
+    When adding/modifying projects in content/, add URLs for both locales:
+    - https://toyos.ar/proyecto/<slug>
+    - https://toyos.ar/en/proyecto/<slug>
+  -->
   <url>
-    <loc>https://toyos.vercel.app/</loc>
+    <loc>https://toyos.ar/</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en</loc>
+    <loc>https://toyos.ar/en</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/print</loc>
+    <loc>https://toyos.ar/print</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/print</loc>
+    <loc>https://toyos.ar/en/print</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/luznegra-web</loc>
+    <loc>https://toyos.ar/proyecto/luznegra-web</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/luznegra-web</loc>
+    <loc>https://toyos.ar/en/proyecto/luznegra-web</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/kinoto</loc>
+    <loc>https://toyos.ar/proyecto/kinoto</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/kinoto</loc>
+    <loc>https://toyos.ar/en/proyecto/kinoto</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/gl</loc>
+    <loc>https://toyos.ar/proyecto/gl</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/gl</loc>
+    <loc>https://toyos.ar/en/proyecto/gl</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/luznegra-video</loc>
+    <loc>https://toyos.ar/proyecto/luznegra-video</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/luznegra-video</loc>
+    <loc>https://toyos.ar/en/proyecto/luznegra-video</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/websites</loc>
+    <loc>https://toyos.ar/proyecto/websites</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/websites</loc>
+    <loc>https://toyos.ar/en/proyecto/websites</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/sanders-web</loc>
+    <loc>https://toyos.ar/proyecto/sanders-web</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/sanders-web</loc>
+    <loc>https://toyos.ar/en/proyecto/sanders-web</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/susan-ibitz</loc>
+    <loc>https://toyos.ar/proyecto/susan-ibitz</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/susan-ibitz</loc>
+    <loc>https://toyos.ar/en/proyecto/susan-ibitz</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/interactivos</loc>
+    <loc>https://toyos.ar/proyecto/interactivos</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/interactivos</loc>
+    <loc>https://toyos.ar/en/proyecto/interactivos</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/commercial-video</loc>
+    <loc>https://toyos.ar/proyecto/commercial-video</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/commercial-video</loc>
+    <loc>https://toyos.ar/en/proyecto/commercial-video</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/logos</loc>
+    <loc>https://toyos.ar/proyecto/logos</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/logos</loc>
+    <loc>https://toyos.ar/en/proyecto/logos</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/grafica</loc>
+    <loc>https://toyos.ar/proyecto/grafica</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/grafica</loc>
+    <loc>https://toyos.ar/en/proyecto/grafica</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/mosaico-instagram</loc>
+    <loc>https://toyos.ar/proyecto/mosaico-instagram</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/mosaico-instagram</loc>
+    <loc>https://toyos.ar/en/proyecto/mosaico-instagram</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/piezas</loc>
+    <loc>https://toyos.ar/proyecto/piezas</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/piezas</loc>
+    <loc>https://toyos.ar/en/proyecto/piezas</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/proyecto/cnb</loc>
+    <loc>https://toyos.ar/proyecto/cnb</loc>
   </url>
   <url>
-    <loc>https://toyos.vercel.app/en/proyecto/cnb</loc>
+    <loc>https://toyos.ar/en/proyecto/cnb</loc>
   </url>
 </urlset>

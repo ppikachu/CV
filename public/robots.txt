@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://toyos.vercel.app/sitemap.xml
+Sitemap: https://toyos.ar/sitemap.xml

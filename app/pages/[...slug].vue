@@ -151,7 +151,7 @@ const links = computed<ButtonProps[]>(() => [
 ])
 
 const runtimeConfig = useRuntimeConfig()
-const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.vercel.app').replace(/\/$/, ''))
+const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.ar').replace(/\/$/, ''))
 
 const formatAbsoluteUrl = (path?: string) => {
   if (!path) return undefined

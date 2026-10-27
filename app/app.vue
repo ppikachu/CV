@@ -3,7 +3,7 @@ const runtimeConfig = useRuntimeConfig()
 const { t, locale } = useI18n()
 const route = useRoute()
 
-const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.vercel.app').replace(/\/$/, ''))
+const siteUrl = computed(() => (runtimeConfig.public.HOST || 'https://toyos.ar').replace(/\/$/, ''))
 const ogImageUrl = computed(() => `${siteUrl.value}${runtimeConfig.public.OG_IMAGE}`)
 const twitterImageUrl = computed(() => `${siteUrl.value}${runtimeConfig.public.TWITTER_IMAGE}`)
 

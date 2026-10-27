@@ -6,3 +6,7 @@
 # Development Server
 
 - **Host Option:** Always run the development server with the `--host` option (e.g., `pnpm run dev --host`) to ensure it is exposed to the network.
+
+# Sitemap & SEO Maintenance
+
+- **Static Sitemap (`public/sitemap.xml`):** The site uses a static sitemap without dynamic module generation. Whenever new projects, pages, or localized routes are added, renamed, or deleted in `content/` or `app/pages/`, always update `public/sitemap.xml` with the corresponding URLs (`https://toyos.ar/...` for both default Spanish and English `/en/...` versions).

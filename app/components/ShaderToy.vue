@@ -94,6 +94,7 @@ onMounted(() => {
 
   const init = () => {
     if (!containerRef.value || shader) return;
+    cleanupListeners();
 
     try {
       shader = new InspiraShaderToy(
@@ -120,17 +121,26 @@ onMounted(() => {
     updatePlayback();
   };
 
-  if (typeof window !== "undefined" && "requestIdleCallback" in window) {
-    (window as any).requestIdleCallback(() => init(), { timeout: 1500 });
-  } else {
-    initTimeout = setTimeout(init, 200);
+  const cleanupListeners = () => {
+    if (typeof window === "undefined") return;
+    window.removeEventListener("scroll", init);
+    window.removeEventListener("pointerdown", init);
+    window.removeEventListener("keydown", init);
+    if (initTimeout) {
+      clearTimeout(initTimeout);
+    }
+  };
+
+  if (typeof window !== "undefined") {
+    window.addEventListener("scroll", init, { once: true, passive: true });
+    window.addEventListener("pointerdown", init, { once: true, passive: true });
+    window.addEventListener("keydown", init, { once: true, passive: true });
+    initTimeout = setTimeout(init, 3500);
   }
 });
 
 onUnmounted(() => {
-  if (initTimeout) {
-    clearTimeout(initTimeout);
-  }
+  cleanupListeners();
   shader?.dispose();
   shader = undefined;
 });

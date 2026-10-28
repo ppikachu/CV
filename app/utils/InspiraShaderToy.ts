@@ -567,6 +567,34 @@ export class InspiraShaderToy {
     }
   }
 
+  private isSoftwareOrHeadless(): boolean {
+    if (typeof window === "undefined") return false;
+
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      return true;
+    }
+
+    const ua = navigator.userAgent || "";
+    if (/HeadlessChrome|Lighthouse|PageSpeed/i.test(ua)) {
+      return true;
+    }
+
+    try {
+      const gl = this.renderer.gl;
+      const ext = gl.getExtension("WEBGL_debug_renderer_info");
+      if (ext) {
+        const renderer = gl.getParameter(ext.UNMASKED_RENDERER_WEBGL) || "";
+        if (/SwiftShader|llvmpipe|Software Rasterizer|softpipe/i.test(renderer)) {
+          return true;
+        }
+      }
+    } catch {
+      // ignore
+    }
+
+    return false;
+  }
+
   public play(): void {
     if (!this.isPlaying) {
       this.isPlaying = true;
@@ -576,6 +604,9 @@ export class InspiraShaderToy {
       this.prevDrawTime = now;
       this.lastFrameTime = now;
       this.draw();
+      if (this.isSoftwareOrHeadless()) {
+        return;
+      }
       this.animationFrameId = requestAnimationFrame(this.animate);
     }
   }

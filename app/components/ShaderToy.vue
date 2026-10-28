@@ -51,6 +51,7 @@ const visibility = useDocumentVisibility();
 const isDocumentVisible = computed(() => visibility.value === "visible");
 
 let shader: InspiraShaderToy | undefined;
+let initTimeout: ReturnType<typeof setTimeout> | undefined;
 
 if (props.autoPause) {
   useIntersectionObserver(containerRef, ([entry]) => {
@@ -91,32 +92,45 @@ function setShaderSource(source: string) {
 onMounted(() => {
   if (!containerRef.value) return;
 
-  try {
-    shader = new InspiraShaderToy(
-      containerRef.value,
-      props.mouseMode,
-      props.frameRate,
-      props.pixelRatio,
-    );
-  } catch (error) {
-    emit("error", error instanceof Error ? error.message : "Failed to initialize WebGL");
-    return;
+  const init = () => {
+    if (!containerRef.value || shader) return;
+
+    try {
+      shader = new InspiraShaderToy(
+        containerRef.value,
+        props.mouseMode,
+        props.frameRate,
+        props.pixelRatio,
+      );
+    } catch (error) {
+      emit("error", error instanceof Error ? error.message : "Failed to initialize WebGL");
+      return;
+    }
+
+    shader.setHSV({
+      hue: props.hue,
+      saturation: props.saturation,
+      brightness: props.brightness,
+    });
+    shader.setSpeed(props.speed);
+    shader.setMouseSensitivity(props.mouseSensitivity);
+    shader.setMouseDamping(props.damping);
+    setShaderSource(props.shaderCode);
+
+    updatePlayback();
+  };
+
+  if (typeof window !== "undefined" && "requestIdleCallback" in window) {
+    (window as any).requestIdleCallback(() => init(), { timeout: 1500 });
+  } else {
+    initTimeout = setTimeout(init, 200);
   }
-
-  shader.setHSV({
-    hue: props.hue,
-    saturation: props.saturation,
-    brightness: props.brightness,
-  });
-  shader.setSpeed(props.speed);
-  shader.setMouseSensitivity(props.mouseSensitivity);
-  shader.setMouseDamping(props.damping);
-  setShaderSource(props.shaderCode);
-
-  updatePlayback();
 });
 
 onUnmounted(() => {
+  if (initTimeout) {
+    clearTimeout(initTimeout);
+  }
   shader?.dispose();
   shader = undefined;
 });

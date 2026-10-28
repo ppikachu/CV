@@ -67,10 +67,13 @@ function ensureStarsGenerated() {
   }
 }
 
+const hasBeenVisible = ref(false);
+
 watch(
-  isMounted,
-  (mounted) => {
-    if (mounted) {
+  [isVisible, isMounted],
+  ([visible, mounted]) => {
+    if (visible && mounted && !hasBeenVisible.value) {
+      hasBeenVisible.value = true;
       ensureStarsGenerated();
     }
   },
@@ -118,7 +121,7 @@ const starLayer3Transition = computed(() => ({
     ]"
   >
     <motion.div
-      v-if="isMounted"
+      v-if="hasBeenVisible"
       class="absolute inset-0 pointer-events-none"
       :style="{ x: springX, y: springY }"
     >

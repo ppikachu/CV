@@ -51,7 +51,6 @@ const visibility = useDocumentVisibility();
 const isDocumentVisible = computed(() => visibility.value === "visible");
 
 let shader: InspiraShaderToy | undefined;
-let initTimeout: ReturnType<typeof setTimeout> | undefined;
 
 if (props.autoPause) {
   useIntersectionObserver(containerRef, ([entry]) => {
@@ -92,55 +91,32 @@ function setShaderSource(source: string) {
 onMounted(() => {
   if (!containerRef.value) return;
 
-  const init = () => {
-    if (!containerRef.value || shader) return;
-    cleanupListeners();
-
-    try {
-      shader = new InspiraShaderToy(
-        containerRef.value,
-        props.mouseMode,
-        props.frameRate,
-        props.pixelRatio,
-      );
-    } catch (error) {
-      emit("error", error instanceof Error ? error.message : "Failed to initialize WebGL");
-      return;
-    }
-
-    shader.setHSV({
-      hue: props.hue,
-      saturation: props.saturation,
-      brightness: props.brightness,
-    });
-    shader.setSpeed(props.speed);
-    shader.setMouseSensitivity(props.mouseSensitivity);
-    shader.setMouseDamping(props.damping);
-    setShaderSource(props.shaderCode);
-
-    updatePlayback();
-  };
-
-  const cleanupListeners = () => {
-    if (typeof window === "undefined") return;
-    window.removeEventListener("scroll", init);
-    window.removeEventListener("pointerdown", init);
-    window.removeEventListener("keydown", init);
-    if (initTimeout) {
-      clearTimeout(initTimeout);
-    }
-  };
-
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", init, { once: true, passive: true });
-    window.addEventListener("pointerdown", init, { once: true, passive: true });
-    window.addEventListener("keydown", init, { once: true, passive: true });
-    initTimeout = setTimeout(init, 3500);
+  try {
+    shader = new InspiraShaderToy(
+      containerRef.value,
+      props.mouseMode,
+      props.frameRate,
+      props.pixelRatio,
+    );
+  } catch (error) {
+    emit("error", error instanceof Error ? error.message : "Failed to initialize WebGL");
+    return;
   }
+
+  shader.setHSV({
+    hue: props.hue,
+    saturation: props.saturation,
+    brightness: props.brightness,
+  });
+  shader.setSpeed(props.speed);
+  shader.setMouseSensitivity(props.mouseSensitivity);
+  shader.setMouseDamping(props.damping);
+  setShaderSource(props.shaderCode);
+
+  updatePlayback();
 });
 
 onUnmounted(() => {
-  cleanupListeners();
   shader?.dispose();
   shader = undefined;
 });

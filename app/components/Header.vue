@@ -61,8 +61,8 @@ const toolsWithSpectrum = computed(() => {
 </script>
 
 <template>
-	<header class="not-prose relative min-h-[calc(100svh-var(--ui-header-height))] flex flex-col justify-center py-12 md:py-16 gap-16">
-		<div class="absolute inset-0 left-1/2 -translate-x-1/2 w-screen -z-10 overflow-hidden">
+	<header class="not-prose relative min-h-[calc(100svh-var(--ui-header-height))] flex flex-col justify-center py-12 md:py-16 md:gap-16">
+		<div class="absolute inset-y-0 left-1/2 -translate-x-1/2 w-screen -z-10 overflow-hidden">
 			<ShaderToy 
 				:shaderCode="sdf1Frag" />
 		</div>

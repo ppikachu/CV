@@ -47,19 +47,31 @@ function setupObserver() {
 	stopObserver?.()
 	if (!import.meta.client || !isHome.value) return
 
-	const sectionIds = ['featured-work', 'what-i-do', 'timeline', 'more-work', 'experiments', 'faqs', 'contact']
+	const sectionIds = ['what-i-do', 'featured-work', 'timeline', 'more-work', 'experiments', 'faqs', 'contact']
 	const targets = sectionIds
 		.map(id => document.getElementById(id))
 		.filter((el): el is HTMLElement => Boolean(el))
 
 	if (!targets.length) return
 
+	const sectionMap: Record<string, string> = {
+		timeline: 'featured-work',
+		'more-work': 'featured-work'
+	}
+
+	const handleScroll = () => {
+		if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80) {
+			activeSection.value = 'contact'
+		}
+	}
+	window.addEventListener('scroll', handleScroll, { passive: true })
+
 	const { stop } = useIntersectionObserver(
 		targets,
 		(entries) => {
 			for (const entry of entries) {
 				if (entry.isIntersecting) {
-					activeSection.value = entry.target.id
+					activeSection.value = sectionMap[entry.target.id] || entry.target.id
 				}
 			}
 		},
@@ -67,7 +79,10 @@ function setupObserver() {
 			rootMargin: '-20% 0px -70% 0px'
 		}
 	)
-	stopObserver = stop
+	stopObserver = () => {
+		stop()
+		window.removeEventListener('scroll', handleScroll)
+	}
 }
 
 onMounted(() => {
@@ -107,7 +122,14 @@ const navItems = computed<NavigationMenuItem[]>(() =>
 </script>
 
 <template>
-	<UHeader v-model:open="isMenuOpen" :to="homePath">
+	<UHeader
+		v-model:open="isMenuOpen"
+		:to="homePath"
+		:ui="{
+			overlay: 'z-50',
+			content: 'z-50'
+		}"
+	>
 		<template #title>
 			<div class="flex items-center gap-2">
 				<NuxtImg

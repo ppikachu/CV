@@ -17,6 +17,12 @@ export default defineAppConfig({
 			arrowRight: 'i-pixelarticons-arrow-right',
 			search: 'i-pixelarticons-search'
 		},
+		header: {
+			slots: {
+				overlay: 'z-50',
+				content: 'z-50'
+			}
+		},
 		badge: {
 			slots: {
 				label: 'text-wrap rounded-full overflow-visible',

@@ -109,6 +109,10 @@ const starLayer3Transition = computed(() => ({
   duration: props.speed * 3,
   ease: "linear",
 }));
+const isPositioned = computed(() => {
+  const combined = `${$attrs.class || ''} ${props.class || ''}`;
+  return combined.includes('absolute') || combined.includes('sticky') || combined.includes('fixed');
+});
 </script>
 
 <template>
@@ -116,7 +120,7 @@ const starLayer3Transition = computed(() => ({
     ref="containerRef"
     :class="[
       'overflow-hidden bg-radial-[ellipse_55%_40%_at_50%_35%] from-slate-700 to-black',
-      $attrs.class?.toString().includes('absolute') ? '' : 'relative',
+      isPositioned ? '' : 'relative',
       props.class,
     ]"
   >

@@ -109,8 +109,9 @@ const starLayer3Transition = computed(() => ({
   duration: props.speed * 3,
   ease: "linear",
 }));
+const attrs = useAttrs();
 const isPositioned = computed(() => {
-  const combined = `${$attrs.class || ''} ${props.class || ''}`;
+  const combined = `${String(attrs.class || '')} ${props.class || ''}`;
   return combined.includes('absolute') || combined.includes('sticky') || combined.includes('fixed');
 });
 </script>
